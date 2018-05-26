@@ -1,0 +1,273 @@
+@import 'typography';
+@import 'variable';
+@import 'mixin';
+@import 'ultilities';
+
+
+
+// THEME SECTION
+$themes:(
+  light: (
+    $cl-light-primary,
+    $cl-light-secondary,
+    $cl-light-third,
+    $cl-light-font
+  ),
+  dark: (
+    $cl-dark-primary,
+    $cl-dark-secondary,
+    $cl-dark-third,
+    $cl-dark-font
+  )
+);
+@mixin theme($name,$color){
+    // Theme changing
+    .#{$name} {
+
+        .navbar-dark{
+            .navbar-nav{
+                .nav-link{
+                    color: nth($color,4);
+                    &:hover,
+                    &:focus{
+                        color: nth($color,1);
+                    }
+                }
+            }
+        }
+        // BACKGROUND
+        .bg-primary{
+            background-color: nth($color,1) !important;
+        }
+        .bg-secondary{
+            background-color: nth($color,2) !important;
+        }
+        // BANNER
+        .banner{
+            background-color: nth($color,3);
+            .banner-buttons{
+                background-color: nth($color,2);
+                &:hover{
+                    background-color: nth($color,1);
+                }
+            }
+        }
+    }
+
+
+    // Control button theme style
+    [data-theme='#{$name}'] {
+        background: nth($color, 1);
+        &:hover {
+            background: darken(nth($color, 1), 10%);
+        }
+        &[disabled] {
+            background: desaturate(nth($color, 1), 40%);
+        }
+    }
+
+}
+// END THEME SECTION
+
+// CONTROL THEME
+// By looping through the $themes map
+@each $key, $value in $themes {
+    @include theme($key, $value);
+}
+  
+.controls{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    &>button {
+        border: none;
+        color: white;
+        padding: .5em;
+        border-radius: .15em;
+        font-weight: bold;
+        margin-bottom: .5em;
+    }
+}
+// END CONTROL THEME
+
+// BASE
+.img-responsive{
+    max-width: 100%;
+    display: block;
+    height: auto;
+    margin: 0 auto;
+}
+// END BASE
+
+// NAVIGATION BAR
+.logo-word {
+    font-weight: 300;
+    font-size: 1.5rem;
+    vertical-align: middle;
+    padding-left: 0.5rem;
+}
+.navbar{
+    padding: 0 1rem;
+    .navbar-brand{
+        padding-top: 0;
+        padding-bottom: 0;
+        width: 150px;
+        text-align: center;
+    }
+}
+.navbar-dark{
+    .navbar-nav{
+        .nav-link{
+            padding: 1rem !important;
+            font-weight: $font-medium;
+        }
+    }
+}
+
+// END NAVIGATION BAR
+
+// SECTION BANNER
+.banner{
+    text-align: center;
+    overflow-x: hidden;
+    background: url('../assets/cover-image-mobile.svg') center no-repeat;
+    height: 596px;
+    position: relative;
+    .banner_footer{
+        position: absolute;
+        bottom: 100px;
+        left: 50%;
+        transform: translateX(-50%);
+        .btn{
+            font-weight: bold;
+            font-size: 15px;
+            line-height: 18px;
+            min-width: 216px;
+            height: 44px;
+            @include border-radius(3px);
+            color: #fff;
+        }
+        .btn_market{
+            background-color: transparent;
+            border: 1px solid #fff;
+            margin-right: 28px;
+            &:hover{
+                background-color: transparent;
+            }
+        }
+    }
+}
+@include maxq(large){
+    .banner{
+        .banner_footer{
+            bottom: 40px;
+            .btn_market{
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+@include minq(large){
+    .banner {
+        background: url('../assets/cover-image.svg') center no-repeat;
+    }
+}
+// END SECTION BANNER
+
+// TRADE SECTION
+.trade_aside{
+    &_header{
+        font-size: 42px;
+        font-weight: $font-light;
+        line-height: 49px;
+        margin: 0;
+    }
+    &_content{
+        font-size: 15px;
+        line-height: 22px;
+        text-align: left;
+        margin-bottom: 48px;
+    }
+    @include maxq(xlarge){
+        &_content{
+            margin-bottom: 40px;
+        }
+    }
+    @include maxq(large){
+        &_content{
+            padding: 0;
+            margin-bottom: 40px;
+        }
+        &_header{
+            font-size: 36px;
+            line-height: 42px;
+        }
+        h3{
+            font-size: 36px;
+            line-height: 42px;
+        }
+    }
+    @include maxq(medium){
+        &_content{
+            width: 100%;
+        }
+    }
+}
+.trade-section{
+    margin: 0 auto;
+    padding: 100px 0 152px;
+    width: 100%;
+    color: #fff;
+}
+@include maxq(xlarge){
+    .trade-section{
+        padding: 100px 0;
+    }
+}
+@include maxq(large){
+    .trade-section{
+        padding-top: 108px;
+    }
+}
+@include maxq(medium){
+    .trade-section{
+        padding: 56px 40px 60px;
+    }
+}
+
+// END TRADE SECTION
+
+// SECURITY SECTION
+.security-section {
+    text-align: center;
+    padding: 100px 0;
+    color: #003662;
+    .trade_aside{
+        &_header {
+            margin-top: 48px;
+            margin-bottom: 16px;
+            color: #003662;
+        }
+    }
+}
+//END SECURITY SECTION
+
+// SUPPORT SECTION
+.support-section {
+    background-color: #f2f3f8;
+    color: #003662;
+    text-align: center;
+    padding: 100px 0;
+    .trade_aside{
+        &_header{
+            margin-bottom: 16px;
+            color: #003662;
+        }
+        &_content{
+            margin-top: 22px;
+        }
+    }
+}
+// END SUPPORT SECTION

@@ -1,0 +1,77 @@
+doctype html
+html
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible" content="ie=edge")
+        title Bittrex
+        link(rel="stylesheet" href="../css/bootstrap.css")
+        link(rel="stylesheet" href="../css/style.css")
+    body
+        .controls
+            button.btn-theme(data-theme="light") Light
+            button.btn-theme(data-theme="dark") Dark
+        .wrapper.dark
+            //- navigation bar
+            nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.scrolling-navbar.fixed-top
+                a.navbar-brand(href="#")
+                    img.logo-icon(src="../assets/logo.svg") 
+                    span.logo-word BITTREX
+                button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation")
+                    span.navbar-toggler-icon
+                .collapse.navbar-collapse#navbarSupportedContent
+                    ul.navbar-nav.ml-auto
+                        li.nav-item.active
+                            a.nav-link(href="index.html") Market
+                                span.sr-only (current)
+                        li.nav-item
+                            a.nav-link(href="#") Register
+                        li.nav-item
+                            a.nav-link(href="#") Login
+            //- end navigation bar
+
+            //- banner section
+            .container-fluid.banner
+                .banner_footer
+                    button.btn.banner-buttons.btn_market Explorer Markets
+                    button.btn.banner-buttons.btn_register Register
+            //- end banners section
+
+            //- trade section
+            .container-fluid.bg-secondary.trade-section
+                .container
+                    .trade-wrapper.p-0.row.d-flex.justify-content-center
+                        .col-lg-12.col-md-10
+                            .row.d-flex.justify-content-center
+                                .col-lg-6.col-md-10.trade_aside
+                                    img.img-responsive.visible-xs-block(src="../assets/illustration-trade-confidently.svg" alt="illustration-trade-confidently")
+                                    h3.trade_aside_header Bittrex
+                                    p.trade_aside_content Bittrex is a global leader in the blockchain revolution. We operate the premier U.S.-based blockchain trading platform, which is designed for customers who demand lightning-fast trade execution, dependable digital wallets, and industry-leading security practices.
+                                    h3.trade_aside_header Blockchain Incubators
+                                    p.trade_aside_content We believe in the potential of blockchain and its ability to provide groundbreaking solutions. To promote innovation in the industry, we are working with teams around the world to advance new, inventive tokens that could potentially transform the way goods, services and operations are managed globally.
+                                    img.img-responsive.visible-sm-block(src="../assets/illustration-trade-confidently.svg" alt="illustration-trade-confidently")
+                                .col-lg-6.trade_banner.hidden-sm.hidden-xs.text-center
+                                    img.img-responsive(src="../assets/illustration-trade-confidently.svg" alt="illustration-trade-confidently")
+            .container.security-section
+                .row
+                    .col-lg-6.trade_aside
+                        img.img-responsive(src="../assets/illustration-algorithmic-trading.svg" alt="illustration-algorithmic-trading")
+                        .trade_aside_header.text-center Security First
+                        .trade_aside_content.text-center Security will always be a top priority in every decision we make, and we incorporate multiple layers of protection, using the most reliable and effective security technologies available to keep your funds secure.
+                    .col-lg-6.trade_aside
+                        img.img-responsive(src="../assets/illustration-security-first.svg" alt="illustration-security-first")
+                        .trade_aside_header.text-center Robust Trading
+                        .trade_aside_content.text-center Our custom trading engine was designed to be scalable and to ensure that orders are executed in real-time. We also support third-party trading platforms and algorithmic trading via our extensive APIs.
+            .container-fluid.support-section
+                .container
+                    .row.d-flex.justify-content-center
+                        .col-lg-7.col-md-10.text-sm-left.text-lg-center
+                            h3.trade_aside_header Corporate Responsibility
+                            p.trade_aside_content We are committed to complying with all U.S. regulations that help prevent, detect and remediate unlawful behavior by customers and virtual currency developers when using the Bittrex trading platform or any of the company’s other services. Bittrex is not a regulated exchange under U.S. securities laws.
+            //- end trade section
+        block content
+
+        script(src="../js/jquery.js")
+        script(src="../js/popper.js")
+        script(src="../js/bootstrap.js")
+        script(src="../js/theme.js")
