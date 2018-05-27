@@ -3,7 +3,38 @@
 @import 'mixin';
 @import 'ultilities';
 
-
+// LAYOUT
+.d-flex{
+    @include d-flex();
+}
+.row{
+    @include d-flex();
+    @include flex-wrap(wrap);
+}
+.justify-content-center{
+    @include justify-content(center);
+}
+// @include minq(large){
+//     .col-lg-6 {
+//         -ms-flex: 0 0 50%;
+//         -webkit-flex: 0 0 50%;        
+//         flex: 0 0 50%;
+//         max-width: 50%;
+//     }
+// }
+// .container:after,
+// .container:before,
+// .row:after,
+// .row:before{
+//     content: normal;
+//     display: none;
+// }
+// [class^='col']{
+//     -ms-flex: 1 0 auto;
+//     -webkit-flex: 1 0 auto;        
+//     flex: 1 0 auto;
+// }
+// END LAYOUT
 
 // THEME SECTION
 $themes:(
@@ -137,12 +168,13 @@ $themes:(
         position: absolute;
         bottom: 100px;
         left: 50%;
-        transform: translateX(-50%);
+        @include transform-translateX(-50%);
         .btn{
             font-weight: bold;
             font-size: 15px;
             line-height: 18px;
             min-width: 216px;
+            display: inline-block;
             height: 44px;
             @include border-radius(3px);
             color: #fff;
@@ -164,6 +196,9 @@ $themes:(
             .btn_market{
                 margin-right: 0;
                 margin-bottom: 20px;
+            }
+            .btn{
+                display: block;
             }
         }
     }
@@ -271,3 +306,69 @@ $themes:(
     }
 }
 // END SUPPORT SECTION
+
+//SECTION REGISTER
+.register-section {
+    background-color: #0084d4;
+    text-align: center;
+    color: #fff;
+    padding: 100px 0;
+    .form-register {
+        display: inline-block;
+        padding-bottom: 16px;
+        margin-top: 60px;
+        border-bottom: 1px solid rgba(0,54,98,.3);
+        width: 360px;
+        .register-btn {
+            margin-top: 40px;
+            border: none;
+            font-size: 1.25em;
+            font-weight: bold;
+            width: 220px;
+            height: 44px;
+            border-radius: 3px;
+            background-color: #003662;
+            color: white;
+        }
+        .form-group{
+            margin-bottom: 24px;    
+            .form-control{
+                padding: 6px 12px;
+                height: 40px;
+                border: none;
+                @include border-radius();
+            }
+        }
+    }
+    .register-footer{
+        padding-top: 28px;
+        font-size: 13px;
+        line-height: 18px;
+        margin-bottom: 60px;
+    }
+    a{
+        display: inline-block;
+        border-bottom: 1px solid #fff;
+        color: #fff;
+        cursor: pointer;
+        vertical-align: baseline;
+        text-decoration: none;
+    }
+}
+//END SECTION REGISTER
+
+
+//FOOTER
+.footer {
+    background-color: #f3f5f8;
+    padding: 28px 0 20px;
+    a{
+        font-size: 12px;
+        cursor: pointer;
+        line-height: 14px;
+        color: #666;
+        text-transform: capitalize;
+        text-decoration: none;
+    }
+}
+// END FOOTER

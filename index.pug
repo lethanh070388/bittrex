@@ -5,6 +5,7 @@ html
         meta(name="viewport" content="width=device-width, initial-scale=1.0")
         meta(http-equiv="X-UA-Compatible" content="ie=edge")
         title Bittrex
+        link(rel="stylesheet" href="../css/fontawesome-all.min.css")
         link(rel="stylesheet" href="../css/bootstrap.css")
         link(rel="stylesheet" href="../css/style.css")
     body
@@ -69,7 +70,71 @@ html
                             h3.trade_aside_header Corporate Responsibility
                             p.trade_aside_content We are committed to complying with all U.S. regulations that help prevent, detect and remediate unlawful behavior by customers and virtual currency developers when using the Bittrex trading platform or any of the company’s other services. Bittrex is not a regulated exchange under U.S. securities laws.
             //- end trade section
+
+            //- register section
+            .container-fluid.bg-secondary.register-section
+                .container
+                    .row.d-flex.justify-content-center
+                        .col-lg-7.col-md-10
+                            h3.trade_aside_header.text-center Sign Up and Start Trading Today!
+                    .row.d-flex.justify-content-center
+                        .col-lg-7.col-md-10
+                            form(action="#").form-register
+                                .form-group.text-left
+                                    label(for="inputEmail") Email address
+                                    input.form-control#inputEmail(type="email" aria-describedby="emailHelp" placeholder="")
+                                .form-group.text-left
+                                    label(for="inputPassword") Password
+                                    input.form-control#inputPassword(type="password" placeholder="")
+                                .form-group.text-left
+                                    label(for="inputPasswordConfirm") Password
+                                    input.form-control#inputPasswordConfirm(type="password" placeholder="")
+                                .form-group.form-check
+                                    input.form-check-input#checkPolicy(type="checkbox")
+                                    label.form-check-label(for="checkPolicy") 
+                                        |I agree to the Bittrex.com 
+                                        a(href="#") Terms of Service
+                                .form-group
+                                    button.btn.register-btn(type="submit") Submit
+                    .row
+                        .col.text-center
+                            p.register-footer
+                                span Already have an account? 
+                                a Login?
+                            img(src="../assets/privacy.jpg", alt="")
+                        
         block content
+            .container-fluid.footer
+                .container
+                    .row.text-center
+                        .col-lg-2.col-sm-4 
+                            a(href="#") About
+                        .col-lg-2.col-sm-4 
+                            a(href="#") Website Status
+                        .col-lg-2.col-sm-4 
+                            a(href="#") Cookies
+                        .col-lg-2.col-sm-4 
+                            a(href="#") Fees
+                        .col-lg-2.col-sm-4 
+                            a(href="#") Support
+                        .col-lg-2.col-sm-4 
+                            a(href="#") 
+                                i.fab.fa-facebook-square.pr-1
+                                |Like Us On Facebook
+                        .col-lg-2.col-sm-4 
+                            a(href="#") Privacy
+                        .col-lg-2.col-sm-4 
+                            a(href="#") API Documentation
+                        .col-lg-2.col-sm-4 
+                            a(href="#") Terms
+                        .col-lg-2.col-sm-4 
+                            a(href="#") Contact
+                        .col-lg-2.col-sm-4 
+                            a(href="#") &nbsp;
+                        .col-lg-2.col-sm-4 
+                            a(href="#") 
+                                i.fab.fa-twitter.pr-1
+                                |Follow us on twitter
 
         script(src="../js/jquery.js")
         script(src="../js/popper.js")

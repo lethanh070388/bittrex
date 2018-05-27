@@ -26,6 +26,29 @@ body {
   .hidden-xs {
     display: none !important; } }
 
+.d-flex {
+  display: -webkit-box !important;
+  display: -moz-box !important;
+  display: -ms-flexbox !important;
+  display: -ms-flexbox !important;
+  display: flex !important; }
+
+.row {
+  display: -webkit-box !important;
+  display: -moz-box !important;
+  display: -ms-flexbox !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-flex-wrap: wrap !important;
+  flex-wrap: wrap !important; }
+
+.justify-content-center {
+  -ms-flex-pack: center !important;
+  -webkit-box-pack: center !important;
+  -moz-box-pack: center !important;
+  -webkit-justify-content: center !important;
+  justify-content: center !important; }
+
 .light .navbar-dark .navbar-nav .nav-link {
   color: #ffffff; }
   .light .navbar-dark .navbar-nav .nav-link:hover, .light .navbar-dark .navbar-nav .nav-link:focus {
@@ -122,12 +145,17 @@ body {
     position: absolute;
     bottom: 100px;
     left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
     transform: translateX(-50%); }
     .banner .banner_footer .btn {
       font-weight: bold;
       font-size: 15px;
       line-height: 18px;
       min-width: 216px;
+      display: inline-block;
       height: 44px;
       -webkit-border-radius: 3px;
       -moz-border-radius: 3px;
@@ -146,7 +174,9 @@ body {
     bottom: 40px; }
     .banner .banner_footer .btn_market {
       margin-right: 0;
-      margin-bottom: 20px; } }
+      margin-bottom: 20px; }
+    .banner .banner_footer .btn {
+      display: block; } }
 
 @media screen and (min-width: 992px) {
   .banner {
@@ -220,3 +250,58 @@ body {
     color: #003662; }
   .support-section .trade_aside_content {
     margin-top: 22px; }
+
+.register-section {
+  background-color: #0084d4;
+  text-align: center;
+  color: #fff;
+  padding: 100px 0; }
+  .register-section .form-register {
+    display: inline-block;
+    padding-bottom: 16px;
+    margin-top: 60px;
+    border-bottom: 1px solid rgba(0, 54, 98, 0.3);
+    width: 360px; }
+    .register-section .form-register .register-btn {
+      margin-top: 40px;
+      border: none;
+      font-size: 1.25em;
+      font-weight: bold;
+      width: 220px;
+      height: 44px;
+      border-radius: 3px;
+      background-color: #003662;
+      color: white; }
+    .register-section .form-register .form-group {
+      margin-bottom: 24px; }
+      .register-section .form-register .form-group .form-control {
+        padding: 6px 12px;
+        height: 40px;
+        border: none;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        -ms-border-radius: 0;
+        border-radius: 0; }
+  .register-section .register-footer {
+    padding-top: 28px;
+    font-size: 13px;
+    line-height: 18px;
+    margin-bottom: 60px; }
+  .register-section a {
+    display: inline-block;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    cursor: pointer;
+    vertical-align: baseline;
+    text-decoration: none; }
+
+.footer {
+  background-color: #f3f5f8;
+  padding: 28px 0 20px; }
+  .footer a {
+    font-size: 12px;
+    cursor: pointer;
+    line-height: 14px;
+    color: #666;
+    text-transform: capitalize;
+    text-decoration: none; }
