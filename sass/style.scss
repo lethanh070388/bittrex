@@ -313,13 +313,14 @@ $themes:(
     background-color: #0084d4;
     text-align: center;
     color: #fff;
-    padding: 100px 0;
+    padding-top: 100px;
+    padding-bottom: 100px;
     .form-register {
         display: inline-block;
         padding-bottom: 16px;
         margin-top: 60px;
         border-bottom: 1px solid rgba(0,54,98,.3);
-        width: 360px;
+        max-width: 360px;
         .register-btn {
             margin-top: 40px;
             border: none;
