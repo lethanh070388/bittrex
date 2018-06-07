@@ -1,0 +1,30 @@
+extends layout.pug  
+
+block content
+    //- register section
+    .container-fluid.h-100.bg-secondary.register-section
+        .container
+            .row.d-flex.justify-content-center
+                .col-lg-7.col-md-10
+                    h3.trade_aside_header.text-center Log In
+            .row.d-flex.justify-content-center
+                .col-lg-7.col-md-10
+                    form(action="#").form-register
+                        .form-group.text-left
+                            label(for="inputEmail") Email address
+                            input.form-control#inputEmail(type="email" aria-describedby="emailHelp" placeholder="")
+                        .form-group.text-left
+                            label(for="inputPassword") Password
+                            input.form-control#inputPassword(type="password" placeholder="")
+                        .form-group.form-check
+                            input.form-check-input#checkPolicy(type="checkbox")
+                            label.form-check-label(for="checkPolicy") 
+                                |Remember me |  
+                                a(href="#") Forgot password
+                        .form-group
+                            button.btn.register-btn(type="submit") Submit
+            .row
+                .col.text-center
+                    p.register-footer
+                        span Don't have an account? 
+                        a Sign Up

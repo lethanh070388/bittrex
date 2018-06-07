@@ -1,0 +1,44 @@
+extends layout_support.pug  
+
+block content
+    .container.mt-nav.flex-full-height
+        .row.mt-4.d-flex.justify-content-center
+            .col-md-8.py-4
+                h1.heading-lv1 Submit a request
+                form
+                    h6.heading-lv6.pb-2.pt-4.mt-2 Please choose your issue below
+                    select.custom-select#selectListRequest.mb-4
+                        option(selected) Choose...
+                        option(value="1") Account disable
+                        option(value="2") Email issues
+                        option(value="3") Reserved Coins
+                        option(value="4") Help with Others
+                    h6.heading-lv6.pb-2.pt-4.mt-2
+                        |Your email address 
+                        sup *
+                    input.form-control(type="email")
+                    h6.heading-lv6.pb-2.pt-4.mt-2
+                        |Subject 
+                        sup *
+                    input.form-control(type="text")
+                    h6.heading-lv6.pb-2.pt-4.mt-2
+                        |Description
+                        sup *
+                    textarea.form-control(rows="5")
+                    small.form-text.text-muted.pt-1 Please enter the details of your request. A member of our support staff will respond as soon as possible.
+                    h6.heading-lv6.pb-2.pt-4
+                        |Bittrex Account Email
+                        sup *
+                    input.form-control(type="email")
+                    small.form-text.text-muted.pt-1 Please provide your Bittrex account email address.
+                    h6.heading-lv6.pb-2.pt-4.mt-2 
+                        |Reason for Disable / Deactivate
+                        sup *
+                    select.custom-select#selectReasonDisable.mb-4
+                        option(selected) Choose...
+                        option(value="1") Accidentally Disabled/Deactivated
+                        option(value="2") Suspicious Activity
+                        option(value="3") Unknown reason
+                    h6.heading-lv6.pb-2.pt-4.mt-2 Attachment
+                    input.form-control.mb-2#requestAttachment(type="file" multiple="true")
+                    button.btn.btn-primary.mt-4.mb-4(type="submit") Submit

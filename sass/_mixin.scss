@@ -45,22 +45,22 @@ $breakpoints-max: (
          -o-transform: translateX($x);
             transform: translateX($x);
 }
-@mixin d-flex(){
-  display: -webkit-box !important;
-  display: -moz-box !important;
-  display: -ms-flexbox !important;  
-  display: -ms-flexbox !important;
-  display: flex !important;
-}
-@mixin justify-content($align: flex-start) {
-  -ms-flex-pack: $align !important;
-  -webkit-box-pack: $align !important;
-  -moz-box-pack: $align !important;
-  -webkit-justify-content: $align !important;
-  justify-content: $align !important;
-}
+// @mixin d-flex(){
+//   display: -webkit-box !important;
+//   display: -moz-box !important;
+//   display: -ms-flexbox !important;  
+//   display: -ms-flexbox !important;
+//   display: flex !important;
+// }
+// @mixin justify-content($align: flex-start) {
+//   -ms-flex-pack: $align !important;
+//   -webkit-box-pack: $align !important;
+//   -moz-box-pack: $align !important;
+//   -webkit-justify-content: $align !important;
+//   justify-content: $align !important;
+// }
 
-@mixin flex-wrap($wrap){
-  -webkit-flex-wrap: $wrap !important; 
-  flex-wrap: $wrap !important;
-}
+// @mixin flex-wrap($wrap){
+//   -webkit-flex-wrap: $wrap !important; 
+//   flex-wrap: $wrap !important;
+// }

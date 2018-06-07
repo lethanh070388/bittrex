@@ -1,0 +1,269 @@
+extends layout.pug  
+
+block content
+    .wrapper-market
+        #carouselMarket.carousel.slide(data-ride="carousel")
+            .carousel-inner
+                .carousel-item.active
+                    .container-fluid.bg-secondary.py-2.text-white
+                        .row.market
+                            .col-sm-4.d-flex.justify-content-center.align-items-center
+                                h3.market_title Bitcoin (BTC)
+                            .col-sm-4.d-flex.justify-content-center.align-items-center.flex-column
+                                .market_price
+                                    span.market_name Last Price
+                                    span.market_value 0.00002420 BTC
+                                .market_volume
+                                    span.market_name 24hr Volume
+                                    span.market_value 45.51 BTC
+                            .col-sm-4.d-flex.justify-content-center.align-items-center.market_icon
+                                img(src="../assets/btc.png", alt="bc-icon")
+                .carousel-item
+                    .container-fluid.bg-secondary.py-2.text-white
+                        .row.market
+                            .col-sm-4.d-flex.justify-content-center.align-items-center
+                                h3.market_title.small-heading eBoots (USDT)
+                            .col-sm-4.d-flex.justify-content-center.align-items-center.flex-column
+                                .market_price
+                                    span.market_name Last Price
+                                    span.market_value 0.00002420 BTC
+                                .market_volume
+                                    span.market_name 24hr Volume
+                                    span.market_value 45.51 BTC
+                            .col-sm-4.d-flex.justify-content-center.align-items-center.market_icon
+                                img(src="../assets/btc.png", alt="bc-icon")
+        
+        .container-fluid.bg-market.bg-shadow.hidden-xs.hidden-sm
+            .container
+                .row
+                    .col-sm-3
+                        .row
+                            .col-5.market_detail_icon.d-flex.justify-content-center.align-items-center.px-2
+                                img(src="../assets/other_coin.png", alt="")
+                            .col-7.market_detail_price.d-flex.flex-column.justify-content-end.text-right.px-2
+                                span.market_detail_label.market-font-black Top Volume
+                                span.market_detail_name.market-font-black Tether(USDT)
+                                span.market_detail_price_value.market-font-white 217189.45USD
+                                span.market_detail_change.up
+                                    |15.6
+                                    img(src="../assets/arrow-up.svg", alt="")
+                    .col-sm-3.border-left.border-market
+                        .row
+                            .col-5.market_detail_icon.d-flex.justify-content-center.align-items-center.px-2
+                                img(src="../assets/btc.png", alt="")
+                            .col-7.market_detail_price.d-flex.flex-column.justify-content-end.text-right.px-2
+                                span.market_detail_label.market-font-black Top Volume
+                                span.market_detail_name.market-font-black Tether(USDT)
+                                span.market_detail_price_value.market-font-white 217189.45USD
+                                span.market_detail_change.up
+                                    |15.6
+                                    img(src="../assets/arrow-up.svg", alt="")
+                    .col-sm-3.border-left.border-market
+                        .row
+                            .col-5.market_detail_icon.d-flex.justify-content-center.align-items-center.px-2
+                                img(src="../assets/other_coin.png", alt="")
+                            .col-7.market_detail_price.d-flex.flex-column.justify-content-end.text-right.px-2
+                                span.market_detail_label.market-font-black Top Volume
+                                span.market_detail_name.market-font-black Tether(USDT)
+                                span.market_detail_price_value.market-font-white 217189.45USD
+                                span.market_detail_change.up
+                                    |15.6
+                                    img(src="../assets/arrow-up.svg", alt="")
+                    .col-sm-3.border-left.border-market
+                        .row
+                            .col-5.market_detail_icon.d-flex.justify-content-center.align-items-center.px-2
+                                img(src="../assets/btc.png", alt="")
+                            .col-7.market_detail_price.d-flex.flex-column.justify-content-end.text-right.px-2
+                                span.market_detail_label.market-font-black Top Volume
+                                span.market_detail_name.market-font-black Tether(USDT)
+                                span.market_detail_price_value.market-font-white 217189.45USD
+                                span.market_detail_change.up
+                                    |15.6
+                                    img(src="../assets/arrow-up.svg", alt="")
+        //- TABLES MARKET
+        //- USD MARKET
+        .container-fluid.bg-market
+            .container.py-4
+                .row
+                    .col-md-8.col-sm-6
+                        h4.market_title.market-font-black USD Markets
+                            .market_title_info 
+                                span Total Volume = $479236.200
+                    .col-md-4.col-sm-6
+                        input.form-control.ml-auto.market_find(type="search" placeholder="Find..." aria-label="Search")
+                .row
+                    .col
+                        table.market_table
+                            thead
+                                tr.market-font-black
+                                    th.market_table_heading Market
+                                    th.market_table_heading.hidden-xs Currency
+                                    th.market_table_heading Volume
+                                    th.market_table_heading % Change
+                                    th.market_table_heading Last Price
+                                    th.market_table_heading.hidden-xs 24hr High
+                                    th.market_table_heading.hidden-xs 24hr Low
+                                    th.market_table_heading.hidden-xs.hidden-sm % Spread
+                                    th.market_table_heading.hidden-xs.hidden-sm Added
+                            tbody
+                            -for(var i=1; i<=5; i++){
+                                tr
+                                    td.market_table_value 
+                                        a(href="#") USD-BTC
+                                    td.market_table_value.hidden-xs Bitcoin
+                                    td.market_table_value 262046.75
+                                    td.market_table_value 
+                                        span.market_table_value_change.up
+                                        |0.1 
+                                        img(src="../assets/arrow-up.svg", alt="")
+                                    td.market_table_value 7575.000000
+                                    td.market_table_value.hidden-xs 7575.000000
+                                    td.market_table_value.hidden-xs 7575.000000
+                                    td.market_table_value.hidden-xs.hidden-sm 7575.000000
+                                    td.market_table_value.hidden-xs.hidden-sm 5/31/2018    
+                            -}
+                .row
+                    .col.pt-4
+                        nav.ml-auto(aria-label="Pagination")
+                            ul.pagination.mb-0.justify-content-end
+                                li.page-item
+                                    a.page-link(href="#" aria-label="Previous") First
+                                li.page-item
+                                    a.page-link(href="#" aria-label="Previous") Prev
+                                -for(var i=1; i<=5; i++){
+                                    if i==1
+                                        li.page-item
+                                            a.page-link.current(href="#")= i
+                                    else
+                                        li.page-item
+                                            a.page-link(href="#")= i
+                                -}
+                                li.page-item
+                                    a.page-link(href="#" aria-label="Next") Next     
+                                li.page-item
+                                    a.page-link(href="#" aria-label="Previous") Last 
+        //- BITCOIN MARKET
+        .container-fluid.bg-market
+            .container.py-4
+                .row
+                    .col-md-8.col-sm-6
+                        h4.market_title.market-font-black Bitcoin markets
+                            .market_title_info 
+                                span Total Volume = 7291.396 
+                                span 1 BTC = $7,737.8640
+                    .col-md-4.col-sm-6
+                        input.form-control.ml-auto.market_find(type="search" placeholder="Find..." aria-label="Search")
+                .row
+                    .col
+                        table.market_table
+                            thead
+                                tr.market-font-black
+                                    th.market_table_heading Market
+                                    th.market_table_heading.hidden-xs Currency
+                                    th.market_table_heading Volume
+                                    th.market_table_heading % Change
+                                    th.market_table_heading Last Price
+                                    th.market_table_heading.hidden-xs 24hr High
+                                    th.market_table_heading.hidden-xs 24hr Low
+                                    th.market_table_heading.hidden-xs.hidden-sm % Spread
+                                    th.market_table_heading.hidden-xs.hidden-sm Added
+                            tbody
+                            -for(var i=1; i<=15; i++){
+                                tr
+                                    td.market_table_value
+                                        a(href="#") BTC
+                                    td.market_table_value.hidden-xs Bitcoin
+                                    td.market_table_value 262046.75
+                                    td.market_table_value 
+                                        span.market_table_value_change.up
+                                        |0.1 
+                                        img(src="../assets/arrow-up.svg", alt="")
+                                    td.market_table_value 7575.000000
+                                    td.market_table_value.hidden-xs 7575.000000
+                                    td.market_table_value.hidden-xs 7575.000000
+                                    td.market_table_value.hidden-xs.hidden-sm 7575.000000
+                                    td.market_table_value.hidden-xs.hidden-sm 5/31/2018    
+                            -}
+                .row
+                    .col.pt-4
+                        nav.ml-auto(aria-label="Pagination")
+                            ul.pagination.mb-0.justify-content-end
+                                li.page-item
+                                    a.page-link(href="#" aria-label="Previous") First
+                                li.page-item
+                                    a.page-link(href="#" aria-label="Previous") Prev
+                                -for(var i=1; i<=3; i++){
+                                    if i==1
+                                        li.page-item
+                                            a.page-link.current(href="#")= i
+                                    else
+                                        li.page-item
+                                            a.page-link(href="#")= i
+                                -}
+                                li.page-item
+                                    a.page-link(href="#" aria-label="Next") Next     
+                                li.page-item
+                                    a.page-link(href="#" aria-label="Previous") Last                             
+        //- ETHEREUM MARKET
+        .container-fluid.bg-market
+            .container.py-4
+                .row
+                    .col-md-8.col-sm-6
+                        h4.market_title.market-font-black Ethereum markets
+                            .market_title_info 
+                                span Total Volume = 8364.396
+                    .col-md-4.col-sm-6
+                        input.form-control.ml-auto.market_find(type="search" placeholder="Find..." aria-label="Search")
+                .row
+                    .col
+                        table.market_table
+                            thead
+                                tr.market-font-black
+                                    th.market_table_heading Market
+                                    th.market_table_heading.hidden-xs Currency
+                                    th.market_table_heading Volume
+                                    th.market_table_heading % Change
+                                    th.market_table_heading Last Price
+                                    th.market_table_heading.hidden-xs 24hr High
+                                    th.market_table_heading.hidden-xs 24hr Low
+                                    th.market_table_heading.hidden-xs.hidden-sm % Spread
+                                    th.market_table_heading.hidden-xs.hidden-sm Added
+                            tbody
+                            -for(var i=1; i<=15; i++){
+                                tr
+                                    td.market_table_value 
+                                        a(href="#") ETH
+                                    td.market_table_value.hidden-xs Bitcoin
+                                    td.market_table_value 262046.75
+                                    td.market_table_value 
+                                        span.market_table_value_change.up
+                                        |-0.1 
+                                        img(src="../assets/arrow-down.svg", alt="")
+                                    td.market_table_value 7575.000000
+                                    td.market_table_value.hidden-xs 7575.000000
+                                    td.market_table_value.hidden-xs 7575.000000
+                                    td.market_table_value.hidden-xs.hidden-sm 7575.000000
+                                    td.market_table_value.hidden-xs.hidden-sm 5/31/2018    
+                            -}
+                .row
+                    .col.pt-4
+                        nav.ml-auto(aria-label="Pagination")
+                            ul.pagination.mb-0.justify-content-end
+                                li.page-item
+                                    a.page-link(href="#" aria-label="Previous") First
+                                li.page-item
+                                    a.page-link(href="#" aria-label="Previous") Prev
+                                -for(var i=1; i<=7; i++){
+                                    if i==1
+                                        li.page-item
+                                            a.page-link.current(href="#")= i
+                                    else
+                                        li.page-item
+                                            a.page-link(href="#")= i
+                                -}
+                                li.page-item
+                                    a.page-link(href="#" aria-label="Next") Next     
+                                li.page-item
+                                    a.page-link(href="#" aria-label="Previous") Last
+
+            

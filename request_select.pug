@@ -1,0 +1,14 @@
+extends layout_support.pug  
+
+block content
+    .container.mt-nav.flex-full-height
+        .row.mt-4.d-flex.justify-content-center
+            .col-md-8.py-4
+                h1.heading-lv1 Submit a request
+                h6.heading-lv6.pb-2 Please choose your issue below
+                select.custom-select#selectListRequest
+                    option(selected) Choose...
+                    option(value="1") Account disable
+                    option(value="2") Email issues
+                    option(value="3") Reserved Coins
+                    option(value="4") Help with Others

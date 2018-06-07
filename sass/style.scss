@@ -4,51 +4,47 @@
 @import 'ultilities';
 
 // LAYOUT
-.d-flex{
-    @include d-flex();
+html, body{
+    height: 100%;
 }
-.row{
-    @include d-flex();
-    @include flex-wrap(wrap);
+.wrapper{
+    height: 100%;
 }
-.justify-content-center{
-    @include justify-content(center);
-}
-// @include minq(large){
-//     .col-lg-6 {
-//         -ms-flex: 0 0 50%;
-//         -webkit-flex: 0 0 50%;        
-//         flex: 0 0 50%;
-//         max-width: 50%;
-//     }
-// }
-// .container:after,
-// .container:before,
-// .row:after,
-// .row:before{
-//     content: normal;
-//     display: none;
-// }
-// [class^='col']{
-//     -ms-flex: 1 0 auto;
-//     -webkit-flex: 1 0 auto;        
-//     flex: 1 0 auto;
-// }
 // END LAYOUT
 
 // THEME SECTION
 $themes:(
   light: (
-    $cl-light-primary,
-    $cl-light-secondary,
-    $cl-light-third,
-    $cl-light-font
+    $light-primary,
+    $light-secondary,
+    $light-third,
+    $light-font-white,
+    $light-font-black,
+    $light-grey,
+    $light-footer,
+    $light-market,
+    $light-market-border,
+    $light-market-font-black,
+    $light-market-font-white,
+    $light-button-hover,
+    $light-market-info-footer,
+    $light-market-info-footer-color
   ),
   dark: (
-    $cl-dark-primary,
-    $cl-dark-secondary,
-    $cl-dark-third,
-    $cl-dark-font
+    $dark-primary,
+    $dark-secondary,
+    $dark-third,
+    $dark-font-white,
+    $dark-font-black,
+    $dark-grey,
+    $dark-footer,
+    $dark-market,
+    $dark-market-border,
+    $dark-market-font-black,
+    $dark-market-font-white,
+    $dark-button-hover,
+    $dark-market-info-footer,
+    $dark-market-info-footer-color
   )
 );
 @mixin theme($name,$color){
@@ -65,6 +61,18 @@ $themes:(
                     }
                 }
             }
+            .btn-outline-primary{
+                border: 2px solid nth($color,2) !important;
+                color: nth($color,2) !important;
+                text-transform: uppercase;
+                font-weight: $font-medium;
+                background-color: transparent;
+                &:hover{
+                    background-color: transparent;
+                    border-color: nth($color,12) !important;
+                    color: nth($color,12) !important;
+                }
+            }
         }
         // BACKGROUND
         .bg-primary{
@@ -73,6 +81,28 @@ $themes:(
         .bg-secondary{
             background-color: nth($color,2) !important;
         }
+        .market-info-footer {
+            background-color: nth($color,13) !important;
+            a{
+                color: nth($color,14) !important;
+            }
+        }
+        // END BACKGROUND
+        
+        // BUTTONS
+        .btn-primary{
+            border: 2px solid nth($color,2) !important;
+            background-color: nth($color,2) !important;
+            text-transform: uppercase;
+            font-weight: $font-medium;
+            min-width: 120px;
+            text-align: center;
+            &:hover{
+                border: 2px solid nth($color,1) !important;
+                background-color: nth($color,1) !important;
+            }
+        }
+        // END BUTTONS
         // BANNER
         .banner{
             background-color: nth($color,3);
@@ -83,6 +113,127 @@ $themes:(
                 }
             }
         }
+        //END BANNER
+
+        // SECURITY SECTION
+        .security-section {
+            color: nth($color,5);
+            .trade_aside{
+                &_header {
+                    color: nth($color,5);
+                }
+            }
+        }
+        //END SECURITY SECTION
+
+        // SUPPORT SECTION
+        .support-section {
+            color: nth($color,6);
+            color: nth($color,5);
+            .trade_aside{
+                &_header{
+                    color: nth($color,5);
+                }
+            }
+        }
+        // END SUPPORT SECTION
+        //SECTION REGISTER
+        .register-section {
+            background-color: nth($color,2);
+            color: nth($color,4);
+            .form-register {
+                .register-btn {
+                    background-color: nth($color,5);
+                    color: nth($color,4);
+                }
+            }
+            a{
+                border-bottom: 1px solid nth($color,4);
+                color: nth($color,4);
+            }
+        }
+        //END SECTION REGISTER
+
+
+        //FOOTER
+        .footer {
+            background-color: nth($color,7);
+            a{
+                color: #666;
+            }
+        }
+        // END FOOTER
+
+        //MARKET PAGE
+        .bg-market{
+            background-color: nth($color,8);
+        }
+        .bg-shadow{
+            box-shadow: -7px 5px 4px rgba(0, 0, 0, .9), 7px 5px 4px rgba(0, 0, 0, .9) !important;
+            margin-bottom: 1px;
+        }
+        .border-market{
+            border-color: nth($color,9) !important;
+        }
+        .market-font-black{
+            color: rgba(nth($color,11),0.8) !important;
+        }
+        .market-font-white{
+            color: nth($color,11) !important;
+        }
+        //END MARKET PAGE
+
+        // PAGINATION
+        .page-link{
+            background-color: rgba(255,255,255,.1);
+            color: rgba(nth($color,11),0.8);
+            border: 0;
+            &:hover{
+                border-color: nth($color,2);
+                color: nth($color,2);
+                &.current{
+                    color: rgba(nth($color,11),0.8);
+                    border: solid 1px #262c36;
+                }
+            }
+            &.current{
+                background-color: #9caac1;
+                padding: 0.6rem 0.85rem;
+                top: -0.1rem;
+            }
+        }
+        // END PAGINATION
+
+        // SETTING PAGE
+        .setting{
+            background-color: nth($color,8) !important;
+            .heading-lv1,
+            .heading-lv2,
+            .heading-lv4,
+            .heading-lv5,
+            .heading-lv6{
+                color: rgba(nth($color,11),0.8);
+            }
+        }
+        .nav-items{
+            .nav-item{
+                .nav-subitem{
+                    a{
+                        color: nth($color,11);
+                        &:hover{
+                            color: nth($color,2);
+                        }
+                    }
+                }
+            }
+        }
+        // END SETTING PAGE
+
+        // MARKET DETAIL
+        .main-market-detail-container{
+            color: rgba(nth($color,11),0.8);
+        }
+        // END MARKET DETAIL
     }
 
 
@@ -122,11 +273,95 @@ $themes:(
 // END CONTROL THEME
 
 // BASE
+a{
+    &:hover{
+        text-decoration: none;
+    }
+}
+sup{
+    color: red;
+}
+.up{
+    color: #00a45b !important;
+}
+.down{
+    color: #f75535 !important;
+}
 .img-responsive{
     max-width: 100%;
     display: block;
     height: auto;
     margin: 0 auto;
+}
+.layout{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.flex-full-height{
+    flex: 1;
+}
+.footer-bottom{
+    height: 100px;
+}
+.mt-nav{
+    margin-top: 56px;
+}
+.custom-select{
+    height: calc(2.55rem + 2px);
+    padding: .5rem 1.75rem .5rem .75rem;
+    border: 2px solid #ececef;
+    font-size: 16px;
+}
+.form-control {
+    padding: .345rem 1.75rem .345rem .75rem;
+    border: 2px solid #ececef;
+    font-size: 16px;
+}
+// H1
+.heading-lv1{
+    font-size: $font-unit*2.5;
+    font-weight: $font-normal;
+}
+.heading-lv4{
+    font-size: 16px;
+    font-weight: $font-normal;
+}
+.heading-lv5{
+    font-size: $font-base;
+    font-weight: $font-normal;
+}
+.heading-lv6{
+    font-size: $font-base;
+    font-weight: $font-normal;
+}
+small{
+    font-size: $font-base;
+}
+@include minq(medium){
+    .heading-lv1{
+        font-size: $font-unit*3.5;
+    }
+    .heading-lv4{
+        font-size: $font-unit*2;
+    }
+    .heading-lv5{
+        font-size: $font-unit*1.75;
+    }
+    .heading-lv6{
+        font-size: $font-unit*1.5;
+    }
+}
+@include minq(large){
+    .heading-lv1{
+        font-size: $font-unit*3.5;
+    }
+    .heading-lv5{
+        font-size: $font-unit*2;
+    }
+    .heading-lv4{
+        font-size: $font-unit*2.5;
+    }
 }
 // END BASE
 
@@ -214,13 +449,13 @@ $themes:(
 // TRADE SECTION
 .trade_aside{
     &_header{
-        font-size: 42px;
+        font-size: $font-heading;
         font-weight: $font-light;
         line-height: 49px;
         margin: 0;
     }
     &_content{
-        font-size: 15px;
+        font-size: $font-content;
         line-height: 22px;
         text-align: left;
         margin-bottom: 48px;
@@ -236,11 +471,11 @@ $themes:(
             margin-bottom: 40px;
         }
         &_header{
-            font-size: 36px;
+            font-size: $font-heading-mlarge;
             line-height: 42px;
         }
         h3{
-            font-size: 36px;
+            font-size: $font-heading-mlarge;
             line-height: 42px;
         }
     }
@@ -279,12 +514,10 @@ $themes:(
     text-align: center;
     padding-top: 100px;
     padding-bottom: 100px;
-    color: #003662;
     .trade_aside{
         &_header {
             margin-top: 48px;
             margin-bottom: 16px;
-            color: #003662;
         }
     }
 }
@@ -292,14 +525,11 @@ $themes:(
 
 // SUPPORT SECTION
 .support-section {
-    background-color: #f2f3f8;
-    color: #003662;
     text-align: center;
     padding: 100px 0;
     .trade_aside{
         &_header{
             margin-bottom: 16px;
-            color: #003662;
         }
         &_content{
             margin-top: 22px;
@@ -321,10 +551,11 @@ $themes:(
         margin-top: 60px;
         border-bottom: 1px solid rgba(0,54,98,.3);
         max-width: 360px;
+        width: 100%;
         .register-btn {
             margin-top: 40px;
             border: none;
-            font-size: 1.25em;
+            font-size: $font-content;
             font-weight: bold;
             width: 220px;
             height: 44px;
@@ -340,6 +571,9 @@ $themes:(
                 border: none;
                 @include border-radius();
             }
+        }
+        .form-check-label{
+            font-size: 13px;
         }
     }
     .register-footer{
@@ -374,3 +608,574 @@ $themes:(
     }
 }
 // END FOOTER
+
+
+// MARKET PAGE
+.wrapper-market{
+    .container{
+        padding-left: 5px;
+        padding-right: 5px;
+        max-width: 100%;
+    }
+    @include minq(medium){
+        .container{
+            padding-left: 45px;
+            padding-right: 45px;
+        }
+    }
+}
+.carousel{
+    margin-top: 56px;
+    .market{
+        &_title{
+            font-size: $font-market-title;
+            &.small-heading{
+                font-size: $font-market-title-small;
+            }
+        }
+        &_price,
+        &_volume{
+            display: flex;
+            justify-content: space-between;
+            width: 258px;
+        }
+        &_name,
+        &_value{
+            font-size: $font-base*1.25;
+            font-weight: $font-medium;
+        }
+        &_icon img{
+            width: 120px;
+        }
+    }
+}
+.market{
+    &_detail{
+        &_icon img{
+            max-width: 71px;
+            width: 100%;
+        }
+        &_label{
+            font-size: 10px;
+            margin-top: 16px;
+        }
+        &_name{
+            font-size: 20px;
+        }
+        &_price_value{
+            font-size: 20px;
+        }
+        &_change{
+            font-size: $font-base;
+            margin-bottom: 16px;
+        }
+        &_change.up{
+            color: #00a45b !important;
+        }
+        &_change.down{
+            color: #f75535 !important;
+        }
+        &_change img{
+            margin-top: -3px;
+        }
+    }
+    &_title{
+        font-size: $font-market-title-small;
+        text-transform: uppercase;
+        &_info{
+            display: inline;
+            padding-left: 20px;
+            text-transform: capitalize;
+            font-size: $font-unit;
+        }
+    }
+    &_find{
+        max-width: 100%;
+        font-size: $font-base;
+        color: $dark-market;
+        background-color: #9caac1;
+        border: 0;
+        @include border-radius(4px);
+    }
+    @include minq(small){
+        &_find{
+            max-width: 200px;
+        }
+    }
+    &_table{
+        width: 100%;
+        color: white;
+        &_heading, th{
+            border-bottom: 1px solid #515967; //border-bottom like border-left
+            text-transform: uppercase;
+        }
+        &_value, td{
+            border-bottom: 1px solid #262c36;
+            cursor: pointer;
+            a{
+                color: white;
+                &:hover{
+                    text-decoration: underline;
+                    color: #337ab7;
+                }
+            }
+        }
+        tr{
+            background-color: transparent !important;
+            &:hover{
+                background-color: rgba(0,132,212,.08);
+            }
+            th,td{
+                padding-top: 5px;
+                padding-bottom: 5px;
+            }
+            th:nth-child(n+3),
+            td:nth-child(n+3){
+                text-align: right;
+            }
+            &:last-child{
+                td{
+                    border-bottom-color: #515967;
+                }
+            }
+        }
+
+    }
+    .border-left{
+        border: 1px solid transparent;
+    }
+}
+@include maxq(large){
+    .market{
+        &_detail{
+            &_label{
+                margin-top: 10px;
+            }
+            &_name{
+                font-size: 12px;
+            }
+            &_price_value{
+                font-size: 12px;
+            }
+            &_change{
+                font-size: $font-base;
+                margin-bottom: 10px;
+            }
+        }
+    }
+    .market{
+        &_title{
+            &_info{
+                display: block;
+                padding-left: 0;
+                span{
+                    padding-right: 15px;
+                }
+            }
+        }
+    }
+}
+// END MARKET PAGE
+
+// SETTING PAGE
+.main-container{
+    margin-top: 56px;
+    display: flex;
+}
+.nav-setting{
+    width: 268px;
+    border-right: 1px solid #515967;
+}
+.nav-items{
+    .nav-item{
+        list-style-type: none;
+        margin: 0;
+        padding: 12px 0;
+        .nav-subitem{
+            padding-left: 15px;
+            border-bottom: 1px solid #262c36;
+            a{
+                color: #fff;
+                text-transform: capitalize;
+                font-size: 14px;
+                display: block;
+                padding: 12px 0;
+                text-decoration: none;
+            }
+        }
+    }
+}
+.main-content{
+    flex: 1;
+    overflow-y: auto;
+}
+.border-bottom{
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #515967 !important;
+}
+.table-activity{
+    border: 0 !important;
+    th{
+        color: rgba(255, 255, 255, 0.8);
+        border-top: 0;
+        padding: 0.75rem 0;
+        border-bottom: 1px solid #515967 !important;
+    }
+    td{
+        border-bottom: 1px solid #262c36 !important;
+        padding: 0.5rem 0;
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 12px;
+    }
+    .row-info{
+        td{
+            font-size: 10px;
+        }
+    }
+    .hidden-row{
+        display: none;
+    }
+}
+.dropdown-menu{
+    right: 0;
+    left: auto;
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    .dropdown-item{
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 14px;
+        padding: .5rem 2rem;
+        &:hover{
+            color: rgba(255, 255, 255, 0.8);
+            background-color: transparent;
+        }
+    }
+}
+@include minq(large){
+    .dropdown-toggle::after{
+        display: none;
+    }
+    .dropdown-menu,
+    .dropdown-menu.show{
+        display: none;
+    }
+}
+// END SETTING PAGE
+
+//MARKET DETAIL
+.clearfix{
+    &:after{
+        content: '';
+        display: block;
+        clear: both;
+    }
+}
+.main-market-detail-container{
+    margin-top: 56px;
+    &:after{
+        content: '';
+        display: block;
+        clear: both;
+    }
+    h1{
+        font-size: 24px;
+    }
+    .main_nav{
+        width: 200px;
+        float: left;
+        background-color: #1c222d;
+        height: calc(100vh - 56px);
+        z-index: 250;
+        &_menu{
+            padding: 16px 12px;
+            &_title{
+                .toggle_icon_navbar{
+                    position: absolute;
+                    right: 0;
+                    top: 2px;
+                    width: 25px;
+                    height: 25px;
+                    line-height: 25px;
+                    border-radius: 3px;
+                    text-align: center;
+                    background-color: #9ba8c0;
+                    cursor: pointer;
+                    &:hover{
+                        background-color: #7d899d;
+                    }
+                    i{
+                        color: #40454d;
+                    }
+                }
+            }
+            &_dropdown{
+                margin-top: 1rem;
+                .custom-select{
+                    padding-left: 3px;
+                }
+            }
+        }
+    }
+    .datalist{
+        margin-top: 1em;
+        height: calc(100vh - 182px);
+        overflow: auto;
+        width: 100%;
+        &_item{
+            list-style-type: none;
+            margin: 10px 0;
+            padding: 0 5px;
+            &_up{
+                &:after{
+                    content: '';
+                    display: block;
+                    clear: both;
+                }
+                .market_currency{
+                    float: left;
+                }
+                .market_change{
+                    float: right;
+                    img{
+                        height: 11px;
+                        width: 10px;
+                        margin-top: -3px;
+                        margin-left: 3px;
+                    }
+                }
+            }
+            &_down{
+                &:after{
+                    content: '';
+                    display: block;
+                    clear: both;
+                }
+                .market_volumn{
+                    float: left;
+                }
+                .market_last{
+                    float: right;
+                }
+            }
+        }
+        .mCSB_inside{
+            &>.mCSB_container {
+                margin-right: 10px;
+            }
+        }
+        .mCSB_scrollTools{
+            width: 2px;
+        }
+    }
+    @include maxq(xlarge){
+        .main_nav{
+            width: 68px;
+            .main_nav_menu{
+                padding: 16px 2px;
+                &_title{
+                    h1{
+                        display: none;
+                    }
+                    .toggle_icon_navbar{
+                        top: 0;
+                        width: 100%;
+                        height: 25px;
+                        .fa-angle-left{
+                            &:before {
+                                content: '\f105';
+                            }
+                        }
+                    }
+                }
+                &_dropdown{
+                    margin-top: 2.5rem;
+                }
+            }
+            .datalist{
+                &_item{
+                    &_down{
+                        display: none;
+                    }
+                }
+            }
+        }
+        
+    }
+    .hidden{
+        width: 68px;
+        .main_nav_menu{
+            padding: 16px 2px;
+            &_title{
+                h1{
+                    display: none;
+                }
+                .toggle_icon_navbar{
+                    top: 0;
+                    width: 100%;
+                    height: 25px;
+                    .fa-angle-left{
+                        &:before {
+                            content: '\f105';
+                        }
+                    }
+                }
+            }
+            &_dropdown{
+                margin-top: 2.5rem;
+            }
+        }
+        .datalist{
+            &_item{
+                &_down{
+                    display: none;
+                }
+            }
+        }
+    }
+    .visible{
+        width: 200px;
+        .main_nav_menu{
+            padding: 16px 12px;
+            &_title{
+                h1{
+                    display: block;
+                }
+                .toggle_icon_navbar{
+                    top: 2px;
+                    width: 25px;
+                    height: 25px;
+                    .fa-angle-left{
+                        &:before {
+                            content: '\f104';
+                        }
+                    }
+                }
+            }
+            &_dropdown{
+                margin-top: 1rem;
+            }
+        }
+        .datalist{
+            &_item{
+                &_down{
+                    display: block;
+                }
+            }
+        }
+    }
+    
+
+    // MAIN CONTENT MARKKET DETAIL
+    .main_content{
+        height: calc(100vh - 56px);
+        -webkit-overflow-scrolling: touch !important;
+        background-color: #303643;
+    }
+}
+
+
+//DATATABLE CUSTOM
+.dataTables_wrapper{
+    .dataTables_paginate{
+        .paginate_button{
+            padding: 0;
+            background-color: rgba(255,255,255,.1);
+            color: rgba(255,255,255,0.8);
+            font-size: 13px;
+            border: solid 1px #262c36;
+        }
+    } 
+}
+table.dataTable.no-footer{
+    border-bottom: 0;
+}
+.page-item{
+    &.disabled{
+        .page-link{
+            color: rgba(255,255,255,0.8);
+            background-color: rgba(255,255,255,.1);
+            border-color: #262c36;
+        }
+    }
+    &.active{
+        .page-link{
+            color: #2b3441;
+            background-color: #9caac1;
+            border-color: #9caac1;
+        }
+    }
+    .page-link{
+        @include border-radius(4px);
+        padding: .5rem .75rem;
+    }
+}
+.market{
+    &_table_detail{
+        width: 100%;
+        color: white;
+        font-size: 13px;
+        th{
+            border-bottom: 1px solid #515967; //border-bottom like border-left
+            text-transform: uppercase;
+            color: #9caac1;
+            padding: 5px !important;
+        }
+        td{
+            border-bottom: 1px solid #262c36;
+            cursor: pointer;
+            padding: 5px !important;
+            a{
+                color: white;
+                &:hover{
+                    text-decoration: underline;
+                    color: #337ab7;
+                }
+            }
+        }
+        tr{
+            background-color: transparent !important;
+            &:hover{
+                background-color: rgba(0,132,212,.08);
+            }
+            th,td{
+                padding-top: 5px;
+                padding-bottom: 5px;
+            }
+        }
+
+    }
+}
+.trade{
+    &_content{
+        max-width: 224px;
+        font-size: 13px;
+        margin: 0 auto;
+        .btn{
+            background-color: rgba(255,255,255,.1);
+            @include border-radius(4px);
+            max-width: 200px;
+            display: block;
+            padding: .75rem 0;
+            font-size: 15px;
+            margin: 6px auto;
+            color: rgba(255,255,255,.8);
+            &:hover{
+                background-color: #009af8;
+                color: #2b3441;
+            }
+        }
+    }
+}
+.chart_area{
+    height: 650px;
+    background-color: rgba(255,255,255,.1);
+}
+.market_info_header{
+    height: 60px;
+    padding: 12px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #262c36;
+}

@@ -1,0 +1,42 @@
+doctype html
+html
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible" content="ie=edge")
+        title Bittrex
+        link(rel="stylesheet" href="../css/fontawesome-all.min.css")
+        link(rel="stylesheet" href="../css/bootstrap.css")
+        link(rel="stylesheet" href="../css/style.css")
+    body
+        .controls
+            button.btn-theme(data-theme="light") Light
+            button.btn-theme(data-theme="dark") Dark
+        .wrapper.dark
+            .layout
+                //- navigation bar
+                nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.scrolling-navbar.fixed-top
+                    a.navbar-brand(href="./index.html")
+                        img.logo-icon(src="../assets/logo.svg") 
+                        span.logo-word BITTREX
+                    button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation")
+                        span.navbar-toggler-icon
+                    .collapse.navbar-collapse#navbarSupportedContent
+                        form.form-inline.ml-auto
+                            button#btnSubmitReq.btn.btn-outline-primary.disabled(type="submit") Submit a request
+                            button.btn.btn-outline-primary.ml-3 Sign in
+                //- end navigation bar
+                block content
+                .container-fluid.footer-bottom.bg-dark
+                    .container.h-100
+                        .row.text-white.h-100.d-flex.align-items-center
+                            .col-6 ©Bittrex Support
+                            .col-6.text-right 
+                                i.fab.fa-twitter.pr-4
+                                i.fab.fa-facebook-square
+                                
+        script(src="../js/jquery.js")
+        script(src="../js/popper.js")
+        script(src="../js/bootstrap.js")
+        script(src="../js/theme.js")
+        script(src="../js/main.js")

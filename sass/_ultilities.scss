@@ -1,26 +1,29 @@
-@import 'mixin';
-
 .visible-sm-block,
-.visible-xs-block{
+.visible-xs-block,
+.visible-md-block{
     display: none !important;
 }
 @include maxq(medium){
     .visible-xs-block{
         display: block !important;
     }
+    .hidden-xs {
+        display: none !important;
+    }
 }
 @media screen and (min-width: 768px) and (max-width: 991px){
     .visible-sm-block{
         display: block !important;
     }
-}
-@media screen and (min-width: 768px) and (max-width: 991px) {
     .hidden-sm {
         display: none !important;
     }
 }
-@media (max-width: 767px){
-    .hidden-xs {
+@media screen and (min-width: 992px) and (max-width: 1199px){
+    .visible-md-block{
+        display: block !important;
+    }
+    .hidden-md {
         display: none !important;
     }
 }

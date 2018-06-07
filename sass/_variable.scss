@@ -1,21 +1,46 @@
 // COLORS
-$cl-dark-primary: #009af8;
-$cl-dark-secondary: #0084d4;
-$cl-dark-third: #0b3e69;
-$cl-dark-font: #ffffff;
-
-$cl-light-primary: #D500F9;
-$cl-light-secondary: #AA00FF;
-$cl-light-third: #6200EA;
-$cl-light-font: #ffffff;
-
-
-
-
-
-
+// DARK
+$dark-primary: #009af8 !default;
+$dark-secondary: #0084d4 !default;
+$dark-third: #0b3e69 !default;
+$dark-font-white: #ffffff !default;
+$dark-font-black: #003662 !default;
+$dark-grey: #f2f3f8 !default;
+$dark-footer: #f3f5f8 !default;
+$dark-market: #2c3441 !default;
+$dark-market-border: #515967 !default;
+$dark-market-font-black: #333 !default;
+$dark-market-font-white: #fff !default;
+$dark-button-hover: #0065a2 !default;
+$dark-market-info-footer: #262c36 !default;
+$dark-market-info-footer-color: #9caac1 !default;
+// LIGHT
+$light-primary: #D500F9 !default;
+$light-secondary: #AA00FF !default;
+$light-third: #6200EA !default;
+$light-font-white: #ffffff !default;
+$light-font-black: #003662 !default;
+$light-grey: #f2f3f8 !default;
+$light-footer: #f3f5f8 !default;
+$light-market: #2c3441 !default;
+$light-market-border: #515967 !default;
+$light-market-font-black: #333 !default;
+$light-market-font-white: #fff !default;
+$light-button-hover: #0065a2 !default;
+$light-market-info-footer: #262c36 !default;
+$light-market-info-footer-color: #9caac1 !default;
 // FONT WEIGHT
 $font-light: 300;
 $font-normal: 400;
 $font-medium: 500;
 $font-bold: 700;
+//FONT SIZE
+$font-base: 14px !default;
+$font-unit: 12px !default;
+//H3
+$font-market-title: $font-base*3.666667;
+$font-market-title-small: $font-base*2;
+$font-heading: $font-unit*3.5;
+$font-heading-mlarge: $font-unit*3;
+//CONTENT P
+$font-content: $font-unit*1.25;

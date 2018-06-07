@@ -1,0 +1,199 @@
+doctype html
+html
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible" content="ie=edge")
+        title Bittrex
+        link(rel="stylesheet" href="../css/fontawesome-all.min.css")
+        link(rel="stylesheet" href="../css/bootstrap.css")
+        link(rel="stylesheet" href="../css/jquery.mCustomScrollbar.min.css")
+        link(rel="stylesheet" href="../css/jquery.dataTables.min.css")
+        link(rel="stylesheet" href="../css/dataTables.bootstrap4.min.css")
+        link(rel="stylesheet" href="../css/style.css")
+    body
+        .controls
+            button.btn-theme(data-theme="light") Light
+            button.btn-theme(data-theme="dark") Dark
+        .wrapper.dark
+            .layout
+                //- navigation bar
+                nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.scrolling-navbar.fixed-top
+                    a.navbar-brand(href="./index.html")
+                        img.logo-icon(src="../assets/logo.svg") 
+                        span.logo-word BITTREX
+                    button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation")
+                        span.navbar-toggler-icon
+                    .collapse.navbar-collapse#navbarSupportedContent
+                        ul.navbar-nav.ml-auto
+                            li.nav-item.active
+                                a.nav-link(href="index.html") Markets
+                                    span.sr-only (current)
+                            li.nav-item
+                                a.nav-link(href="#") Orders
+                            li.nav-item
+                                a.nav-link(href="#") Wallets
+                            li.nav-item.dropdown
+                                a.nav-link.dropdown-toggle#navbarDropdownSetting(href="./view/setting_activity" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Settings
+                            li.nav-item
+                                a.nav-link(href="#") Login
+                //- end navigation bar
+
+                .main-wapper.main-market-detail-container
+                    .main_nav.visible
+                        .main_nav_menu
+                            .main_nav_menu_title.position-relative 
+                                h1.text-uppercase Markets
+                                span.toggle_icon_navbar
+                                    i.fas.fa-angle-left
+                            .main_nav_menu_dropdown
+                                select.custom-select#MarketList
+                                    option(value="1" selected) ETH Markets
+                                    option(value="2") USD Markets
+                                    option(value="3") BTC Markets
+                                    option(value="4") USDT Markets
+                            .datalist.scrollbar_custom.mCustomScrollbar
+                                -for(var i=0; i<30; i++){
+                                    ul.datalist_item
+                                        li.datalist_item_up
+                                            .market_currency ANI
+                                            .market_change 
+                                                span.up -3.1%
+                                                img(src="../assets/arrow-up.svg", alt="")
+                                        li.datalist_item_down
+                                            .market_volumn 9.34
+                                            .market_last 0.074890
+                                -}
+                    .main_content.scrollbar_custom
+                        .container-fluid
+                            .row
+                                .col
+                                    .market_info_header
+                            .row
+                                .col
+                                    .chart_area
+                        .container-fluid
+                            .row
+                                .col
+                                    h1.text-uppercase.mt-4 Other books
+                            .row
+                                .col-lg-5.col-xl-4
+                                    table.dataTablePlugin.market_table_detail.text-right
+                                        thead
+                                            tr
+                                                th Sum
+                                                th Total
+                                                th Size(BTC)
+                                                th Bid(USD)
+                                        tbody
+                                            -for(var i=1; i<20; i++){
+                                                tr
+                                                    td 483.7489
+                                                    td 483.7489
+                                                    td 0.064
+                                                    td.up 7575.30700000
+                                            -}
+                                .col-lg-2.col-xl-4
+                                    .trade.trade-unauthenticated
+                                        .trade_content
+                                            p To begin trading please log in or create an account.
+                                            .text-center
+                                                a.btn(href="#") Create account
+                                            .text-center
+                                                a.btn(href="#") Login                                    
+                                .col-lg-5.col-xl-4
+                                    table.dataTablePlugin.market_table_detail.text-left
+                                        thead
+                                            tr
+                                                th Ask (USD)
+                                                th Size (USDT)
+                                                th Total
+                                                th Sum
+                                        tbody
+                                            -for(var i=1; i<30; i++){
+                                                tr
+                                                    td.down 1.00300000
+                                                    td 100300.0000
+                                                    td 100000.000	
+                                                    td 100300.0000
+                                            -}
+                        .container-fluid
+                            .row
+                                .col
+                                    h1.text-uppercase.mt-4 Market history
+                            .row
+                                .col
+                                    table.dataTablePlugin.market_table_detail
+                                        thead
+                                            tr
+                                                th.text-left Date
+                                                th.text-left Buy/Sell
+                                                th.text-right Bid/Ask
+                                                th.text-right Total Units (USDT)
+                                                th.text-right Totol Cost (USD)
+                                        tbody
+                                            -for(var i=1; i<20; i++){
+                                                tr
+                                                    td.text-left 23:23:45
+                                                    td.text-left.down SELL
+                                                    td.text-right 1.00100000
+                                                    td.text-right 3035.33000000
+                                                    td.text-right 3038.36533000
+                                            -}
+                        .container-fluid.footer.market-info-footer.mt-4
+                            .container
+                                .row.text-center
+                                    .col-lg-2.col-sm-4 
+                                        a(href="#") About
+                                    .col-lg-2.col-sm-4 
+                                        a(href="#") Website Status
+                                    .col-lg-2.col-sm-4 
+                                        a(href="#") Cookies
+                                    .col-lg-2.col-sm-4 
+                                        a(href="#") Fees
+                                    .col-lg-2.col-sm-4 
+                                        a(href="#") Support
+                                    .col-lg-2.col-sm-4 
+                                        a(href="#") 
+                                            i.fab.fa-facebook-square.pr-1
+                                            |Like Us On Facebook
+                                    .col-lg-2.col-sm-4 
+                                        a(href="#") Privacy
+                                    .col-lg-2.col-sm-4 
+                                        a(href="#") API Documentation
+                                    .col-lg-2.col-sm-4 
+                                        a(href="#") Terms
+                                    .col-lg-2.col-sm-4 
+                                        a(href="#") Contact
+                                    .col-lg-2.col-sm-4 
+                                        a(href="#") &nbsp;
+                                    .col-lg-2.col-sm-4 
+                                        a(href="#") 
+                                            i.fab.fa-twitter.pr-1
+                                            |Follow us on twitter
+                
+                                
+        script(src="../js/jquery.js")
+        script(src="../js/popper.js")
+        script(src="../js/bootstrap.js")
+        script(src="../js/jquery.mCustomScrollbar.concat.min.js")
+        script(src="../js/jquery.dataTables.min.js")
+        script(src="../js/dataTables.bootstrap4.min.js")
+        script(src="../js/theme.js")
+        script(src="../js/main.js")
+        script.
+            (function($){
+                $(window).on("load",function(){
+                    $(".scrollbar_custom").mCustomScrollbar({
+                        autoHideScrollbar:true
+                    });
+                    $('.dataTablePlugin').DataTable({
+                        "lengthChange": false,
+                        "searching": false,
+                        "ordering": false,
+                        "info": false,
+                        "pagingType": "full_numbers"
+                    });
+                });
+            })(jQuery);
+        
