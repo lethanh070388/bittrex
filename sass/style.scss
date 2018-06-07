@@ -193,13 +193,18 @@ $themes:(
                 color: nth($color,2);
                 &.current{
                     color: rgba(nth($color,11),0.8);
-                    border: solid 1px #262c36;
+                    border: 0;
                 }
             }
             &.current{
-                background-color: #9caac1;
+                background-color: #9caac1 !important;
                 padding: 0.6rem 0.85rem;
                 top: -0.1rem;
+            }
+            &.disabled{
+                &:hover{
+                    color: rgba(nth($color,11),0.8);
+                }
             }
         }
         // END PAGINATION
@@ -854,12 +859,14 @@ small{
     }
 }
 @include minq(large){
-    .dropdown-toggle::after{
-        display: none;
-    }
-    .dropdown-menu,
-    .dropdown-menu.show{
-        display: none;
+    .navbar{
+        .dropdown-toggle::after{
+            display: none;
+        }
+        .dropdown-menu,
+        .dropdown-menu.show{
+            display: none;
+        }
     }
 }
 // END SETTING PAGE
@@ -916,11 +923,24 @@ small{
                     padding-left: 3px;
                 }
             }
+            .form-control{
+                background-color: rgba(231,235,241,.9);
+                border: 0;
+            }
+            .dropdown-menu{
+                background-color: rgba(231,235,241,.9);
+                .dropdown-item{
+                    color: #495057;
+                    &:hover{
+                        background-color: rgba(255, 255, 255, 0.8);
+                    }
+                }
+            }
         }
     }
     .datalist{
         margin-top: 1em;
-        height: calc(100vh - 182px);
+        height: calc(100vh - 230px);
         overflow: auto;
         width: 100%;
         &_item{
@@ -992,8 +1012,12 @@ small{
                 &_dropdown{
                     margin-top: 2.5rem;
                 }
+                .input-group{
+                    display: flex;
+                }
             }
             .datalist{
+                height: calc(100vh - 182px);
                 &_item{
                     &_down{
                         display: none;
@@ -1025,8 +1049,12 @@ small{
             &_dropdown{
                 margin-top: 2.5rem;
             }
+            .input-group{
+                display: none;
+            }
         }
         .datalist{
+            height: calc(100vh - 182px);
             &_item{
                 &_down{
                     display: none;
@@ -1056,8 +1084,12 @@ small{
             &_dropdown{
                 margin-top: 1rem;
             }
+            .input-group{
+                display: flex;
+            }
         }
         .datalist{
+            height: calc(100vh - 230px);
             &_item{
                 &_down{
                     display: block;
@@ -1066,7 +1098,11 @@ small{
         }
     }
     
-
+    .mCSB_inside{
+        &>.mCSB_container{
+            margin-right: 0;
+        }
+    }
     // MAIN CONTENT MARKKET DETAIL
     .main_content{
         height: calc(100vh - 56px);
@@ -1085,8 +1121,25 @@ small{
             color: rgba(255,255,255,0.8);
             font-size: 13px;
             border: solid 1px #262c36;
+            &:hover{
+                background-color: rgba(255,255,255,.1);
+                border-color: #0084d4;
+                background: none;
+            }
+            &.active{
+                &:hover{
+                    border-color: #9caac1;
+                }
+            }
         }
-    } 
+    }
+    @include minq(xlarge){
+        .col-sm-12{
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+    
 }
 table.dataTable.no-footer{
     border-bottom: 0;
@@ -1104,11 +1157,19 @@ table.dataTable.no-footer{
             color: #2b3441;
             background-color: #9caac1;
             border-color: #9caac1;
+            &:hover{
+                background-color: #9caac1;
+                border-color: #9caac1;
+            }
         }
     }
     .page-link{
-        @include border-radius(4px);
+        @include border-radius(2px);
         padding: .5rem .75rem;
+        &:hover{
+            background-color: rgba(255,255,255,.1);
+            border-color: #0084d4;
+        }
     }
 }
 .market{
@@ -1173,9 +1234,42 @@ table.dataTable.no-footer{
     background-color: rgba(255,255,255,.1);
 }
 .market_info_header{
-    height: 60px;
-    padding: 12px;
-    display: flex;
-    justify-content: space-between;
+    min-height: 60px;
     background-color: #262c36;
+    &_name{
+        display: flex;
+        padding-top: 7px;
+        padding-bottom: 7px;        
+        .market-logo{
+            width: 45px;
+            height: 45px;
+            margin-right: 5px;
+        }
+    }
+    p{
+        margin-bottom: 0;
+    }
+    .item-group{
+        display: flex;
+    }
+    .item{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-right: 5px;
+    }
+    
+}
+@include maxq(large){
+    .market_info_header{
+        height: auto;
+    }
+}
+@include maxq(medium){
+    .market_info_header{
+        .volume,.high,.low{
+            display: none;
+        }
+    }
 }
