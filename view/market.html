@@ -95,9 +95,10 @@
           <div class="container py-4">
             <div class="row">
               <div class="col-md-8 col-sm-6">
-                <h4 class="market_title market-font-black">USD Markets
-                  <div class="market_title_info"> <span>Total Volume = $479236.200</span></div>
-                </h4>
+                <div class="market_title market-font-black" id="marketUSD"> 
+                  <h4 class="market_title_name">USD Markets</h4>
+                  <div class="market_title_info"> <span id="totalVolumeUSDMarket">Total Volume = $479236.200</span></div>
+                </div>
               </div>
               <div class="col-md-4 col-sm-6">
                 <input class="form-control ml-auto market_find" type="search" placeholder="Find..." aria-label="Search">
@@ -105,7 +106,7 @@
             </div>
             <div class="row">
               <div class="col">
-                <table class="market_table">
+                <table class="market_table dataTablePlugin" id="marketUSD">
                   <thead>
                     <tr class="market-font-black">
                       <th class="market_table_heading">Market</th>
@@ -119,80 +120,64 @@
                       <th class="market_table_heading hidden-xs hidden-sm">Added</th>
                     </tr>
                   </thead>
-                  <tbody></tbody>
-                  <tr>
-                    <td class="market_table_value"> <a href="./market_detail.html">USD-BTC</a></td>
-                    <td class="market_table_value hidden-xs">Bitcoin</td>
-                    <td class="market_table_value">262046.75</td>
-                    <td class="market_table_value"> <span class="market_table_value_change up"></span>0.1 <img src="../assets/arrow-up.svg" alt=""></td>
-                    <td class="market_table_value">7575.000000</td>
-                    <td class="market_table_value hidden-xs">7575.000000</td>
-                    <td class="market_table_value hidden-xs">7575.000000</td>
-                    <td class="market_table_value hidden-xs hidden-sm">7575.000000</td>
-                    <td class="market_table_value hidden-xs hidden-sm">5/31/2018    </td>
-                  </tr>
-                  <tr>
-                    <td class="market_table_value"> <a href="./market_detail.html">USD-BTC</a></td>
-                    <td class="market_table_value hidden-xs">Bitcoin</td>
-                    <td class="market_table_value">262046.75</td>
-                    <td class="market_table_value"> <span class="market_table_value_change up"></span>0.1 <img src="../assets/arrow-up.svg" alt=""></td>
-                    <td class="market_table_value">7575.000000</td>
-                    <td class="market_table_value hidden-xs">7575.000000</td>
-                    <td class="market_table_value hidden-xs">7575.000000</td>
-                    <td class="market_table_value hidden-xs hidden-sm">7575.000000</td>
-                    <td class="market_table_value hidden-xs hidden-sm">5/31/2018    </td>
-                  </tr>
-                  <tr>
-                    <td class="market_table_value"> <a href="./market_detail.html">USD-BTC</a></td>
-                    <td class="market_table_value hidden-xs">Bitcoin</td>
-                    <td class="market_table_value">262046.75</td>
-                    <td class="market_table_value"> <span class="market_table_value_change up"></span>0.1 <img src="../assets/arrow-up.svg" alt=""></td>
-                    <td class="market_table_value">7575.000000</td>
-                    <td class="market_table_value hidden-xs">7575.000000</td>
-                    <td class="market_table_value hidden-xs">7575.000000</td>
-                    <td class="market_table_value hidden-xs hidden-sm">7575.000000</td>
-                    <td class="market_table_value hidden-xs hidden-sm">5/31/2018    </td>
-                  </tr>
-                  <tr>
-                    <td class="market_table_value"> <a href="./market_detail.html">USD-BTC</a></td>
-                    <td class="market_table_value hidden-xs">Bitcoin</td>
-                    <td class="market_table_value">262046.75</td>
-                    <td class="market_table_value"> <span class="market_table_value_change up"></span>0.1 <img src="../assets/arrow-up.svg" alt=""></td>
-                    <td class="market_table_value">7575.000000</td>
-                    <td class="market_table_value hidden-xs">7575.000000</td>
-                    <td class="market_table_value hidden-xs">7575.000000</td>
-                    <td class="market_table_value hidden-xs hidden-sm">7575.000000</td>
-                    <td class="market_table_value hidden-xs hidden-sm">5/31/2018    </td>
-                  </tr>
-                  <tr>
-                    <td class="market_table_value"> <a href="./market_detail.html">USD-BTC</a></td>
-                    <td class="market_table_value hidden-xs">Bitcoin</td>
-                    <td class="market_table_value">262046.75</td>
-                    <td class="market_table_value"> <span class="market_table_value_change up"></span>0.1 <img src="../assets/arrow-up.svg" alt=""></td>
-                    <td class="market_table_value">7575.000000</td>
-                    <td class="market_table_value hidden-xs">7575.000000</td>
-                    <td class="market_table_value hidden-xs">7575.000000</td>
-                    <td class="market_table_value hidden-xs hidden-sm">7575.000000</td>
-                    <td class="market_table_value hidden-xs hidden-sm">5/31/2018    </td>
-                  </tr>
+                  <tbody>
+                    <tr>
+                      <td class="market_table_value"> <a href="./market_detail.html">USD-BTC</a></td>
+                      <td class="market_table_value hidden-xs">Bitcoin</td>
+                      <td class="market_table_value">262046.75</td>
+                      <td class="market_table_value"> <span class="market_table_value_change up"></span>0.1 <img src="../assets/arrow-up.svg" alt=""></td>
+                      <td class="market_table_value">7575.000000</td>
+                      <td class="market_table_value hidden-xs">7575.000000</td>
+                      <td class="market_table_value hidden-xs">7575.000000</td>
+                      <td class="market_table_value hidden-xs hidden-sm">7575.000000</td>
+                      <td class="market_table_value hidden-xs hidden-sm">5/31/2018    </td>
+                    </tr>
+                    <tr>
+                      <td class="market_table_value"> <a href="./market_detail.html">USD-BTC</a></td>
+                      <td class="market_table_value hidden-xs">Bitcoin</td>
+                      <td class="market_table_value">262046.75</td>
+                      <td class="market_table_value"> <span class="market_table_value_change up"></span>0.1 <img src="../assets/arrow-up.svg" alt=""></td>
+                      <td class="market_table_value">7575.000000</td>
+                      <td class="market_table_value hidden-xs">7575.000000</td>
+                      <td class="market_table_value hidden-xs">7575.000000</td>
+                      <td class="market_table_value hidden-xs hidden-sm">7575.000000</td>
+                      <td class="market_table_value hidden-xs hidden-sm">5/31/2018    </td>
+                    </tr>
+                    <tr>
+                      <td class="market_table_value"> <a href="./market_detail.html">USD-BTC</a></td>
+                      <td class="market_table_value hidden-xs">Bitcoin</td>
+                      <td class="market_table_value">262046.75</td>
+                      <td class="market_table_value"> <span class="market_table_value_change up"></span>0.1 <img src="../assets/arrow-up.svg" alt=""></td>
+                      <td class="market_table_value">7575.000000</td>
+                      <td class="market_table_value hidden-xs">7575.000000</td>
+                      <td class="market_table_value hidden-xs">7575.000000</td>
+                      <td class="market_table_value hidden-xs hidden-sm">7575.000000</td>
+                      <td class="market_table_value hidden-xs hidden-sm">5/31/2018    </td>
+                    </tr>
+                    <tr>
+                      <td class="market_table_value"> <a href="./market_detail.html">USD-BTC</a></td>
+                      <td class="market_table_value hidden-xs">Bitcoin</td>
+                      <td class="market_table_value">262046.75</td>
+                      <td class="market_table_value"> <span class="market_table_value_change up"></span>0.1 <img src="../assets/arrow-up.svg" alt=""></td>
+                      <td class="market_table_value">7575.000000</td>
+                      <td class="market_table_value hidden-xs">7575.000000</td>
+                      <td class="market_table_value hidden-xs">7575.000000</td>
+                      <td class="market_table_value hidden-xs hidden-sm">7575.000000</td>
+                      <td class="market_table_value hidden-xs hidden-sm">5/31/2018    </td>
+                    </tr>
+                    <tr>
+                      <td class="market_table_value"> <a href="./market_detail.html">USD-BTC</a></td>
+                      <td class="market_table_value hidden-xs">Bitcoin</td>
+                      <td class="market_table_value">262046.75</td>
+                      <td class="market_table_value"> <span class="market_table_value_change up"></span>0.1 <img src="../assets/arrow-up.svg" alt=""></td>
+                      <td class="market_table_value">7575.000000</td>
+                      <td class="market_table_value hidden-xs">7575.000000</td>
+                      <td class="market_table_value hidden-xs">7575.000000</td>
+                      <td class="market_table_value hidden-xs hidden-sm">7575.000000</td>
+                      <td class="market_table_value hidden-xs hidden-sm">5/31/2018    </td>
+                    </tr>
+                  </tbody>
                 </table>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col pt-4">
-                <nav class="ml-auto" aria-label="Pagination">
-                  <ul class="pagination mb-0 justify-content-end">
-                    <li class="page-item"><a class="page-link" href="#" aria-label="Previous">First</a></li>
-                    <li class="page-item"><a class="page-link" href="#" aria-label="Previous">Prev</a></li>
-                    <li class="page-item"><a class="page-link current" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                    <li class="page-item"><a class="page-link" href="#">4</a></li>
-                    <li class="page-item"><a class="page-link" href="#">5</a></li>
-                    <li class="page-item"><a class="page-link" href="#" aria-label="Next">Next     </a></li>
-                    <li class="page-item"><a class="page-link" href="#" aria-label="Previous">Last </a></li>
-                  </ul>
-                </nav>
               </div>
             </div>
           </div>
@@ -201,9 +186,10 @@
           <div class="container py-4">
             <div class="row">
               <div class="col-md-8 col-sm-6">
-                <h4 class="market_title market-font-black">Bitcoin markets
+                <div class="market_title market-font-black"> 
+                  <h4 class="market_title_name">Bitcoin markets</h4>
                   <div class="market_title_info"> <span>Total Volume = 7291.396 </span><span>1 BTC = $7,737.8640</span></div>
-                </h4>
+                </div>
               </div>
               <div class="col-md-4 col-sm-6">
                 <input class="form-control ml-auto market_find" type="search" placeholder="Find..." aria-label="Search">
@@ -211,7 +197,7 @@
             </div>
             <div class="row">
               <div class="col">
-                <table class="market_table">
+                <table class="market_table dataTablePlugin">
                   <thead>
                     <tr class="market-font-black">
                       <th class="market_table_heading">Market</th>
@@ -225,188 +211,174 @@
                       <th class="market_table_heading hidden-xs hidden-sm">Added</th>
                     </tr>
                   </thead>
-                  <tbody></tbody>
-                  <tr>
-                    <td class="market_table_value"><a href="#">BTC</a></td>
-                    <td class="market_table_value hidden-xs">Bitcoin</td>
-                    <td class="market_table_value">262046.75</td>
-                    <td class="market_table_value"> <span class="market_table_value_change up"></span>0.1 <img src="../assets/arrow-up.svg" alt=""></td>
-                    <td class="market_table_value">7575.000000</td>
-                    <td class="market_table_value hidden-xs">7575.000000</td>
-                    <td class="market_table_value hidden-xs">7575.000000</td>
-                    <td class="market_table_value hidden-xs hidden-sm">7575.000000</td>
-                    <td class="market_table_value hidden-xs hidden-sm">5/31/2018    </td>
-                  </tr>
-                  <tr>
-                    <td class="market_table_value"><a href="#">BTC</a></td>
-                    <td class="market_table_value hidden-xs">Bitcoin</td>
-                    <td class="market_table_value">262046.75</td>
-                    <td class="market_table_value"> <span class="market_table_value_change up"></span>0.1 <img src="../assets/arrow-up.svg" alt=""></td>
-                    <td class="market_table_value">7575.000000</td>
-                    <td class="market_table_value hidden-xs">7575.000000</td>
-                    <td class="market_table_value hidden-xs">7575.000000</td>
-                    <td class="market_table_value hidden-xs hidden-sm">7575.000000</td>
-                    <td class="market_table_value hidden-xs hidden-sm">5/31/2018    </td>
-                  </tr>
-                  <tr>
-                    <td class="market_table_value"><a href="#">BTC</a></td>
-                    <td class="market_table_value hidden-xs">Bitcoin</td>
-                    <td class="market_table_value">262046.75</td>
-                    <td class="market_table_value"> <span class="market_table_value_change up"></span>0.1 <img src="../assets/arrow-up.svg" alt=""></td>
-                    <td class="market_table_value">7575.000000</td>
-                    <td class="market_table_value hidden-xs">7575.000000</td>
-                    <td class="market_table_value hidden-xs">7575.000000</td>
-                    <td class="market_table_value hidden-xs hidden-sm">7575.000000</td>
-                    <td class="market_table_value hidden-xs hidden-sm">5/31/2018    </td>
-                  </tr>
-                  <tr>
-                    <td class="market_table_value"><a href="#">BTC</a></td>
-                    <td class="market_table_value hidden-xs">Bitcoin</td>
-                    <td class="market_table_value">262046.75</td>
-                    <td class="market_table_value"> <span class="market_table_value_change up"></span>0.1 <img src="../assets/arrow-up.svg" alt=""></td>
-                    <td class="market_table_value">7575.000000</td>
-                    <td class="market_table_value hidden-xs">7575.000000</td>
-                    <td class="market_table_value hidden-xs">7575.000000</td>
-                    <td class="market_table_value hidden-xs hidden-sm">7575.000000</td>
-                    <td class="market_table_value hidden-xs hidden-sm">5/31/2018    </td>
-                  </tr>
-                  <tr>
-                    <td class="market_table_value"><a href="#">BTC</a></td>
-                    <td class="market_table_value hidden-xs">Bitcoin</td>
-                    <td class="market_table_value">262046.75</td>
-                    <td class="market_table_value"> <span class="market_table_value_change up"></span>0.1 <img src="../assets/arrow-up.svg" alt=""></td>
-                    <td class="market_table_value">7575.000000</td>
-                    <td class="market_table_value hidden-xs">7575.000000</td>
-                    <td class="market_table_value hidden-xs">7575.000000</td>
-                    <td class="market_table_value hidden-xs hidden-sm">7575.000000</td>
-                    <td class="market_table_value hidden-xs hidden-sm">5/31/2018    </td>
-                  </tr>
-                  <tr>
-                    <td class="market_table_value"><a href="#">BTC</a></td>
-                    <td class="market_table_value hidden-xs">Bitcoin</td>
-                    <td class="market_table_value">262046.75</td>
-                    <td class="market_table_value"> <span class="market_table_value_change up"></span>0.1 <img src="../assets/arrow-up.svg" alt=""></td>
-                    <td class="market_table_value">7575.000000</td>
-                    <td class="market_table_value hidden-xs">7575.000000</td>
-                    <td class="market_table_value hidden-xs">7575.000000</td>
-                    <td class="market_table_value hidden-xs hidden-sm">7575.000000</td>
-                    <td class="market_table_value hidden-xs hidden-sm">5/31/2018    </td>
-                  </tr>
-                  <tr>
-                    <td class="market_table_value"><a href="#">BTC</a></td>
-                    <td class="market_table_value hidden-xs">Bitcoin</td>
-                    <td class="market_table_value">262046.75</td>
-                    <td class="market_table_value"> <span class="market_table_value_change up"></span>0.1 <img src="../assets/arrow-up.svg" alt=""></td>
-                    <td class="market_table_value">7575.000000</td>
-                    <td class="market_table_value hidden-xs">7575.000000</td>
-                    <td class="market_table_value hidden-xs">7575.000000</td>
-                    <td class="market_table_value hidden-xs hidden-sm">7575.000000</td>
-                    <td class="market_table_value hidden-xs hidden-sm">5/31/2018    </td>
-                  </tr>
-                  <tr>
-                    <td class="market_table_value"><a href="#">BTC</a></td>
-                    <td class="market_table_value hidden-xs">Bitcoin</td>
-                    <td class="market_table_value">262046.75</td>
-                    <td class="market_table_value"> <span class="market_table_value_change up"></span>0.1 <img src="../assets/arrow-up.svg" alt=""></td>
-                    <td class="market_table_value">7575.000000</td>
-                    <td class="market_table_value hidden-xs">7575.000000</td>
-                    <td class="market_table_value hidden-xs">7575.000000</td>
-                    <td class="market_table_value hidden-xs hidden-sm">7575.000000</td>
-                    <td class="market_table_value hidden-xs hidden-sm">5/31/2018    </td>
-                  </tr>
-                  <tr>
-                    <td class="market_table_value"><a href="#">BTC</a></td>
-                    <td class="market_table_value hidden-xs">Bitcoin</td>
-                    <td class="market_table_value">262046.75</td>
-                    <td class="market_table_value"> <span class="market_table_value_change up"></span>0.1 <img src="../assets/arrow-up.svg" alt=""></td>
-                    <td class="market_table_value">7575.000000</td>
-                    <td class="market_table_value hidden-xs">7575.000000</td>
-                    <td class="market_table_value hidden-xs">7575.000000</td>
-                    <td class="market_table_value hidden-xs hidden-sm">7575.000000</td>
-                    <td class="market_table_value hidden-xs hidden-sm">5/31/2018    </td>
-                  </tr>
-                  <tr>
-                    <td class="market_table_value"><a href="#">BTC</a></td>
-                    <td class="market_table_value hidden-xs">Bitcoin</td>
-                    <td class="market_table_value">262046.75</td>
-                    <td class="market_table_value"> <span class="market_table_value_change up"></span>0.1 <img src="../assets/arrow-up.svg" alt=""></td>
-                    <td class="market_table_value">7575.000000</td>
-                    <td class="market_table_value hidden-xs">7575.000000</td>
-                    <td class="market_table_value hidden-xs">7575.000000</td>
-                    <td class="market_table_value hidden-xs hidden-sm">7575.000000</td>
-                    <td class="market_table_value hidden-xs hidden-sm">5/31/2018    </td>
-                  </tr>
-                  <tr>
-                    <td class="market_table_value"><a href="#">BTC</a></td>
-                    <td class="market_table_value hidden-xs">Bitcoin</td>
-                    <td class="market_table_value">262046.75</td>
-                    <td class="market_table_value"> <span class="market_table_value_change up"></span>0.1 <img src="../assets/arrow-up.svg" alt=""></td>
-                    <td class="market_table_value">7575.000000</td>
-                    <td class="market_table_value hidden-xs">7575.000000</td>
-                    <td class="market_table_value hidden-xs">7575.000000</td>
-                    <td class="market_table_value hidden-xs hidden-sm">7575.000000</td>
-                    <td class="market_table_value hidden-xs hidden-sm">5/31/2018    </td>
-                  </tr>
-                  <tr>
-                    <td class="market_table_value"><a href="#">BTC</a></td>
-                    <td class="market_table_value hidden-xs">Bitcoin</td>
-                    <td class="market_table_value">262046.75</td>
-                    <td class="market_table_value"> <span class="market_table_value_change up"></span>0.1 <img src="../assets/arrow-up.svg" alt=""></td>
-                    <td class="market_table_value">7575.000000</td>
-                    <td class="market_table_value hidden-xs">7575.000000</td>
-                    <td class="market_table_value hidden-xs">7575.000000</td>
-                    <td class="market_table_value hidden-xs hidden-sm">7575.000000</td>
-                    <td class="market_table_value hidden-xs hidden-sm">5/31/2018    </td>
-                  </tr>
-                  <tr>
-                    <td class="market_table_value"><a href="#">BTC</a></td>
-                    <td class="market_table_value hidden-xs">Bitcoin</td>
-                    <td class="market_table_value">262046.75</td>
-                    <td class="market_table_value"> <span class="market_table_value_change up"></span>0.1 <img src="../assets/arrow-up.svg" alt=""></td>
-                    <td class="market_table_value">7575.000000</td>
-                    <td class="market_table_value hidden-xs">7575.000000</td>
-                    <td class="market_table_value hidden-xs">7575.000000</td>
-                    <td class="market_table_value hidden-xs hidden-sm">7575.000000</td>
-                    <td class="market_table_value hidden-xs hidden-sm">5/31/2018    </td>
-                  </tr>
-                  <tr>
-                    <td class="market_table_value"><a href="#">BTC</a></td>
-                    <td class="market_table_value hidden-xs">Bitcoin</td>
-                    <td class="market_table_value">262046.75</td>
-                    <td class="market_table_value"> <span class="market_table_value_change up"></span>0.1 <img src="../assets/arrow-up.svg" alt=""></td>
-                    <td class="market_table_value">7575.000000</td>
-                    <td class="market_table_value hidden-xs">7575.000000</td>
-                    <td class="market_table_value hidden-xs">7575.000000</td>
-                    <td class="market_table_value hidden-xs hidden-sm">7575.000000</td>
-                    <td class="market_table_value hidden-xs hidden-sm">5/31/2018    </td>
-                  </tr>
-                  <tr>
-                    <td class="market_table_value"><a href="#">BTC</a></td>
-                    <td class="market_table_value hidden-xs">Bitcoin</td>
-                    <td class="market_table_value">262046.75</td>
-                    <td class="market_table_value"> <span class="market_table_value_change up"></span>0.1 <img src="../assets/arrow-up.svg" alt=""></td>
-                    <td class="market_table_value">7575.000000</td>
-                    <td class="market_table_value hidden-xs">7575.000000</td>
-                    <td class="market_table_value hidden-xs">7575.000000</td>
-                    <td class="market_table_value hidden-xs hidden-sm">7575.000000</td>
-                    <td class="market_table_value hidden-xs hidden-sm">5/31/2018    </td>
-                  </tr>
+                  <tbody>
+                    <tr>
+                      <td class="market_table_value"><a href="#">BTC</a></td>
+                      <td class="market_table_value hidden-xs">Bitcoin</td>
+                      <td class="market_table_value">262046.75</td>
+                      <td class="market_table_value"> <span class="market_table_value_change up"></span>0.1 <img src="../assets/arrow-up.svg" alt=""></td>
+                      <td class="market_table_value">7575.000000</td>
+                      <td class="market_table_value hidden-xs">7575.000000</td>
+                      <td class="market_table_value hidden-xs">7575.000000</td>
+                      <td class="market_table_value hidden-xs hidden-sm">7575.000000</td>
+                      <td class="market_table_value hidden-xs hidden-sm">5/31/2018    </td>
+                    </tr>
+                    <tr>
+                      <td class="market_table_value"><a href="#">BTC</a></td>
+                      <td class="market_table_value hidden-xs">Bitcoin</td>
+                      <td class="market_table_value">262046.75</td>
+                      <td class="market_table_value"> <span class="market_table_value_change up"></span>0.1 <img src="../assets/arrow-up.svg" alt=""></td>
+                      <td class="market_table_value">7575.000000</td>
+                      <td class="market_table_value hidden-xs">7575.000000</td>
+                      <td class="market_table_value hidden-xs">7575.000000</td>
+                      <td class="market_table_value hidden-xs hidden-sm">7575.000000</td>
+                      <td class="market_table_value hidden-xs hidden-sm">5/31/2018    </td>
+                    </tr>
+                    <tr>
+                      <td class="market_table_value"><a href="#">BTC</a></td>
+                      <td class="market_table_value hidden-xs">Bitcoin</td>
+                      <td class="market_table_value">262046.75</td>
+                      <td class="market_table_value"> <span class="market_table_value_change up"></span>0.1 <img src="../assets/arrow-up.svg" alt=""></td>
+                      <td class="market_table_value">7575.000000</td>
+                      <td class="market_table_value hidden-xs">7575.000000</td>
+                      <td class="market_table_value hidden-xs">7575.000000</td>
+                      <td class="market_table_value hidden-xs hidden-sm">7575.000000</td>
+                      <td class="market_table_value hidden-xs hidden-sm">5/31/2018    </td>
+                    </tr>
+                    <tr>
+                      <td class="market_table_value"><a href="#">BTC</a></td>
+                      <td class="market_table_value hidden-xs">Bitcoin</td>
+                      <td class="market_table_value">262046.75</td>
+                      <td class="market_table_value"> <span class="market_table_value_change up"></span>0.1 <img src="../assets/arrow-up.svg" alt=""></td>
+                      <td class="market_table_value">7575.000000</td>
+                      <td class="market_table_value hidden-xs">7575.000000</td>
+                      <td class="market_table_value hidden-xs">7575.000000</td>
+                      <td class="market_table_value hidden-xs hidden-sm">7575.000000</td>
+                      <td class="market_table_value hidden-xs hidden-sm">5/31/2018    </td>
+                    </tr>
+                    <tr>
+                      <td class="market_table_value"><a href="#">BTC</a></td>
+                      <td class="market_table_value hidden-xs">Bitcoin</td>
+                      <td class="market_table_value">262046.75</td>
+                      <td class="market_table_value"> <span class="market_table_value_change up"></span>0.1 <img src="../assets/arrow-up.svg" alt=""></td>
+                      <td class="market_table_value">7575.000000</td>
+                      <td class="market_table_value hidden-xs">7575.000000</td>
+                      <td class="market_table_value hidden-xs">7575.000000</td>
+                      <td class="market_table_value hidden-xs hidden-sm">7575.000000</td>
+                      <td class="market_table_value hidden-xs hidden-sm">5/31/2018    </td>
+                    </tr>
+                    <tr>
+                      <td class="market_table_value"><a href="#">BTC</a></td>
+                      <td class="market_table_value hidden-xs">Bitcoin</td>
+                      <td class="market_table_value">262046.75</td>
+                      <td class="market_table_value"> <span class="market_table_value_change up"></span>0.1 <img src="../assets/arrow-up.svg" alt=""></td>
+                      <td class="market_table_value">7575.000000</td>
+                      <td class="market_table_value hidden-xs">7575.000000</td>
+                      <td class="market_table_value hidden-xs">7575.000000</td>
+                      <td class="market_table_value hidden-xs hidden-sm">7575.000000</td>
+                      <td class="market_table_value hidden-xs hidden-sm">5/31/2018    </td>
+                    </tr>
+                    <tr>
+                      <td class="market_table_value"><a href="#">BTC</a></td>
+                      <td class="market_table_value hidden-xs">Bitcoin</td>
+                      <td class="market_table_value">262046.75</td>
+                      <td class="market_table_value"> <span class="market_table_value_change up"></span>0.1 <img src="../assets/arrow-up.svg" alt=""></td>
+                      <td class="market_table_value">7575.000000</td>
+                      <td class="market_table_value hidden-xs">7575.000000</td>
+                      <td class="market_table_value hidden-xs">7575.000000</td>
+                      <td class="market_table_value hidden-xs hidden-sm">7575.000000</td>
+                      <td class="market_table_value hidden-xs hidden-sm">5/31/2018    </td>
+                    </tr>
+                    <tr>
+                      <td class="market_table_value"><a href="#">BTC</a></td>
+                      <td class="market_table_value hidden-xs">Bitcoin</td>
+                      <td class="market_table_value">262046.75</td>
+                      <td class="market_table_value"> <span class="market_table_value_change up"></span>0.1 <img src="../assets/arrow-up.svg" alt=""></td>
+                      <td class="market_table_value">7575.000000</td>
+                      <td class="market_table_value hidden-xs">7575.000000</td>
+                      <td class="market_table_value hidden-xs">7575.000000</td>
+                      <td class="market_table_value hidden-xs hidden-sm">7575.000000</td>
+                      <td class="market_table_value hidden-xs hidden-sm">5/31/2018    </td>
+                    </tr>
+                    <tr>
+                      <td class="market_table_value"><a href="#">BTC</a></td>
+                      <td class="market_table_value hidden-xs">Bitcoin</td>
+                      <td class="market_table_value">262046.75</td>
+                      <td class="market_table_value"> <span class="market_table_value_change up"></span>0.1 <img src="../assets/arrow-up.svg" alt=""></td>
+                      <td class="market_table_value">7575.000000</td>
+                      <td class="market_table_value hidden-xs">7575.000000</td>
+                      <td class="market_table_value hidden-xs">7575.000000</td>
+                      <td class="market_table_value hidden-xs hidden-sm">7575.000000</td>
+                      <td class="market_table_value hidden-xs hidden-sm">5/31/2018    </td>
+                    </tr>
+                    <tr>
+                      <td class="market_table_value"><a href="#">BTC</a></td>
+                      <td class="market_table_value hidden-xs">Bitcoin</td>
+                      <td class="market_table_value">262046.75</td>
+                      <td class="market_table_value"> <span class="market_table_value_change up"></span>0.1 <img src="../assets/arrow-up.svg" alt=""></td>
+                      <td class="market_table_value">7575.000000</td>
+                      <td class="market_table_value hidden-xs">7575.000000</td>
+                      <td class="market_table_value hidden-xs">7575.000000</td>
+                      <td class="market_table_value hidden-xs hidden-sm">7575.000000</td>
+                      <td class="market_table_value hidden-xs hidden-sm">5/31/2018    </td>
+                    </tr>
+                    <tr>
+                      <td class="market_table_value"><a href="#">BTC</a></td>
+                      <td class="market_table_value hidden-xs">Bitcoin</td>
+                      <td class="market_table_value">262046.75</td>
+                      <td class="market_table_value"> <span class="market_table_value_change up"></span>0.1 <img src="../assets/arrow-up.svg" alt=""></td>
+                      <td class="market_table_value">7575.000000</td>
+                      <td class="market_table_value hidden-xs">7575.000000</td>
+                      <td class="market_table_value hidden-xs">7575.000000</td>
+                      <td class="market_table_value hidden-xs hidden-sm">7575.000000</td>
+                      <td class="market_table_value hidden-xs hidden-sm">5/31/2018    </td>
+                    </tr>
+                    <tr>
+                      <td class="market_table_value"><a href="#">BTC</a></td>
+                      <td class="market_table_value hidden-xs">Bitcoin</td>
+                      <td class="market_table_value">262046.75</td>
+                      <td class="market_table_value"> <span class="market_table_value_change up"></span>0.1 <img src="../assets/arrow-up.svg" alt=""></td>
+                      <td class="market_table_value">7575.000000</td>
+                      <td class="market_table_value hidden-xs">7575.000000</td>
+                      <td class="market_table_value hidden-xs">7575.000000</td>
+                      <td class="market_table_value hidden-xs hidden-sm">7575.000000</td>
+                      <td class="market_table_value hidden-xs hidden-sm">5/31/2018    </td>
+                    </tr>
+                    <tr>
+                      <td class="market_table_value"><a href="#">BTC</a></td>
+                      <td class="market_table_value hidden-xs">Bitcoin</td>
+                      <td class="market_table_value">262046.75</td>
+                      <td class="market_table_value"> <span class="market_table_value_change up"></span>0.1 <img src="../assets/arrow-up.svg" alt=""></td>
+                      <td class="market_table_value">7575.000000</td>
+                      <td class="market_table_value hidden-xs">7575.000000</td>
+                      <td class="market_table_value hidden-xs">7575.000000</td>
+                      <td class="market_table_value hidden-xs hidden-sm">7575.000000</td>
+                      <td class="market_table_value hidden-xs hidden-sm">5/31/2018    </td>
+                    </tr>
+                    <tr>
+                      <td class="market_table_value"><a href="#">BTC</a></td>
+                      <td class="market_table_value hidden-xs">Bitcoin</td>
+                      <td class="market_table_value">262046.75</td>
+                      <td class="market_table_value"> <span class="market_table_value_change up"></span>0.1 <img src="../assets/arrow-up.svg" alt=""></td>
+                      <td class="market_table_value">7575.000000</td>
+                      <td class="market_table_value hidden-xs">7575.000000</td>
+                      <td class="market_table_value hidden-xs">7575.000000</td>
+                      <td class="market_table_value hidden-xs hidden-sm">7575.000000</td>
+                      <td class="market_table_value hidden-xs hidden-sm">5/31/2018    </td>
+                    </tr>
+                    <tr>
+                      <td class="market_table_value"><a href="#">BTC</a></td>
+                      <td class="market_table_value hidden-xs">Bitcoin</td>
+                      <td class="market_table_value">262046.75</td>
+                      <td class="market_table_value"> <span class="market_table_value_change up"></span>0.1 <img src="../assets/arrow-up.svg" alt=""></td>
+                      <td class="market_table_value">7575.000000</td>
+                      <td class="market_table_value hidden-xs">7575.000000</td>
+                      <td class="market_table_value hidden-xs">7575.000000</td>
+                      <td class="market_table_value hidden-xs hidden-sm">7575.000000</td>
+                      <td class="market_table_value hidden-xs hidden-sm">5/31/2018    </td>
+                    </tr>
+                  </tbody>
                 </table>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col pt-4">
-                <nav class="ml-auto" aria-label="Pagination">
-                  <ul class="pagination mb-0 justify-content-end">
-                    <li class="page-item"><a class="page-link" href="#" aria-label="Previous">First</a></li>
-                    <li class="page-item"><a class="page-link" href="#" aria-label="Previous">Prev</a></li>
-                    <li class="page-item"><a class="page-link current" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                    <li class="page-item"><a class="page-link" href="#" aria-label="Next">Next     </a></li>
-                    <li class="page-item"><a class="page-link" href="#" aria-label="Previous">Last                             </a></li>
-                  </ul>
-                </nav>
               </div>
             </div>
           </div>
@@ -415,9 +387,10 @@
           <div class="container py-4">
             <div class="row">
               <div class="col-md-8 col-sm-6">
-                <h4 class="market_title market-font-black">Ethereum markets
+                <div class="market_title market-font-black"> 
+                  <h4 class="market_title_name">Ethereum markets</h4>
                   <div class="market_title_info"> <span>Total Volume = 8364.396</span></div>
-                </h4>
+                </div>
               </div>
               <div class="col-md-4 col-sm-6">
                 <input class="form-control ml-auto market_find" type="search" placeholder="Find..." aria-label="Search">
@@ -425,7 +398,7 @@
             </div>
             <div class="row">
               <div class="col">
-                <table class="market_table">
+                <table class="market_table dataTablePlugin">
                   <thead>
                     <tr class="market-font-black">
                       <th class="market_table_heading">Market</th>
@@ -439,192 +412,174 @@
                       <th class="market_table_heading hidden-xs hidden-sm">Added</th>
                     </tr>
                   </thead>
-                  <tbody></tbody>
-                  <tr>
-                    <td class="market_table_value"> <a href="#">ETH</a></td>
-                    <td class="market_table_value hidden-xs">Bitcoin</td>
-                    <td class="market_table_value">262046.75</td>
-                    <td class="market_table_value"> <span class="market_table_value_change up"></span>-0.1 <img src="../assets/arrow-down.svg" alt=""></td>
-                    <td class="market_table_value">7575.000000</td>
-                    <td class="market_table_value hidden-xs">7575.000000</td>
-                    <td class="market_table_value hidden-xs">7575.000000</td>
-                    <td class="market_table_value hidden-xs hidden-sm">7575.000000</td>
-                    <td class="market_table_value hidden-xs hidden-sm">5/31/2018    </td>
-                  </tr>
-                  <tr>
-                    <td class="market_table_value"> <a href="#">ETH</a></td>
-                    <td class="market_table_value hidden-xs">Bitcoin</td>
-                    <td class="market_table_value">262046.75</td>
-                    <td class="market_table_value"> <span class="market_table_value_change up"></span>-0.1 <img src="../assets/arrow-down.svg" alt=""></td>
-                    <td class="market_table_value">7575.000000</td>
-                    <td class="market_table_value hidden-xs">7575.000000</td>
-                    <td class="market_table_value hidden-xs">7575.000000</td>
-                    <td class="market_table_value hidden-xs hidden-sm">7575.000000</td>
-                    <td class="market_table_value hidden-xs hidden-sm">5/31/2018    </td>
-                  </tr>
-                  <tr>
-                    <td class="market_table_value"> <a href="#">ETH</a></td>
-                    <td class="market_table_value hidden-xs">Bitcoin</td>
-                    <td class="market_table_value">262046.75</td>
-                    <td class="market_table_value"> <span class="market_table_value_change up"></span>-0.1 <img src="../assets/arrow-down.svg" alt=""></td>
-                    <td class="market_table_value">7575.000000</td>
-                    <td class="market_table_value hidden-xs">7575.000000</td>
-                    <td class="market_table_value hidden-xs">7575.000000</td>
-                    <td class="market_table_value hidden-xs hidden-sm">7575.000000</td>
-                    <td class="market_table_value hidden-xs hidden-sm">5/31/2018    </td>
-                  </tr>
-                  <tr>
-                    <td class="market_table_value"> <a href="#">ETH</a></td>
-                    <td class="market_table_value hidden-xs">Bitcoin</td>
-                    <td class="market_table_value">262046.75</td>
-                    <td class="market_table_value"> <span class="market_table_value_change up"></span>-0.1 <img src="../assets/arrow-down.svg" alt=""></td>
-                    <td class="market_table_value">7575.000000</td>
-                    <td class="market_table_value hidden-xs">7575.000000</td>
-                    <td class="market_table_value hidden-xs">7575.000000</td>
-                    <td class="market_table_value hidden-xs hidden-sm">7575.000000</td>
-                    <td class="market_table_value hidden-xs hidden-sm">5/31/2018    </td>
-                  </tr>
-                  <tr>
-                    <td class="market_table_value"> <a href="#">ETH</a></td>
-                    <td class="market_table_value hidden-xs">Bitcoin</td>
-                    <td class="market_table_value">262046.75</td>
-                    <td class="market_table_value"> <span class="market_table_value_change up"></span>-0.1 <img src="../assets/arrow-down.svg" alt=""></td>
-                    <td class="market_table_value">7575.000000</td>
-                    <td class="market_table_value hidden-xs">7575.000000</td>
-                    <td class="market_table_value hidden-xs">7575.000000</td>
-                    <td class="market_table_value hidden-xs hidden-sm">7575.000000</td>
-                    <td class="market_table_value hidden-xs hidden-sm">5/31/2018    </td>
-                  </tr>
-                  <tr>
-                    <td class="market_table_value"> <a href="#">ETH</a></td>
-                    <td class="market_table_value hidden-xs">Bitcoin</td>
-                    <td class="market_table_value">262046.75</td>
-                    <td class="market_table_value"> <span class="market_table_value_change up"></span>-0.1 <img src="../assets/arrow-down.svg" alt=""></td>
-                    <td class="market_table_value">7575.000000</td>
-                    <td class="market_table_value hidden-xs">7575.000000</td>
-                    <td class="market_table_value hidden-xs">7575.000000</td>
-                    <td class="market_table_value hidden-xs hidden-sm">7575.000000</td>
-                    <td class="market_table_value hidden-xs hidden-sm">5/31/2018    </td>
-                  </tr>
-                  <tr>
-                    <td class="market_table_value"> <a href="#">ETH</a></td>
-                    <td class="market_table_value hidden-xs">Bitcoin</td>
-                    <td class="market_table_value">262046.75</td>
-                    <td class="market_table_value"> <span class="market_table_value_change up"></span>-0.1 <img src="../assets/arrow-down.svg" alt=""></td>
-                    <td class="market_table_value">7575.000000</td>
-                    <td class="market_table_value hidden-xs">7575.000000</td>
-                    <td class="market_table_value hidden-xs">7575.000000</td>
-                    <td class="market_table_value hidden-xs hidden-sm">7575.000000</td>
-                    <td class="market_table_value hidden-xs hidden-sm">5/31/2018    </td>
-                  </tr>
-                  <tr>
-                    <td class="market_table_value"> <a href="#">ETH</a></td>
-                    <td class="market_table_value hidden-xs">Bitcoin</td>
-                    <td class="market_table_value">262046.75</td>
-                    <td class="market_table_value"> <span class="market_table_value_change up"></span>-0.1 <img src="../assets/arrow-down.svg" alt=""></td>
-                    <td class="market_table_value">7575.000000</td>
-                    <td class="market_table_value hidden-xs">7575.000000</td>
-                    <td class="market_table_value hidden-xs">7575.000000</td>
-                    <td class="market_table_value hidden-xs hidden-sm">7575.000000</td>
-                    <td class="market_table_value hidden-xs hidden-sm">5/31/2018    </td>
-                  </tr>
-                  <tr>
-                    <td class="market_table_value"> <a href="#">ETH</a></td>
-                    <td class="market_table_value hidden-xs">Bitcoin</td>
-                    <td class="market_table_value">262046.75</td>
-                    <td class="market_table_value"> <span class="market_table_value_change up"></span>-0.1 <img src="../assets/arrow-down.svg" alt=""></td>
-                    <td class="market_table_value">7575.000000</td>
-                    <td class="market_table_value hidden-xs">7575.000000</td>
-                    <td class="market_table_value hidden-xs">7575.000000</td>
-                    <td class="market_table_value hidden-xs hidden-sm">7575.000000</td>
-                    <td class="market_table_value hidden-xs hidden-sm">5/31/2018    </td>
-                  </tr>
-                  <tr>
-                    <td class="market_table_value"> <a href="#">ETH</a></td>
-                    <td class="market_table_value hidden-xs">Bitcoin</td>
-                    <td class="market_table_value">262046.75</td>
-                    <td class="market_table_value"> <span class="market_table_value_change up"></span>-0.1 <img src="../assets/arrow-down.svg" alt=""></td>
-                    <td class="market_table_value">7575.000000</td>
-                    <td class="market_table_value hidden-xs">7575.000000</td>
-                    <td class="market_table_value hidden-xs">7575.000000</td>
-                    <td class="market_table_value hidden-xs hidden-sm">7575.000000</td>
-                    <td class="market_table_value hidden-xs hidden-sm">5/31/2018    </td>
-                  </tr>
-                  <tr>
-                    <td class="market_table_value"> <a href="#">ETH</a></td>
-                    <td class="market_table_value hidden-xs">Bitcoin</td>
-                    <td class="market_table_value">262046.75</td>
-                    <td class="market_table_value"> <span class="market_table_value_change up"></span>-0.1 <img src="../assets/arrow-down.svg" alt=""></td>
-                    <td class="market_table_value">7575.000000</td>
-                    <td class="market_table_value hidden-xs">7575.000000</td>
-                    <td class="market_table_value hidden-xs">7575.000000</td>
-                    <td class="market_table_value hidden-xs hidden-sm">7575.000000</td>
-                    <td class="market_table_value hidden-xs hidden-sm">5/31/2018    </td>
-                  </tr>
-                  <tr>
-                    <td class="market_table_value"> <a href="#">ETH</a></td>
-                    <td class="market_table_value hidden-xs">Bitcoin</td>
-                    <td class="market_table_value">262046.75</td>
-                    <td class="market_table_value"> <span class="market_table_value_change up"></span>-0.1 <img src="../assets/arrow-down.svg" alt=""></td>
-                    <td class="market_table_value">7575.000000</td>
-                    <td class="market_table_value hidden-xs">7575.000000</td>
-                    <td class="market_table_value hidden-xs">7575.000000</td>
-                    <td class="market_table_value hidden-xs hidden-sm">7575.000000</td>
-                    <td class="market_table_value hidden-xs hidden-sm">5/31/2018    </td>
-                  </tr>
-                  <tr>
-                    <td class="market_table_value"> <a href="#">ETH</a></td>
-                    <td class="market_table_value hidden-xs">Bitcoin</td>
-                    <td class="market_table_value">262046.75</td>
-                    <td class="market_table_value"> <span class="market_table_value_change up"></span>-0.1 <img src="../assets/arrow-down.svg" alt=""></td>
-                    <td class="market_table_value">7575.000000</td>
-                    <td class="market_table_value hidden-xs">7575.000000</td>
-                    <td class="market_table_value hidden-xs">7575.000000</td>
-                    <td class="market_table_value hidden-xs hidden-sm">7575.000000</td>
-                    <td class="market_table_value hidden-xs hidden-sm">5/31/2018    </td>
-                  </tr>
-                  <tr>
-                    <td class="market_table_value"> <a href="#">ETH</a></td>
-                    <td class="market_table_value hidden-xs">Bitcoin</td>
-                    <td class="market_table_value">262046.75</td>
-                    <td class="market_table_value"> <span class="market_table_value_change up"></span>-0.1 <img src="../assets/arrow-down.svg" alt=""></td>
-                    <td class="market_table_value">7575.000000</td>
-                    <td class="market_table_value hidden-xs">7575.000000</td>
-                    <td class="market_table_value hidden-xs">7575.000000</td>
-                    <td class="market_table_value hidden-xs hidden-sm">7575.000000</td>
-                    <td class="market_table_value hidden-xs hidden-sm">5/31/2018    </td>
-                  </tr>
-                  <tr>
-                    <td class="market_table_value"> <a href="#">ETH</a></td>
-                    <td class="market_table_value hidden-xs">Bitcoin</td>
-                    <td class="market_table_value">262046.75</td>
-                    <td class="market_table_value"> <span class="market_table_value_change up"></span>-0.1 <img src="../assets/arrow-down.svg" alt=""></td>
-                    <td class="market_table_value">7575.000000</td>
-                    <td class="market_table_value hidden-xs">7575.000000</td>
-                    <td class="market_table_value hidden-xs">7575.000000</td>
-                    <td class="market_table_value hidden-xs hidden-sm">7575.000000</td>
-                    <td class="market_table_value hidden-xs hidden-sm">5/31/2018    </td>
-                  </tr>
+                  <tbody>
+                    <tr>
+                      <td class="market_table_value"> <a href="#">ETH</a></td>
+                      <td class="market_table_value hidden-xs">Bitcoin</td>
+                      <td class="market_table_value">262046.75</td>
+                      <td class="market_table_value"> <span class="market_table_value_change up"></span>-0.1 <img src="../assets/arrow-down.svg" alt=""></td>
+                      <td class="market_table_value">7575.000000</td>
+                      <td class="market_table_value hidden-xs">7575.000000</td>
+                      <td class="market_table_value hidden-xs">7575.000000</td>
+                      <td class="market_table_value hidden-xs hidden-sm">7575.000000</td>
+                      <td class="market_table_value hidden-xs hidden-sm">5/31/2018    </td>
+                    </tr>
+                    <tr>
+                      <td class="market_table_value"> <a href="#">ETH</a></td>
+                      <td class="market_table_value hidden-xs">Bitcoin</td>
+                      <td class="market_table_value">262046.75</td>
+                      <td class="market_table_value"> <span class="market_table_value_change up"></span>-0.1 <img src="../assets/arrow-down.svg" alt=""></td>
+                      <td class="market_table_value">7575.000000</td>
+                      <td class="market_table_value hidden-xs">7575.000000</td>
+                      <td class="market_table_value hidden-xs">7575.000000</td>
+                      <td class="market_table_value hidden-xs hidden-sm">7575.000000</td>
+                      <td class="market_table_value hidden-xs hidden-sm">5/31/2018    </td>
+                    </tr>
+                    <tr>
+                      <td class="market_table_value"> <a href="#">ETH</a></td>
+                      <td class="market_table_value hidden-xs">Bitcoin</td>
+                      <td class="market_table_value">262046.75</td>
+                      <td class="market_table_value"> <span class="market_table_value_change up"></span>-0.1 <img src="../assets/arrow-down.svg" alt=""></td>
+                      <td class="market_table_value">7575.000000</td>
+                      <td class="market_table_value hidden-xs">7575.000000</td>
+                      <td class="market_table_value hidden-xs">7575.000000</td>
+                      <td class="market_table_value hidden-xs hidden-sm">7575.000000</td>
+                      <td class="market_table_value hidden-xs hidden-sm">5/31/2018    </td>
+                    </tr>
+                    <tr>
+                      <td class="market_table_value"> <a href="#">ETH</a></td>
+                      <td class="market_table_value hidden-xs">Bitcoin</td>
+                      <td class="market_table_value">262046.75</td>
+                      <td class="market_table_value"> <span class="market_table_value_change up"></span>-0.1 <img src="../assets/arrow-down.svg" alt=""></td>
+                      <td class="market_table_value">7575.000000</td>
+                      <td class="market_table_value hidden-xs">7575.000000</td>
+                      <td class="market_table_value hidden-xs">7575.000000</td>
+                      <td class="market_table_value hidden-xs hidden-sm">7575.000000</td>
+                      <td class="market_table_value hidden-xs hidden-sm">5/31/2018    </td>
+                    </tr>
+                    <tr>
+                      <td class="market_table_value"> <a href="#">ETH</a></td>
+                      <td class="market_table_value hidden-xs">Bitcoin</td>
+                      <td class="market_table_value">262046.75</td>
+                      <td class="market_table_value"> <span class="market_table_value_change up"></span>-0.1 <img src="../assets/arrow-down.svg" alt=""></td>
+                      <td class="market_table_value">7575.000000</td>
+                      <td class="market_table_value hidden-xs">7575.000000</td>
+                      <td class="market_table_value hidden-xs">7575.000000</td>
+                      <td class="market_table_value hidden-xs hidden-sm">7575.000000</td>
+                      <td class="market_table_value hidden-xs hidden-sm">5/31/2018    </td>
+                    </tr>
+                    <tr>
+                      <td class="market_table_value"> <a href="#">ETH</a></td>
+                      <td class="market_table_value hidden-xs">Bitcoin</td>
+                      <td class="market_table_value">262046.75</td>
+                      <td class="market_table_value"> <span class="market_table_value_change up"></span>-0.1 <img src="../assets/arrow-down.svg" alt=""></td>
+                      <td class="market_table_value">7575.000000</td>
+                      <td class="market_table_value hidden-xs">7575.000000</td>
+                      <td class="market_table_value hidden-xs">7575.000000</td>
+                      <td class="market_table_value hidden-xs hidden-sm">7575.000000</td>
+                      <td class="market_table_value hidden-xs hidden-sm">5/31/2018    </td>
+                    </tr>
+                    <tr>
+                      <td class="market_table_value"> <a href="#">ETH</a></td>
+                      <td class="market_table_value hidden-xs">Bitcoin</td>
+                      <td class="market_table_value">262046.75</td>
+                      <td class="market_table_value"> <span class="market_table_value_change up"></span>-0.1 <img src="../assets/arrow-down.svg" alt=""></td>
+                      <td class="market_table_value">7575.000000</td>
+                      <td class="market_table_value hidden-xs">7575.000000</td>
+                      <td class="market_table_value hidden-xs">7575.000000</td>
+                      <td class="market_table_value hidden-xs hidden-sm">7575.000000</td>
+                      <td class="market_table_value hidden-xs hidden-sm">5/31/2018    </td>
+                    </tr>
+                    <tr>
+                      <td class="market_table_value"> <a href="#">ETH</a></td>
+                      <td class="market_table_value hidden-xs">Bitcoin</td>
+                      <td class="market_table_value">262046.75</td>
+                      <td class="market_table_value"> <span class="market_table_value_change up"></span>-0.1 <img src="../assets/arrow-down.svg" alt=""></td>
+                      <td class="market_table_value">7575.000000</td>
+                      <td class="market_table_value hidden-xs">7575.000000</td>
+                      <td class="market_table_value hidden-xs">7575.000000</td>
+                      <td class="market_table_value hidden-xs hidden-sm">7575.000000</td>
+                      <td class="market_table_value hidden-xs hidden-sm">5/31/2018    </td>
+                    </tr>
+                    <tr>
+                      <td class="market_table_value"> <a href="#">ETH</a></td>
+                      <td class="market_table_value hidden-xs">Bitcoin</td>
+                      <td class="market_table_value">262046.75</td>
+                      <td class="market_table_value"> <span class="market_table_value_change up"></span>-0.1 <img src="../assets/arrow-down.svg" alt=""></td>
+                      <td class="market_table_value">7575.000000</td>
+                      <td class="market_table_value hidden-xs">7575.000000</td>
+                      <td class="market_table_value hidden-xs">7575.000000</td>
+                      <td class="market_table_value hidden-xs hidden-sm">7575.000000</td>
+                      <td class="market_table_value hidden-xs hidden-sm">5/31/2018    </td>
+                    </tr>
+                    <tr>
+                      <td class="market_table_value"> <a href="#">ETH</a></td>
+                      <td class="market_table_value hidden-xs">Bitcoin</td>
+                      <td class="market_table_value">262046.75</td>
+                      <td class="market_table_value"> <span class="market_table_value_change up"></span>-0.1 <img src="../assets/arrow-down.svg" alt=""></td>
+                      <td class="market_table_value">7575.000000</td>
+                      <td class="market_table_value hidden-xs">7575.000000</td>
+                      <td class="market_table_value hidden-xs">7575.000000</td>
+                      <td class="market_table_value hidden-xs hidden-sm">7575.000000</td>
+                      <td class="market_table_value hidden-xs hidden-sm">5/31/2018    </td>
+                    </tr>
+                    <tr>
+                      <td class="market_table_value"> <a href="#">ETH</a></td>
+                      <td class="market_table_value hidden-xs">Bitcoin</td>
+                      <td class="market_table_value">262046.75</td>
+                      <td class="market_table_value"> <span class="market_table_value_change up"></span>-0.1 <img src="../assets/arrow-down.svg" alt=""></td>
+                      <td class="market_table_value">7575.000000</td>
+                      <td class="market_table_value hidden-xs">7575.000000</td>
+                      <td class="market_table_value hidden-xs">7575.000000</td>
+                      <td class="market_table_value hidden-xs hidden-sm">7575.000000</td>
+                      <td class="market_table_value hidden-xs hidden-sm">5/31/2018    </td>
+                    </tr>
+                    <tr>
+                      <td class="market_table_value"> <a href="#">ETH</a></td>
+                      <td class="market_table_value hidden-xs">Bitcoin</td>
+                      <td class="market_table_value">262046.75</td>
+                      <td class="market_table_value"> <span class="market_table_value_change up"></span>-0.1 <img src="../assets/arrow-down.svg" alt=""></td>
+                      <td class="market_table_value">7575.000000</td>
+                      <td class="market_table_value hidden-xs">7575.000000</td>
+                      <td class="market_table_value hidden-xs">7575.000000</td>
+                      <td class="market_table_value hidden-xs hidden-sm">7575.000000</td>
+                      <td class="market_table_value hidden-xs hidden-sm">5/31/2018    </td>
+                    </tr>
+                    <tr>
+                      <td class="market_table_value"> <a href="#">ETH</a></td>
+                      <td class="market_table_value hidden-xs">Bitcoin</td>
+                      <td class="market_table_value">262046.75</td>
+                      <td class="market_table_value"> <span class="market_table_value_change up"></span>-0.1 <img src="../assets/arrow-down.svg" alt=""></td>
+                      <td class="market_table_value">7575.000000</td>
+                      <td class="market_table_value hidden-xs">7575.000000</td>
+                      <td class="market_table_value hidden-xs">7575.000000</td>
+                      <td class="market_table_value hidden-xs hidden-sm">7575.000000</td>
+                      <td class="market_table_value hidden-xs hidden-sm">5/31/2018    </td>
+                    </tr>
+                    <tr>
+                      <td class="market_table_value"> <a href="#">ETH</a></td>
+                      <td class="market_table_value hidden-xs">Bitcoin</td>
+                      <td class="market_table_value">262046.75</td>
+                      <td class="market_table_value"> <span class="market_table_value_change up"></span>-0.1 <img src="../assets/arrow-down.svg" alt=""></td>
+                      <td class="market_table_value">7575.000000</td>
+                      <td class="market_table_value hidden-xs">7575.000000</td>
+                      <td class="market_table_value hidden-xs">7575.000000</td>
+                      <td class="market_table_value hidden-xs hidden-sm">7575.000000</td>
+                      <td class="market_table_value hidden-xs hidden-sm">5/31/2018    </td>
+                    </tr>
+                    <tr>
+                      <td class="market_table_value"> <a href="#">ETH</a></td>
+                      <td class="market_table_value hidden-xs">Bitcoin</td>
+                      <td class="market_table_value">262046.75</td>
+                      <td class="market_table_value"> <span class="market_table_value_change up"></span>-0.1 <img src="../assets/arrow-down.svg" alt=""></td>
+                      <td class="market_table_value">7575.000000</td>
+                      <td class="market_table_value hidden-xs">7575.000000</td>
+                      <td class="market_table_value hidden-xs">7575.000000</td>
+                      <td class="market_table_value hidden-xs hidden-sm">7575.000000</td>
+                      <td class="market_table_value hidden-xs hidden-sm">5/31/2018    </td>
+                    </tr>
+                  </tbody>
                 </table>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col pt-4">
-                <nav class="ml-auto" aria-label="Pagination">
-                  <ul class="pagination mb-0 justify-content-end">
-                    <li class="page-item"><a class="page-link" href="#" aria-label="Previous">First</a></li>
-                    <li class="page-item"><a class="page-link" href="#" aria-label="Previous">Prev</a></li>
-                    <li class="page-item"><a class="page-link current" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                    <li class="page-item"><a class="page-link" href="#">4</a></li>
-                    <li class="page-item"><a class="page-link" href="#">5</a></li>
-                    <li class="page-item"><a class="page-link" href="#">6</a></li>
-                    <li class="page-item"><a class="page-link" href="#">7</a></li>
-                    <li class="page-item"><a class="page-link" href="#" aria-label="Next">Next     </a></li>
-                    <li class="page-item"><a class="page-link" href="#" aria-label="Previous">Last</a></li>
-                  </ul>
-                </nav>
               </div>
             </div>
           </div>
@@ -660,16 +615,14 @@
     <script>
       (function($){
           $(window).on("load",function(){
-              //- $(".scrollbar_custom").mCustomScrollbar({
-              //-     autoHideScrollbar:true
-              //- });
-              $('.dataTablePlugin').DataTable({
+              var table = $('.dataTablePlugin').DataTable({
                   "lengthChange": false,
                   "searching": false,
                   "ordering": false,
                   "info": false,
                   "pagingType": "full_numbers"
               });
+              //- $('#totalVolumeUSDMarket').html(table.column(2).data().sum());
           });
       })(jQuery);
     </script>

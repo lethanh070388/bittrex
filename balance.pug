@@ -1,0 +1,64 @@
+extends layout_market_detail.pug  
+
+block datalist_aside
+    .datalist.scrollbar_custom.mCustomScrollbar
+        -for(var i=0; i<30; i++){
+            ul.datalist_item
+                li.datalist_item_up
+                    .market_currency WAVES
+                    .market_change 
+                        span.up -3.1%
+                        img(src="../assets/arrow-down.svg", alt="")
+                li.datalist_item_down
+                    .market_volumn 9.34
+                    .market_last 0.074890
+        -}
+
+block main_content
+    .container-fluid
+        .row
+            .col
+                h1.text-uppercase.mt-4 Account balances
+                h3 Estimated Holdings
+                .d-table
+                    .d-table-row
+                        .d-table-cell.pr-4 Crypto  
+                        .d-table-cell
+                            span
+                                i.fab.fa-bitcoin.mr-1
+                                | 0.00000000 
+                                small ($0.000)
+                    .d-table-row
+                        .d-table-cell.pr-4 Fiat
+                        .d-table-cell
+                            i.fas.fa-dollar-sign.mr-1 
+                            | 0.00000000
+        .row
+            .col.balance
+                table.dataTablePlugin.market_table_detail
+                    thead
+                        tr
+                            th.text-center D
+                            th.text-center W
+                            th.text-left.hidden-xl-cell Currency name
+                            th.text-center Symbol
+                            th.text-right.hidden-xl-cell Available balance
+                            th.text-right.hidden-xl-cell Pending deposit
+                            th.text-right.hidden-xl-cell Reserved
+                            th.text-right Total
+                            th.text-right.hidden-xl-cell EST.BTC value
+                            th.text-right %change
+                    tbody
+                        -for(var i=1; i<20; i++){
+                            tr
+                                td.icon.icon-deposit-green
+                                td.icon.icon-withdraw-red
+                                td.text-left.hidden-xl-cell Ada
+                                td.text-center ADA
+                                td.text-right.hidden-xl-cell 0.00000000
+                                td.text-right.hidden-xl-cell 0.00000000
+                                td.text-right.hidden-xl-cell 0.00000000
+                                td.text-right 0.00000000
+                                td.text-right.hidden-xl-cell 0.00000000
+                                td.text-right.up -1.7%
+                        -}

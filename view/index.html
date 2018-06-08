@@ -143,16 +143,14 @@
     <script>
       (function($){
           $(window).on("load",function(){
-              //- $(".scrollbar_custom").mCustomScrollbar({
-              //-     autoHideScrollbar:true
-              //- });
-              $('.dataTablePlugin').DataTable({
+              var table = $('.dataTablePlugin').DataTable({
                   "lengthChange": false,
                   "searching": false,
                   "ordering": false,
                   "info": false,
                   "pagingType": "full_numbers"
               });
+              //- $('#totalVolumeUSDMarket').html(table.column(2).data().sum());
           });
       })(jQuery);
     </script>

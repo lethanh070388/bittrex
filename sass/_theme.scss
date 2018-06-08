@@ -1,0 +1,264 @@
+// THEME SECTION
+$themes:(
+  light: (
+    $light-primary,
+    $light-secondary,
+    $light-third,
+    $light-font-white,
+    $light-font-black,
+    $light-grey,
+    $light-footer,
+    $light-market,
+    $light-market-border,
+    $light-market-font-black,
+    $light-market-font-white,
+    $light-button-hover,
+    $light-market-info-footer,
+    $light-market-info-footer-color
+  ),
+  dark: (
+    $dark-primary,
+    $dark-secondary,
+    $dark-third,
+    $dark-font-white,
+    $dark-font-black,
+    $dark-grey,
+    $dark-footer,
+    $dark-market,
+    $dark-market-border,
+    $dark-market-font-black,
+    $dark-market-font-white,
+    $dark-button-hover,
+    $dark-market-info-footer,
+    $dark-market-info-footer-color
+  )
+);
+@mixin theme($name,$color){
+    // Theme changing
+    .#{$name} {
+
+        .navbar-dark{
+            .navbar-nav{
+                .nav-link{
+                    color: nth($color,4);
+                    &:hover,
+                    &:focus{
+                        color: nth($color,1);
+                    }
+                }
+            }
+            .btn-outline-primary{
+                border: 2px solid nth($color,2) !important;
+                color: nth($color,2) !important;
+                text-transform: uppercase;
+                font-weight: $font-medium;
+                background-color: transparent;
+                &:hover{
+                    background-color: transparent;
+                    border-color: nth($color,12) !important;
+                    color: nth($color,12) !important;
+                }
+            }
+        }
+        // BACKGROUND
+        .bg-primary{
+            background-color: nth($color,1) !important;
+        }
+        .bg-secondary{
+            background-color: nth($color,2) !important;
+        }
+        .market-info-footer {
+            background-color: nth($color,13) !important;
+            a{
+                color: nth($color,14) !important;
+            }
+        }
+        // END BACKGROUND
+        
+        // BUTTONS
+        .btn-primary{
+            border: 2px solid nth($color,2) !important;
+            background-color: nth($color,2) !important;
+            text-transform: uppercase;
+            font-weight: $font-medium;
+            min-width: 120px;
+            text-align: center;
+            &:hover{
+                border: 2px solid nth($color,1) !important;
+                background-color: nth($color,1) !important;
+            }
+        }
+        // END BUTTONS
+        // BANNER
+        .banner{
+            background-color: nth($color,3);
+            .banner-buttons{
+                background-color: nth($color,2);
+                &:hover{
+                    background-color: nth($color,1);
+                }
+            }
+        }
+        //END BANNER
+
+        // SECURITY SECTION
+        .security-section {
+            color: nth($color,5);
+            .trade_aside{
+                &_header {
+                    color: nth($color,5);
+                }
+            }
+        }
+        //END SECURITY SECTION
+
+        // SUPPORT SECTION
+        .support-section {
+            color: nth($color,6);
+            color: nth($color,5);
+            .trade_aside{
+                &_header{
+                    color: nth($color,5);
+                }
+            }
+        }
+        // END SUPPORT SECTION
+        //SECTION REGISTER
+        .register-section {
+            background-color: nth($color,2);
+            color: nth($color,4);
+            .form-register {
+                .register-btn {
+                    background-color: nth($color,5);
+                    color: nth($color,4);
+                }
+            }
+            a{
+                border-bottom: 1px solid nth($color,4);
+                color: nth($color,4);
+            }
+        }
+        //END SECTION REGISTER
+
+
+        //FOOTER
+        .footer {
+            background-color: nth($color,7);
+            a{
+                color: #666;
+            }
+        }
+        // END FOOTER
+
+        //MARKET PAGE
+        .bg-market{
+            background-color: nth($color,8);
+        }
+        .bg-shadow{
+            box-shadow: -7px 5px 4px rgba(0, 0, 0, .9), 7px 5px 4px rgba(0, 0, 0, .9) !important;
+            margin-bottom: 1px;
+        }
+        .border-market{
+            border-color: nth($color,9) !important;
+        }
+        .market-font-black{
+            color: rgba(nth($color,11),0.8) !important;
+        }
+        .market-font-white{
+            color: nth($color,11) !important;
+        }
+        //END MARKET PAGE
+
+        // PAGINATION
+        .page-link{
+            background-color: rgba(255,255,255,.1);
+            color: rgba(nth($color,11),0.8);
+            border: 0;
+            &:hover{
+                border-color: nth($color,2);
+                color: nth($color,2);
+                &.current{
+                    color: rgba(nth($color,11),0.8);
+                    border: 0;
+                }
+            }
+            &.current{
+                background-color: #9caac1 !important;
+                padding: 0.6rem 0.85rem;
+                top: -0.1rem;
+            }
+            &.disabled{
+                &:hover{
+                    color: rgba(nth($color,11),0.8);
+                }
+            }
+        }
+        // END PAGINATION
+
+        // SETTING PAGE
+        .setting{
+            background-color: nth($color,8) !important;
+            .heading-lv1,
+            .heading-lv2,
+            .heading-lv4,
+            .heading-lv5,
+            .heading-lv6{
+                color: rgba(nth($color,11),0.8);
+            }
+        }
+        .nav-items{
+            .nav-item{
+                .nav-subitem{
+                    a{
+                        color: nth($color,11);
+                        &:hover{
+                            color: nth($color,2);
+                        }
+                    }
+                }
+            }
+        }
+        // END SETTING PAGE
+
+        // MARKET DETAIL
+        .main-market-detail-container{
+            color: rgba(nth($color,11),0.8);
+        }
+        // END MARKET DETAIL
+    }
+
+
+    // Control button theme style
+    [data-theme='#{$name}'] {
+        background: nth($color, 1);
+        &:hover {
+            background: darken(nth($color, 1), 10%);
+        }
+        &[disabled] {
+            background: desaturate(nth($color, 1), 40%);
+        }
+    }
+
+}
+// END THEME SECTION
+
+// CONTROL THEME
+// By looping through the $themes map
+@each $key, $value in $themes {
+    @include theme($key, $value);
+}
+  
+.controls{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    &>button {
+        border: none;
+        color: white;
+        padding: .5em;
+        border-radius: .15em;
+        font-weight: bold;
+        margin-bottom: .5em;
+    }
+}
+// END CONTROL THEME

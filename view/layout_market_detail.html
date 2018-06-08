@@ -86,17 +86,44 @@
     <script src="../js/theme.js"></script>
     <script src="../js/main.js"></script>
     <script>
+      jQuery.fn.dataTable.Api.register( 'sum()', function ( ) {
+          return this.flatten().reduce( function ( a, b ) {
+              if ( typeof a === 'string' ) {
+                  a = a.replace(/[^\d.-]/g, '') * 1;
+              }
+              if ( typeof b === 'string' ) {
+                  b = b.replace(/[^\d.-]/g, '') * 1;
+              }
+      
+              return a + b;
+          }, 0 );
+      } );
       (function($){
           $(window).on("load",function(){
               $(".scrollbar_custom").mCustomScrollbar({
                   autoHideScrollbar:true
               });
-              $('.dataTablePlugin').DataTable({
+              $.extend(true, $.fn.dataTable.defaults, {
                   "lengthChange": false,
                   "searching": false,
                   "ordering": false,
                   "info": false,
-                  "pagingType": "full_numbers"
+                  "pagingType": "full_numbers",
+                  "dom": 't<"row sum"<"col-6 total_sum"><"col-6 total_bid text-right">>p',
+                  drawCallback: function () {
+                      var api = this.api();
+                      $('.total_sum').html(api.column(0,{page:'current'}).data().sum().toFixed(3)+" USDT");
+                      $('.total_bid').html(api.column(3,{page:'current'}).data().sum().toFixed(3)+" USD");
+                  }
+              });
+              $('.dataTablePlugin').DataTable();
+              $('.dataTablePlugin-right').DataTable({
+                  "dom": 't<"row"<"col-6 total_ask"><"col-6 total_sum text-right">>p',
+                  drawCallback: function () {
+                      var api = this.api();
+                      $('.total_ask').html(api.column(0,{page:'current'}).data().sum().toFixed(3)+" USD");
+                      $('.total_sum').html(api.column(3,{page:'current'}).data().sum().toFixed(3)+" USDT");
+                  }
               });
           });
       })(jQuery);

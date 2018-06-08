@@ -3,6 +3,14 @@
 .visible-md-block{
     display: none !important;
 }
+.hidden-xl-cell{
+    display: table-cell;
+}
+@include maxq(xlarge){
+    .hidden-xl-cell{
+        display: none;
+    }
+}
 @include maxq(medium){
     .visible-xs-block{
         display: block !important;

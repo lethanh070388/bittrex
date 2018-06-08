@@ -11,6 +11,13 @@ body {
 .visible-md-block {
   display: none !important; }
 
+.hidden-xl-cell {
+  display: table-cell; }
+
+@media screen and (max-width: 1199px) {
+  .hidden-xl-cell {
+    display: none; } }
+
 @media screen and (max-width: 767px) {
   .visible-xs-block {
     display: block !important; }
@@ -362,9 +369,6 @@ sup {
   font-size: 14px;
   font-weight: 400; }
 
-small {
-  font-size: 14px; }
-
 @media screen and (min-width: 768px) {
   .heading-lv1 {
     font-size: 42px; }
@@ -625,14 +629,16 @@ small {
 .market_detail_change img {
   margin-top: -3px; }
 
-.market_title {
+.market_title_name {
   font-size: 28px;
-  text-transform: uppercase; }
-  .market_title_info {
-    display: inline;
-    padding-left: 20px;
-    text-transform: capitalize;
-    font-size: 12px; }
+  text-transform: uppercase;
+  display: inline-block; }
+
+.market_title_info {
+  display: inline;
+  padding-left: 20px;
+  text-transform: capitalize;
+  font-size: 12px; }
 
 .market_find {
   max-width: 100%;
@@ -1039,3 +1045,17 @@ table.dataTable.no-footer {
 @media screen and (max-width: 767px) {
   .market_info_header .volume, .market_info_header .high, .market_info_header .low {
     display: none; } }
+
+.balance .sum {
+  display: none; }
+
+.icon {
+  background-size: 16px;
+  background-repeat: no-repeat;
+  background-position: center; }
+
+.icon-withdraw-red {
+  background-image: url("../assets/icon-withdraw-red.svg"); }
+
+.icon-deposit-green {
+  background-image: url("../assets/icon-deposit-green.svg"); }
