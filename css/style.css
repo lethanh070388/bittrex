@@ -6,7 +6,12 @@ html {
 /* line 5, E:/My projects/Bittrex/sass/_typography.scss */
 body {
   font-family: 'Roboto', sans-serif;
-  font-size: 1rem; }
+  font-size: 0.8rem; }
+
+@media (min-width: 576px) {
+  /* line 10, E:/My projects/Bittrex/sass/_typography.scss */
+  body {
+    font-size: 1rem; } }
 
 /* line 1, E:/My projects/Bittrex/sass/_ultilities.scss */
 .visible-sm-block,
@@ -403,26 +408,31 @@ html, body {
   border-radius: 0 0 3px 3px; }
   /* line 260, E:/My projects/Bittrex/sass/_theme.scss */
   .controls .control-toggle {
-    cursor: pointer; }
-  /* line 263, E:/My projects/Bittrex/sass/_theme.scss */
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: top; }
+  /* line 265, E:/My projects/Bittrex/sass/_theme.scss */
   .controls .fas {
     color: rgba(255, 255, 255, 0.8); }
-  /* line 266, E:/My projects/Bittrex/sass/_theme.scss */
+  /* line 268, E:/My projects/Bittrex/sass/_theme.scss */
   .controls button {
     border: 0;
     color: white;
-    padding: 1em;
+    padding: 0;
     border-radius: 0;
     font-weight: bold;
     cursor: pointer;
-    transition: all 0.4s ease; }
-  /* line 275, E:/My projects/Bittrex/sass/_theme.scss */
+    transition: all 0.4s ease;
+    display: block;
+    height: 20px;
+    width: 15px; }
+  /* line 280, E:/My projects/Bittrex/sass/_theme.scss */
   .controls .control-button-group {
     display: none;
     transition: all 0.4s ease; }
-    /* line 278, E:/My projects/Bittrex/sass/_theme.scss */
+    /* line 283, E:/My projects/Bittrex/sass/_theme.scss */
     .controls .control-button-group.show {
-      display: block; }
+      display: inline-block; }
 
 /* line 20, E:/My projects/Bittrex/sass/style.scss */
 a:hover {
@@ -1264,7 +1274,7 @@ table.dataTable.no-footer {
 .market_table_detail {
   width: 100%;
   color: white;
-  font-size: 13px; }
+  font-size: 11px; }
   /* line 918, E:/My projects/Bittrex/sass/style.scss */
   .market_table_detail th {
     border-bottom: 1px solid #515967;
@@ -1294,12 +1304,17 @@ table.dataTable.no-footer {
       padding-top: 5px;
       padding-bottom: 5px; }
 
-/* line 950, E:/My projects/Bittrex/sass/style.scss */
+@media screen and (min-width: 768px) {
+  /* line 951, E:/My projects/Bittrex/sass/style.scss */
+  .market_table_detail {
+    font-size: 13px; } }
+
+/* line 957, E:/My projects/Bittrex/sass/style.scss */
 .trade_content {
   max-width: 224px;
   font-size: 13px;
   margin: 0 auto; }
-  /* line 954, E:/My projects/Bittrex/sass/style.scss */
+  /* line 961, E:/My projects/Bittrex/sass/style.scss */
   .trade_content .btn {
     background-color: rgba(255, 255, 255, 0.1);
     -webkit-border-radius: 4px;
@@ -1312,37 +1327,37 @@ table.dataTable.no-footer {
     font-size: 15px;
     margin: 6px auto;
     color: rgba(255, 255, 255, 0.8); }
-    /* line 963, E:/My projects/Bittrex/sass/style.scss */
+    /* line 970, E:/My projects/Bittrex/sass/style.scss */
     .trade_content .btn:hover {
       background-color: #009af8;
       color: #2b3441; }
 
-/* line 970, E:/My projects/Bittrex/sass/style.scss */
+/* line 977, E:/My projects/Bittrex/sass/style.scss */
 .chart_area {
   height: 650px;
   background-color: rgba(255, 255, 255, 0.1); }
 
-/* line 974, E:/My projects/Bittrex/sass/style.scss */
+/* line 981, E:/My projects/Bittrex/sass/style.scss */
 .market_info_header {
   min-height: 60px;
   background-color: #262c36; }
-  /* line 977, E:/My projects/Bittrex/sass/style.scss */
+  /* line 984, E:/My projects/Bittrex/sass/style.scss */
   .market_info_header_name {
     display: flex;
     padding-top: 7px;
     padding-bottom: 7px; }
-    /* line 981, E:/My projects/Bittrex/sass/style.scss */
+    /* line 988, E:/My projects/Bittrex/sass/style.scss */
     .market_info_header_name .market-logo {
       width: 45px;
       height: 45px;
       margin-right: 5px; }
-  /* line 987, E:/My projects/Bittrex/sass/style.scss */
+  /* line 994, E:/My projects/Bittrex/sass/style.scss */
   .market_info_header p {
     margin-bottom: 0; }
-  /* line 990, E:/My projects/Bittrex/sass/style.scss */
+  /* line 997, E:/My projects/Bittrex/sass/style.scss */
   .market_info_header .item-group {
     display: flex; }
-  /* line 993, E:/My projects/Bittrex/sass/style.scss */
+  /* line 1000, E:/My projects/Bittrex/sass/style.scss */
   .market_info_header .item {
     flex: 1;
     display: flex;
@@ -1351,34 +1366,34 @@ table.dataTable.no-footer {
     padding-right: 5px; }
 
 @media screen and (max-width: 991px) {
-  /* line 1003, E:/My projects/Bittrex/sass/style.scss */
+  /* line 1010, E:/My projects/Bittrex/sass/style.scss */
   .market_info_header {
     height: auto; } }
 
 @media screen and (max-width: 767px) {
-  /* line 1009, E:/My projects/Bittrex/sass/style.scss */
+  /* line 1016, E:/My projects/Bittrex/sass/style.scss */
   .market_info_header .volume, .market_info_header .high, .market_info_header .low {
     display: none; } }
 
-/* line 1017, E:/My projects/Bittrex/sass/style.scss */
+/* line 1024, E:/My projects/Bittrex/sass/style.scss */
 .balance .sum {
   display: none; }
 
-/* line 1021, E:/My projects/Bittrex/sass/style.scss */
+/* line 1028, E:/My projects/Bittrex/sass/style.scss */
 .icon {
   background-size: 16px;
   background-repeat: no-repeat;
   background-position: center; }
 
-/* line 1026, E:/My projects/Bittrex/sass/style.scss */
+/* line 1033, E:/My projects/Bittrex/sass/style.scss */
 .icon-withdraw-red {
   background-image: url("../assets/icon-withdraw-red.svg"); }
 
-/* line 1029, E:/My projects/Bittrex/sass/style.scss */
+/* line 1036, E:/My projects/Bittrex/sass/style.scss */
 .icon-deposit-green {
   background-image: url("../assets/icon-deposit-green.svg"); }
 
-/* line 1034, E:/My projects/Bittrex/sass/style.scss */
+/* line 1041, E:/My projects/Bittrex/sass/style.scss */
 .collapse-control a h1 {
   color: rgba(255, 255, 255, 0.8); }
 
