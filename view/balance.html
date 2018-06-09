@@ -13,9 +13,12 @@
     <link rel="stylesheet" href="../css/style.css">
   </head>
   <body>
-    <div class="controls">
-      <button class="btn-theme" data-theme="light">Light</button>
-      <button class="btn-theme" data-theme="dark">Dark</button>
+    <div class="controls"> 
+      <div class="control-toggle"><i class="fas fa-cog fa-1x"></i></div>
+      <div class="control-button-group">
+        <button class="btn-theme" data-theme="light"></button>
+        <button class="btn-theme" data-theme="dark"></button>
+      </div>
     </div>
     <div class="wrapper dark">
       <div class="layout">
@@ -25,7 +28,7 @@
             <ul class="navbar-nav ml-auto">
               <li class="nav-item active"><a class="nav-link" href="./market.html">Markets<span class="sr-only">(current)</span></a></li>
               <li class="nav-item"><a class="nav-link" href="#">Orders</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">Wallets</a></li>
+              <li class="nav-item"><a class="nav-link" href="./balance.html">Wallets</a></li>
               <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="navbarDropdownSetting" href="./view/setting_activity" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Settings</a></li>
               <li class="nav-item"><a class="nav-link" href="./login.html">Login</a></li>
             </ul>
@@ -622,6 +625,17 @@
                       </tr>
                     </tbody>
                   </table>
+                </div>
+              </div>
+            </div>
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col">
+                  <div class="collapse-control"><a data-toggle="collapse" href="#collapseWithdrawPending" role="button" aria-expanded="false" aria-controls="collapseWithdrawPending">
+                      <h1 class="text-uppercase mt-4">Pending withdrawals</h1></a></div>
+                  <div class="collapse" id="collapseWithdrawPending">
+                    <div class="expand-collapse-container">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.</div>
+                  </div>
                 </div>
               </div>
             </div>

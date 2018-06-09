@@ -250,15 +250,34 @@ $themes:(
   
 .controls{
     position: fixed;
-    bottom: 0;
+    top: 0;
     right: 0;
-    &>button {
-        border: none;
+    z-index: 9999;
+    background-color: #515967;
+    box-shadow: 1px -1px 2px rgba(255,255,255,.4);
+    padding: 2px;
+    border-radius: 0 0 3px 3px;
+    .control-toggle{
+        cursor: pointer;
+    }
+    .fas{
+        color: rgba(255,255,255,.8);
+    }
+    button {
+        border: 0;
         color: white;
-        padding: .5em;
-        border-radius: .15em;
+        padding: 1em;
+        border-radius: 0;
         font-weight: bold;
-        margin-bottom: .5em;
+        cursor: pointer;
+        transition: all 0.4s ease;
+    }
+    .control-button-group{
+        display: none;
+        transition: all 0.4s ease;
+        &.show{
+            display: block;
+        }
     }
 }
 // END CONTROL THEME

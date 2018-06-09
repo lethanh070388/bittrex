@@ -1029,3 +1029,10 @@ table.dataTable.no-footer{
 .icon-deposit-green{
     background-image: url('../assets/icon-deposit-green.svg');
 }
+.collapse-control{
+    a{
+        h1{
+            color: rgba(255, 255, 255, 0.8);
+        }
+    }
+}

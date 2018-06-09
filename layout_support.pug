@@ -9,9 +9,12 @@ html
         link(rel="stylesheet" href="../css/bootstrap.css")
         link(rel="stylesheet" href="../css/style.css")
     body
-        .controls
-            button.btn-theme(data-theme="light") Light
-            button.btn-theme(data-theme="dark") Dark
+        .controls 
+            .control-toggle
+                i.fas.fa-cog.fa-1x
+            .control-button-group
+                button.btn-theme(data-theme="light")
+                button.btn-theme(data-theme="dark")
         .wrapper.dark
             .layout
                 //- navigation bar

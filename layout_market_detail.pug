@@ -12,9 +12,12 @@ html
         link(rel="stylesheet" href="../css/dataTables.bootstrap4.min.css")
         link(rel="stylesheet" href="../css/style.css")
     body
-        .controls
-            button.btn-theme(data-theme="light") Light
-            button.btn-theme(data-theme="dark") Dark
+        .controls 
+            .control-toggle
+                i.fas.fa-cog.fa-1x
+            .control-button-group
+                button.btn-theme(data-theme="light")
+                button.btn-theme(data-theme="dark")
         .wrapper.dark
             .layout
                 //- navigation bar
@@ -32,7 +35,7 @@ html
                             li.nav-item
                                 a.nav-link(href="#") Orders
                             li.nav-item
-                                a.nav-link(href="#") Wallets
+                                a.nav-link(href="./balance.html") Wallets
                             li.nav-item.dropdown
                                 a.nav-link.dropdown-toggle#navbarDropdownSetting(href="./view/setting_activity" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Settings
                             li.nav-item

@@ -12,9 +12,12 @@ html
         link(rel="stylesheet" href="../css/dataTables.bootstrap4.min.css")
         link(rel="stylesheet" href="../css/style.css")
     body
-        .controls
-            button.btn-theme(data-theme="light") Light
-            button.btn-theme(data-theme="dark") Dark
+        .controls 
+            .control-toggle
+                i.fas.fa-cog.fa-1x
+            .control-button-group
+                button.btn-theme(data-theme="light")
+                button.btn-theme(data-theme="dark")
         .wrapper.dark
             //- navigation bar
             nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.scrolling-navbar.fixed-top

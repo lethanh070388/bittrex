@@ -10,9 +10,12 @@
     <link rel="stylesheet" href="../css/style.css">
   </head>
   <body>
-    <div class="controls">
-      <button class="btn-theme" data-theme="light">Light</button>
-      <button class="btn-theme" data-theme="dark">Dark</button>
+    <div class="controls"> 
+      <div class="control-toggle"><i class="fas fa-cog fa-1x"></i></div>
+      <div class="control-button-group">
+        <button class="btn-theme" data-theme="light"></button>
+        <button class="btn-theme" data-theme="dark"></button>
+      </div>
     </div>
     <div class="wrapper dark">
       <div class="layout">
@@ -22,7 +25,7 @@
             <ul class="navbar-nav ml-auto">
               <li class="nav-item active"><a class="nav-link" href="index.html">Markets<span class="sr-only">(current)</span></a></li>
               <li class="nav-item"><a class="nav-link" href="#">Orders</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">Wallets</a></li>
+              <li class="nav-item"><a class="nav-link" href="./balance.html">Wallets</a></li>
               <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="navbarDropdownSetting" href="./view/setting_activity" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Settings</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownSetting"><a class="dropdown-item" href="#">Action </a><a class="dropdown-item" href="#">My Profile </a><a class="dropdown-item" href="#">Identity Verification </a><a class="dropdown-item" href="#">Enable Account </a><a class="dropdown-item" href="#">Password </a><a class="dropdown-item" href="#">Two-Factor Authentication </a><a class="dropdown-item" href="#">API Keys </a><a class="dropdown-item" href="#">Auto-Sell </a><a class="dropdown-item" href="#">IP Whitelist</a><a class="dropdown-item" href="#">Withdrawal Whitelist </a><a class="dropdown-item" href="#">UI Settings </a><a class="dropdown-item" href="#">Notifications </a></div>
               </li>
