@@ -83,14 +83,144 @@ block main_content
                                 td 0.064
                                 td.up 7575.30700000
                         -}
-            .col-lg-2.col-xl-4
-                .trade.trade-unauthenticated
-                    .trade_content
-                        p To begin trading please log in or create an account.
-                        .text-center
-                            a.btn(href="./register.html") Create account
-                        .text-center
-                            a.btn(href="./login.html") Login                                    
+            
+            -const login = true
+            -if(login == false)
+                .col-lg-2.col-xl-4
+                    .trade.trade-unauthenticated
+                        .trade_content
+                            p To begin trading please log in or create an account.
+                            .text-center
+                                a.btn(href="./register.html") Create account
+                            .text-center
+                                a.btn(href="./login.html") Login
+            -else
+                .col-lg-2.col-xl-4.px-lg-0.mt-2
+                    .trade.trade-content
+                        ul.nav.nav-pills.mb-3#trade-tab(role="tablist")
+                            li.nav-item
+                                a.nav-link.active.btn-buy#pills-buy-tab(data-toggle="pill" href="#pills-buy" role="tab" aria-controls="pills-buy" aria-selected="true") Buy
+                            li.nav-item
+                                a.nav-link.btn-sell#pills-sell-tab(data-toggle="pill" href="#pills-sell" role="tab" aria-controls="pills-sell" aria-selected="true") Sell
+                        .tab-content#pills-tabContent
+                            form.tab-pane.fade.show.active#pills-buy(role="tabpanel" aria-labelledby="pills-buy-tab")
+                                .form-group
+                                    label.text-uppercase(for="orderType") Order type
+                                    .dropdown.show
+                                        a.btn.btn-link.dropdown-toggle#orderType(href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Limit (default)
+                                        .dropdown-menu(aria-labelledby="orderType")
+                                            a.dropdown-item.limitDefault(href="#") Limit (default)
+                                            a.dropdown-item.conditionTarget(href="#") Conditional
+                                .form-group
+                                    label.text-uppercase(for="") Quantity
+                                    .input-group
+                                        input.form-control(type="text" autocomplete="off" placeholder="0.00000000")
+                                        .input-group-append
+                                            span.input-group-text USDT
+                                .form-group
+                                    //- .dropdown.show
+                                    //-     a.btn.btn-link.text-uppercase.dropdown-toggle#bidPrice(href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Bid Price
+                                    //-     .dropdown-menu(aria-labelledby="bidPrice")
+                                    //-         a.dropdown-item(href="#") Last
+                                    //-         a.dropdown-item(href="#") Bid
+                                    //-         a.dropdown-item(href="#") Ask
+                                    label.text-uppercase(for="") Bid
+                                    .input-group
+                                        input.form-control(type="text" autocomplete="off" placeholder="0.000")
+                                        .input-group-append
+                                            span.input-group-text USD
+                                .form-group.condition
+                                    label.text-uppercase(for="") Condition
+                                    .dropdown.show
+                                        a.btn.btn-link.dropdown-toggle#condition(href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") None
+                                        .dropdown-menu(aria-labelledby="condition")
+                                            a.dropdown-item(href="#") None
+                                            a.dropdown-item(href="#") Greater Than or Equal To
+                                            a.dropdown-item(href="#") Less Than or Equal To
+                                .form-group.target-price
+                                    label.text-uppercase.px-4(for="targetPrice") Target Price
+                                    .input-group.px-4
+                                        input.form-control#targetPrice(type="text" autocomplete="off" placeholder="0")
+                                        .input-group-append
+                                            span.input-group-text USD
+                                .form-group
+                                    label.text-uppercase(for="") Total
+                                    .input-group
+                                        input.form-control(type="text" autocomplete="off" placeholder="0.000")
+                                        .input-group-append
+                                            span.input-group-text USD
+                                .form-group
+                                    label.text-uppercase(for="") Time in force
+                                    .dropdown.show
+                                        a.btn.btn-link.dropdown-toggle#timeInForce(href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Good 'Til Cancelled (Default)
+                                        .dropdown-menu(aria-labelledby="timeInForce")
+                                            a.dropdown-item(href="#") Good 'Til Cancelled (Default)
+                                            a.dropdown-item(href="#") Immediate or Cancel
+                                .text-center
+                                    button.btn.btn-transaction.btn-buy(type="submit") Buy Tether
+                                .max-buy.text-center
+                                    h4.available-balance.mt-3 Available balance
+                                    .balance-data.active-data 0.000 USD
+                                    .balance-data
+                                        small 0.00000000 USDT
+                                    .balance-data
+                                        a.text-uppercase.text-white(href="#") Max Buy
+                            form.tab-pane.fade#pills-sell(role="tabpanel" aria-labelledby="pills-sell-tab")
+                                .form-group
+                                    label.text-uppercase(for="orderType") Order type
+                                    .dropdown.show
+                                        a.btn.btn-link.dropdown-toggle#orderType(href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Limit (default)
+                                        .dropdown-menu(aria-labelledby="orderType")
+                                            a.dropdown-item.limitDefault(href="#") Limit (default)
+                                            a.dropdown-item.conditionTarget(href="#") Conditional
+                                .form-group
+                                    label.text-uppercase(for="") Quantity
+                                    .input-group
+                                        input.form-control(type="text" autocomplete="off" placeholder="0.00000000")
+                                        .input-group-append
+                                            span.input-group-text USDT
+                                .form-group
+                                    label.text-uppercase(for="") Ask
+                                    .input-group
+                                        input.form-control(type="text" autocomplete="off" placeholder="0.000")
+                                        .input-group-append
+                                            span.input-group-text USD
+                                .form-group.condition
+                                    label.text-uppercase(for="") Condition
+                                    .dropdown.show
+                                        a.btn.btn-link.dropdown-toggle#condition(href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") None
+                                        .dropdown-menu(aria-labelledby="condition")
+                                            a.dropdown-item(href="#") None
+                                            a.dropdown-item(href="#") Greater Than or Equal To
+                                            a.dropdown-item(href="#") Less Than or Equal To
+                                .form-group.target-price
+                                    label.text-uppercase.px-4(for="targetPrice") Target Price
+                                    .input-group.px-4
+                                        input.form-control#targetPrice(type="text" autocomplete="off" placeholder="0")
+                                        .input-group-append
+                                            span.input-group-text USD
+                                .form-group
+                                    label.text-uppercase(for="") Total
+                                    .input-group
+                                        input.form-control(type="text" autocomplete="off" placeholder="0.000")
+                                        .input-group-append
+                                            span.input-group-text USD
+                                .form-group
+                                    label.text-uppercase(for="") Time in force
+                                    .dropdown.show
+                                        a.btn.btn-link.dropdown-toggle#timeInForce(href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Good 'Til Cancelled (Default)
+                                        .dropdown-menu(aria-labelledby="timeInForce")
+                                            a.dropdown-item(href="#") Good 'Til Cancelled (Default)
+                                            a.dropdown-item(href="#") Immediate or Cancel
+                                .text-center
+                                    button.btn.btn-transaction.btn-sell(type="submit") Sell Tether
+                                .max-buy.text-center
+                                    h4.available-balance.mt-3 Available balance
+                                    .balance-data.active-data 0.000 USD
+                                    .balance-data
+                                        small 0.00000000 USDT
+                                    .balance-data
+                                        a.text-uppercase.text-white(href="#") Max Sell         
             .col-lg-5.col-xl-4
                 table.dataTablePlugin-right.market_table_detail.text-left
                     thead
@@ -130,3 +260,19 @@ block main_content
                                 td.text-right 3035.33000000
                                 td.text-right.hidden-xs 3038.36533000
                         -}
+block script-append
+    script.
+        $(function(){
+            $('.dropdown-menu a').on("click",function(){
+                $(this).parent().prev().text($(this).text());
+            });
+            $('.conditionTarget').on("click",function(){
+                $('.condition').addClass('active');
+                $('.target-price').addClass('active');
+            });
+            $('.limitDefault').on("click",function(){
+                $('.condition').removeClass('active');
+                $('.target-price').removeClass('active');
+            });
+        });
+    

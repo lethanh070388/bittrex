@@ -557,12 +557,127 @@
                     </tbody>
                   </table>
                 </div>
-                <div class="col-lg-2 col-xl-4">
-                  <div class="trade trade-unauthenticated">
-                    <div class="trade_content">
-                      <p>To begin trading please log in or create an account.</p>
-                      <div class="text-center"><a class="btn" href="./register.html">Create account</a></div>
-                      <div class="text-center"><a class="btn" href="./login.html">Login                                    </a></div>
+                <div class="col-lg-2 col-xl-4 px-lg-0 mt-2">
+                  <div class="trade trade-content">
+                    <ul class="nav nav-pills mb-3" id="trade-tab" role="tablist">
+                      <li class="nav-item"><a class="nav-link active btn-buy" id="pills-buy-tab" data-toggle="pill" href="#pills-buy" role="tab" aria-controls="pills-buy" aria-selected="true">Buy</a></li>
+                      <li class="nav-item"><a class="nav-link btn-sell" id="pills-sell-tab" data-toggle="pill" href="#pills-sell" role="tab" aria-controls="pills-sell" aria-selected="true">Sell</a></li>
+                    </ul>
+                    <div class="tab-content" id="pills-tabContent">
+                      <form class="tab-pane fade show active" id="pills-buy" role="tabpanel" aria-labelledby="pills-buy-tab">
+                        <div class="form-group">
+                          <label class="text-uppercase" for="orderType">Order type</label>
+                          <div class="dropdown show"><a class="btn btn-link dropdown-toggle" id="orderType" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Limit (default)</a>
+                            <div class="dropdown-menu" aria-labelledby="orderType"><a class="dropdown-item limitDefault" href="#">Limit (default)</a><a class="dropdown-item conditionTarget" href="#">Conditional</a></div>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="text-uppercase" for="">Quantity</label>
+                          <div class="input-group">
+                            <input class="form-control" type="text" autocomplete="off" placeholder="0.00000000">
+                            <div class="input-group-append"><span class="input-group-text">USDT</span></div>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="text-uppercase" for="">Bid</label>
+                          <div class="input-group">
+                            <input class="form-control" type="text" autocomplete="off" placeholder="0.000">
+                            <div class="input-group-append"><span class="input-group-text">USD</span></div>
+                          </div>
+                        </div>
+                        <div class="form-group condition">
+                          <label class="text-uppercase" for="">Condition</label>
+                          <div class="dropdown show"><a class="btn btn-link dropdown-toggle" id="condition" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">None</a>
+                            <div class="dropdown-menu" aria-labelledby="condition"><a class="dropdown-item" href="#">None</a><a class="dropdown-item" href="#">Greater Than or Equal To</a><a class="dropdown-item" href="#">Less Than or Equal To</a></div>
+                          </div>
+                        </div>
+                        <div class="form-group target-price">
+                          <label class="text-uppercase px-4" for="targetPrice">Target Price</label>
+                          <div class="input-group px-4">
+                            <input class="form-control" id="targetPrice" type="text" autocomplete="off" placeholder="0">
+                            <div class="input-group-append"><span class="input-group-text">USD</span></div>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="text-uppercase" for="">Total</label>
+                          <div class="input-group">
+                            <input class="form-control" type="text" autocomplete="off" placeholder="0.000">
+                            <div class="input-group-append"><span class="input-group-text">USD</span></div>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="text-uppercase" for="">Time in force</label>
+                          <div class="dropdown show"><a class="btn btn-link dropdown-toggle" id="timeInForce" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Good 'Til Cancelled (Default)</a>
+                            <div class="dropdown-menu" aria-labelledby="timeInForce"><a class="dropdown-item" href="#">Good 'Til Cancelled (Default)</a><a class="dropdown-item" href="#">Immediate or Cancel</a></div>
+                          </div>
+                        </div>
+                        <div class="text-center">
+                          <button class="btn btn-transaction btn-buy" type="submit">Buy Tether</button>
+                        </div>
+                        <div class="max-buy text-center">
+                          <h4 class="available-balance mt-3">Available balance</h4>
+                          <div class="balance-data active-data">0.000 USD</div>
+                          <div class="balance-data"><small>0.00000000 USDT</small></div>
+                          <div class="balance-data"><a class="text-uppercase text-white" href="#">Max Buy</a></div>
+                        </div>
+                      </form>
+                      <form class="tab-pane fade" id="pills-sell" role="tabpanel" aria-labelledby="pills-sell-tab">
+                        <div class="form-group">
+                          <label class="text-uppercase" for="orderType">Order type</label>
+                          <div class="dropdown show"><a class="btn btn-link dropdown-toggle" id="orderType" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Limit (default)</a>
+                            <div class="dropdown-menu" aria-labelledby="orderType"><a class="dropdown-item limitDefault" href="#">Limit (default)</a><a class="dropdown-item conditionTarget" href="#">Conditional</a></div>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="text-uppercase" for="">Quantity</label>
+                          <div class="input-group">
+                            <input class="form-control" type="text" autocomplete="off" placeholder="0.00000000">
+                            <div class="input-group-append"><span class="input-group-text">USDT</span></div>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="text-uppercase" for="">Ask</label>
+                          <div class="input-group">
+                            <input class="form-control" type="text" autocomplete="off" placeholder="0.000">
+                            <div class="input-group-append"><span class="input-group-text">USD</span></div>
+                          </div>
+                        </div>
+                        <div class="form-group condition">
+                          <label class="text-uppercase" for="">Condition</label>
+                          <div class="dropdown show"><a class="btn btn-link dropdown-toggle" id="condition" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">None</a>
+                            <div class="dropdown-menu" aria-labelledby="condition"><a class="dropdown-item" href="#">None</a><a class="dropdown-item" href="#">Greater Than or Equal To</a><a class="dropdown-item" href="#">Less Than or Equal To</a></div>
+                          </div>
+                        </div>
+                        <div class="form-group target-price">
+                          <label class="text-uppercase px-4" for="targetPrice">Target Price</label>
+                          <div class="input-group px-4">
+                            <input class="form-control" id="targetPrice" type="text" autocomplete="off" placeholder="0">
+                            <div class="input-group-append"><span class="input-group-text">USD</span></div>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="text-uppercase" for="">Total</label>
+                          <div class="input-group">
+                            <input class="form-control" type="text" autocomplete="off" placeholder="0.000">
+                            <div class="input-group-append"><span class="input-group-text">USD</span></div>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="text-uppercase" for="">Time in force</label>
+                          <div class="dropdown show"><a class="btn btn-link dropdown-toggle" id="timeInForce" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Good 'Til Cancelled (Default)</a>
+                            <div class="dropdown-menu" aria-labelledby="timeInForce"><a class="dropdown-item" href="#">Good 'Til Cancelled (Default)</a><a class="dropdown-item" href="#">Immediate or Cancel</a></div>
+                          </div>
+                        </div>
+                        <div class="text-center">
+                          <button class="btn btn-transaction btn-sell" type="submit">Sell Tether</button>
+                        </div>
+                        <div class="max-buy text-center">
+                          <h4 class="available-balance mt-3">Available balance</h4>
+                          <div class="balance-data active-data">0.000 USD</div>
+                          <div class="balance-data"><small>0.00000000 USDT</small></div>
+                          <div class="balance-data"><a class="text-uppercase text-white" href="#">Max Sell         </a></div>
+                        </div>
+                      </form>
                     </div>
                   </div>
                 </div>
@@ -985,6 +1100,21 @@
               });
           });
       })(jQuery);
+    </script>
+    <script>
+      $(function(){
+          $('.dropdown-menu a').on("click",function(){
+              $(this).parent().prev().text($(this).text());
+          });
+          $('.conditionTarget').on("click",function(){
+              $('.condition').addClass('active');
+              $('.target-price').addClass('active');
+          });
+          $('.limitDefault').on("click",function(){
+              $('.condition').removeClass('active');
+              $('.target-price').removeClass('active');
+          });
+      });
     </script>
   </body>
 </html>

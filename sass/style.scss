@@ -879,6 +879,37 @@ sup{
     }
     
 }
+@include maxq(small){
+    table.dataTable thead th,
+    table.dataTable thead td{
+        padding: 5px;
+    }
+}
+@media (max-width: 360px){
+    .container-fluid{
+        padding-left: 8px;
+        padding-right: 8px;
+        .row{
+            margin-left: -8px;
+            margin-right: -8px;
+            [class*='col']{
+                padding-left: 8px;
+                padding-right: 8px;
+            }
+        }
+    }
+    .dataTables_wrapper{
+        [class*='col']{
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+    }
+    .carousel {
+        .market_title {
+            font-size: 28px;
+        }
+    }
+}
 table.dataTable.no-footer{
     border-bottom: 0;
 }
@@ -946,13 +977,7 @@ table.dataTable.no-footer{
 
     }
 }
-@include minq(medium){
-    .market{
-        &_table_detail{
-            font-size: 13px;
-        }
-    }
-}
+
 .trade{
     &_content{
         max-width: 224px;
@@ -970,6 +995,152 @@ table.dataTable.no-footer{
             &:hover{
                 background-color: #009af8;
                 color: #2b3441;
+            }
+        }
+    }
+}
+.nav-pills {
+    display: flex;
+    justify-content: space-between;
+    .nav-item{
+        flex: 1;
+        max-width: 49%;;
+    }
+    .nav-link{
+        border-radius: 0;
+        text-transform: uppercase;
+        text-align: center;
+        height: 32px;
+        font-size: 14px;
+        line-height: 18px;
+        font-weight: bold;
+        color: #2b3441;
+        background-color: #9caac1;
+        &:hover{
+            background-color: #7d899d;
+        }
+    }
+    .btn-sell.active{
+        background-color: #ff6724;
+        color: #2b3441;
+        &:hover{
+            background-color: #f75535;
+        }
+    }
+    .btn-buy.active{
+        background-color: #00a45b;
+        color: #2b3441;
+        &:hover{
+            background-color: #00b74a;
+        }
+    }
+}
+.tab-pane{
+    .form-group{
+        border-bottom: 1px solid #515967;
+        .form-control{
+            background-color: transparent !important;
+            color: #9caac1;
+            border: 0;
+            font-size: 11px;
+            padding: .375rem 0;
+        }
+        .input-group-text{
+            color: #7d899d;
+            background-color: transparent;
+            border: 0;
+            padding: .375rem 0;
+            font-size: 11px;
+        }
+    }
+    .condition{
+        display: none;
+        &.active{
+            display: block;
+        }
+    }
+    .target-price{
+        display: none;
+        &.active{
+            display: block;
+        }
+    }
+    .btn-transaction{
+        padding: 11px 12px;
+        outline: none;
+        font-size: 15px;
+        color: #2b3441;
+        transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+        &.btn-buy{
+            background-color: #00a45b;
+            min-width: 150px;
+            &:hover{
+                background-color: #00b74a;
+            }
+        }
+        &.btn-sell{
+            background-color: #ff6724;
+            min-width: 150px;
+            &:hover{
+                background-color: #f75535;
+            }
+        }
+    }
+}
+.trade{
+    .dropdown-menu{
+        background-color: #2b3441;
+        box-shadow: 0 2px 10px 0 rgba(0,0,0,.5);
+        .dropdown-item{
+            padding: 3px 10px;
+            font-size: 11px;
+            &:hover{
+                color: #0084d4;
+            }
+        }
+    }
+    label{
+        font-size: 10px;
+    }
+}
+.trade-content{
+    max-width: 400px;
+    margin: 0 auto;
+}
+.btn-link{
+    text-decoration: none !important;
+    padding-left: 0;
+    font-size: 11px;
+    color: #0084d4;
+    &:hover{
+        text-decoration: none !important;
+        color: #0084d4;
+    }
+}
+@include minq(medium){
+    .market{
+        &_table_detail{
+            font-size: 13px;
+        }
+    }
+    .btn-link{
+        font-size: 13px;
+    }
+    .trade{
+        .dropdown-menu{
+            .dropdown-item{
+                font-size: 13px;
+            }
+        }
+        label{
+            font-size: 12px;
+        }
+    }
+    .tab-pane{
+        .form-group{
+            .form-control,
+            .input-group-text{
+                font-size: 13px;
             }
         }
     }
