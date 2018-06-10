@@ -65,9 +65,105 @@ block main_content
     //- PENDING WITHDRAWALS
     .container-fluid
         .row
-            .col
+            .col.balance
                 div.collapse-control
-                    a(data-toggle="collapse" href="#collapseWithdrawPending" role="button" aria-expanded="false" aria-controls="collapseWithdrawPending")
-                        h1.text-uppercase.mt-4 Pending withdrawals
+                    a.expand-button(data-toggle="collapse" href="#collapseWithdrawPending" role="button" aria-expanded="false" aria-controls="collapseWithdrawPending")
+                        h1.text-uppercase.mt-4
+                            i.far.fa-plus-square.expand-icon.show.mr-2
+                            i.far.fa-minus-square.expand-icon.mr-2
+                            |Pending withdrawals
                 .collapse#collapseWithdrawPending
-                    .expand-collapse-container Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                    .expand-collapse-container
+                        .pt-2.text-right
+                            input.form-control.ml-auto.market_find.d-inline-block.mr-2(type="search" placeholder="Find..." aria-label="Search")
+                            button.btn.btn-refresh(type="button")
+                                i.fas.fa-sync
+                        table.dataTablePlugin.market_table_detail
+                            thead
+                                tr
+                                    th.text-left Date
+                                    th.text-left Symbol
+                                    th.text-right Quantity
+                                    th.text-right Status
+                            tbody
+                                tr
+                                    td.text-center(colspan="4") You have no pending withdrawals.
+        .row
+            .col.balance
+                div.collapse-control
+                    a.expand-button(data-toggle="collapse" href="#collapsePendingDeposit" role="button" aria-expanded="false" aria-controls="collapseWithdrawPending")
+                        h1.text-uppercase.mt-4
+                            i.far.fa-plus-square.expand-icon.show.mr-2
+                            i.far.fa-minus-square.expand-icon.mr-2
+                            |Pending Deposits
+                .collapse#collapsePendingDeposit
+                    .expand-collapse-container
+                        .pt-2.text-right
+                            input.form-control.ml-auto.market_find.d-inline-block.mr-2(type="search" placeholder="Find..." aria-label="Search")
+                            button.btn.btn-refresh(type="button")
+                                i.fas.fa-sync
+                        table.dataTablePlugin.market_table_detail
+                            thead
+                                tr
+                                    th.text-left Date
+                                    th.text-left Symbol
+                                    th.text-right Quantity
+                                    th.text-right Status
+                            tbody
+                                tr
+                                    td.text-center(colspan="4") You have no pending withdrawals.
+        .row
+            .col.balance
+                div.collapse-control
+                    a.expand-button(data-toggle="collapse" href="#collapseWithdrawHistory" role="button" aria-expanded="false" aria-controls="collapseWithdrawPending")
+                        h1.text-uppercase.mt-4
+                            i.far.fa-plus-square.expand-icon.show.mr-2
+                            i.far.fa-minus-square.expand-icon.mr-2
+                            |Withdrawals History
+                .collapse#collapseWithdrawHistory
+                    .expand-collapse-container
+                        .pt-2.text-right
+                            input.form-control.ml-auto.market_find.d-inline-block.mr-2(type="search" placeholder="Find..." aria-label="Search")
+                            button.btn.btn-refresh(type="button")
+                                i.fas.fa-sync
+                        table.dataTablePlugin.market_table_detail
+                            thead
+                                tr
+                                    th.text-left Date
+                                    th.text-left Symbol
+                                    th.text-right Quantity
+                                    th.text-right Status
+                            tbody
+                                tr
+                                    td.text-center(colspan="4") You have no pending withdrawals.
+        .row
+            .col.balance
+                div.collapse-control
+                    a.expand-button(data-toggle="collapse" href="#collapseDepositHistory" role="button" aria-expanded="false" aria-controls="collapseWithdrawPending")
+                        h1.text-uppercase.mt-4
+                            i.far.fa-plus-square.expand-icon.show.mr-2
+                            i.far.fa-minus-square.expand-icon.mr-2
+                            |Deposit History
+                .collapse#collapseDepositHistory
+                    .expand-collapse-container
+                        .pt-2.text-right
+                            input.form-control.ml-auto.market_find.d-inline-block.mr-2(type="search" placeholder="Find..." aria-label="Search")
+                            button.btn.btn-refresh(type="button")
+                                i.fas.fa-sync
+                        table.dataTablePlugin.market_table_detail
+                            thead
+                                tr
+                                    th.text-left Date
+                                    th.text-left Symbol
+                                    th.text-right Quantity
+                                    th.text-right Status
+                            tbody
+                                tr
+                                    td.text-center(colspan="4") You have no pending withdrawals.
+block script-append
+    script.
+        $(function(){
+            $('.expand-button').on("click",function(){
+                $('.expand-icon').toggleClass('show');
+            });
+        });                                

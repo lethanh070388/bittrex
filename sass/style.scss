@@ -883,7 +883,9 @@ sup{
     }
     
 }
-
+table.dataTable tbody tr:hover td{
+    background-color: rgba(0,132,212,.08);
+}
 @include maxq(small){
     table.dataTable thead th,
     table.dataTable thead td{
@@ -1212,6 +1214,21 @@ table.dataTable.no-footer{
     .sum{
         display: none;
     }
+    .expand-icon{
+        display: none;
+    }
+    .expand-icon.show{
+        display: inline-block;
+    }
+    .btn-refresh{
+        padding: .274rem .65rem;
+        background-color: #9caac1;
+    }
+    .far {
+        font-size: 14px;
+        vertical-align: middle;
+        margin-top: -4px;
+    }
 }
 .icon{
     background-size: 16px;
@@ -1228,6 +1245,43 @@ table.dataTable.no-footer{
     a{
         h1{
             color: rgba(255, 255, 255, 0.8);
+        }
+    }
+}
+.expand-collapse-container{
+    padding: 2px 8px;
+    border-radius: 2px;
+    margin-bottom: 24px;
+    border-left: 6px solid #009af8;
+    background-color: rgba(255,255,255,.05);
+}
+// MODAL
+.error-container{
+    background-color: transparent;
+    .modal-header{
+        background-color: #c73535;
+        border-bottom-color: #c73535;
+        .modal-title{
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .close{
+            margin-left: 0;
+        }
+    }
+    .modal-body{
+        background-color: #2b3441;
+        color: rgba(255, 255, 255, 0.8);
+    }
+    .modal-footer{
+        background-color: #2b3441;
+        border-top-color: #2b3441;
+        .btn-transaction{
+            background-color: #c73535;
+            color: rgba(255, 255, 255, 0.8);
+            &:hover{
+                color: #2b3441;
+            }
         }
     }
 }

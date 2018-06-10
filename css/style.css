@@ -968,6 +968,9 @@ sup {
   padding-left: 0;
   padding-right: 0; }
 
+table.dataTable tbody tr:hover td {
+  background-color: rgba(0, 132, 212, 0.08); }
+
 @media screen and (max-width: 575px) {
   table.dataTable thead th,
   table.dataTable thead td {
@@ -1217,6 +1220,25 @@ table.dataTable.no-footer {
 .balance .sum {
   display: none; }
 
+.balance .expand-icon,
+.balance .expand-info {
+  display: none; }
+
+.balance .expand-icon.show {
+  display: inline-block; }
+
+.balance .expand-info.show {
+  display: block; }
+
+.balance .btn-refresh {
+  padding: .274rem .65rem;
+  background-color: #9caac1; }
+
+.balance .far {
+  font-size: 14px;
+  vertical-align: middle;
+  margin-top: -4px; }
+
 .icon {
   background-size: 16px;
   background-repeat: no-repeat;
@@ -1230,3 +1252,32 @@ table.dataTable.no-footer {
 
 .collapse-control a h1 {
   color: rgba(255, 255, 255, 0.8); }
+
+.expand-collapse-container {
+  padding: 2px 8px;
+  border-radius: 2px;
+  margin-bottom: 24px;
+  border-left: 6px solid #009af8;
+  background-color: rgba(255, 255, 255, 0.05); }
+
+.error-container {
+  background-color: transparent; }
+  .error-container .modal-header {
+    background-color: #c73535;
+    border-bottom-color: #c73535; }
+    .error-container .modal-header .modal-title {
+      margin-left: auto;
+      margin-right: auto; }
+    .error-container .modal-header .close {
+      margin-left: 0; }
+  .error-container .modal-body {
+    background-color: #2b3441;
+    color: rgba(255, 255, 255, 0.8); }
+  .error-container .modal-footer {
+    background-color: #2b3441;
+    border-top-color: #2b3441; }
+    .error-container .modal-footer .btn-transaction {
+      background-color: #c73535;
+      color: rgba(255, 255, 255, 0.8); }
+      .error-container .modal-footer .btn-transaction:hover {
+        color: #2b3441; }

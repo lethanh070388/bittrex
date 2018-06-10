@@ -612,7 +612,7 @@
                           </div>
                         </div>
                         <div class="text-center">
-                          <button class="btn btn-transaction btn-buy" type="submit">Buy Tether</button>
+                          <button class="btn btn-transaction btn-buy" type="button" data-toggle="modal" data-target="#modalFailed">Buy Tether</button>
                         </div>
                         <div class="max-buy text-center">
                           <h4 class="available-balance mt-3">Available balance</h4>
@@ -669,7 +669,7 @@
                           </div>
                         </div>
                         <div class="text-center">
-                          <button class="btn btn-transaction btn-sell" type="submit">Sell Tether</button>
+                          <button class="btn btn-transaction btn-sell" type="button" data-toggle="modal" data-target="#modalFailed">Sell Tether</button>
                         </div>
                         <div class="max-buy text-center">
                           <h4 class="available-balance mt-3">Available balance</h4>
@@ -868,6 +868,32 @@
                       </tr>
                     </tbody>
                   </table>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <div class="modal fade" id="modalFailed" tabindex="-1" role="dialog" aria-labelledby="modalFailedLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content error-container">
+                        <div class="modal-header text-center">
+                          <h5 class="modal-title" id="modalFailedLabel">Modal title</h5>
+                          <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        </div>
+                        <div class="modal-body">
+                          <p>
+                             The following errors were encountered:
+                            <ul>
+                              <li>Bids must be greater than .00000001 for limit orders</li>
+                              <li>The minimum order size is .00050000</li>
+                            </ul>Please correct these issues and try again.
+                          </p>
+                        </div>
+                        <div class="modal-footer">
+                          <button class="btn btn-transaction" type="button" data-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

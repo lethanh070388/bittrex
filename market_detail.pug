@@ -157,7 +157,7 @@ block main_content
                                             a.dropdown-item(href="#") Good 'Til Cancelled (Default)
                                             a.dropdown-item(href="#") Immediate or Cancel
                                 .text-center
-                                    button.btn.btn-transaction.btn-buy(type="submit") Buy Tether
+                                    button.btn.btn-transaction.btn-buy(type="button" data-toggle="modal" data-target="#modalFailed") Buy Tether
                                 .max-buy.text-center
                                     h4.available-balance.mt-3 Available balance
                                     .balance-data.active-data 0.000 USD
@@ -213,7 +213,7 @@ block main_content
                                             a.dropdown-item(href="#") Good 'Til Cancelled (Default)
                                             a.dropdown-item(href="#") Immediate or Cancel
                                 .text-center
-                                    button.btn.btn-transaction.btn-sell(type="submit") Sell Tether
+                                    button.btn.btn-transaction.btn-sell(type="button" data-toggle="modal" data-target="#modalFailed") Sell Tether
                                 .max-buy.text-center
                                     h4.available-balance.mt-3 Available balance
                                     .balance-data.active-data 0.000 USD
@@ -237,6 +237,25 @@ block main_content
                                 td 100000.000	
                                 td 100300.0000
                         -}
+        //- Modal
+        .row
+            .col
+                #modalFailed.modal.fade(tabindex="-1" role="dialog" aria-labelledby="modalFailedLabel" aria-hidden="true")
+                    .modal-dialog(role="document")
+                        .modal-content.error-container
+                            .modal-header.text-center
+                                h5.modal-title#modalFailedLabel Modal title
+                                button.close(type="button" data-dismiss="modal" aria-label="Close")
+                                    span(aria-hidden="true") &times;
+                            .modal-body
+                                p 
+                                    |The following errors were encountered:
+                                    ul
+                                        li Bids must be greater than .00000001 for limit orders
+                                        li The minimum order size is .00050000
+                                    |Please correct these issues and try again.
+                            .modal-footer
+                                button.btn.btn-transaction(type="button" data-dismiss="modal") Close
     .container-fluid
         .row
             .col
@@ -260,6 +279,7 @@ block main_content
                                 td.text-right 3035.33000000
                                 td.text-right.hidden-xs 3038.36533000
                         -}
+    
 block script-append
     script.
         $(function(){
