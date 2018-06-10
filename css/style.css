@@ -607,6 +607,11 @@ sup {
 
 @media screen and (min-width: 768px) {
   .wrapper-market .container {
+    padding-left: 15px;
+    padding-right: 15px; } }
+
+@media screen and (min-width: 1200px) {
+  .wrapper-market .container {
     padding-left: 45px;
     padding-right: 45px; } }
 
@@ -959,15 +964,24 @@ sup {
   .dataTables_wrapper .dataTables_paginate .paginate_button.active:hover {
     border-color: #9caac1; }
 
-@media screen and (min-width: 1200px) {
-  .dataTables_wrapper .col-sm-12 {
-    padding-left: 0;
-    padding-right: 0; } }
+.dataTables_wrapper .col-sm-12 {
+  padding-left: 0;
+  padding-right: 0; }
 
 @media screen and (max-width: 575px) {
   table.dataTable thead th,
   table.dataTable thead td {
     padding: 5px; } }
+
+@media screen and (min-width: 576px) {
+  table.dataTable thead th,
+  table.dataTable thead td {
+    padding: 8px; } }
+
+@media screen and (min-width: 992px) {
+  table.dataTable thead th,
+  table.dataTable thead td {
+    padding: 8px 10px; } }
 
 @media (max-width: 360px) {
   .container-fluid {

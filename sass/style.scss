@@ -359,6 +359,12 @@ sup{
     }
     @include minq(medium){
         .container{
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+    @include minq(xlarge){
+        .container{
             padding-left: 45px;
             padding-right: 45px;
         }
@@ -871,18 +877,29 @@ sup{
             }
         }
     }
-    @include minq(xlarge){
-        .col-sm-12{
-            padding-left: 0;
-            padding-right: 0;
-        }
+    .col-sm-12{
+        padding-left: 0;
+        padding-right: 0;
     }
     
 }
+
 @include maxq(small){
     table.dataTable thead th,
     table.dataTable thead td{
         padding: 5px;
+    }
+}
+@include minq(small){
+    table.dataTable thead th,
+    table.dataTable thead td{
+        padding: 8px;
+    }
+}
+@include minq(large){
+    table.dataTable thead th,
+    table.dataTable thead td{
+        padding: 8px 10px;
     }
 }
 @media (max-width: 360px){
