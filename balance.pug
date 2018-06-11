@@ -35,33 +35,92 @@ block main_content
                             | 0.00000000
         .row
             .col.balance
+                .container-fluid.mt-4
+                    .row
+                        .col-sm-6
+                            label.btn.btn-custom Hide zero balances
+                        .col-sm-6
+                            .text-right.d-flex
+                                input.form-control.ml-auto.market_find.d-inline-block.mr-2(type="search" placeholder="Find..." aria-label="Search")
+                                button.btn.btn-refresh(type="button")
+                                    i.fas.fa-sync
                 table.dataTablePlugin.market_table_detail
                     thead
                         tr
                             th.text-center D
                             th.text-center W
-                            th.text-left.hidden-xl-cell Currency name
+                            th.text-left.hidden-lg-cell Currency name
                             th.text-center Symbol
-                            th.text-right.hidden-xl-cell Available balance
-                            th.text-right.hidden-xl-cell Pending deposit
-                            th.text-right.hidden-xl-cell Reserved
+                            th.text-right.hidden-lg-cell Available balance
+                            th.text-right.hidden-lg-cell Pending deposit
+                            th.text-right.hidden-lg-cell Reserved
                             th.text-right Total
-                            th.text-right.hidden-xl-cell EST.BTC value
+                            th.text-right.hidden-lg-cell EST.BTC value
                             th.text-right %change
                     tbody
                         -for(var i=1; i<20; i++){
                             tr
                                 td.icon.icon-deposit-green
+                                    button.btn-modal-deposit(type="button" data-toggle="modal" data-target="#modalDeposit")
                                 td.icon.icon-withdraw-red
-                                td.text-left.hidden-xl-cell Ada
+                                    button.btn-modal-withdrawal(type="button" data-toggle="modal" data-target="#modalWithdrawal")
+                                td.text-left.hidden-lg-cell Ada
                                 td.text-center ADA
-                                td.text-right.hidden-xl-cell 0.00000000
-                                td.text-right.hidden-xl-cell 0.00000000
-                                td.text-right.hidden-xl-cell 0.00000000
+                                td.text-right.hidden-lg-cell 0.00000000
+                                td.text-right.hidden-lg-cell 0.00000000
+                                td.text-right.hidden-lg-cell 0.00000000
                                 td.text-right 0.00000000
-                                td.text-right.hidden-xl-cell 0.00000000
+                                td.text-right.hidden-lg-cell 0.00000000
                                 td.text-right.up -1.7%
                         -}
+        //- Modal
+        .row
+            .col
+                #modalDeposit.modal.fade(tabindex="-1" role="dialog" aria-labelledby="modalDepositLabel" aria-hidden="true")
+                    .modal-dialog(role="document")
+                        .modal-content.deposit-container
+                            .modal-header.text-center
+                                h5.modal-title#modalDepositLabel 
+                                    span.title-icon
+                                    |Deposit
+                                button.close(type="button" data-dismiss="modal" aria-label="Close")
+                                    span(aria-hidden="true") &times;
+                            .modal-body
+                                .container
+                                    .row
+                                        .col
+                                            .info.d-flex.justify-content-between.align-items-baseline
+                                                h5 Currency
+                                                h6 
+                                                    i.fas.fa-check-circle.mr-2
+                                                    |Block updated 8 minutes ago
+                                            table.deposit_table
+                                                thead
+                                                    tr
+                                                        th Name
+                                                        th.text-right Symbol
+                                                tbody
+                                                    tr
+                                                        td Bitcoin
+                                                        td.text-right BTC
+                                            .modal-disclaimer
+                                                h5.text-uppercase Disclaimer
+                                                small I acknowledge the following information: 
+                                                small By depositing tokens to this address, you agree to our 
+                                                    a(href="#") deposit recovery policy
+                                                    |. Depositing tokens to an address other than BTC may result in your funds being lost.
+                                            .info.mt-4
+                                                h5 Address
+                                            .input-group.mb-3
+                                                input.form-control.deposit-control(type="text" placeholder="Generate a new address" aria-label="newaddress" aria-describedby="basic-addon2")
+                                                .input-group-append
+                                                    button.btn.btn-new-address(type="button") New Address
+                                            .modal-disclaimer
+                                                h5.text-uppercase DEPOSIT INSTRUCTIONS
+                                                small Depositing tokens to this address other than BTC will result in your funds being lost.
+                            .modal-footer
+                                button.btn.btn-deposit(type="button" data-dismiss="modal") Close
+
     //- PENDING WITHDRAWALS
     .container-fluid
         .row
@@ -74,7 +133,7 @@ block main_content
                             |Pending withdrawals
                 .collapse#collapseWithdrawPending
                     .expand-collapse-container
-                        .pt-2.text-right
+                        .pt-2.text-right.d-flex
                             input.form-control.ml-auto.market_find.d-inline-block.mr-2(type="search" placeholder="Find..." aria-label="Search")
                             button.btn.btn-refresh(type="button")
                                 i.fas.fa-sync
@@ -98,7 +157,7 @@ block main_content
                             |Pending Deposits
                 .collapse#collapsePendingDeposit
                     .expand-collapse-container
-                        .pt-2.text-right
+                        .pt-2.text-right.d-flex
                             input.form-control.ml-auto.market_find.d-inline-block.mr-2(type="search" placeholder="Find..." aria-label="Search")
                             button.btn.btn-refresh(type="button")
                                 i.fas.fa-sync
@@ -122,7 +181,7 @@ block main_content
                             |Withdrawals History
                 .collapse#collapseWithdrawHistory
                     .expand-collapse-container
-                        .pt-2.text-right
+                        .pt-2.text-right.d-flex
                             input.form-control.ml-auto.market_find.d-inline-block.mr-2(type="search" placeholder="Find..." aria-label="Search")
                             button.btn.btn-refresh(type="button")
                                 i.fas.fa-sync
@@ -146,7 +205,7 @@ block main_content
                             |Deposit History
                 .collapse#collapseDepositHistory
                     .expand-collapse-container
-                        .pt-2.text-right
+                        .pt-2.text-right.d-flex
                             input.form-control.ml-auto.market_find.d-inline-block.mr-2(type="search" placeholder="Find..." aria-label="Search")
                             button.btn.btn-refresh(type="button")
                                 i.fas.fa-sync

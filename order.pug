@@ -1,0 +1,65 @@
+extends layout_market_detail.pug  
+
+block datalist_aside
+    .datalist.scrollbar_custom.mCustomScrollbar
+        -for(var i=0; i<30; i++){
+            ul.datalist_item
+                li.datalist_item_up
+                    .market_currency WAVES
+                    .market_change 
+                        span.up -3.1%
+                        img(src="../assets/arrow-down.svg", alt="")
+                li.datalist_item_down
+                    .market_volumn 9.34
+                    .market_last 0.074890
+        -}
+
+block main_content
+    .container-fluid.order-container
+        .row
+            .col
+                h1.text-uppercase.mt-4 OPEN ORDERS
+        .row
+            .col
+                .pt-2.text-right.d-flex
+                    input.form-control.ml-auto.market_find.d-inline-block.mr-2(type="search" placeholder="Find..." aria-label="Search")
+                    button.btn.btn-refresh(type="button")
+                        i.fas.fa-sync
+                table.dataTablePlugin.market_table_detail
+                    thead
+                        tr
+                            th.text-left Order date
+                            th.text-left.hidden-lg-cell Market
+                            th.text-right.hidden-lg-cell Type
+                            th.text-right Bid/Ask
+                            th.text-right.hidden-lg-cell Filled
+                            th.text-right Unit Total
+                            th.text-right.hidden-lg-cell Actual Rate
+                            th.text-right EST.Total
+                    tbody
+                        tr
+                            td.text-center(colspan="8") You have no open orders.
+        .row
+            .col
+                h1.text-uppercase.mt-4 My order history
+        .row
+            .col
+                .pt-2.text-right.d-flex
+                    input.form-control.ml-auto.market_find.d-inline-block.mr-2(type="search" placeholder="Find..." aria-label="Search")
+                    button.btn.btn-refresh(type="button")
+                        i.fas.fa-sync
+                table.dataTablePlugin.market_table_detail
+                    thead
+                        tr
+                            th.text-left.hidden-lg-cell.hidden-xl-cell Closed date
+                            th.text-left.hidden-lg-cell.hidden-xl-cell Opened date
+                            th.text-left Market
+                            th.text-right Type
+                            th.text-right.hidden-lg-cell Bid/Ask
+                            th.text-right Unit Filled
+                            th.text-right Unit Total
+                            th.text-right.hidden-lg-cell Actual Rate
+                            th.text-right.hidden-lg-cell Cost/Proceeds
+                    tbody
+                        tr
+                            td.text-center(colspan="8") You have no closed orders.

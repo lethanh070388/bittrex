@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bittrex</title>
+    <link rel="stylesheet" href="../css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="../css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="../css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+  </head>
+  <body>
+    <div class="controls"> 
+      <div class="control-toggle"><i class="fas fa-cog fa-1x"></i></div>
+      <div class="control-button-group">
+        <button class="btn-theme" data-theme="light"></button>
+        <button class="btn-theme" data-theme="dark"></button>
+      </div>
+    </div>
+    <div class="wrapper dark">
+      <div class="layout">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark scrolling-navbar fixed-top"><a class="navbar-brand" href="./index.html"><img class="logo-icon" src="../assets/logo.svg"><span class="logo-word">BITTREX</span></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active"><a class="nav-link" href="./market.html">Markets<span class="sr-only">(current)</span></a></li>
+              <li class="nav-item"><a class="nav-link" href="./order.html">Orders</a></li>
+              <li class="nav-item"><a class="nav-link" href="./balance.html">Wallets</a></li>
+              <li class="nav-item dropdown"><a class="nav-link" href="./setting_activity.html">Settings</a></li>
+              <li class="nav-item"><a class="nav-link" href="./login.html">Login</a></li>
+            </ul>
+          </div>
+        </nav>
+        <div class="main-wapper main-market-detail-container">
+          <div class="main_nav visible hidden-xs">
+            <div class="main_nav_menu">
+              <div class="main_nav_menu_title position-relative"> 
+                <h1 class="text-uppercase">Markets</h1><span class="toggle_icon_navbar"><i class="fas fa-angle-left"></i></span>
+              </div>
+              <div class="main_nav_menu_dropdown">
+                <select class="custom-select" id="MarketList">
+                  <option value="1" selected>ETH Markets</option>
+                  <option value="2">USD Markets</option>
+                  <option value="3">BTC Markets</option>
+                  <option value="4">USDT Markets</option>
+                </select>
+              </div>
+              <div class="input-group mt-3">
+                <input class="form-control" type="text" placeholder="Find...">
+                <div class="input-group-append">
+                  <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+                  <div class="dropdown-menu"><a class="dropdown-item py-1" href="#">Markets</a><a class="dropdown-item py-1" href="#">Volume</a><a class="dropdown-item py-1" href="#">% Change</a><a class="dropdown-item py-1" href="#">Last price</a><a class="dropdown-item py-1" href="#">Added</a></div>
+                </div>
+              </div>
+              <div class="datalist scrollbar_custom mCustomScrollbar">
+                <ul class="datalist_item">
+                  <li class="datalist_item_up">
+                    <div class="market_currency">WAVES</div>
+                    <div class="market_change"> <span class="up">-3.1%</span><img src="../assets/arrow-down.svg" alt=""></div>
+                  </li>
+                  <li class="datalist_item_down">
+                    <div class="market_volumn">9.34</div>
+                    <div class="market_last">0.074890</div>
+                  </li>
+                </ul>
+                <ul class="datalist_item">
+                  <li class="datalist_item_up">
+                    <div class="market_currency">WAVES</div>
+                    <div class="market_change"> <span class="up">-3.1%</span><img src="../assets/arrow-down.svg" alt=""></div>
+                  </li>
+                  <li class="datalist_item_down">
+                    <div class="market_volumn">9.34</div>
+                    <div class="market_last">0.074890</div>
+                  </li>
+                </ul>
+                <ul class="datalist_item">
+                  <li class="datalist_item_up">
+                    <div class="market_currency">WAVES</div>
+                    <div class="market_change"> <span class="up">-3.1%</span><img src="../assets/arrow-down.svg" alt=""></div>
+                  </li>
+                  <li class="datalist_item_down">
+                    <div class="market_volumn">9.34</div>
+                    <div class="market_last">0.074890</div>
+                  </li>
+                </ul>
+                <ul class="datalist_item">
+                  <li class="datalist_item_up">
+                    <div class="market_currency">WAVES</div>
+                    <div class="market_change"> <span class="up">-3.1%</span><img src="../assets/arrow-down.svg" alt=""></div>
+                  </li>
+                  <li class="datalist_item_down">
+                    <div class="market_volumn">9.34</div>
+                    <div class="market_last">0.074890</div>
+                  </li>
+                </ul>
+                <ul class="datalist_item">
+                  <li class="datalist_item_up">
+                    <div class="market_currency">WAVES</div>
+                    <div class="market_change"> <span class="up">-3.1%</span><img src="../assets/arrow-down.svg" alt=""></div>
+                  </li>
+                  <li class="datalist_item_down">
+                    <div class="market_volumn">9.34</div>
+                    <div class="market_last">0.074890</div>
+                  </li>
+                </ul>
+                <ul class="datalist_item">
+                  <li class="datalist_item_up">
+                    <div class="market_currency">WAVES</div>
+                    <div class="market_change"> <span class="up">-3.1%</span><img src="../assets/arrow-down.svg" alt=""></div>
+                  </li>
+                  <li class="datalist_item_down">
+                    <div class="market_volumn">9.34</div>
+                    <div class="market_last">0.074890</div>
+                  </li>
+                </ul>
+                <ul class="datalist_item">
+                  <li class="datalist_item_up">
+                    <div class="market_currency">WAVES</div>
+                    <div class="market_change"> <span class="up">-3.1%</span><img src="../assets/arrow-down.svg" alt=""></div>
+                  </li>
+                  <li class="datalist_item_down">
+                    <div class="market_volumn">9.34</div>
+                    <div class="market_last">0.074890</div>
+                  </li>
+                </ul>
+                <ul class="datalist_item">
+                  <li class="datalist_item_up">
+                    <div class="market_currency">WAVES</div>
+                    <div class="market_change"> <span class="up">-3.1%</span><img src="../assets/arrow-down.svg" alt=""></div>
+                  </li>
+                  <li class="datalist_item_down">
+                    <div class="market_volumn">9.34</div>
+                    <div class="market_last">0.074890</div>
+                  </li>
+                </ul>
+                <ul class="datalist_item">
+                  <li class="datalist_item_up">
+                    <div class="market_currency">WAVES</div>
+                    <div class="market_change"> <span class="up">-3.1%</span><img src="../assets/arrow-down.svg" alt=""></div>
+                  </li>
+                  <li class="datalist_item_down">
+                    <div class="market_volumn">9.34</div>
+                    <div class="market_last">0.074890</div>
+                  </li>
+                </ul>
+                <ul class="datalist_item">
+                  <li class="datalist_item_up">
+                    <div class="market_currency">WAVES</div>
+                    <div class="market_change"> <span class="up">-3.1%</span><img src="../assets/arrow-down.svg" alt=""></div>
+                  </li>
+                  <li class="datalist_item_down">
+                    <div class="market_volumn">9.34</div>
+                    <div class="market_last">0.074890</div>
+                  </li>
+                </ul>
+                <ul class="datalist_item">
+                  <li class="datalist_item_up">
+                    <div class="market_currency">WAVES</div>
+                    <div class="market_change"> <span class="up">-3.1%</span><img src="../assets/arrow-down.svg" alt=""></div>
+                  </li>
+                  <li class="datalist_item_down">
+                    <div class="market_volumn">9.34</div>
+                    <div class="market_last">0.074890</div>
+                  </li>
+                </ul>
+                <ul class="datalist_item">
+                  <li class="datalist_item_up">
+                    <div class="market_currency">WAVES</div>
+                    <div class="market_change"> <span class="up">-3.1%</span><img src="../assets/arrow-down.svg" alt=""></div>
+                  </li>
+                  <li class="datalist_item_down">
+                    <div class="market_volumn">9.34</div>
+                    <div class="market_last">0.074890</div>
+                  </li>
+                </ul>
+                <ul class="datalist_item">
+                  <li class="datalist_item_up">
+                    <div class="market_currency">WAVES</div>
+                    <div class="market_change"> <span class="up">-3.1%</span><img src="../assets/arrow-down.svg" alt=""></div>
+                  </li>
+                  <li class="datalist_item_down">
+                    <div class="market_volumn">9.34</div>
+                    <div class="market_last">0.074890</div>
+                  </li>
+                </ul>
+                <ul class="datalist_item">
+                  <li class="datalist_item_up">
+                    <div class="market_currency">WAVES</div>
+                    <div class="market_change"> <span class="up">-3.1%</span><img src="../assets/arrow-down.svg" alt=""></div>
+                  </li>
+                  <li class="datalist_item_down">
+                    <div class="market_volumn">9.34</div>
+                    <div class="market_last">0.074890</div>
+                  </li>
+                </ul>
+                <ul class="datalist_item">
+                  <li class="datalist_item_up">
+                    <div class="market_currency">WAVES</div>
+                    <div class="market_change"> <span class="up">-3.1%</span><img src="../assets/arrow-down.svg" alt=""></div>
+                  </li>
+                  <li class="datalist_item_down">
+                    <div class="market_volumn">9.34</div>
+                    <div class="market_last">0.074890</div>
+                  </li>
+                </ul>
+                <ul class="datalist_item">
+                  <li class="datalist_item_up">
+                    <div class="market_currency">WAVES</div>
+                    <div class="market_change"> <span class="up">-3.1%</span><img src="../assets/arrow-down.svg" alt=""></div>
+                  </li>
+                  <li class="datalist_item_down">
+                    <div class="market_volumn">9.34</div>
+                    <div class="market_last">0.074890</div>
+                  </li>
+                </ul>
+                <ul class="datalist_item">
+                  <li class="datalist_item_up">
+                    <div class="market_currency">WAVES</div>
+                    <div class="market_change"> <span class="up">-3.1%</span><img src="../assets/arrow-down.svg" alt=""></div>
+                  </li>
+                  <li class="datalist_item_down">
+                    <div class="market_volumn">9.34</div>
+                    <div class="market_last">0.074890</div>
+                  </li>
+                </ul>
+                <ul class="datalist_item">
+                  <li class="datalist_item_up">
+                    <div class="market_currency">WAVES</div>
+                    <div class="market_change"> <span class="up">-3.1%</span><img src="../assets/arrow-down.svg" alt=""></div>
+                  </li>
+                  <li class="datalist_item_down">
+                    <div class="market_volumn">9.34</div>
+                    <div class="market_last">0.074890</div>
+                  </li>
+                </ul>
+                <ul class="datalist_item">
+                  <li class="datalist_item_up">
+                    <div class="market_currency">WAVES</div>
+                    <div class="market_change"> <span class="up">-3.1%</span><img src="../assets/arrow-down.svg" alt=""></div>
+                  </li>
+                  <li class="datalist_item_down">
+                    <div class="market_volumn">9.34</div>
+                    <div class="market_last">0.074890</div>
+                  </li>
+                </ul>
+                <ul class="datalist_item">
+                  <li class="datalist_item_up">
+                    <div class="market_currency">WAVES</div>
+                    <div class="market_change"> <span class="up">-3.1%</span><img src="../assets/arrow-down.svg" alt=""></div>
+                  </li>
+                  <li class="datalist_item_down">
+                    <div class="market_volumn">9.34</div>
+                    <div class="market_last">0.074890</div>
+                  </li>
+                </ul>
+                <ul class="datalist_item">
+                  <li class="datalist_item_up">
+                    <div class="market_currency">WAVES</div>
+                    <div class="market_change"> <span class="up">-3.1%</span><img src="../assets/arrow-down.svg" alt=""></div>
+                  </li>
+                  <li class="datalist_item_down">
+                    <div class="market_volumn">9.34</div>
+                    <div class="market_last">0.074890</div>
+                  </li>
+                </ul>
+                <ul class="datalist_item">
+                  <li class="datalist_item_up">
+                    <div class="market_currency">WAVES</div>
+                    <div class="market_change"> <span class="up">-3.1%</span><img src="../assets/arrow-down.svg" alt=""></div>
+                  </li>
+                  <li class="datalist_item_down">
+                    <div class="market_volumn">9.34</div>
+                    <div class="market_last">0.074890</div>
+                  </li>
+                </ul>
+                <ul class="datalist_item">
+                  <li class="datalist_item_up">
+                    <div class="market_currency">WAVES</div>
+                    <div class="market_change"> <span class="up">-3.1%</span><img src="../assets/arrow-down.svg" alt=""></div>
+                  </li>
+                  <li class="datalist_item_down">
+                    <div class="market_volumn">9.34</div>
+                    <div class="market_last">0.074890</div>
+                  </li>
+                </ul>
+                <ul class="datalist_item">
+                  <li class="datalist_item_up">
+                    <div class="market_currency">WAVES</div>
+                    <div class="market_change"> <span class="up">-3.1%</span><img src="../assets/arrow-down.svg" alt=""></div>
+                  </li>
+                  <li class="datalist_item_down">
+                    <div class="market_volumn">9.34</div>
+                    <div class="market_last">0.074890</div>
+                  </li>
+                </ul>
+                <ul class="datalist_item">
+                  <li class="datalist_item_up">
+                    <div class="market_currency">WAVES</div>
+                    <div class="market_change"> <span class="up">-3.1%</span><img src="../assets/arrow-down.svg" alt=""></div>
+                  </li>
+                  <li class="datalist_item_down">
+                    <div class="market_volumn">9.34</div>
+                    <div class="market_last">0.074890</div>
+                  </li>
+                </ul>
+                <ul class="datalist_item">
+                  <li class="datalist_item_up">
+                    <div class="market_currency">WAVES</div>
+                    <div class="market_change"> <span class="up">-3.1%</span><img src="../assets/arrow-down.svg" alt=""></div>
+                  </li>
+                  <li class="datalist_item_down">
+                    <div class="market_volumn">9.34</div>
+                    <div class="market_last">0.074890</div>
+                  </li>
+                </ul>
+                <ul class="datalist_item">
+                  <li class="datalist_item_up">
+                    <div class="market_currency">WAVES</div>
+                    <div class="market_change"> <span class="up">-3.1%</span><img src="../assets/arrow-down.svg" alt=""></div>
+                  </li>
+                  <li class="datalist_item_down">
+                    <div class="market_volumn">9.34</div>
+                    <div class="market_last">0.074890</div>
+                  </li>
+                </ul>
+                <ul class="datalist_item">
+                  <li class="datalist_item_up">
+                    <div class="market_currency">WAVES</div>
+                    <div class="market_change"> <span class="up">-3.1%</span><img src="../assets/arrow-down.svg" alt=""></div>
+                  </li>
+                  <li class="datalist_item_down">
+                    <div class="market_volumn">9.34</div>
+                    <div class="market_last">0.074890</div>
+                  </li>
+                </ul>
+                <ul class="datalist_item">
+                  <li class="datalist_item_up">
+                    <div class="market_currency">WAVES</div>
+                    <div class="market_change"> <span class="up">-3.1%</span><img src="../assets/arrow-down.svg" alt=""></div>
+                  </li>
+                  <li class="datalist_item_down">
+                    <div class="market_volumn">9.34</div>
+                    <div class="market_last">0.074890</div>
+                  </li>
+                </ul>
+                <ul class="datalist_item">
+                  <li class="datalist_item_up">
+                    <div class="market_currency">WAVES</div>
+                    <div class="market_change"> <span class="up">-3.1%</span><img src="../assets/arrow-down.svg" alt=""></div>
+                  </li>
+                  <li class="datalist_item_down">
+                    <div class="market_volumn">9.34</div>
+                    <div class="market_last">0.074890</div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="main_content scrollbar_custom">
+            <div class="container-fluid order-container">
+              <div class="row">
+                <div class="col">
+                  <h1 class="text-uppercase mt-4">OPEN ORDERS</h1>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <div class="pt-2 text-right d-flex">
+                    <input class="form-control ml-auto market_find d-inline-block mr-2" type="search" placeholder="Find..." aria-label="Search">
+                    <button class="btn btn-refresh" type="button"><i class="fas fa-sync"></i></button>
+                  </div>
+                  <table class="dataTablePlugin market_table_detail">
+                    <thead>
+                      <tr>
+                        <th class="text-left">Order date</th>
+                        <th class="text-left hidden-lg-cell">Market</th>
+                        <th class="text-right hidden-lg-cell">Type</th>
+                        <th class="text-right">Bid/Ask</th>
+                        <th class="text-right hidden-lg-cell">Filled</th>
+                        <th class="text-right">Unit Total</th>
+                        <th class="text-right hidden-lg-cell">Actual Rate</th>
+                        <th class="text-right">EST.Total</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="text-center" colspan="8">You have no open orders.</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <h1 class="text-uppercase mt-4">My order history</h1>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <div class="pt-2 text-right d-flex">
+                    <input class="form-control ml-auto market_find d-inline-block mr-2" type="search" placeholder="Find..." aria-label="Search">
+                    <button class="btn btn-refresh" type="button"><i class="fas fa-sync"></i></button>
+                  </div>
+                  <table class="dataTablePlugin market_table_detail">
+                    <thead>
+                      <tr>
+                        <th class="text-left hidden-lg-cell hidden-xl-cell">Closed date</th>
+                        <th class="text-left hidden-lg-cell hidden-xl-cell">Opened date</th>
+                        <th class="text-left">Market</th>
+                        <th class="text-right">Type</th>
+                        <th class="text-right hidden-lg-cell">Bid/Ask</th>
+                        <th class="text-right">Unit Filled</th>
+                        <th class="text-right">Unit Total</th>
+                        <th class="text-right hidden-lg-cell">Actual Rate</th>
+                        <th class="text-right hidden-lg-cell">Cost/Proceeds</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="text-center" colspan="8">You have no closed orders.</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="container-fluid footer market-info-footer mt-4">
+              <div class="container">
+                <div class="row text-center">
+                  <div class="col-lg-2 col-sm-4"> <a href="#">About</a></div>
+                  <div class="col-lg-2 col-sm-4"> <a href="#">Website Status</a></div>
+                  <div class="col-lg-2 col-sm-4"> <a href="#">Cookies</a></div>
+                  <div class="col-lg-2 col-sm-4"> <a href="#">Fees</a></div>
+                  <div class="col-lg-2 col-sm-4"> <a href="#">Support</a></div>
+                  <div class="col-lg-2 col-sm-4"> <a href="#"> <i class="fab fa-facebook-square pr-1"></i>Like Us On Facebook</a></div>
+                  <div class="col-lg-2 col-sm-4"> <a href="#">Privacy</a></div>
+                  <div class="col-lg-2 col-sm-4"> <a href="#">API Documentation</a></div>
+                  <div class="col-lg-2 col-sm-4"> <a href="#">Terms</a></div>
+                  <div class="col-lg-2 col-sm-4"> <a href="#">Contact</a></div>
+                  <div class="col-lg-2 col-sm-4"> <a href="#">&nbsp;</a></div>
+                  <div class="col-lg-2 col-sm-4"> <a href="#"> <i class="fab fa-twitter pr-1"></i>Follow us on twitter</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../js/jquery.js"></script>
+    <script src="../js/popper.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="../js/jquery.dataTables.min.js"></script>
+    <script src="../js/dataTables.bootstrap4.min.js"></script>
+    <script src="../js/theme.js"></script>
+    <script src="../js/main.js"></script>
+    <script>
+      jQuery.fn.dataTable.Api.register( 'sum()', function ( ) {
+          return this.flatten().reduce( function ( a, b ) {
+              if ( typeof a === 'string' ) {
+                  a = a.replace(/[^\d.-]/g, '') * 1;
+              }
+              if ( typeof b === 'string' ) {
+                  b = b.replace(/[^\d.-]/g, '') * 1;
+              }
+      
+              return a + b;
+          }, 0 );
+      } );
+      (function($){
+          $(window).on("load",function(){
+              $(".scrollbar_custom").mCustomScrollbar({
+                  autoHideScrollbar:true
+              });
+              $.extend(true, $.fn.dataTable.defaults, {
+                  "lengthChange": false,
+                  "searching": false,
+                  "ordering": false,
+                  "info": false,
+                  "pagingType": "full_numbers",
+                  "dom": 't<"row sum"<"col-6 total_sum"><"col-6 total_bid text-right">>p',
+                  drawCallback: function () {
+                      var api = this.api();
+                      $('.total_sum').html(api.column(0,{page:'current'}).data().sum().toFixed(3)+" USDT");
+                      $('.total_bid').html(api.column(3,{page:'current'}).data().sum().toFixed(3)+" USD");
+                  }
+              });
+              $('.dataTablePlugin').DataTable();
+              $('.dataTablePlugin-right').DataTable({
+                  "dom": 't<"row"<"col-6 total_ask"><"col-6 total_sum text-right">>p',
+                  drawCallback: function () {
+                      var api = this.api();
+                      $('.total_ask').html(api.column(0,{page:'current'}).data().sum().toFixed(3)+" USD");
+                      $('.total_sum').html(api.column(3,{page:'current'}).data().sum().toFixed(3)+" USDT");
+                  }
+              });
+          });
+      })(jQuery);
+    </script>
+  </body>
+</html>

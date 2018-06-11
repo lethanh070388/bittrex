@@ -27,9 +27,9 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item active"><a class="nav-link" href="./market.html">Markets<span class="sr-only">(current)</span></a></li>
-              <li class="nav-item"><a class="nav-link" href="#">Orders</a></li>
+              <li class="nav-item"><a class="nav-link" href="./order.html">Orders</a></li>
               <li class="nav-item"><a class="nav-link" href="./balance.html">Wallets</a></li>
-              <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="navbarDropdownSetting" href="./view/setting_activity" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Settings</a></li>
+              <li class="nav-item dropdown"><a class="nav-link" href="./setting_activity.html">Settings</a></li>
               <li class="nav-item"><a class="nav-link" href="./login.html">Login</a></li>
             </ul>
           </div>
@@ -379,252 +379,399 @@
               </div>
               <div class="row">
                 <div class="col balance">
+                  <div class="container-fluid mt-4">
+                    <div class="row">
+                      <div class="col-sm-6">
+                        <label class="btn btn-custom">Hide zero balances</label>
+                      </div>
+                      <div class="col-sm-6">
+                        <div class="text-right d-flex">
+                          <input class="form-control ml-auto market_find d-inline-block mr-2" type="search" placeholder="Find..." aria-label="Search">
+                          <button class="btn btn-refresh" type="button"><i class="fas fa-sync"></i></button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                   <table class="dataTablePlugin market_table_detail">
                     <thead>
                       <tr>
                         <th class="text-center">D</th>
                         <th class="text-center">W</th>
-                        <th class="text-left hidden-xl-cell">Currency name</th>
+                        <th class="text-left hidden-lg-cell">Currency name</th>
                         <th class="text-center">Symbol</th>
-                        <th class="text-right hidden-xl-cell">Available balance</th>
-                        <th class="text-right hidden-xl-cell">Pending deposit</th>
-                        <th class="text-right hidden-xl-cell">Reserved</th>
+                        <th class="text-right hidden-lg-cell">Available balance</th>
+                        <th class="text-right hidden-lg-cell">Pending deposit</th>
+                        <th class="text-right hidden-lg-cell">Reserved</th>
                         <th class="text-right">Total</th>
-                        <th class="text-right hidden-xl-cell">EST.BTC value</th>
+                        <th class="text-right hidden-lg-cell">EST.BTC value</th>
                         <th class="text-right">%change</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <td class="icon icon-deposit-green"></td>
-                        <td class="icon icon-withdraw-red"></td>
-                        <td class="text-left hidden-xl-cell">Ada</td>
+                        <td class="icon icon-deposit-green">
+                          <button class="btn-modal-deposit" type="button" data-toggle="modal" data-target="#modalDeposit"></button>
+                        </td>
+                        <td class="icon icon-withdraw-red">
+                          <button class="btn-modal-withdrawal" type="button" data-toggle="modal" data-target="#modalWithdrawal"></button>
+                        </td>
+                        <td class="text-left hidden-lg-cell">Ada</td>
                         <td class="text-center">ADA</td>
-                        <td class="text-right hidden-xl-cell">0.00000000</td>
-                        <td class="text-right hidden-xl-cell">0.00000000</td>
-                        <td class="text-right hidden-xl-cell">0.00000000</td>
+                        <td class="text-right hidden-lg-cell">0.00000000</td>
+                        <td class="text-right hidden-lg-cell">0.00000000</td>
+                        <td class="text-right hidden-lg-cell">0.00000000</td>
                         <td class="text-right">0.00000000</td>
-                        <td class="text-right hidden-xl-cell">0.00000000</td>
+                        <td class="text-right hidden-lg-cell">0.00000000</td>
                         <td class="text-right up">-1.7%</td>
                       </tr>
                       <tr>
-                        <td class="icon icon-deposit-green"></td>
-                        <td class="icon icon-withdraw-red"></td>
-                        <td class="text-left hidden-xl-cell">Ada</td>
+                        <td class="icon icon-deposit-green">
+                          <button class="btn-modal-deposit" type="button" data-toggle="modal" data-target="#modalDeposit"></button>
+                        </td>
+                        <td class="icon icon-withdraw-red">
+                          <button class="btn-modal-withdrawal" type="button" data-toggle="modal" data-target="#modalWithdrawal"></button>
+                        </td>
+                        <td class="text-left hidden-lg-cell">Ada</td>
                         <td class="text-center">ADA</td>
-                        <td class="text-right hidden-xl-cell">0.00000000</td>
-                        <td class="text-right hidden-xl-cell">0.00000000</td>
-                        <td class="text-right hidden-xl-cell">0.00000000</td>
+                        <td class="text-right hidden-lg-cell">0.00000000</td>
+                        <td class="text-right hidden-lg-cell">0.00000000</td>
+                        <td class="text-right hidden-lg-cell">0.00000000</td>
                         <td class="text-right">0.00000000</td>
-                        <td class="text-right hidden-xl-cell">0.00000000</td>
+                        <td class="text-right hidden-lg-cell">0.00000000</td>
                         <td class="text-right up">-1.7%</td>
                       </tr>
                       <tr>
-                        <td class="icon icon-deposit-green"></td>
-                        <td class="icon icon-withdraw-red"></td>
-                        <td class="text-left hidden-xl-cell">Ada</td>
+                        <td class="icon icon-deposit-green">
+                          <button class="btn-modal-deposit" type="button" data-toggle="modal" data-target="#modalDeposit"></button>
+                        </td>
+                        <td class="icon icon-withdraw-red">
+                          <button class="btn-modal-withdrawal" type="button" data-toggle="modal" data-target="#modalWithdrawal"></button>
+                        </td>
+                        <td class="text-left hidden-lg-cell">Ada</td>
                         <td class="text-center">ADA</td>
-                        <td class="text-right hidden-xl-cell">0.00000000</td>
-                        <td class="text-right hidden-xl-cell">0.00000000</td>
-                        <td class="text-right hidden-xl-cell">0.00000000</td>
+                        <td class="text-right hidden-lg-cell">0.00000000</td>
+                        <td class="text-right hidden-lg-cell">0.00000000</td>
+                        <td class="text-right hidden-lg-cell">0.00000000</td>
                         <td class="text-right">0.00000000</td>
-                        <td class="text-right hidden-xl-cell">0.00000000</td>
+                        <td class="text-right hidden-lg-cell">0.00000000</td>
                         <td class="text-right up">-1.7%</td>
                       </tr>
                       <tr>
-                        <td class="icon icon-deposit-green"></td>
-                        <td class="icon icon-withdraw-red"></td>
-                        <td class="text-left hidden-xl-cell">Ada</td>
+                        <td class="icon icon-deposit-green">
+                          <button class="btn-modal-deposit" type="button" data-toggle="modal" data-target="#modalDeposit"></button>
+                        </td>
+                        <td class="icon icon-withdraw-red">
+                          <button class="btn-modal-withdrawal" type="button" data-toggle="modal" data-target="#modalWithdrawal"></button>
+                        </td>
+                        <td class="text-left hidden-lg-cell">Ada</td>
                         <td class="text-center">ADA</td>
-                        <td class="text-right hidden-xl-cell">0.00000000</td>
-                        <td class="text-right hidden-xl-cell">0.00000000</td>
-                        <td class="text-right hidden-xl-cell">0.00000000</td>
+                        <td class="text-right hidden-lg-cell">0.00000000</td>
+                        <td class="text-right hidden-lg-cell">0.00000000</td>
+                        <td class="text-right hidden-lg-cell">0.00000000</td>
                         <td class="text-right">0.00000000</td>
-                        <td class="text-right hidden-xl-cell">0.00000000</td>
+                        <td class="text-right hidden-lg-cell">0.00000000</td>
                         <td class="text-right up">-1.7%</td>
                       </tr>
                       <tr>
-                        <td class="icon icon-deposit-green"></td>
-                        <td class="icon icon-withdraw-red"></td>
-                        <td class="text-left hidden-xl-cell">Ada</td>
+                        <td class="icon icon-deposit-green">
+                          <button class="btn-modal-deposit" type="button" data-toggle="modal" data-target="#modalDeposit"></button>
+                        </td>
+                        <td class="icon icon-withdraw-red">
+                          <button class="btn-modal-withdrawal" type="button" data-toggle="modal" data-target="#modalWithdrawal"></button>
+                        </td>
+                        <td class="text-left hidden-lg-cell">Ada</td>
                         <td class="text-center">ADA</td>
-                        <td class="text-right hidden-xl-cell">0.00000000</td>
-                        <td class="text-right hidden-xl-cell">0.00000000</td>
-                        <td class="text-right hidden-xl-cell">0.00000000</td>
+                        <td class="text-right hidden-lg-cell">0.00000000</td>
+                        <td class="text-right hidden-lg-cell">0.00000000</td>
+                        <td class="text-right hidden-lg-cell">0.00000000</td>
                         <td class="text-right">0.00000000</td>
-                        <td class="text-right hidden-xl-cell">0.00000000</td>
+                        <td class="text-right hidden-lg-cell">0.00000000</td>
                         <td class="text-right up">-1.7%</td>
                       </tr>
                       <tr>
-                        <td class="icon icon-deposit-green"></td>
-                        <td class="icon icon-withdraw-red"></td>
-                        <td class="text-left hidden-xl-cell">Ada</td>
+                        <td class="icon icon-deposit-green">
+                          <button class="btn-modal-deposit" type="button" data-toggle="modal" data-target="#modalDeposit"></button>
+                        </td>
+                        <td class="icon icon-withdraw-red">
+                          <button class="btn-modal-withdrawal" type="button" data-toggle="modal" data-target="#modalWithdrawal"></button>
+                        </td>
+                        <td class="text-left hidden-lg-cell">Ada</td>
                         <td class="text-center">ADA</td>
-                        <td class="text-right hidden-xl-cell">0.00000000</td>
-                        <td class="text-right hidden-xl-cell">0.00000000</td>
-                        <td class="text-right hidden-xl-cell">0.00000000</td>
+                        <td class="text-right hidden-lg-cell">0.00000000</td>
+                        <td class="text-right hidden-lg-cell">0.00000000</td>
+                        <td class="text-right hidden-lg-cell">0.00000000</td>
                         <td class="text-right">0.00000000</td>
-                        <td class="text-right hidden-xl-cell">0.00000000</td>
+                        <td class="text-right hidden-lg-cell">0.00000000</td>
                         <td class="text-right up">-1.7%</td>
                       </tr>
                       <tr>
-                        <td class="icon icon-deposit-green"></td>
-                        <td class="icon icon-withdraw-red"></td>
-                        <td class="text-left hidden-xl-cell">Ada</td>
+                        <td class="icon icon-deposit-green">
+                          <button class="btn-modal-deposit" type="button" data-toggle="modal" data-target="#modalDeposit"></button>
+                        </td>
+                        <td class="icon icon-withdraw-red">
+                          <button class="btn-modal-withdrawal" type="button" data-toggle="modal" data-target="#modalWithdrawal"></button>
+                        </td>
+                        <td class="text-left hidden-lg-cell">Ada</td>
                         <td class="text-center">ADA</td>
-                        <td class="text-right hidden-xl-cell">0.00000000</td>
-                        <td class="text-right hidden-xl-cell">0.00000000</td>
-                        <td class="text-right hidden-xl-cell">0.00000000</td>
+                        <td class="text-right hidden-lg-cell">0.00000000</td>
+                        <td class="text-right hidden-lg-cell">0.00000000</td>
+                        <td class="text-right hidden-lg-cell">0.00000000</td>
                         <td class="text-right">0.00000000</td>
-                        <td class="text-right hidden-xl-cell">0.00000000</td>
+                        <td class="text-right hidden-lg-cell">0.00000000</td>
                         <td class="text-right up">-1.7%</td>
                       </tr>
                       <tr>
-                        <td class="icon icon-deposit-green"></td>
-                        <td class="icon icon-withdraw-red"></td>
-                        <td class="text-left hidden-xl-cell">Ada</td>
+                        <td class="icon icon-deposit-green">
+                          <button class="btn-modal-deposit" type="button" data-toggle="modal" data-target="#modalDeposit"></button>
+                        </td>
+                        <td class="icon icon-withdraw-red">
+                          <button class="btn-modal-withdrawal" type="button" data-toggle="modal" data-target="#modalWithdrawal"></button>
+                        </td>
+                        <td class="text-left hidden-lg-cell">Ada</td>
                         <td class="text-center">ADA</td>
-                        <td class="text-right hidden-xl-cell">0.00000000</td>
-                        <td class="text-right hidden-xl-cell">0.00000000</td>
-                        <td class="text-right hidden-xl-cell">0.00000000</td>
+                        <td class="text-right hidden-lg-cell">0.00000000</td>
+                        <td class="text-right hidden-lg-cell">0.00000000</td>
+                        <td class="text-right hidden-lg-cell">0.00000000</td>
                         <td class="text-right">0.00000000</td>
-                        <td class="text-right hidden-xl-cell">0.00000000</td>
+                        <td class="text-right hidden-lg-cell">0.00000000</td>
                         <td class="text-right up">-1.7%</td>
                       </tr>
                       <tr>
-                        <td class="icon icon-deposit-green"></td>
-                        <td class="icon icon-withdraw-red"></td>
-                        <td class="text-left hidden-xl-cell">Ada</td>
+                        <td class="icon icon-deposit-green">
+                          <button class="btn-modal-deposit" type="button" data-toggle="modal" data-target="#modalDeposit"></button>
+                        </td>
+                        <td class="icon icon-withdraw-red">
+                          <button class="btn-modal-withdrawal" type="button" data-toggle="modal" data-target="#modalWithdrawal"></button>
+                        </td>
+                        <td class="text-left hidden-lg-cell">Ada</td>
                         <td class="text-center">ADA</td>
-                        <td class="text-right hidden-xl-cell">0.00000000</td>
-                        <td class="text-right hidden-xl-cell">0.00000000</td>
-                        <td class="text-right hidden-xl-cell">0.00000000</td>
+                        <td class="text-right hidden-lg-cell">0.00000000</td>
+                        <td class="text-right hidden-lg-cell">0.00000000</td>
+                        <td class="text-right hidden-lg-cell">0.00000000</td>
                         <td class="text-right">0.00000000</td>
-                        <td class="text-right hidden-xl-cell">0.00000000</td>
+                        <td class="text-right hidden-lg-cell">0.00000000</td>
                         <td class="text-right up">-1.7%</td>
                       </tr>
                       <tr>
-                        <td class="icon icon-deposit-green"></td>
-                        <td class="icon icon-withdraw-red"></td>
-                        <td class="text-left hidden-xl-cell">Ada</td>
+                        <td class="icon icon-deposit-green">
+                          <button class="btn-modal-deposit" type="button" data-toggle="modal" data-target="#modalDeposit"></button>
+                        </td>
+                        <td class="icon icon-withdraw-red">
+                          <button class="btn-modal-withdrawal" type="button" data-toggle="modal" data-target="#modalWithdrawal"></button>
+                        </td>
+                        <td class="text-left hidden-lg-cell">Ada</td>
                         <td class="text-center">ADA</td>
-                        <td class="text-right hidden-xl-cell">0.00000000</td>
-                        <td class="text-right hidden-xl-cell">0.00000000</td>
-                        <td class="text-right hidden-xl-cell">0.00000000</td>
+                        <td class="text-right hidden-lg-cell">0.00000000</td>
+                        <td class="text-right hidden-lg-cell">0.00000000</td>
+                        <td class="text-right hidden-lg-cell">0.00000000</td>
                         <td class="text-right">0.00000000</td>
-                        <td class="text-right hidden-xl-cell">0.00000000</td>
+                        <td class="text-right hidden-lg-cell">0.00000000</td>
                         <td class="text-right up">-1.7%</td>
                       </tr>
                       <tr>
-                        <td class="icon icon-deposit-green"></td>
-                        <td class="icon icon-withdraw-red"></td>
-                        <td class="text-left hidden-xl-cell">Ada</td>
+                        <td class="icon icon-deposit-green">
+                          <button class="btn-modal-deposit" type="button" data-toggle="modal" data-target="#modalDeposit"></button>
+                        </td>
+                        <td class="icon icon-withdraw-red">
+                          <button class="btn-modal-withdrawal" type="button" data-toggle="modal" data-target="#modalWithdrawal"></button>
+                        </td>
+                        <td class="text-left hidden-lg-cell">Ada</td>
                         <td class="text-center">ADA</td>
-                        <td class="text-right hidden-xl-cell">0.00000000</td>
-                        <td class="text-right hidden-xl-cell">0.00000000</td>
-                        <td class="text-right hidden-xl-cell">0.00000000</td>
+                        <td class="text-right hidden-lg-cell">0.00000000</td>
+                        <td class="text-right hidden-lg-cell">0.00000000</td>
+                        <td class="text-right hidden-lg-cell">0.00000000</td>
                         <td class="text-right">0.00000000</td>
-                        <td class="text-right hidden-xl-cell">0.00000000</td>
+                        <td class="text-right hidden-lg-cell">0.00000000</td>
                         <td class="text-right up">-1.7%</td>
                       </tr>
                       <tr>
-                        <td class="icon icon-deposit-green"></td>
-                        <td class="icon icon-withdraw-red"></td>
-                        <td class="text-left hidden-xl-cell">Ada</td>
+                        <td class="icon icon-deposit-green">
+                          <button class="btn-modal-deposit" type="button" data-toggle="modal" data-target="#modalDeposit"></button>
+                        </td>
+                        <td class="icon icon-withdraw-red">
+                          <button class="btn-modal-withdrawal" type="button" data-toggle="modal" data-target="#modalWithdrawal"></button>
+                        </td>
+                        <td class="text-left hidden-lg-cell">Ada</td>
                         <td class="text-center">ADA</td>
-                        <td class="text-right hidden-xl-cell">0.00000000</td>
-                        <td class="text-right hidden-xl-cell">0.00000000</td>
-                        <td class="text-right hidden-xl-cell">0.00000000</td>
+                        <td class="text-right hidden-lg-cell">0.00000000</td>
+                        <td class="text-right hidden-lg-cell">0.00000000</td>
+                        <td class="text-right hidden-lg-cell">0.00000000</td>
                         <td class="text-right">0.00000000</td>
-                        <td class="text-right hidden-xl-cell">0.00000000</td>
+                        <td class="text-right hidden-lg-cell">0.00000000</td>
                         <td class="text-right up">-1.7%</td>
                       </tr>
                       <tr>
-                        <td class="icon icon-deposit-green"></td>
-                        <td class="icon icon-withdraw-red"></td>
-                        <td class="text-left hidden-xl-cell">Ada</td>
+                        <td class="icon icon-deposit-green">
+                          <button class="btn-modal-deposit" type="button" data-toggle="modal" data-target="#modalDeposit"></button>
+                        </td>
+                        <td class="icon icon-withdraw-red">
+                          <button class="btn-modal-withdrawal" type="button" data-toggle="modal" data-target="#modalWithdrawal"></button>
+                        </td>
+                        <td class="text-left hidden-lg-cell">Ada</td>
                         <td class="text-center">ADA</td>
-                        <td class="text-right hidden-xl-cell">0.00000000</td>
-                        <td class="text-right hidden-xl-cell">0.00000000</td>
-                        <td class="text-right hidden-xl-cell">0.00000000</td>
+                        <td class="text-right hidden-lg-cell">0.00000000</td>
+                        <td class="text-right hidden-lg-cell">0.00000000</td>
+                        <td class="text-right hidden-lg-cell">0.00000000</td>
                         <td class="text-right">0.00000000</td>
-                        <td class="text-right hidden-xl-cell">0.00000000</td>
+                        <td class="text-right hidden-lg-cell">0.00000000</td>
                         <td class="text-right up">-1.7%</td>
                       </tr>
                       <tr>
-                        <td class="icon icon-deposit-green"></td>
-                        <td class="icon icon-withdraw-red"></td>
-                        <td class="text-left hidden-xl-cell">Ada</td>
+                        <td class="icon icon-deposit-green">
+                          <button class="btn-modal-deposit" type="button" data-toggle="modal" data-target="#modalDeposit"></button>
+                        </td>
+                        <td class="icon icon-withdraw-red">
+                          <button class="btn-modal-withdrawal" type="button" data-toggle="modal" data-target="#modalWithdrawal"></button>
+                        </td>
+                        <td class="text-left hidden-lg-cell">Ada</td>
                         <td class="text-center">ADA</td>
-                        <td class="text-right hidden-xl-cell">0.00000000</td>
-                        <td class="text-right hidden-xl-cell">0.00000000</td>
-                        <td class="text-right hidden-xl-cell">0.00000000</td>
+                        <td class="text-right hidden-lg-cell">0.00000000</td>
+                        <td class="text-right hidden-lg-cell">0.00000000</td>
+                        <td class="text-right hidden-lg-cell">0.00000000</td>
                         <td class="text-right">0.00000000</td>
-                        <td class="text-right hidden-xl-cell">0.00000000</td>
+                        <td class="text-right hidden-lg-cell">0.00000000</td>
                         <td class="text-right up">-1.7%</td>
                       </tr>
                       <tr>
-                        <td class="icon icon-deposit-green"></td>
-                        <td class="icon icon-withdraw-red"></td>
-                        <td class="text-left hidden-xl-cell">Ada</td>
+                        <td class="icon icon-deposit-green">
+                          <button class="btn-modal-deposit" type="button" data-toggle="modal" data-target="#modalDeposit"></button>
+                        </td>
+                        <td class="icon icon-withdraw-red">
+                          <button class="btn-modal-withdrawal" type="button" data-toggle="modal" data-target="#modalWithdrawal"></button>
+                        </td>
+                        <td class="text-left hidden-lg-cell">Ada</td>
                         <td class="text-center">ADA</td>
-                        <td class="text-right hidden-xl-cell">0.00000000</td>
-                        <td class="text-right hidden-xl-cell">0.00000000</td>
-                        <td class="text-right hidden-xl-cell">0.00000000</td>
+                        <td class="text-right hidden-lg-cell">0.00000000</td>
+                        <td class="text-right hidden-lg-cell">0.00000000</td>
+                        <td class="text-right hidden-lg-cell">0.00000000</td>
                         <td class="text-right">0.00000000</td>
-                        <td class="text-right hidden-xl-cell">0.00000000</td>
+                        <td class="text-right hidden-lg-cell">0.00000000</td>
                         <td class="text-right up">-1.7%</td>
                       </tr>
                       <tr>
-                        <td class="icon icon-deposit-green"></td>
-                        <td class="icon icon-withdraw-red"></td>
-                        <td class="text-left hidden-xl-cell">Ada</td>
+                        <td class="icon icon-deposit-green">
+                          <button class="btn-modal-deposit" type="button" data-toggle="modal" data-target="#modalDeposit"></button>
+                        </td>
+                        <td class="icon icon-withdraw-red">
+                          <button class="btn-modal-withdrawal" type="button" data-toggle="modal" data-target="#modalWithdrawal"></button>
+                        </td>
+                        <td class="text-left hidden-lg-cell">Ada</td>
                         <td class="text-center">ADA</td>
-                        <td class="text-right hidden-xl-cell">0.00000000</td>
-                        <td class="text-right hidden-xl-cell">0.00000000</td>
-                        <td class="text-right hidden-xl-cell">0.00000000</td>
+                        <td class="text-right hidden-lg-cell">0.00000000</td>
+                        <td class="text-right hidden-lg-cell">0.00000000</td>
+                        <td class="text-right hidden-lg-cell">0.00000000</td>
                         <td class="text-right">0.00000000</td>
-                        <td class="text-right hidden-xl-cell">0.00000000</td>
+                        <td class="text-right hidden-lg-cell">0.00000000</td>
                         <td class="text-right up">-1.7%</td>
                       </tr>
                       <tr>
-                        <td class="icon icon-deposit-green"></td>
-                        <td class="icon icon-withdraw-red"></td>
-                        <td class="text-left hidden-xl-cell">Ada</td>
+                        <td class="icon icon-deposit-green">
+                          <button class="btn-modal-deposit" type="button" data-toggle="modal" data-target="#modalDeposit"></button>
+                        </td>
+                        <td class="icon icon-withdraw-red">
+                          <button class="btn-modal-withdrawal" type="button" data-toggle="modal" data-target="#modalWithdrawal"></button>
+                        </td>
+                        <td class="text-left hidden-lg-cell">Ada</td>
                         <td class="text-center">ADA</td>
-                        <td class="text-right hidden-xl-cell">0.00000000</td>
-                        <td class="text-right hidden-xl-cell">0.00000000</td>
-                        <td class="text-right hidden-xl-cell">0.00000000</td>
+                        <td class="text-right hidden-lg-cell">0.00000000</td>
+                        <td class="text-right hidden-lg-cell">0.00000000</td>
+                        <td class="text-right hidden-lg-cell">0.00000000</td>
                         <td class="text-right">0.00000000</td>
-                        <td class="text-right hidden-xl-cell">0.00000000</td>
+                        <td class="text-right hidden-lg-cell">0.00000000</td>
                         <td class="text-right up">-1.7%</td>
                       </tr>
                       <tr>
-                        <td class="icon icon-deposit-green"></td>
-                        <td class="icon icon-withdraw-red"></td>
-                        <td class="text-left hidden-xl-cell">Ada</td>
+                        <td class="icon icon-deposit-green">
+                          <button class="btn-modal-deposit" type="button" data-toggle="modal" data-target="#modalDeposit"></button>
+                        </td>
+                        <td class="icon icon-withdraw-red">
+                          <button class="btn-modal-withdrawal" type="button" data-toggle="modal" data-target="#modalWithdrawal"></button>
+                        </td>
+                        <td class="text-left hidden-lg-cell">Ada</td>
                         <td class="text-center">ADA</td>
-                        <td class="text-right hidden-xl-cell">0.00000000</td>
-                        <td class="text-right hidden-xl-cell">0.00000000</td>
-                        <td class="text-right hidden-xl-cell">0.00000000</td>
+                        <td class="text-right hidden-lg-cell">0.00000000</td>
+                        <td class="text-right hidden-lg-cell">0.00000000</td>
+                        <td class="text-right hidden-lg-cell">0.00000000</td>
                         <td class="text-right">0.00000000</td>
-                        <td class="text-right hidden-xl-cell">0.00000000</td>
+                        <td class="text-right hidden-lg-cell">0.00000000</td>
                         <td class="text-right up">-1.7%</td>
                       </tr>
                       <tr>
-                        <td class="icon icon-deposit-green"></td>
-                        <td class="icon icon-withdraw-red"></td>
-                        <td class="text-left hidden-xl-cell">Ada</td>
+                        <td class="icon icon-deposit-green">
+                          <button class="btn-modal-deposit" type="button" data-toggle="modal" data-target="#modalDeposit"></button>
+                        </td>
+                        <td class="icon icon-withdraw-red">
+                          <button class="btn-modal-withdrawal" type="button" data-toggle="modal" data-target="#modalWithdrawal"></button>
+                        </td>
+                        <td class="text-left hidden-lg-cell">Ada</td>
                         <td class="text-center">ADA</td>
-                        <td class="text-right hidden-xl-cell">0.00000000</td>
-                        <td class="text-right hidden-xl-cell">0.00000000</td>
-                        <td class="text-right hidden-xl-cell">0.00000000</td>
+                        <td class="text-right hidden-lg-cell">0.00000000</td>
+                        <td class="text-right hidden-lg-cell">0.00000000</td>
+                        <td class="text-right hidden-lg-cell">0.00000000</td>
                         <td class="text-right">0.00000000</td>
-                        <td class="text-right hidden-xl-cell">0.00000000</td>
+                        <td class="text-right hidden-lg-cell">0.00000000</td>
                         <td class="text-right up">-1.7%</td>
                       </tr>
                     </tbody>
                   </table>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <div class="modal fade" id="modalDeposit" tabindex="-1" role="dialog" aria-labelledby="modalDepositLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content deposit-container">
+                        <div class="modal-header text-center">
+                          <h5 class="modal-title" id="modalDepositLabel"> <span class="title-icon"></span>Deposit</h5>
+                          <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        </div>
+                        <div class="modal-body">
+                          <div class="container">
+                            <div class="row">
+                              <div class="col">
+                                <div class="info d-flex justify-content-between align-items-baseline">
+                                  <h5>Currency</h5>
+                                  <h6> <i class="fas fa-check-circle mr-2"></i>Block updated 8 minutes ago</h6>
+                                </div>
+                                <table class="deposit_table">
+                                  <thead>
+                                    <tr>
+                                      <th>Name</th>
+                                      <th class="text-right">Symbol</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td>Bitcoin</td>
+                                      <td class="text-right">BTC</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                                <div class="modal-disclaimer">
+                                  <h5 class="text-uppercase">Disclaimer</h5><small>I acknowledge the following information: </small><small>By depositing tokens to this address, you agree to our <a href="#">deposit recovery policy</a>. Depositing tokens to an address other than BTC may result in your funds being lost.</small>
+                                </div>
+                                <div class="info mt-4">
+                                  <h5>Address</h5>
+                                </div>
+                                <div class="input-group mb-3">
+                                  <input class="form-control deposit-control" type="text" placeholder="Generate a new address" aria-label="newaddress" aria-describedby="basic-addon2">
+                                  <div class="input-group-append">
+                                    <button class="btn btn-new-address" type="button">New Address</button>
+                                  </div>
+                                </div>
+                                <div class="modal-disclaimer">
+                                  <h5 class="text-uppercase">DEPOSIT INSTRUCTIONS</h5><small>Depositing tokens to this address other than BTC will result in your funds being lost.</small>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="modal-footer">
+                          <button class="btn btn-deposit" type="button" data-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -635,7 +782,7 @@
                       <h1 class="text-uppercase mt-4"><i class="far fa-plus-square expand-icon show mr-2"></i><i class="far fa-minus-square expand-icon mr-2"></i>Pending withdrawals</h1></a></div>
                   <div class="collapse" id="collapseWithdrawPending">
                     <div class="expand-collapse-container">
-                      <div class="pt-2 text-right">
+                      <div class="pt-2 text-right d-flex">
                         <input class="form-control ml-auto market_find d-inline-block mr-2" type="search" placeholder="Find..." aria-label="Search">
                         <button class="btn btn-refresh" type="button"><i class="fas fa-sync"></i></button>
                       </div>
@@ -664,7 +811,7 @@
                       <h1 class="text-uppercase mt-4"><i class="far fa-plus-square expand-icon show mr-2"></i><i class="far fa-minus-square expand-icon mr-2"></i>Pending Deposits</h1></a></div>
                   <div class="collapse" id="collapsePendingDeposit">
                     <div class="expand-collapse-container">
-                      <div class="pt-2 text-right">
+                      <div class="pt-2 text-right d-flex">
                         <input class="form-control ml-auto market_find d-inline-block mr-2" type="search" placeholder="Find..." aria-label="Search">
                         <button class="btn btn-refresh" type="button"><i class="fas fa-sync"></i></button>
                       </div>
@@ -693,7 +840,7 @@
                       <h1 class="text-uppercase mt-4"><i class="far fa-plus-square expand-icon show mr-2"></i><i class="far fa-minus-square expand-icon mr-2"></i>Withdrawals History</h1></a></div>
                   <div class="collapse" id="collapseWithdrawHistory">
                     <div class="expand-collapse-container">
-                      <div class="pt-2 text-right">
+                      <div class="pt-2 text-right d-flex">
                         <input class="form-control ml-auto market_find d-inline-block mr-2" type="search" placeholder="Find..." aria-label="Search">
                         <button class="btn btn-refresh" type="button"><i class="fas fa-sync"></i></button>
                       </div>
@@ -722,7 +869,7 @@
                       <h1 class="text-uppercase mt-4"><i class="far fa-plus-square expand-icon show mr-2"></i><i class="far fa-minus-square expand-icon mr-2"></i>Deposit History</h1></a></div>
                   <div class="collapse" id="collapseDepositHistory">
                     <div class="expand-collapse-container">
-                      <div class="pt-2 text-right">
+                      <div class="pt-2 text-right d-flex">
                         <input class="form-control ml-auto market_find d-inline-block mr-2" type="search" placeholder="Find..." aria-label="Search">
                         <button class="btn btn-refresh" type="button"><i class="fas fa-sync"></i></button>
                       </div>
