@@ -1,0 +1,81 @@
+extends layout_setting.pug  
+
+block content
+    .container-fluid.px-4.two-factor
+        .row
+            .col
+                h5.heading-lv5.text-uppercase.pt-4 Auto sell
+        .row
+            .col
+                .info-blurd
+                    p Auto-Sell is a feature that automatically sells any currency you specify into Bitcoin. We primarily see this as a convenience for mining pools and large scale miners to convert their coins 
+                    ul
+                        li  Every 10 seconds, we check your balance. If you have more than the minimum trade size, we market sell your coin for Bitcoin
+                        li Any coins you have in your balance will get sold if the auto-sell option is enabled in that currency, whether you have a balance due to a trade or a deposit
+                        li The price your currency is sold at is dependant on the market price at the time it was sold
+                        li The standard trade fees apply
+        .row
+            .col
+                h5.heading-lv5.text-uppercase.pt-4 Wallet
+        .row
+            .col
+                .text-right
+                    label.custom-button Hide zero balances
+                .text-right
+                    input.custom-search(type="search" placeholder="Filter symbol..." aria-label="Search")
+        .row
+            .col
+                table.table.custom-table
+                    thead
+                        tr
+                            th Symbol
+                            th Name
+                            th Balance
+                            th.text-right Auto-Sell Enable
+                    tbody
+                        tr
+                            td 2GIVE
+                            td 2GIVE	
+                            td 0
+                            td.text-right.switch-wrapper
+                                label.switch
+                                    input(type="checkbox")
+                                    span.slider.round
+                                    input(type="hidden" name="name" value="false")
+                        tr
+                            td ABY	
+                            td ArtByte	
+                            td 0
+                            td.text-right.switch-wrapper
+                                label.switch
+                                    input(type="checkbox")
+                                    span.slider.round
+                                    input(type="hidden" name="name" value="false")
+                        tr
+                            td ADA
+                            td Ada
+                            td 0
+                            td.text-right.switch-wrapper
+                                label.switch
+                                    input(type="checkbox")
+                                    span.slider.round
+                                    input(type="hidden" name="name" value="false")
+                        tr
+                            td ADT
+                            td adToken	
+                            td 0	
+                            td.text-right.switch-wrapper
+                                label.switch
+                                    input(type="checkbox")
+                                    span.slider.round
+                                    input(type="hidden" name="name" value="false")
+                        tr
+                            td ADX
+                            td AdEx
+                            td 0
+                            td.text-right.switch-wrapper
+                                label.switch
+                                    input(type="checkbox")
+                                    span.slider.round
+                                    input(type="hidden" name="name" value="false")
+            

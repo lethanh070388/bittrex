@@ -1,0 +1,40 @@
+extends layout_setting.pug  
+
+block content
+    .container-fluid.px-4
+        .row
+            .col
+                h5.heading-lv5.text-uppercase.pt-4.border-bottom UI SETTINGS
+        .row
+            .col
+                .ui-setting-content.mt-4
+                    h4 Toast Notifications
+                    form#frmManageUI(action="#")
+                        .form-group
+                            input#bottomLeft(type="radio" name="alertLocation" checked)
+                            label(for="bottomLeft") Bottom Left
+                            span.icon-arrow-gray-alert.rotate-225
+                        .form-group
+                            input#bottomRight(type="radio" name="alertLocation")
+                            label(for="bottomRight") Bottom Left
+                            span.icon-arrow-gray-alert.rotate-135
+                        .form-group
+                            input#topLeft(type="radio" name="alertLocation")
+                            label(for="topLeft") Top Left
+                            span.icon-arrow-gray-alert.rotate-315
+                        .form-group
+                            input#topRight(type="radio" name="alertLocation")
+                            label(for="topRight") Top Right
+                            span.icon-arrow-gray-alert.rotate-45
+                        .form-group
+                            input#disable(type="radio" name="alertLocation")
+                            label(for="disable") Disable
+                            span.icon-disabled
+                    h4 Theme
+                    form(action="#")
+                        .form-group
+                            input#themeLight(type="radio" name="theme" checked)
+                            label(for="themeLight") Theme Light
+                        .form-group
+                            input#themeDark(type="radio" name="theme")
+                            label(for="themeDark") Theme Dark

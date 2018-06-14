@@ -62,67 +62,106 @@
             <div class="container-fluid px-4 two-factor">
               <div class="row">
                 <div class="col">
-                  <h5 class="heading-lv5 text-uppercase pt-4">TWO-FACTOR AUTHENTICATION</h5>
-                  <p class="border-bottom">Greatly increase security by requiring both your password and another form of authentication.</p>
+                  <h5 class="heading-lv5 text-uppercase pt-4">Auto sell</h5>
                 </div>
               </div>
               <div class="row">
                 <div class="col">
-                  <div class="panel status-panel">
-                    <h4>Status: <span class="un-verify"><i class="fas fa-address-card px-2"></i>Disable</span></h4>
+                  <div class="info-blurd">
+                    <p>Auto-Sell is a feature that automatically sells any currency you specify into Bitcoin. We primarily see this as a convenience for mining pools and large scale miners to convert their coins </p>
+                    <ul>
+                      <li> Every 10 seconds, we check your balance. If you have more than the minimum trade size, we market sell your coin for Bitcoin</li>
+                      <li>Any coins you have in your balance will get sold if the auto-sell option is enabled in that currency, whether you have a balance due to a trade or a deposit</li>
+                      <li>The price your currency is sold at is dependant on the market price at the time it was sold</li>
+                      <li>The standard trade fees apply</li>
+                    </ul>
                   </div>
                 </div>
               </div>
               <div class="row">
                 <div class="col">
-                  <div class="disabled-content">
-                    <h5>How to Enable Two-Factor Authentication</h5>
-                    <div class="row">
-                      <div class="col-1"><span class="step-num">1</span></div>
-                      <div class="col-11 step-content">Download Google Authenticator on your mobile device</div>
-                    </div>
-                    <div class="row">
-                      <div class="col text-center py-4"><img src="../assets/google-authenticator.png" alt=""></div>
-                    </div>
-                    <div class="row">   
-                      <div class="col text-center pb-4"><img class="px-1" src="../assets/download-apple-store.png" alt=""><img class="px-1" src="../assets/download-google-store.png" alt=""></div>
-                    </div>
-                    <div class="row">
-                      <div class="col-1"><span class="step-num">2</span></div>
-                      <div class="col-11 step-content">Use Google Authenticator to scan the QRCode</div>
-                    </div>
-                    <div class="row">
-                      <div class="col text-center py-4"><img src="../assets/xcode.png" alt=""></div>
-                    </div>
-                    <div class="row">
-                      <div class="col-1"><span class="step-num">3</span></div>
-                      <div class="col-11">
-                        <div class="step-content">Back up your Secret Key.</div>
-                        <p>Reseting your two - factor authentication requires opening a support ticket and may take up to 48 hours to address.p</p>
-                        <div class="input-group mb-3">
-                          <input class="form-control copy-control" type="text" placeholder="XJ2RBL47CPGBC67T" aria-describedby="basic-addon2">
-                          <div class="input-group-append">
-                            <button class="btn btn-copy" type="button">Copy</button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-1"><span class="step-num">4</span></div>
-                      <div class="col-11 step-content">Enter the 6 digit authentication code provided by Google Authenticator</div>
-                    </div>
-                    <div class="row">
-                      <div class="col form-password">
-                        <div class="form-group pt-4">
-                          <label for="authenticationCode">Authentication Code</label>
-                          <input class="form-control" id="authenticationCode" type="text" placeholder="Input 6 digit authentication code">
-                        </div>
-                        <div class="text-center form-group mt-4"> 
-                          <button class="btn btn-form change-pass">Enable 2FA</button>
-                        </div>
-                      </div>
-                    </div>
+                  <h5 class="heading-lv5 text-uppercase pt-4">Wallet</h5>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <div class="text-right">
+                    <label class="custom-button">Hide zero balances</label>
                   </div>
+                  <div class="text-right">
+                    <input class="custom-search" type="search" placeholder="Filter symbol..." aria-label="Search">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <table class="table custom-table">
+                    <thead>
+                      <tr>
+                        <th>Symbol</th>
+                        <th>Name</th>
+                        <th>Balance</th>
+                        <th class="text-right">Auto-Sell Enable</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>2GIVE</td>
+                        <td>2GIVE	</td>
+                        <td>0</td>
+                        <td class="text-right switch-wrapper">
+                          <label class="switch">
+                            <input type="checkbox"><span class="slider round"></span>
+                            <input type="hidden" name="name" value="false">
+                          </label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>ABY	</td>
+                        <td>ArtByte	</td>
+                        <td>0</td>
+                        <td class="text-right switch-wrapper">
+                          <label class="switch">
+                            <input type="checkbox"><span class="slider round"></span>
+                            <input type="hidden" name="name" value="false">
+                          </label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>ADA</td>
+                        <td>Ada</td>
+                        <td>0</td>
+                        <td class="text-right switch-wrapper">
+                          <label class="switch">
+                            <input type="checkbox"><span class="slider round"></span>
+                            <input type="hidden" name="name" value="false">
+                          </label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>ADT</td>
+                        <td>adToken	</td>
+                        <td>0	</td>
+                        <td class="text-right switch-wrapper">
+                          <label class="switch">
+                            <input type="checkbox"><span class="slider round"></span>
+                            <input type="hidden" name="name" value="false">
+                          </label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>ADX</td>
+                        <td>AdEx</td>
+                        <td>0</td>
+                        <td class="text-right switch-wrapper">
+                          <label class="switch">
+                            <input type="checkbox"><span class="slider round"></span>
+                            <input type="hidden" name="name" value="false">
+                          </label>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
               </div>
             </div>

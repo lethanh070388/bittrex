@@ -1,0 +1,103 @@
+.custom-table{
+    color: rgba(255,255,255,.8);
+    th{
+        border-top: 0;
+        padding: 8px;
+    }
+    td{
+        padding: 8px;
+    }
+}
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 24px;
+    margin-bottom: 0;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    display: none;
+}
+
+/* The slider */
+.switch-wrapper{
+    line-height: 10px;
+}
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    &:before {
+        position: absolute;
+        content: "";
+        height: 20px;
+        width: 20px;
+        left: 3px;
+        bottom: 2px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+    &.round{
+        border-radius: 24px;
+        &:before{
+            border-radius: 50%;
+        }
+    }
+}
+
+input:checked+.slider {
+    background-color: #0084d4;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #0084d4;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(14px);
+    -ms-transform: translateX(14px);
+    transform: translateX(14px);
+}
+
+.custom-button{
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+    white-space: nowrap;
+    height: 32px;
+    border-radius: 4px;
+    border: solid 1px rgba(32,32,32,.6);
+    padding: 8px 0;
+    font-size: 13px;
+    line-height: 16px;
+    vertical-align: middle;
+    margin: 0;
+    width: 220px;
+    text-align: center;
+    color: rgba(255,255,255,.6);
+    background-color: rgba(255,255,255,.1);
+    border-color: rgba(32,32,32,.6);
+}
+.custom-search{
+    color: #2b3441;
+    background-color: #9caac1;
+    width: 220px;
+    border-radius: 3px;
+    height: 30px;
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 1.5;
+    background-image: none;
+    border: 1px solid #2b3441;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}

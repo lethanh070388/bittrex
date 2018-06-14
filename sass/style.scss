@@ -3,6 +3,8 @@
 @import 'mixin';
 @import 'ultilities';
 
+@import 'table';
+
 
 // LAYOUT
 html, body{
@@ -566,6 +568,9 @@ hr{
                 padding: 12px 0;
                 text-decoration: none;
             }
+            &.active{
+                border-left: 8px solid #0084d4;
+            }
         }
     }
 }
@@ -684,6 +689,14 @@ hr{
         width: 70%;
     }
 }
+.info-blurd{
+    max-width: 100%;
+    font-size: 13px;
+    color: #fff;
+    background-color: rgba(255,255,255,.25);
+    border-radius: 4px;
+    padding: 12px;
+}
 .form-password{
     max-width: 400px;
     margin: 0 auto;
@@ -731,6 +744,12 @@ hr{
         color: #f75535;
     }
 }
+.default-panel{
+    background-color: #2b3441;
+    border: 1px solid #ddd;
+    font-size: 13px;
+    @include border-radius(3px);
+}
 .step-num{
     display: inline-block;
     width: 24px;
@@ -754,6 +773,63 @@ hr{
 .btn.btn-copy{
     background-color: #0084d4;
     color: #fff;
+}
+
+// UI SETTINGS
+.ui-setting-content{
+    max-width: 400px;
+    margin: 0 auto 40px;
+    h4{
+        border-bottom: 1px solid #515967;
+        margin: 0;
+        padding-bottom: 8px;
+        text-transform: uppercase;
+        color: #9caac1;
+        font-size: 15px;
+        line-height: 16px;
+    }
+    .form-group{
+        margin-top: 20px;
+        label{
+            color: rgba(255,255,255,.8);
+            cursor: pointer;
+            vertical-align: text-bottom;
+            margin: 0;
+            line-height: 21px;
+            font-size: 16px;
+            padding-left: 5px;
+        }
+        .rotate-225 {
+            transform: rotate(225deg);
+        }
+        .rotate-135 {
+            transform: rotate(135deg);
+        }
+        .rotate-315 {
+            transform: rotate(315deg);
+        }
+        .rotate-45 {
+            transform: rotate(45deg);
+        }
+    }
+}
+.icon-arrow-gray-alert {
+    width: 10px;
+    height: 16.7px;
+    background: url('../assets/icon-arrow-gray-alert.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    float: right;
+}
+.icon-disabled {
+    width: 14px;
+    height: 14px;
+    background: url('../assets/icon-disabled.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    float: right;
 }
 // END SETTING PAGE
 
