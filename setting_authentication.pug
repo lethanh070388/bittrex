@@ -1,0 +1,58 @@
+extends layout_setting.pug  
+
+block content
+    .container-fluid.px-4.two-factor
+        .row
+            .col
+                h5.heading-lv5.text-uppercase.pt-4 TWO-FACTOR AUTHENTICATION
+                p.border-bottom Greatly increase security by requiring both your password and another form of authentication.
+        .row
+            .col
+                .panel.status-panel
+                    h4 Status: 
+                        span.un-verify
+                            i.fas.fa-address-card.px-2
+                            | Disable
+        .row
+            .col
+                .disabled-content
+                    h5 How to Enable Two-Factor Authentication
+                    .row
+                        .col-1
+                            span.step-num 1
+                        .col-11.step-content Download Google Authenticator on your mobile device
+                    .row
+                        .col.text-center.py-4
+                            img(src="../assets/google-authenticator.png", alt="")
+                    .row    
+                        .col.text-center.pb-4
+                            img.px-1(src="../assets/download-apple-store.png", alt="")
+                            img.px-1(src="../assets/download-google-store.png", alt="")
+                    .row
+                        .col-1
+                            span.step-num 2
+                        .col-11.step-content Use Google Authenticator to scan the QRCode
+                    .row
+                        .col.text-center.py-4
+                            img(src="../assets/xcode.png", alt="")
+                    .row
+                        .col-1
+                            span.step-num 3
+                        .col-11
+                            .step-content Back up your Secret Key.
+                            p Reseting your two - factor authentication requires opening a support ticket and may take up to 48 hours to address.p
+                            .input-group.mb-3
+                                input.form-control.copy-control(type="text" placeholder="XJ2RBL47CPGBC67T" aria-describedby="basic-addon2")
+                                .input-group-append
+                                    button.btn.btn-copy(type="button") Copy
+                    .row
+                        .col-1
+                            span.step-num 4
+                        .col-11.step-content Enter the 6 digit authentication code provided by Google Authenticator
+                    .row
+                        .col.form-password
+                            .form-group.pt-4
+                                label(for="authenticationCode") Authentication Code
+                                input.form-control#authenticationCode(type="text" placeholder="Input 6 digit authentication code")
+                            .text-center.form-group.mt-4 
+                                button.btn.btn-form.change-pass Enable 2FA

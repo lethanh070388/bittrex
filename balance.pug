@@ -44,7 +44,7 @@ block main_content
                                 input.form-control.ml-auto.market_find.d-inline-block.mr-2(type="search" placeholder="Find..." aria-label="Search")
                                 button.btn.btn-refresh(type="button")
                                     i.fas.fa-sync
-                table.dataTablePlugin.market_table_detail
+                table#balanceTable.dataTablePlugin.market_table_detail
                     thead
                         tr
                             th.text-center D
@@ -59,7 +59,7 @@ block main_content
                             th.text-right %change
                     tbody
                         -for(var i=1; i<20; i++){
-                            tr
+                            tr.row-key
                                 td.icon.icon-deposit-green
                                     button.btn-modal-deposit(type="button" data-toggle="modal" data-target="#modalDeposit")
                                 td.icon.icon-withdraw-red
@@ -114,12 +114,95 @@ block main_content
                                             .input-group.mb-3
                                                 input.form-control.deposit-control(type="text" placeholder="Generate a new address" aria-label="newaddress" aria-describedby="basic-addon2")
                                                 .input-group-append
-                                                    button.btn.btn-new-address(type="button") New Address
+                                                    button.btn.btn-new-address(type="button" data-toggle="modal" data-target="#modalFailed") New Address
                                             .modal-disclaimer
                                                 h5.text-uppercase DEPOSIT INSTRUCTIONS
                                                 small Depositing tokens to this address other than BTC will result in your funds being lost.
                             .modal-footer
-                                button.btn.btn-deposit(type="button" data-dismiss="modal") Close
+                                button.btn.btn-close(type="button" data-dismiss="modal") Close
+        //- Modal error
+        .row
+            .col
+                #modalFailed.modal.fade(tabindex="-1" role="dialog" aria-labelledby="modalFailedLabel" aria-hidden="true")
+                    .modal-dialog(role="document")
+                        .modal-content.error-container
+                            .modal-header.text-center
+                                h5.modal-title#modalFailedLabel Error Generating Address
+                                button.close(type="button" data-dismiss="modal" aria-label="Close")
+                                    span(aria-hidden="true") &times;
+                            .modal-body
+                                p 
+                                    |The following errors were encountered:
+                                    ul
+                                        li Your account must be verified to deposit, trade, or withdraw.
+                                    |Please correct these issues and try again.
+                            .modal-footer
+                                button.btn.btn-transaction(type="button" data-dismiss="modal") Close
+        .row
+            .col
+                #modalWithdrawal.modal.fade(tabindex="-1" role="dialog" aria-labelledby="modalWithdrawalLabel" aria-hidden="true")
+                    .modal-dialog(role="document")
+                        .modal-content.withdrawal-container
+                            .modal-header.text-center
+                                h5.modal-title#modalWithdrawalLabel 
+                                    span.title-icon
+                                    |Withdrawal
+                                button.close(type="button" data-dismiss="modal" aria-label="Close")
+                                    span(aria-hidden="true") &times;
+                            .modal-body
+                                .container
+                                    .row
+                                        .col
+                                            .info.d-flex.justify-content-between.align-items-baseline
+                                                h5 Currency
+                                            table.deposit_table
+                                                thead
+                                                    tr
+                                                        th Name
+                                                        th Symbol
+                                                        th.text-right Available balance
+                                                tbody
+                                                    tr
+                                                        td Bitcoin
+                                                        td BTC
+                                                        td.text-right 0
+                                            .info.mt-4
+                                                h5 Withdrawal amount
+                                            .container-fluid
+                                                .row.mt-3
+                                                    .col-6.px-0
+                                                        .text-uppercase Quantity
+                                                    .col-6.d-flex.align-items-baseline.px-0
+                                                        input.form-control.withdrawal-control.text-right(type="text" placeholder="0" autocomplete="off")
+                                                        span.currency.text-center.px-2 LTC
+                                                .row.mt-3
+                                                    .col-6.px-0
+                                                        .text-uppercase Transaction fee
+                                                    .col-6.px-0.d-flex.align-items-baseline
+                                                        .amount.text-right 0.01000000
+                                                        span.currency.text-center.px-2 LTC
+                                                .row.mt-3
+                                                    .col-6.px-0
+                                                        .text-uppercase Total withdrawal
+                                                    .col-6.px-0.d-flex.align-items-baseline
+                                                        .amount.text-right -0.01000000
+                                                        span.currency.text-center.px-2 LTC
+                                            .info.mt-4
+                                                h5 Address
+                                            .input-group.mb-3
+                                                input.form-control.withdrawal-control(type="text" autocomplete="off")
+                                            .modal-disclaimer
+                                                h5.text-uppercase DISCLAIMER
+                                                small 
+                                                    |Please verify your withdrawal address. We cannot refund an incorrect withdrawal.
+                                                    br
+                                                    br
+                                                    |DO NOT WITHDRAW DIRECTLY TO A CROWDFUND OR ICO.
+                                                    br
+                                                    |We will not credit your account with tokens from that sale.
+                            .modal-footer
+                                button.btn.btn-close(type="button" data-dismiss="modal") Cancel
+                                button.btn.btn-withdrawal(type="button") Withdraw LTC           
 
     //- PENDING WITHDRAWALS
     .container-fluid
@@ -225,4 +308,41 @@ block script-append
             $('.expand-button').on("click",function(){
                 $('.expand-icon').toggleClass('show');
             });
+            function format() {
+                return '<tr class="row-info pb-2 hidden-row">'+
+                                '<td colspan="10">'+
+                                    '<table>'+
+                                        '<tr>'+
+                                            '<td>Symbol</td>'+
+                                            '<td class="text-left">BTC</td>'+
+                                            '<td class="icon icon-deposit-green">'+
+                                                '<button class="btn-modal-deposit" type="button" data-toggle="modal" data-target="#modalDeposit"></button></td>'+
+                                            '<td class="icon icon-withdraw-red">'+
+                                                '<button class="btn-modal-withdrawal" type="button" data-toggle="modal" data-target="#modalWithdrawal"></button></td>'+
+                                        '</tr>'+
+                                        '<tr>'+
+                                            '<td>%Change</td>'+
+                                            '<td class="text-left colspan="3">0.0%</td>'+
+                                        '</tr>'+
+                                        '<tr>'+
+                                            '<td>Available Balance</td>'+
+                                            '<td class="text-left colspan="3"> 0.00000000</td>'+
+                                        '</tr>'+
+                                        '<tr>'+
+                                            '<td>Pending Deposit</td>'+
+                                            '<td class="text-left colspan="3"> 0.00000000</td>'+
+                                        '</tr>'+
+                                        '<tr>'+
+                                            '<td>Total</td>'+
+                                            '<td class="text-left colspan="3"> 0.00000000</td>'+
+                                        '</tr>'+
+                                        '<tr>'+
+                                            '<td>Est.BTC Value</td>'+
+                                            '<td class="text-left colspan="3"> 0.00000000</td>'+
+                                        '</tr>'+
+                                        '<tr>'+
+                                            '<td> Rate</td>'+
+                                            '<td class="text-left colspan="3"> 0.00000000</td></tr>';
+            }
+            $('#balanceTable tbody tr').after(format());
         });                                

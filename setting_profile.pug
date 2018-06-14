@@ -1,0 +1,46 @@
+extends layout_setting.pug  
+
+block content
+    .container-fluid.px-4
+        .row
+            .col
+                h5.heading-lv5.text-uppercase.pt-4.border-bottom Profile
+        .row
+            .col
+                .blurd.sucess-blurd
+                    .blurd_icon
+                        i.fas.fa-check-square.fa-5x
+                    .blurd_content
+                        .font-weight-bold Thanks for setting up your profile
+                        small If you see any errors below, please report this issue to our support team by visiting the 
+                            a(href="#") support site 
+                            |and clicking 
+                            i Submit a Request.
+                            br
+                            |To learn more about why it's important to verify your identity, please view this customer 
+                            a(href="#") support document.
+                            br
+                        a(href="#") 
+                            | Proceed to identity verification 
+                            i.fas.fa-arrow-right
+        .row
+            .col
+                form.basic-form(action="#")
+                    .verified-content
+                        .row.mt-3
+                            .col-5
+                                span Birth day
+                            .col-7
+                                span Mar 07, 1988
+                        .row.mt-3
+                            .col-5
+                                span Address
+                            .col-7
+                                div
+                                    |Luy Ban Bich
+                                    br 
+                                    |Ho Chi Minh, Ho Chi Minh 
+                                    br
+                                    |700000 
+                                    br
+                                    |Vietnam 

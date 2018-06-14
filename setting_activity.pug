@@ -38,41 +38,35 @@ block content
                 h5.heading-lv5.text-uppercase.pt-4 User Activity
         .row
             .col
-                table.table.table-activity
+                table.table.table-activity.dataTablePlugin
                     thead
                         tr
                             th.text-uppercase Time stamp
                             th.text-uppercase Address
                             th.text-uppercase Activity
-                    -for(var i=0; i<6; i++){
+                    -for(var i=0; i<16; i++){
                         tr.row-key
                             td 06/04/18 07:00:50
                             td 171.232.180.20
                             td Logon
-                        tr.row-info.pb-2.hidden-row
-                            td(colspan="3") 
-                                span.px-4 User Agent:
-                                span Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36
                     -}
-        .row
-            .col.pt-4
-                nav.ml-auto(aria-label="Pagination")
-                    ul.pagination.mb-0.justify-content-end
-                        li.page-item
-                            a.page-link(href="#" aria-label="Previous") First
-                        li.page-item
-                            a.page-link(href="#" aria-label="Previous") Prev
-                        -for(var i=1; i<=3; i++){
-                            if i==1
-                                li.page-item
-                                    a.page-link.current(href="#")= i
-                            else
-                                li.page-item
-                                    a.page-link(href="#")= i
-                        -}
-                        li.page-item
-                            a.page-link(href="#" aria-label="Next") Next     
-                        li.page-item
-                            a.page-link(href="#" aria-label="Previous") Last
-                
+block script-append
+    script.
+        (function($){
+            $(window).on("load",function(){
+                function format() {
+                    return '<tr class="row-info pb-2 hidden-row">'+
+                                '<td colspan="3"><span class="px-4">User Agent: </span><span>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36</span></td>'+
+                            '</tr>';
+                }
+                var table = $('.dataTablePlugin').DataTable({
+                    "lengthChange": false,
+                    "searching": false,
+                    "ordering": false,
+                    "info": false,
+                    "pagingType": "full_numbers"
+                });
+                $('.dataTablePlugin tbody tr').after(format());
+            });
+        })(jQuery);               
                 

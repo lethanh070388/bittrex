@@ -1,4 +1,44 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
+@font-face {
+    font-family: 'Roboto';
+    src: url('../webfonts/RobotoLight.eot');
+    src: url('../webfonts/RobotoLight.eot?#iefix') format('embedded-opentype'),
+         url('../webfonts/RobotoLight.woff') format('woff'),
+         url('../webfonts/RobotoLight.ttf') format('truetype'),
+         url('../webfonts/RobotoLight.svg#RobotoLight') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('../webfonts/RobotoRegular.eot');
+    src: url('../webfonts/RobotoRegular.eot?#iefix') format('embedded-opentype'),
+         url('../webfonts/RobotoRegular.woff') format('woff'),
+         url('../webfonts/RobotoRegular.ttf') format('truetype'),
+         url('../webfonts/RobotoRegular.svg#RobotoRegular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('../webfonts/RobotoMedium.eot');
+    src: url('../webfonts/RobotoMedium.eot?#iefix') format('embedded-opentype'),
+         url('../webfonts/RobotoMedium.woff') format('woff'),
+         url('../webfonts/RobotoMedium.ttf') format('truetype'),
+         url('../webfonts/RobotoMedium.svg#RobotoMedium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('../webfonts/RobotoBold.eot');
+    src: url('../webfonts/RobotoBold.eot?#iefix') format('embedded-opentype'),
+         url('../webfonts/RobotoBold.woff') format('woff'),
+         url('../webfonts/RobotoBold.ttf') format('truetype'),
+         url('../webfonts/RobotoBold.svg#RobotoBold') format('svg');
+    font-weight: 700;
+    font-style: normal;
+}
 html{
     font-size: 14px;
 }

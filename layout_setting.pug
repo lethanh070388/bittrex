@@ -36,12 +36,12 @@ html
                             li.nav-item.dropdown
                                 a.nav-link.dropdown-toggle#navbarDropdownSetting(href="./view/setting_activity" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Settings
                                 .dropdown-menu(aria-labelledby="navbarDropdownSetting")
-                                    a.dropdown-item(href="#") Action 
-                                    a.dropdown-item(href="#") My Profile 
-                                    a.dropdown-item(href="#") Identity Verification 
+                                    a.dropdown-item(href="./setting_activity.html") Action 
+                                    a.dropdown-item(href="./setting_profile.html") My Profile 
+                                    a.dropdown-item(href="./setting_verification.html") Identity Verification 
                                     a.dropdown-item(href="#") Enable Account 
-                                    a.dropdown-item(href="#") Password 
-                                    a.dropdown-item(href="#") Two-Factor Authentication 
+                                    a.dropdown-item(href="./setting_password.html") Password 
+                                    a.dropdown-item(href="./setting_authentication.html") Two-Factor Authentication 
                                     a.dropdown-item(href="#") API Keys 
                                     a.dropdown-item(href="#") Auto-Sell 
                                     a.dropdown-item(href="#") IP Whitelist
@@ -60,19 +60,19 @@ html
                             .nav-items
                                 ul.heading-lv6.nav-item.text-uppercase Summary
                                     li.heading-lv6.nav-subitem.current 
-                                        a(href="#") My Activity
+                                        a(href="./setting_activity.html") My Activity
                                 ul.heading-lv6.nav-item.text-uppercase Account
                                     li.heading-lv6.nav-subitem 
-                                        a(href="#") My Profile
+                                        a(href="./setting_profile.html") My Profile
                                     li.heading-lv6.nav-subitem 
-                                        a(href="#") Identity Verification
+                                        a(href="./setting_verification.html") Identity Verification
                                     li.heading-lv6.nav-subitem
                                         a(href="#") Enable Account
                                 ul.heading-lv6.nav-item.text-uppercase Site Settings
                                     li.heading-lv6.nav-subitem
-                                        a(href="#") Password
+                                        a(href="./setting_password.html") Password
                                     li.heading-lv6.nav-subitem
-                                        a(href="#") Two-Factor Authentication
+                                        a(href="./setting_authentication.html") Two-Factor Authentication
                                     li.heading-lv6.nav-subitem
                                         a(href="#") API Keys
                                     li.heading-lv6.nav-subitem
@@ -122,5 +122,9 @@ html
         script(src="../js/jquery.js")
         script(src="../js/popper.js")
         script(src="../js/bootstrap.js")
+        script(src="../js/jquery.mCustomScrollbar.concat.min.js")
+        script(src="../js/jquery.dataTables.min.js")
+        script(src="../js/dataTables.bootstrap4.min.js")
         script(src="../js/theme.js")
         script(src="../js/main.js")
+        block script-append

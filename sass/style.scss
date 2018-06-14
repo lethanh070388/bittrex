@@ -21,8 +21,8 @@ a{
         text-decoration: none;
     }
 }
-sup{
-    color: red;
+a sup{
+    color: rgba(255,255,255,.8);
 }
 .up{
     color: #00a45b !important;
@@ -83,6 +83,9 @@ h5{
 }
 h6{
     font-size: 0.8rem;
+}
+hr{
+    border: 1px solid #515967;
 }
 @include minq(medium){
     .heading-lv1{
@@ -579,7 +582,7 @@ h6{
     th{
         color: rgba(255, 255, 255, 0.8);
         border-top: 0;
-        padding: 0.75rem 0;
+        padding: 0.75rem 0 !important;
         border-bottom: 1px solid #515967 !important;
     }
     td{
@@ -593,8 +596,18 @@ h6{
             font-size: 10px;
         }
     }
-    .hidden-row{
-        display: none;
+}
+.hidden-row{
+    display: none;
+}
+.row-info{
+    table{
+        margin-left: 1em;
+        font-size: 13px;
+        td{
+            padding: 3px 5px !important;
+            border: 0;
+        }
     }
 }
 .dropdown-menu{
@@ -624,6 +637,123 @@ h6{
             display: none;
         }
     }
+}
+
+.basic-form{
+    max-width: 400px;
+    font-size: 16px;
+    color: rgba(255,255,255,.8);
+    margin: 0 auto;
+}
+.enhanced-verification{
+    color: rgba(255,255,255,.8);
+    font-size: 13px;
+    .help {
+        max-width: 700px;
+        margin: 0 auto;
+    }
+}
+.blurd{
+    background-color: #262f3b;
+    width: 100%;
+    max-width: 600px;
+    margin: .5em auto;
+    border-radius: 4px;
+    padding: 12px;
+    font-size: 1em;
+    color: rgba(255,255,255,.8);
+    display: flex;
+    &_content{
+        flex-grow: 1;
+        padding: 0 10px;
+    }
+    &_icon{
+        color: #00a800;
+        &.info{
+            color: #fff;
+            .fa-info{
+                padding: 15px 30px;
+                background-color: #009af8;
+                border-radius: 5px;
+            }
+        }
+    }
+}
+@include minq(small){
+    .blurd{
+        width: 70%;
+    }
+}
+.form-password{
+    max-width: 400px;
+    margin: 0 auto;
+    color: #9caac1;
+    font-size: 13px;
+    .form-control{
+        background-color: #2b3441;
+        border: 0;
+        border-bottom: 1px solid #515967;
+        @include border-radius(0);
+        font-size: 13px;
+    }
+}
+.btn-form{
+    width: 200px;
+    height: 44px;
+    font-size: 15px;
+    color: rgba(255,255,255,.8);
+    background-color: #00b000;
+    padding: 6px 12px;
+    @include border-radius(4px);
+    &.change-pass{
+        background-color: rgba(255,255,255,.1);
+        &:hover{
+            background-color: #009af8;
+        }
+    }
+}
+.two-factor{
+    color: #9caac1;
+    .disabled-content{
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}
+.status-panel {
+    border-radius: 6px;
+    background-color: #262c36;
+    border: none;
+    box-shadow: none;
+    padding: 16px 0;
+    margin-bottom: 40px;
+    text-align: center;
+    .un-verify{
+        color: #f75535;
+    }
+}
+.step-num{
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    line-height: 22px;
+    border-radius: 50%;
+    border: 2px solid #0084d4;
+    margin-top: -2px;
+}
+.step-content{
+    font-size: 1em;
+    color: rgba(255, 255, 255, 0.8);
+}
+.copy-control{
+    background-color: #262c36;
+    padding: .7rem 1.75rem .7rem .75rem;
+    font-size: 15px;
+    border: 0;
+}
+.btn.btn-copy{
+    background-color: #0084d4;
+    color: #fff;
 }
 // END SETTING PAGE
 
@@ -943,6 +1073,9 @@ table.dataTable tbody tr:hover td{
 }
 table.dataTable.no-footer{
     border-bottom: 0;
+}
+.pagination{
+    justify-content: flex-end;
 }
 .page-item{
     &.disabled{
@@ -1371,21 +1504,98 @@ table.dataTable.no-footer{
     .modal-footer{
         background-color: #2b3441;
         border-top-color: #2b3441;
-        .btn-deposit{
+        .btn-close{
             border: 1px solid #0084d4;
             color: #0084d4;
             background-color: rgba(255,255,255,.1);
             font-size: 15px;
             width: 200px;
             margin-right: 1rem;
+            padding: .7rem .75rem;
             &:hover{
                 color: #009af8;
             }
         }
     }
 }
+.withdrawal-container{
+    background-color: transparent;
+    .modal-header{
+        background-color: #0084d4;
+        border-bottom-color: #0084d4;
+        padding: 1.5rem 1rem;
+        .modal-title{
+            margin-left: auto;
+            margin-right: auto;
+            .title-icon{
+                display: inline-block;
+                width: 30px;
+                height: 26px;
+                background: url('../assets/icon-withdraw-white.svg');
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center bottom;
+                vertical-align: text-bottom;
+                margin-right: 8px;
+            }
+        }
+        .close{
+            margin-left: 0;
+            margin-top: -0.75rem;
+        }
+    }
+    .modal-body{
+        background-color: #2b3441;
+        color: rgba(255, 255, 255, 0.8);
+    }
+    .modal-disclaimer{
+        background-color: rgba(81,89,104,.3);
+        padding: 1rem;
+    }
+    .withdrawal-control{
+        background-color: #262c36;
+        padding: .5rem .75rem .5rem .75rem;
+        font-size: 15px;
+        border: 1px solid #515967;
+        color: #fff;
+    }
+    .amount{
+        flex: 1;
+        font-size: 15px;
+    }
+    .modal-footer{
+        background-color: #2b3441;
+        border-top-color: #2b3441;
+        .btn-close{
+            border: 1px solid #0084d4;
+            color: #0084d4;
+            background-color: rgba(255,255,255,.1);
+            font-size: 15px;
+            width: 200px;
+            margin-right: 1rem;
+            padding: .7rem .75rem;
+            &:hover{
+                color: #2b3441;
+            }
+        }
+        .btn-withdrawal{
+            border: 1px solid #0084d4;
+            color: #fff;
+            background-color: rgba(255,255,255,.1);
+            font-size: 15px;
+            width: 200px;
+            margin-right: 1rem;
+            padding: .7rem .75rem;
+            &:hover{
+                color: #2b3441;
+                background-color: #009af8;
+            }
+        }
+    }
+}
 @include minq(small){
-    #modalDeposit .modal-dialog {
+    #modalDeposit .modal-dialog,
+    #modalWithdrawal .modal-dialog{
         max-width: 600px;
     }
 }
