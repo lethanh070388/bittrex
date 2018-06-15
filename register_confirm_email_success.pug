@@ -1,0 +1,18 @@
+extends layout_blank.pug  
+
+block content
+    .container-fluid.px-4
+        .row
+            .col.mt-4
+                .blurd.sucess-blurd
+                    .blurd_icon
+                        i.fas.fa-check-square.fa-5x
+                    .blurd_content
+                        .font-weight-bold Email Confirmation Successful
+                        small Your email has been successfully verified. Please 
+                            a(href="./login.html") login 
+                            |to start trading.
+                        br
+                        a(href="./login.html") 
+                            | Return To Login 
+                            i.fas.fa-arrow-right

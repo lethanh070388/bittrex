@@ -130,7 +130,7 @@ hr{
     padding-left: 0.5rem;
 }
 .navbar{
-    padding: 0 1rem;
+    padding: 0 1.5rem;
     .navbar-brand{
         padding-top: 0;
         padding-bottom: 0;
@@ -293,20 +293,21 @@ hr{
         }
     }
 }
+.home-market-content {
+    background-color: #2b3441;
+    min-height: calc(100vh - 146px);
+}
 // END SUPPORT SECTION
 
-//SECTION REGISTER
+// SECTION REGISTER
 .register-section {
-    background-color: #0084d4;
     text-align: center;
-    color: #fff;
     padding-top: 100px;
     padding-bottom: 100px;
     .form-register {
         display: inline-block;
         padding-bottom: 16px;
         margin-top: 60px;
-        border-bottom: 1px solid rgba(0,54,98,.3);
         max-width: 360px;
         width: 100%;
         .register-btn {
@@ -317,7 +318,6 @@ hr{
             width: 220px;
             height: 44px;
             border-radius: 3px;
-            background-color: #003662;
             color: white;
         }
         .form-group{
@@ -341,8 +341,6 @@ hr{
     }
     a{
         display: inline-block;
-        border-bottom: 1px solid #fff;
-        color: #fff;
         cursor: pointer;
         vertical-align: baseline;
         text-decoration: none;
@@ -353,7 +351,6 @@ hr{
 
 //FOOTER
 .footer {
-    background-color: #f3f5f8;
     padding: 28px 0 20px;
     a{
         font-size: 12px;
@@ -470,27 +467,19 @@ hr{
     }
     &_table{
         width: 100%;
-        color: white;
         &_heading, th{
-            border-bottom: 1px solid #515967; //border-bottom like border-left
             text-transform: uppercase;
         }
         &_value, td{
-            border-bottom: 1px solid #262c36;
             cursor: pointer;
             a{
-                color: white;
                 &:hover{
                     text-decoration: underline;
-                    color: #337ab7;
                 }
             }
         }
         tr{
             background-color: transparent !important;
-            &:hover{
-                background-color: rgba(0,132,212,.08);
-            }
             th,td{
                 padding-top: 5px;
                 padding-bottom: 5px;
@@ -498,11 +487,6 @@ hr{
             th:nth-child(n+3),
             td:nth-child(n+3){
                 text-align: right;
-            }
-            &:last-child{
-                td{
-                    border-bottom-color: #515967;
-                }
             }
         }
 
@@ -550,7 +534,6 @@ hr{
 }
 .nav-setting{
     width: 268px;
-    border-right: 1px solid #515967;
 }
 .nav-items{
     .nav-item{
@@ -559,17 +542,12 @@ hr{
         padding: 12px 0;
         .nav-subitem{
             padding-left: 15px;
-            border-bottom: 1px solid #262c36;
             a{
-                color: #fff;
                 text-transform: capitalize;
                 font-size: 14px;
                 display: block;
                 padding: 12px 0;
                 text-decoration: none;
-            }
-            &.active{
-                border-left: 8px solid #0084d4;
             }
         }
     }
@@ -580,20 +558,15 @@ hr{
 }
 .border-bottom{
     padding-bottom: 1rem;
-    border-bottom: 1px solid #515967 !important;
 }
 .table-activity{
     border: 0 !important;
     th{
-        color: rgba(255, 255, 255, 0.8);
         border-top: 0;
         padding: 0.75rem 0 !important;
-        border-bottom: 1px solid #515967 !important;
     }
     td{
-        border-bottom: 1px solid #262c36 !important;
         padding: 0.5rem 0;
-        color: rgba(255, 255, 255, 0.8);
         font-size: 12px;
     }
     .row-info{
@@ -623,11 +596,9 @@ hr{
     padding: 0;
     margin: 0;
     .dropdown-item{
-        color: rgba(255, 255, 255, 0.8);
         font-size: 14px;
         padding: .5rem 2rem;
         &:hover{
-            color: rgba(255, 255, 255, 0.8);
             background-color: transparent;
         }
     }
@@ -647,11 +618,9 @@ hr{
 .basic-form{
     max-width: 400px;
     font-size: 16px;
-    color: rgba(255,255,255,.8);
     margin: 0 auto;
 }
 .enhanced-verification{
-    color: rgba(255,255,255,.8);
     font-size: 13px;
     .help {
         max-width: 700px;
@@ -659,26 +628,21 @@ hr{
     }
 }
 .blurd{
-    background-color: #262f3b;
     width: 100%;
     max-width: 600px;
     margin: .5em auto;
     border-radius: 4px;
     padding: 12px;
     font-size: 1em;
-    color: rgba(255,255,255,.8);
     display: flex;
     &_content{
         flex-grow: 1;
         padding: 0 10px;
     }
     &_icon{
-        color: #00a800;
         &.info{
-            color: #fff;
             .fa-info{
                 padding: 15px 30px;
-                background-color: #009af8;
                 border-radius: 5px;
             }
         }
@@ -692,38 +656,39 @@ hr{
 .info-blurd{
     max-width: 100%;
     font-size: 13px;
-    color: #fff;
-    background-color: rgba(255,255,255,.25);
     border-radius: 4px;
     padding: 12px;
 }
-.form-password{
+.submit-success{
+    display: none;
+}
+.form-input{
     max-width: 400px;
     margin: 0 auto;
-    color: #9caac1;
     font-size: 13px;
+    .form-control-inline{
+        flex: 1;
+    }
     .form-control{
-        background-color: #2b3441;
         border: 0;
-        border-bottom: 1px solid #515967;
         @include border-radius(0);
         font-size: 13px;
+    }
+    .form-control[readonly]{
+        font-size: 15px;
+        font-weight: $font-medium;
+        padding-left: 0;
+    }
+    label{
+        font-weight: $font-medium;
     }
 }
 .btn-form{
     width: 200px;
     height: 44px;
     font-size: 15px;
-    color: rgba(255,255,255,.8);
-    background-color: #00b000;
     padding: 6px 12px;
     @include border-radius(4px);
-    &.change-pass{
-        background-color: rgba(255,255,255,.1);
-        &:hover{
-            background-color: #009af8;
-        }
-    }
 }
 .two-factor{
     color: #9caac1;
@@ -734,19 +699,13 @@ hr{
 }
 .status-panel {
     border-radius: 6px;
-    background-color: #262c36;
     border: none;
     box-shadow: none;
     padding: 16px 0;
     margin-bottom: 40px;
     text-align: center;
-    .un-verify{
-        color: #f75535;
-    }
 }
 .default-panel{
-    background-color: #2b3441;
-    border: 1px solid #ddd;
     font-size: 13px;
     @include border-radius(3px);
 }
@@ -757,22 +716,15 @@ hr{
     text-align: center;
     line-height: 22px;
     border-radius: 50%;
-    border: 2px solid #0084d4;
     margin-top: -2px;
 }
 .step-content{
     font-size: 1em;
-    color: rgba(255, 255, 255, 0.8);
 }
 .copy-control{
-    background-color: #262c36;
     padding: .7rem 1.75rem .7rem .75rem;
     font-size: 15px;
     border: 0;
-}
-.btn.btn-copy{
-    background-color: #0084d4;
-    color: #fff;
 }
 
 // UI SETTINGS
@@ -780,18 +732,15 @@ hr{
     max-width: 400px;
     margin: 0 auto 40px;
     h4{
-        border-bottom: 1px solid #515967;
         margin: 0;
         padding-bottom: 8px;
         text-transform: uppercase;
-        color: #9caac1;
         font-size: 15px;
         line-height: 16px;
     }
     .form-group{
         margin-top: 20px;
         label{
-            color: rgba(255,255,255,.8);
             cursor: pointer;
             vertical-align: text-bottom;
             margin: 0;
@@ -831,6 +780,22 @@ hr{
     background-position: center bottom;
     float: right;
 }
+
+// NOTIFICATIONS
+.form-notify{
+    max-width: 400px;
+    margin: 0 auto;
+}
+.form-line {
+    padding-right: 10px;
+    padding-top: 19px;
+    height: 60px;
+    font-size: 15px;
+    line-height: 18px;
+}
+.notifications p {
+    max-width: 400px;
+}
 // END SETTING PAGE
 
 //MARKET DETAIL
@@ -854,7 +819,6 @@ hr{
     .main_nav{
         width: 200px;
         float: left;
-        background-color: #1c222d;
         height: calc(100vh - 56px);
         z-index: 250;
         &_menu{
@@ -869,14 +833,7 @@ hr{
                     line-height: 25px;
                     border-radius: 3px;
                     text-align: center;
-                    background-color: #9ba8c0;
                     cursor: pointer;
-                    &:hover{
-                        background-color: #7d899d;
-                    }
-                    i{
-                        color: #40454d;
-                    }
                 }
             }
             &_dropdown{
@@ -886,17 +843,7 @@ hr{
                 }
             }
             .form-control{
-                background-color: rgba(231,235,241,.9);
                 border: 0;
-            }
-            .dropdown-menu{
-                background-color: rgba(231,235,241,.9);
-                .dropdown-item{
-                    color: #495057;
-                    &:hover{
-                        background-color: rgba(255, 255, 255, 0.8);
-                    }
-                }
             }
         }
     }
@@ -1069,29 +1016,18 @@ hr{
     .main_content{
         height: calc(100vh - 56px);
         -webkit-overflow-scrolling: touch !important;
-        background-color: #303643;
     }
 }
-
+// END MARKET DETAIL
 
 //DATATABLE CUSTOM
 .dataTables_wrapper{
     .dataTables_paginate{
         .paginate_button{
             padding: 0;
-            background-color: rgba(255,255,255,.1);
-            color: rgba(255,255,255,0.8);
             font-size: 13px;
-            border: solid 1px #262c36;
             &:hover{
-                background-color: rgba(255,255,255,.1);
-                border-color: #0084d4;
                 background: none;
-            }
-            &.active{
-                &:hover{
-                    border-color: #9caac1;
-                }
             }
         }
     }
@@ -1100,9 +1036,6 @@ hr{
         padding-right: 0;
     }
     
-}
-table.dataTable tbody tr:hover td{
-    background-color: rgba(0,132,212,.08);
 }
 @include maxq(small){
     table.dataTable thead th,
@@ -1154,61 +1087,30 @@ table.dataTable.no-footer{
     justify-content: flex-end;
 }
 .page-item{
-    &.disabled{
-        .page-link{
-            color: rgba(255,255,255,0.8);
-            background-color: rgba(255,255,255,.1);
-            border-color: #262c36;
-        }
-    }
-    &.active{
-        .page-link{
-            color: #2b3441;
-            background-color: #9caac1;
-            border-color: #9caac1;
-            &:hover{
-                background-color: #9caac1;
-                border-color: #9caac1;
-            }
-        }
-    }
     .page-link{
         @include border-radius(2px);
         padding: .5rem .75rem;
-        &:hover{
-            background-color: rgba(255,255,255,.1);
-            border-color: #0084d4;
-        }
     }
 }
 .market{
     &_table_detail{
         width: 100%;
-        color: white;
         font-size: 11px;
         th{
-            border-bottom: 1px solid #515967; //border-bottom like border-left
             text-transform: uppercase;
-            color: #9caac1;
             padding: 5px !important;
         }
         td{
-            border-bottom: 1px solid #262c36;
             cursor: pointer;
             padding: 5px !important;
             a{
                 color: white;
                 &:hover{
                     text-decoration: underline;
-                    color: #337ab7;
                 }
             }
         }
         tr{
-            background-color: transparent !important;
-            &:hover{
-                background-color: rgba(0,132,212,.08);
-            }
             th,td{
                 padding-top: 5px;
                 padding-bottom: 5px;
@@ -1224,18 +1126,12 @@ table.dataTable.no-footer{
         font-size: 13px;
         margin: 0 auto;
         .btn{
-            background-color: rgba(255,255,255,.1);
             @include border-radius(4px);
             max-width: 200px;
             display: block;
             padding: .75rem 0;
             font-size: 15px;
             margin: 6px auto;
-            color: rgba(255,255,255,.8);
-            &:hover{
-                background-color: #009af8;
-                color: #2b3441;
-            }
         }
     }
 }
@@ -1254,40 +1150,16 @@ table.dataTable.no-footer{
         font-size: 14px;
         line-height: 18px;
         font-weight: bold;
-        color: #2b3441;
-        background-color: #9caac1;
-        &:hover{
-            background-color: #7d899d;
-        }
-    }
-    .btn-sell.active{
-        background-color: #ff6724;
-        color: #2b3441;
-        &:hover{
-            background-color: #f75535;
-        }
-    }
-    .btn-buy.active{
-        background-color: #00a45b;
-        color: #2b3441;
-        &:hover{
-            background-color: #00b74a;
-        }
     }
 }
 .tab-pane{
     .form-group{
-        border-bottom: 1px solid #515967;
         .form-control{
-            background-color: transparent !important;
-            color: #9caac1;
             border: 0;
             font-size: 11px;
             padding: .375rem 0;
         }
         .input-group-text{
-            color: #7d899d;
-            background-color: transparent;
             border: 0;
             padding: .375rem 0;
             font-size: 11px;
@@ -1309,34 +1181,21 @@ table.dataTable.no-footer{
         padding: 11px 12px;
         outline: none;
         font-size: 15px;
-        color: #2b3441;
         transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
         &.btn-buy{
-            background-color: #00a45b;
             min-width: 150px;
-            &:hover{
-                background-color: #00b74a;
-            }
         }
         &.btn-sell{
-            background-color: #ff6724;
             min-width: 150px;
-            &:hover{
-                background-color: #f75535;
-            }
         }
     }
 }
 .trade{
     .dropdown-menu{
-        background-color: #2b3441;
         box-shadow: 0 2px 10px 0 rgba(0,0,0,.5);
         .dropdown-item{
             padding: 3px 10px;
             font-size: 11px;
-            &:hover{
-                color: #0084d4;
-            }
         }
     }
     label{
@@ -1351,10 +1210,8 @@ table.dataTable.no-footer{
     text-decoration: none !important;
     padding-left: 0;
     font-size: 11px;
-    color: #0084d4;
     &:hover{
         text-decoration: none !important;
-        color: #0084d4;
     }
 }
 @include minq(medium){
@@ -1387,11 +1244,9 @@ table.dataTable.no-footer{
 }
 .chart_area{
     height: 650px;
-    background-color: rgba(255,255,255,.1);
 }
 .market_info_header{
     min-height: 60px;
-    background-color: #262c36;
     &_name{
         display: flex;
         padding-top: 7px;
@@ -1429,6 +1284,7 @@ table.dataTable.no-footer{
         }
     }
 }
+// DATA CUSTOM TABLE
 
 // BALANCE
 .balance{
@@ -1447,14 +1303,11 @@ table.dataTable.no-footer{
         white-space: nowrap;
         height: 32px;
         border-radius: 4px;
-        border: solid 1px rgba(32,32,32,.6);
         padding: 8px 12px;
         font-size: 13px;
         font-weight: normal;
-        color: rgba(255,255,255,.6);
         line-height: 16px;
         vertical-align: middle;
-        background-color: rgba(255,255,255,.1);
     }
     @include minq(small){
         .btn-custom{
@@ -1469,7 +1322,6 @@ table.dataTable.no-footer{
 }
 .btn-refresh{
     padding: .274rem .65rem;
-    background-color: #9caac1;
 }
 .icon{
     background-size: 16px;
@@ -1486,29 +1338,16 @@ table.dataTable.no-footer{
 .btn-modal-withdrawal{
     width: 100%;
     height: 30px;
-    background-color: transparent;
     border: 0;
-}
-.collapse-control{
-    a{
-        h1{
-            color: rgba(255, 255, 255, 0.8);
-        }
-    }
 }
 .expand-collapse-container{
     padding: 2px 8px;
     border-radius: 2px;
     margin-bottom: 24px;
-    border-left: 6px solid #009af8;
-    background-color: rgba(255,255,255,.05);
 }
 // MODAL
 .error-container{
-    background-color: transparent;
     .modal-header{
-        background-color: #c73535;
-        border-bottom-color: #c73535;
         .modal-title{
             margin-left: auto;
             margin-right: auto;
@@ -1517,27 +1356,9 @@ table.dataTable.no-footer{
             margin-left: 0;
         }
     }
-    .modal-body{
-        background-color: #2b3441;
-        color: rgba(255, 255, 255, 0.8);
-    }
-    .modal-footer{
-        background-color: #2b3441;
-        border-top-color: #2b3441;
-        .btn-transaction{
-            background-color: #c73535;
-            color: rgba(255, 255, 255, 0.8);
-            &:hover{
-                color: #2b3441;
-            }
-        }
-    }
 }
 .deposit-container{
-    background-color: transparent;
     .modal-header{
-        background-color: #0084d4;
-        border-bottom-color: #0084d4;
         padding: 1.5rem 1rem;
         .modal-title{
             margin-left: auto;
@@ -1559,46 +1380,26 @@ table.dataTable.no-footer{
             margin-top: -0.75rem;
         }
     }
-    .modal-body{
-        background-color: #2b3441;
-        color: rgba(255, 255, 255, 0.8);
-    }
     .modal-disclaimer{
-        background-color: rgba(81,89,104,.3);
         padding: 1rem;
     }
     .deposit-control{
-        background-color: #262c36;
         padding: .7rem 1.75rem .7rem .75rem;
         font-size: 15px;
         border: 0;
     }
-    .btn.btn-new-address{
-        background-color: #0084d4;
-        color: #fff;
-    }
     .modal-footer{
-        background-color: #2b3441;
-        border-top-color: #2b3441;
         .btn-close{
-            border: 1px solid #0084d4;
-            color: #0084d4;
-            background-color: rgba(255,255,255,.1);
             font-size: 15px;
             width: 200px;
             margin-right: 1rem;
             padding: .7rem .75rem;
-            &:hover{
-                color: #009af8;
-            }
         }
     }
 }
 .withdrawal-container{
     background-color: transparent;
     .modal-header{
-        background-color: #0084d4;
-        border-bottom-color: #0084d4;
         padding: 1.5rem 1rem;
         .modal-title{
             margin-left: auto;
@@ -1620,52 +1421,29 @@ table.dataTable.no-footer{
             margin-top: -0.75rem;
         }
     }
-    .modal-body{
-        background-color: #2b3441;
-        color: rgba(255, 255, 255, 0.8);
-    }
     .modal-disclaimer{
-        background-color: rgba(81,89,104,.3);
         padding: 1rem;
     }
     .withdrawal-control{
-        background-color: #262c36;
         padding: .5rem .75rem .5rem .75rem;
         font-size: 15px;
-        border: 1px solid #515967;
-        color: #fff;
     }
     .amount{
         flex: 1;
         font-size: 15px;
     }
     .modal-footer{
-        background-color: #2b3441;
-        border-top-color: #2b3441;
         .btn-close{
-            border: 1px solid #0084d4;
-            color: #0084d4;
-            background-color: rgba(255,255,255,.1);
             font-size: 15px;
             width: 200px;
             margin-right: 1rem;
             padding: .7rem .75rem;
-            &:hover{
-                color: #2b3441;
-            }
         }
         .btn-withdrawal{
-            border: 1px solid #0084d4;
-            color: #fff;
-            background-color: rgba(255,255,255,.1);
             font-size: 15px;
             width: 200px;
             margin-right: 1rem;
             padding: .7rem .75rem;
-            &:hover{
-                color: #2b3441;
-                background-color: #009af8;
-            }
         }
     }
 }
@@ -1679,8 +1457,6 @@ table.dataTable.no-footer{
     width: 100%;
     th{
         text-transform: uppercase;
-        color: #9caac1;
-        border-bottom: 1px solid #515967;
         font-weight: $font-medium;
         padding: 12px 10px 8px;
     }

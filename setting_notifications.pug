@@ -1,0 +1,44 @@
+extends layout_setting.pug  
+
+block content
+    .container-fluid.px-4
+        .row
+            .col
+                h5.heading-lv5.text-uppercase.pt-4.border-bottom Email Notifications
+        .row
+            .col.notifications
+                .ui-setting-content.mt-4
+                    form#frmNotify.form-notify(action="#")
+                        .form-line.d-flex.justify-content-between
+                            span Bittrex newsletter
+                            label.switch
+                                input(type="checkbox")
+                                span.slider.round
+                                input(type="hidden" name="name" value="false")
+                        .form-line.d-flex.justify-content-between
+                            span Emails about coin removals
+                            label.switch
+                                input(type="checkbox")
+                                span.slider.round
+                                input(type="hidden" name="name" value="false")
+                        .form-line.d-flex.justify-content-between
+                            span Emails about market removals
+                            label.switch
+                                input(type="checkbox")
+                                span.slider.round
+                                input(type="hidden" name="name" value="false")
+                        .form-line.d-flex.justify-content-between
+                            span Emails about my logins
+                            label.switch
+                                input(type="checkbox")
+                                span.slider.round
+                                input(type="hidden" name="name" value="false")
+                    p.mt-4.pt-4
+                        small Please add no-reply@bittrex.com and mailer@bittrex.com to your email address book or safe senders list to ensure that notifications don’t accidentally get sent to the spam/junk folder. 
+                    p 
+                        small
+                            |If you continue having issues receiving email from Bittrex, please check out our 
+                            a(href="#") email tips and tricks 
+                            |support article for detailed instructions on configuring various popular mail clients.
+                            
+                    

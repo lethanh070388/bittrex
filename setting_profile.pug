@@ -1,10 +1,73 @@
 extends layout_setting.pug  
 
 block content
-    .container-fluid.px-4
+    .container-fluid.px-4.submit-wrapper
         .row
             .col
                 h5.heading-lv5.text-uppercase.pt-4.border-bottom Profile
+        .row
+            .col
+                p.pt-3 Thank you for registering with Bittrex. To create your profile and enable identity verification, please complete the form below.
+                form.form-input.mt-3(action="#")
+                    .form-group.pt-4
+                        label(for="emailCurrent") Email address
+                        input.form-control#emailCurrent(type="text" value="test@gmail.com" readonly)
+                    .form-group.pt-4.d-flex
+                        .form-control-inline.border-right
+                            label(for="selectMonth") Birth Month
+                            select.form-control#selectMonth
+                                option(value="0" selected) --------
+                                option(value="1") January
+                                option(value="2") February
+                                option(value="3") March
+                                option(value="4") April
+                                option(value="5") May
+                                option(value="6") June
+                                option(value="7") July
+                                option(value="8") August
+                                option(value="9") September
+                                option(value="10") October
+                                option(value="11") November
+                                option(value="12") December
+                        .form-control-inline.border-right
+                            label.pl-2(for="selectDay") Birth Day
+                            select.form-control#selectDay
+                                option(value="0" selected) --------
+                                -for(var i=1; i<=31; i++){
+                                    option(value=""+i)= i
+                                -}
+                        .form-control-inline
+                            label.pl-2(for="selectYear") Birth Day
+                            select.form-control#selectYear
+                                option(value="0" selected) --------
+                                -for(var i=2018; i>=1900; i--){
+                                    option(value=""+i)= i
+                                -}
+                    .form-group.pt-4
+                        label(for="selectCountry") Street adress
+                        select.form-control#selectCountry
+                            option(value="0" selected) Choose Country
+                            option(value="1") America
+                            option(value="2") England
+                            option(value="3") France
+                            option(value="4") China
+                            option(value="5") Vietnam
+                            option(value="6") Japan
+                    .form-group.pt-4
+                        label(for="inputStreetAddr") Street adress
+                        input.form-control#inputStreetAddr(type="text")
+                    .form-group.pt-4
+                        label(for="inputUnit") Apt or unit
+                        input.form-control#inputUnit(type="text")
+                    .form-group.pt-4
+                        label(for="inputCity") City
+                        input.form-control#inputCity(type="text")
+                    .form-group.pt-4
+                        label(for="inputPhoneNumber") Phone number
+                        input.form-control#inputPhoneNumber(type="text")
+                    .text-center.form-group.mt-4 
+                        button.btn.btn-form.change-pass#submitForm Submit
+    .container-fluid.pt-4.submit-success
         .row
             .col
                 .blurd.sucess-blurd
@@ -44,3 +107,11 @@ block content
                                     |700000 
                                     br
                                     |Vietnam 
+block script-append
+    script.
+        $(function(){
+            $('#submitForm').click(function(){
+                $('.submit-wrapper').css("display","none");
+                $('.submit-success').css("display","block");
+            });
+        });

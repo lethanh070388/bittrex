@@ -1,0 +1,19 @@
+extends layout_blank.pug  
+
+block content
+    .container-fluid.px-4
+        .row
+            .col.mt-4
+                .blurd.sucess-blurd
+                    .blurd_icon.info
+                        i.fas.fa-info.fa-3x.warning
+                    .blurd_content
+                        .font-weight-bold New IP Address Detected
+                        small We have detected you are attempting to access your account from the following IP Address:
+                        .py-2 
+                            small 116.102.47.84
+                        small Please check your email for instructions on allowing this IP address to access your account.
+                        br
+                        a(href="./index.html") 
+                            |Return to Bittrex Home 
+                            i.fas.fa-arrow-right

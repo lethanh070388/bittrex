@@ -14,7 +14,11 @@ $themes:(
     $light-market-font-white,
     $light-button-hover,
     $light-market-info-footer,
-    $light-market-info-footer-color
+    $light-market-info-footer-color,
+    $light-bg-market-content,
+    $light-market-info-footer-link,
+    $light-market-table-link-hover,
+    $light-market-form-control
   ),
   dark: (
     $dark-primary,
@@ -30,13 +34,17 @@ $themes:(
     $dark-market-font-white,
     $dark-button-hover,
     $dark-market-info-footer,
-    $dark-market-info-footer-color
+    $dark-market-info-footer-color,
+    $dark-bg-market-content,
+    $dark-market-info-footer-link,
+    $dark-market-table-link-hover,
+    $dark-market-form-control
   )
 );
 @mixin theme($name,$color){
     // Theme changing
     .#{$name} {
-
+        color: rgba(nth($color,11),0.8);
         .navbar-dark{
             .navbar-nav{
                 .nav-link{
@@ -171,7 +179,7 @@ $themes:(
 
         // PAGINATION
         .page-link{
-            background-color: rgba(255,255,255,.1);
+            background-color: rgba(nth($color,11),0.1);
             color: rgba(nth($color,11),0.8);
             border: 0;
             &:hover{
@@ -183,7 +191,7 @@ $themes:(
                 }
             }
             &.current{
-                background-color: #9caac1 !important;
+                background-color: nth($color,14) !important;
                 padding: 0.6rem 0.85rem;
                 top: -0.1rem;
             }
@@ -225,6 +233,542 @@ $themes:(
             color: rgba(nth($color,11),0.8);
         }
         // END MARKET DETAIL
+
+        // SUPPORT SECTION
+        .home-market-content {
+            background-color: nth($color,15);
+        }
+        // END SUPPORT SECTION
+
+        // SECTION REGISTER
+        .register-section {
+            background-color: nth($color,2);
+            color: nth($color,4);
+            .form-register {
+                border-bottom: 1px solid rgba(0,54,98,.3);
+                .register-btn {
+                    background-color: nth($color,5);
+                    color: nth($color,4);
+                }
+            }
+            a{
+                border-bottom: 1px solid nth($color,4);
+            }
+        }
+        // END SECTION REGISTER
+        //FOOTER
+        .footer {
+            background-color: nth($color,7);
+            a{
+                color: nth($color,16);
+            }
+        }
+        // END FOOTER
+        // MARKET PAGE
+        .market{
+            &_find{
+                background-color: nth($color,14);
+            }
+            &_table{
+                &_heading, th{
+                    border-bottom: 1px solid nth($color,9); //border-bottom like border-left
+                }
+                &_value, td{
+                    border-bottom: 1px solid nth($color,13);
+                    a{
+                        color: nth($color,4);
+                        &:hover{
+                            color: nth($color,17);
+                        }
+                    }
+                }
+                tr{
+                    &:hover{
+                        background-color: rgba(nth($color,2),0.8);;
+                    }
+                    &:last-child{
+                        td{
+                            border-bottom-color: nth($color,9);
+                        }
+                    }
+                }
+
+            }
+        }
+        // END MARKET PAGE
+
+        // SETTING PAGE
+        .nav-setting{
+            border-right: 1px solid nth($color,9);
+        }
+        .nav-items{
+            .nav-item{
+                .nav-subitem{
+                    border-bottom: 1px solid nth($color,13);
+                    a{
+                        color: nth($color,4);
+                    }
+                    &.active{
+                        border-left: 8px solid nth($color,2);
+                    }
+                }
+            }
+        }
+        .border-bottom{
+            border-bottom: 1px solid nth($color,9) !important;
+        }
+        .table-activity{
+            th{
+                color: rgba(nth($color,11),0.8);
+                border-bottom: 1px solid nth($color,9) !important;
+            }
+            td{
+                border-bottom: 1px solid nth($color,13) !important;
+                color: rgba(nth($color,11),0.8);
+            }
+        }
+        .dropdown-menu{
+            .dropdown-item{
+                color: rgba(nth($color,11),0.8);
+                &:hover{
+                    color: rgba(nth($color,11),0.8);
+                }
+            }
+        }
+        .basic-form{
+            color: rgba(nth($color,11),0.8);
+        }
+        .enhanced-verification{
+            color: rgba(nth($color,11),0.8);
+        }
+        .blurd{
+            background-color: #262f3b;
+            color: rgba(nth($color,11),0.8);
+            &_icon{
+                color: #00a800;
+                &.info{
+                    color: nth($color,4);
+                    .fa-info{
+                        background-color: nth($color,1);
+                    }
+                    .warning{
+                        background-color: #ffa500;
+                    }
+                }
+            }
+        }
+        .info-blurd{
+            color: nth($color,4);
+            background-color: rgba(nth($color,11),0.25);
+        }
+        .form-input{
+            color: nth($color,14);
+            .form-control-inline{
+                &.border-right{
+                    border-right: 1px solid nth($color,9) !important;
+                }
+            }
+            .form-control{
+                background-color: nth($color,15);
+                border-bottom: 1px solid nth($color,9);
+                color: rgba(nth($color,11),0.8);
+            }
+            .form-control[readonly]{
+                color: rgba(nth($color,11),0.8);
+            }
+            h6{
+                color: rgba(nth($color,11),0.8);
+            }
+        }
+        .btn-form{
+            color: rgba(nth($color,11),0.8);
+            &.change-pass{
+                background-color: rgba(nth($color,11),0.1);
+                &:hover{
+                    background-color: nth($color,1);
+                }
+            }
+        }
+        .two-factor{
+            color: nth($color,14);
+        }
+        .status-panel{
+            background-color: nth($color,13);
+            .un-verify{
+                color: #f75535;
+            }
+        }
+        .default-panel{
+            background-color: nth($color,15);
+            border: 1px solid #ddd;
+        }
+        .step-num{
+            border: 2px solid nth($color,2);
+        }
+        .step-content{
+            color: rgba(nth($color,11),0.8);
+        }
+        .copy-control{
+            background-color: nth($color,13);
+        }
+        .btn.btn-copy{
+            background-color: nth($color,2);
+            color: nth($color,4);
+        }
+
+        // UI SETTINGS
+        .ui-setting-content{
+            h4{
+                border-bottom: 1px solid nth($color,9);
+                color: nth($color,14);
+            }
+            .form-group{
+                label{
+                    color: rgba(nth($color,11),0.8);
+                }
+            }
+        }
+
+        // NOTIFICATIONS
+        .form-notify{
+            border-bottom: 1px solid #eee;
+        }
+        .form-line {
+            border-top: 1px solid #eee;
+        }
+        .notifications p {
+            color: nth($color,14);
+        }
+        // END SETTING PAGE
+
+        //MARKET DETAIL
+        .main-market-detail-container{
+            .main_nav{
+                background-color: #1c222d;
+                &_menu{
+                    &_title{
+                        .toggle_icon_navbar{
+                            background-color: #9ba8c0;
+                            &:hover{
+                                background-color: #7d899d;
+                            }
+                            i{
+                                color: #40454d;
+                            }
+                        }
+                    }
+                    .form-control{
+                        background-color: rgba(nth($color,18),0.9); //#e7ebf1
+                    }
+                    .dropdown-menu{
+                        background-color: rgba(nth($color,18),0.9);
+                        .dropdown-item{
+                            color: #495057;
+                            &:hover{
+                                background-color: rgba(nth($color,11),0.8);
+                            }
+                        }
+                    }
+                }
+            }
+            
+            // MAIN CONTENT MARKKET DETAIL
+            .main_content{
+                background-color: #303643;
+            }
+            // END MARKET DETAIL
+
+            //DATATABLE CUSTOM
+            .dataTables_wrapper{
+                .dataTables_paginate{
+                    .paginate_button{
+                        background-color: rgba(nth($color,11),0.1);
+                        color: rgba(nth($color,11),0.8);
+                        border: solid 1px nth($color,13);
+                        &:hover{
+                            background-color: rgba(nth($color,11),0.1);
+                            border-color: nth($color,2);
+                        }
+                        &.active{
+                            &:hover{
+                                border-color: nth($color,14);
+                            }
+                        }
+                    }
+                }
+                
+            }
+            table.dataTable tbody tr:hover td{
+                background-color: rgba(nth($color,2),0.08);
+            }
+            .page-item{
+                &.disabled{
+                    .page-link{
+                        color: rgba(nth($color,2),0.08);
+                        background-color: rgba(nth($color,11),0.1);
+                        border-color: nth($color,13);
+                    }
+                }
+                &.active{
+                    .page-link{
+                        color: nth($color,15);
+                        background-color: nth($color,14);
+                        border-color: nth($color,14);
+                        &:hover{
+                            background-color: nth($color,14);
+                            border-color: nth($color,14);
+                        }
+                    }
+                }
+                .page-link{
+                    &:hover{
+                        background-color: rgba(nth($color,11),0.1);
+                        border-color: nth($color,2);
+                    }
+                }
+            }
+            .market{
+                &_table_detail{
+                    th{
+                        border-bottom: 1px solid nth($color,9); //border-bottom like border-left
+                        text-transform: uppercase;
+                        color: nth($color,14);
+                    }
+                    td{
+                        border-bottom: 1px solid nth($color,13);
+                        a{
+                            color: nth($color,11);
+                            &:hover{
+                                color: nth($color,17);
+                            }
+                        }
+                    }
+                    tr{
+                        background-color: transparent !important;
+                        &:hover{
+                            background-color: rgba(nth($color,2),0.08);
+                        }
+                    }
+
+                }
+            }
+
+            .trade{
+                &_content{
+                    .btn{
+                        background-color: rgba(nth($color,11),0.1);
+                        color: rgba(nth($color,11),0.8);
+                        &:hover{
+                            background-color: nth($color,1);
+                            color: nth($color,15);
+                        }
+                    }
+                }
+            }
+            .nav-pills {
+                .nav-link{
+                    color: nth($color,15);
+                    background-color: nth($color,14);
+                    &:hover{
+                        background-color: #7d899d;
+                    }
+                }
+                .btn-sell.active{
+                    background-color: #ff6724;
+                    color: nth($color,15);
+                    &:hover{
+                        background-color: #f75535;
+                    }
+                }
+                .btn-buy.active{
+                    background-color: #00a45b;
+                    color: nth($color,15);
+                    &:hover{
+                        background-color: #00b74a;
+                    }
+                }
+            }
+            .tab-pane{
+                .form-group{
+                    border-bottom: 1px solid nth($color,9);
+                    .form-control{
+                        background-color: transparent !important;
+                        color: nth($color,14);
+                    }
+                    .input-group-text{
+                        color: #7d899d;
+                        background-color: transparent;
+                    }
+                }
+                .btn-transaction{
+                    color: nth($color,15);
+                    &.btn-buy{
+                        background-color: #00a45b;
+                        &:hover{
+                            background-color: #00b74a;
+                        }
+                    }
+                    &.btn-sell{
+                        background-color: #ff6724;
+                        &:hover{
+                            background-color: #f75535;
+                        }
+                    }
+                }
+            }
+            .trade{
+                .dropdown-menu{
+                    background-color: nth($color,15);
+                    .dropdown-item{
+                        &:hover{
+                            color: nth($color,2);
+                        }
+                    }
+                }
+            }
+            .btn-link{
+                color: nth($color,2);
+                &:hover{
+                    color: nth($color,2);
+                }
+            }
+            .chart_area{
+                background-color: rgba(nth($color,11),0.1);
+            }
+            .market_info_header{
+                background-color: nth($color,13);
+            }
+            // DATA CUSTOM TABLE
+
+            // BALANCE
+            .balance{
+                .btn-custom{
+                    border: solid 1px rgba(32,32,32,.6);
+                    color: rgba(nth($color,11),0.6);
+                    background-color: rgba(nth($color,11),0.1);
+                }
+            }
+            .btn-refresh{
+                background-color: nth($color,14);
+            }
+            .collapse-control{
+                a{
+                    h1{
+                        color: rgba(nth($color,11),0.8);
+                    }
+                }
+            }
+            .expand-collapse-container{
+                border-left: 6px solid nth($color,1);
+                background-color: rgba(255,255,255,.05);
+            }
+            // END BALANCE
+
+            // MODAL
+            .error-container{
+                background-color: transparent;
+                .modal-header{
+                    background-color: #c73535;
+                    border-bottom-color: #c73535;
+                }
+                .modal-body{
+                    background-color: nth($color,15);
+                    color: rgba(nth($color,11),0.8);
+                }
+                .modal-footer{
+                    background-color: nth($color,15);
+                    border-top-color: nth($color,15);
+                    .btn-transaction{
+                        background-color: #c73535;
+                        color: rgba(nth($color,11),0.8);
+                        &:hover{
+                            color: nth($color,15);
+                        }
+                    }
+                }
+            }
+            .deposit-container{
+                background-color: transparent;
+                .modal-header{
+                    background-color: nth($color,2);
+                    border-bottom-color: nth($color,2);
+                }
+                .modal-body{
+                    background-color: nth($color,15);
+                    color: rgba(nth($color,11),0.8);
+                }
+                .modal-disclaimer{
+                    background-color: rgba(nth($color,9),0.3);
+                }
+                .deposit-control{
+                    background-color: nth($color,13);
+                }
+                .btn.btn-new-address{
+                    background-color: nth($color,2);
+                    color: nth($color,11);
+                }
+                .modal-footer{
+                    background-color: nth($color,15);
+                    border-top-color: nth($color,15);
+                    .btn-close{
+                        border: 1px solid nth($color,2);
+                        color: nth($color,2);
+                        background-color: rgba(nth($color,11),0.05);
+                        &:hover{
+                            color: nth($color,1);
+                        }
+                    }
+                }
+            }
+            .withdrawal-container{
+                background-color: transparent;
+                .modal-header{
+                    background-color: nth($color,2);
+                    border-bottom-color: nth($color,2);
+                }
+                .modal-body{
+                    background-color: nth($color,15);
+                    color: rgba(nth($color,11),0.8);
+                }
+                .modal-disclaimer{
+                    background-color: rgba(nth($color,9),0.3);
+                    padding: 1rem;
+                }
+                .withdrawal-control{
+                    background-color: nth($color,13);
+                    border: 1px solid nth($color,9);
+                    color: nth($color,11);
+                }
+                .modal-footer{
+                    background-color: nth($color,15);
+                    border-top-color: nth($color,15);
+                    .btn-close{
+                        border: 1px solid nth($color,2);
+                        color: nth($color,2);
+                        background-color: rgba(nth($color,11),0.1);
+                        &:hover{
+                            color: nth($color,15);
+                        }
+                    }
+                    .btn-withdrawal{
+                        border: 1px solid nth($color,2);
+                        color: nth($color,11);
+                        background-color: rgba(nth($color,11),0.1);
+                        &:hover{
+                            color: nth($color,15);
+                            background-color: nth($color,1);
+                        }
+                    }
+                }
+            }
+            .deposit_table{
+                th{
+                    color: nth($color,14);
+                    border-bottom: 1px solid nth($color,9);
+                }
+            }
+        }
+        // END MODAL
     }
 
 
@@ -253,7 +797,7 @@ $themes:(
     top: 0;
     right: 0;
     z-index: 9999;
-    background-color: #515967;
+    background-color: nth($color,9);
     box-shadow: 1px -1px 2px rgba(255,255,255,.4);
     padding: 2px;
     border-radius: 0 0 3px 3px;
