@@ -229,10 +229,6 @@ html, body {
     .light .register-section a {
       border-bottom: 1px solid #ffffff;
       color: #ffffff; }
-  .light .footer {
-    background-color: #f3f5f8; }
-    .light .footer a {
-      color: #666; }
   .light .bg-market {
     background-color: #2c3441; }
   .light .bg-shadow {
@@ -287,7 +283,7 @@ html, body {
     .light .register-section a {
       border-bottom: 1px solid #ffffff; }
   .light .footer {
-    background-color: #f3f5f8; }
+    background-color: #262c36; }
     .light .footer a {
       color: #666; }
   .light .market_find {
@@ -407,96 +403,184 @@ html, body {
           background-color: rgba(255, 255, 255, 0.8); }
   .light .main-market-detail-container .main_content {
     background-color: #303643; }
-  .light .main-market-detail-container .dataTables_wrapper .dataTables_paginate .paginate_button {
+  .light .dataTables_wrapper .dataTables_paginate .paginate_button {
     background-color: rgba(255, 255, 255, 0.1);
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.8) !important;
     border: solid 1px #262c36; }
-    .light .main-market-detail-container .dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+    .light .dataTables_wrapper .dataTables_paginate .paginate_button:hover {
       background-color: rgba(255, 255, 255, 0.1);
       border-color: #0084d4; }
-    .light .main-market-detail-container .dataTables_wrapper .dataTables_paginate .paginate_button.active:hover {
+    .light .dataTables_wrapper .dataTables_paginate .paginate_button.active:hover {
       border-color: #9caac1; }
-  .light .main-market-detail-container table.dataTable tbody tr:hover td {
+    .light .dataTables_wrapper .dataTables_paginate .paginate_button.disabled {
+      background-color: rgba(255, 255, 255, 0.1) !important;
+      color: rgba(255, 255, 255, 0.8) !important; }
+  .light table.dataTable tbody tr:hover td {
     background-color: rgba(0, 132, 212, 0.08); }
-  .light .main-market-detail-container .page-item.disabled .page-link {
-    color: rgba(0, 132, 212, 0.08);
+  .light .page-item.disabled .page-link {
+    color: rgba(255, 255, 255, 0.8) !important;
     background-color: rgba(255, 255, 255, 0.1);
     border-color: #262c36; }
-  .light .main-market-detail-container .page-item.active .page-link {
+  .light .page-item.active .page-link {
     color: #2b3441;
     background-color: #9caac1;
     border-color: #9caac1; }
-    .light .main-market-detail-container .page-item.active .page-link:hover {
+    .light .page-item.active .page-link:hover {
       background-color: #9caac1;
       border-color: #9caac1; }
-  .light .main-market-detail-container .page-item .page-link:hover {
+  .light .page-item .page-link:hover {
     background-color: rgba(255, 255, 255, 0.1);
     border-color: #0084d4; }
-  .light .main-market-detail-container .market_table_detail th {
+  .light .market_table_detail th {
     border-bottom: 1px solid #515967;
     text-transform: uppercase;
     color: #9caac1; }
-  .light .main-market-detail-container .market_table_detail td {
+  .light .market_table_detail td {
     border-bottom: 1px solid #262c36; }
-    .light .main-market-detail-container .market_table_detail td a {
+    .light .market_table_detail td a {
       color: #fff; }
-      .light .main-market-detail-container .market_table_detail td a:hover {
+      .light .market_table_detail td a:hover {
         color: #337ab7; }
-  .light .main-market-detail-container .market_table_detail tr {
+  .light .market_table_detail tr {
     background-color: transparent !important; }
-    .light .main-market-detail-container .market_table_detail tr:hover {
+    .light .market_table_detail tr:hover {
       background-color: rgba(0, 132, 212, 0.08); }
-  .light .main-market-detail-container .trade_content .btn {
+  .light .trade_content .btn {
     background-color: rgba(255, 255, 255, 0.1);
     color: rgba(255, 255, 255, 0.8); }
-    .light .main-market-detail-container .trade_content .btn:hover {
+    .light .trade_content .btn:hover {
       background-color: #009af8;
       color: #2b3441; }
-  .light .main-market-detail-container .nav-pills .nav-link {
+  .light .nav-pills .nav-link {
     color: #2b3441;
     background-color: #9caac1; }
-    .light .main-market-detail-container .nav-pills .nav-link:hover {
+    .light .nav-pills .nav-link:hover {
       background-color: #7d899d; }
-  .light .main-market-detail-container .nav-pills .btn-sell.active {
+  .light .nav-pills .btn-sell.active {
     background-color: #ff6724;
     color: #2b3441; }
-    .light .main-market-detail-container .nav-pills .btn-sell.active:hover {
+    .light .nav-pills .btn-sell.active:hover {
       background-color: #f75535; }
-  .light .main-market-detail-container .nav-pills .btn-buy.active {
+  .light .nav-pills .btn-buy.active {
     background-color: #00a45b;
     color: #2b3441; }
-    .light .main-market-detail-container .nav-pills .btn-buy.active:hover {
+    .light .nav-pills .btn-buy.active:hover {
       background-color: #00b74a; }
-  .light .main-market-detail-container .tab-pane .form-group {
+  .light .tab-pane .form-group {
     border-bottom: 1px solid #515967; }
-    .light .main-market-detail-container .tab-pane .form-group .form-control {
+    .light .tab-pane .form-group .form-control {
       background-color: transparent !important;
       color: #9caac1; }
-    .light .main-market-detail-container .tab-pane .form-group .input-group-text {
+    .light .tab-pane .form-group .input-group-text {
       color: #7d899d;
       background-color: transparent; }
-  .light .main-market-detail-container .tab-pane .btn-transaction {
+  .light .tab-pane .btn-transaction {
     color: #2b3441; }
-    .light .main-market-detail-container .tab-pane .btn-transaction.btn-buy {
+    .light .tab-pane .btn-transaction.btn-buy {
       background-color: #00a45b; }
-      .light .main-market-detail-container .tab-pane .btn-transaction.btn-buy:hover {
+      .light .tab-pane .btn-transaction.btn-buy:hover {
         background-color: #00b74a; }
-    .light .main-market-detail-container .tab-pane .btn-transaction.btn-sell {
+    .light .tab-pane .btn-transaction.btn-sell {
       background-color: #ff6724; }
-      .light .main-market-detail-container .tab-pane .btn-transaction.btn-sell:hover {
+      .light .tab-pane .btn-transaction.btn-sell:hover {
         background-color: #f75535; }
-  .light .main-market-detail-container .trade .dropdown-menu {
+  .light .trade .dropdown-menu {
     background-color: #2b3441; }
-    .light .main-market-detail-container .trade .dropdown-menu .dropdown-item:hover {
+    .light .trade .dropdown-menu .dropdown-item:hover {
       color: #0084d4; }
-  .light .main-market-detail-container .btn-link {
+  .light .btn-link {
     color: #0084d4; }
-    .light .main-market-detail-container .btn-link:hover {
+    .light .btn-link:hover {
       color: #0084d4; }
-  .light .main-market-detail-container .chart_area {
+  .light .chart_area {
     background-color: rgba(255, 255, 255, 0.1); }
-  .light .main-market-detail-container .market_info_header {
+  .light .market_info_header {
     background-color: #262c36; }
+  .light .balance .btn-custom {
+    border: solid 1px rgba(32, 32, 32, 0.6);
+    color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.1); }
+  .light .btn-refresh {
+    background-color: #9caac1; }
+  .light .collapse-control a h1 {
+    color: rgba(255, 255, 255, 0.8); }
+  .light .expand-collapse-container {
+    border-left: 6px solid #009af8;
+    background-color: rgba(255, 255, 255, 0.05); }
+  .light .error-container {
+    background-color: transparent; }
+    .light .error-container .modal-header {
+      background-color: #c73535;
+      border-bottom-color: #c73535; }
+    .light .error-container .modal-body {
+      background-color: #2b3441;
+      color: rgba(255, 255, 255, 0.8); }
+    .light .error-container .modal-footer {
+      background-color: #2b3441;
+      border-top-color: #2b3441; }
+      .light .error-container .modal-footer .btn-transaction {
+        background-color: #c73535;
+        color: rgba(255, 255, 255, 0.8); }
+        .light .error-container .modal-footer .btn-transaction:hover {
+          color: #2b3441; }
+  .light .deposit-container {
+    background-color: transparent; }
+    .light .deposit-container .modal-header {
+      background-color: #0084d4;
+      border-bottom-color: #0084d4; }
+    .light .deposit-container .modal-body {
+      background-color: #2b3441;
+      color: rgba(255, 255, 255, 0.8); }
+    .light .deposit-container .modal-disclaimer {
+      background-color: rgba(81, 89, 103, 0.3); }
+    .light .deposit-container .deposit-control {
+      background-color: #262c36; }
+    .light .deposit-container .btn.btn-new-address {
+      background-color: #0084d4;
+      color: #fff; }
+    .light .deposit-container .modal-footer {
+      background-color: #2b3441;
+      border-top-color: #2b3441; }
+      .light .deposit-container .modal-footer .btn-close {
+        border: 1px solid #0084d4;
+        color: #0084d4;
+        background-color: rgba(255, 255, 255, 0.05); }
+        .light .deposit-container .modal-footer .btn-close:hover {
+          color: #009af8; }
+  .light .withdrawal-container {
+    background-color: transparent; }
+    .light .withdrawal-container .modal-header {
+      background-color: #0084d4;
+      border-bottom-color: #0084d4; }
+    .light .withdrawal-container .modal-body {
+      background-color: #2b3441;
+      color: rgba(255, 255, 255, 0.8); }
+    .light .withdrawal-container .modal-disclaimer {
+      background-color: rgba(81, 89, 103, 0.3);
+      padding: 1rem; }
+    .light .withdrawal-container .withdrawal-control {
+      background-color: #262c36;
+      border: 1px solid #515967;
+      color: #fff; }
+    .light .withdrawal-container .modal-footer {
+      background-color: #2b3441;
+      border-top-color: #2b3441; }
+      .light .withdrawal-container .modal-footer .btn-close {
+        border: 1px solid #0084d4;
+        color: #0084d4;
+        background-color: rgba(255, 255, 255, 0.1); }
+        .light .withdrawal-container .modal-footer .btn-close:hover {
+          color: #2b3441; }
+      .light .withdrawal-container .modal-footer .btn-withdrawal {
+        border: 1px solid #0084d4;
+        color: #fff;
+        background-color: rgba(255, 255, 255, 0.1); }
+        .light .withdrawal-container .modal-footer .btn-withdrawal:hover {
+          color: #2b3441;
+          background-color: #009af8; }
+  .light .deposit_table th {
+    color: #9caac1;
+    border-bottom: 1px solid #515967; }
 
 [data-theme='light'] {
   background: #009af8; }
@@ -563,10 +647,6 @@ html, body {
     .dark .register-section a {
       border-bottom: 1px solid #ffffff;
       color: #ffffff; }
-  .dark .footer {
-    background-color: #f3f5f8; }
-    .dark .footer a {
-      color: #666; }
   .dark .bg-market {
     background-color: #2c3441; }
   .dark .bg-shadow {
@@ -621,7 +701,7 @@ html, body {
     .dark .register-section a {
       border-bottom: 1px solid #ffffff; }
   .dark .footer {
-    background-color: #f3f5f8; }
+    background-color: #262c36; }
     .dark .footer a {
       color: #666; }
   .dark .market_find {
@@ -741,96 +821,184 @@ html, body {
           background-color: rgba(255, 255, 255, 0.8); }
   .dark .main-market-detail-container .main_content {
     background-color: #303643; }
-  .dark .main-market-detail-container .dataTables_wrapper .dataTables_paginate .paginate_button {
+  .dark .dataTables_wrapper .dataTables_paginate .paginate_button {
     background-color: rgba(255, 255, 255, 0.1);
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.8) !important;
     border: solid 1px #262c36; }
-    .dark .main-market-detail-container .dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+    .dark .dataTables_wrapper .dataTables_paginate .paginate_button:hover {
       background-color: rgba(255, 255, 255, 0.1);
       border-color: #0084d4; }
-    .dark .main-market-detail-container .dataTables_wrapper .dataTables_paginate .paginate_button.active:hover {
+    .dark .dataTables_wrapper .dataTables_paginate .paginate_button.active:hover {
       border-color: #9caac1; }
-  .dark .main-market-detail-container table.dataTable tbody tr:hover td {
+    .dark .dataTables_wrapper .dataTables_paginate .paginate_button.disabled {
+      background-color: rgba(255, 255, 255, 0.1) !important;
+      color: rgba(255, 255, 255, 0.8) !important; }
+  .dark table.dataTable tbody tr:hover td {
     background-color: rgba(0, 132, 212, 0.08); }
-  .dark .main-market-detail-container .page-item.disabled .page-link {
-    color: rgba(0, 132, 212, 0.08);
+  .dark .page-item.disabled .page-link {
+    color: rgba(255, 255, 255, 0.8) !important;
     background-color: rgba(255, 255, 255, 0.1);
     border-color: #262c36; }
-  .dark .main-market-detail-container .page-item.active .page-link {
+  .dark .page-item.active .page-link {
     color: #2b3441;
     background-color: #9caac1;
     border-color: #9caac1; }
-    .dark .main-market-detail-container .page-item.active .page-link:hover {
+    .dark .page-item.active .page-link:hover {
       background-color: #9caac1;
       border-color: #9caac1; }
-  .dark .main-market-detail-container .page-item .page-link:hover {
+  .dark .page-item .page-link:hover {
     background-color: rgba(255, 255, 255, 0.1);
     border-color: #0084d4; }
-  .dark .main-market-detail-container .market_table_detail th {
+  .dark .market_table_detail th {
     border-bottom: 1px solid #515967;
     text-transform: uppercase;
     color: #9caac1; }
-  .dark .main-market-detail-container .market_table_detail td {
+  .dark .market_table_detail td {
     border-bottom: 1px solid #262c36; }
-    .dark .main-market-detail-container .market_table_detail td a {
+    .dark .market_table_detail td a {
       color: #fff; }
-      .dark .main-market-detail-container .market_table_detail td a:hover {
+      .dark .market_table_detail td a:hover {
         color: #337ab7; }
-  .dark .main-market-detail-container .market_table_detail tr {
+  .dark .market_table_detail tr {
     background-color: transparent !important; }
-    .dark .main-market-detail-container .market_table_detail tr:hover {
+    .dark .market_table_detail tr:hover {
       background-color: rgba(0, 132, 212, 0.08); }
-  .dark .main-market-detail-container .trade_content .btn {
+  .dark .trade_content .btn {
     background-color: rgba(255, 255, 255, 0.1);
     color: rgba(255, 255, 255, 0.8); }
-    .dark .main-market-detail-container .trade_content .btn:hover {
+    .dark .trade_content .btn:hover {
       background-color: #009af8;
       color: #2b3441; }
-  .dark .main-market-detail-container .nav-pills .nav-link {
+  .dark .nav-pills .nav-link {
     color: #2b3441;
     background-color: #9caac1; }
-    .dark .main-market-detail-container .nav-pills .nav-link:hover {
+    .dark .nav-pills .nav-link:hover {
       background-color: #7d899d; }
-  .dark .main-market-detail-container .nav-pills .btn-sell.active {
+  .dark .nav-pills .btn-sell.active {
     background-color: #ff6724;
     color: #2b3441; }
-    .dark .main-market-detail-container .nav-pills .btn-sell.active:hover {
+    .dark .nav-pills .btn-sell.active:hover {
       background-color: #f75535; }
-  .dark .main-market-detail-container .nav-pills .btn-buy.active {
+  .dark .nav-pills .btn-buy.active {
     background-color: #00a45b;
     color: #2b3441; }
-    .dark .main-market-detail-container .nav-pills .btn-buy.active:hover {
+    .dark .nav-pills .btn-buy.active:hover {
       background-color: #00b74a; }
-  .dark .main-market-detail-container .tab-pane .form-group {
+  .dark .tab-pane .form-group {
     border-bottom: 1px solid #515967; }
-    .dark .main-market-detail-container .tab-pane .form-group .form-control {
+    .dark .tab-pane .form-group .form-control {
       background-color: transparent !important;
       color: #9caac1; }
-    .dark .main-market-detail-container .tab-pane .form-group .input-group-text {
+    .dark .tab-pane .form-group .input-group-text {
       color: #7d899d;
       background-color: transparent; }
-  .dark .main-market-detail-container .tab-pane .btn-transaction {
+  .dark .tab-pane .btn-transaction {
     color: #2b3441; }
-    .dark .main-market-detail-container .tab-pane .btn-transaction.btn-buy {
+    .dark .tab-pane .btn-transaction.btn-buy {
       background-color: #00a45b; }
-      .dark .main-market-detail-container .tab-pane .btn-transaction.btn-buy:hover {
+      .dark .tab-pane .btn-transaction.btn-buy:hover {
         background-color: #00b74a; }
-    .dark .main-market-detail-container .tab-pane .btn-transaction.btn-sell {
+    .dark .tab-pane .btn-transaction.btn-sell {
       background-color: #ff6724; }
-      .dark .main-market-detail-container .tab-pane .btn-transaction.btn-sell:hover {
+      .dark .tab-pane .btn-transaction.btn-sell:hover {
         background-color: #f75535; }
-  .dark .main-market-detail-container .trade .dropdown-menu {
+  .dark .trade .dropdown-menu {
     background-color: #2b3441; }
-    .dark .main-market-detail-container .trade .dropdown-menu .dropdown-item:hover {
+    .dark .trade .dropdown-menu .dropdown-item:hover {
       color: #0084d4; }
-  .dark .main-market-detail-container .btn-link {
+  .dark .btn-link {
     color: #0084d4; }
-    .dark .main-market-detail-container .btn-link:hover {
+    .dark .btn-link:hover {
       color: #0084d4; }
-  .dark .main-market-detail-container .chart_area {
+  .dark .chart_area {
     background-color: rgba(255, 255, 255, 0.1); }
-  .dark .main-market-detail-container .market_info_header {
+  .dark .market_info_header {
     background-color: #262c36; }
+  .dark .balance .btn-custom {
+    border: solid 1px rgba(32, 32, 32, 0.6);
+    color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.1); }
+  .dark .btn-refresh {
+    background-color: #9caac1; }
+  .dark .collapse-control a h1 {
+    color: rgba(255, 255, 255, 0.8); }
+  .dark .expand-collapse-container {
+    border-left: 6px solid #009af8;
+    background-color: rgba(255, 255, 255, 0.05); }
+  .dark .error-container {
+    background-color: transparent; }
+    .dark .error-container .modal-header {
+      background-color: #c73535;
+      border-bottom-color: #c73535; }
+    .dark .error-container .modal-body {
+      background-color: #2b3441;
+      color: rgba(255, 255, 255, 0.8); }
+    .dark .error-container .modal-footer {
+      background-color: #2b3441;
+      border-top-color: #2b3441; }
+      .dark .error-container .modal-footer .btn-transaction {
+        background-color: #c73535;
+        color: rgba(255, 255, 255, 0.8); }
+        .dark .error-container .modal-footer .btn-transaction:hover {
+          color: #2b3441; }
+  .dark .deposit-container {
+    background-color: transparent; }
+    .dark .deposit-container .modal-header {
+      background-color: #0084d4;
+      border-bottom-color: #0084d4; }
+    .dark .deposit-container .modal-body {
+      background-color: #2b3441;
+      color: rgba(255, 255, 255, 0.8); }
+    .dark .deposit-container .modal-disclaimer {
+      background-color: rgba(81, 89, 103, 0.3); }
+    .dark .deposit-container .deposit-control {
+      background-color: #262c36; }
+    .dark .deposit-container .btn.btn-new-address {
+      background-color: #0084d4;
+      color: #fff; }
+    .dark .deposit-container .modal-footer {
+      background-color: #2b3441;
+      border-top-color: #2b3441; }
+      .dark .deposit-container .modal-footer .btn-close {
+        border: 1px solid #0084d4;
+        color: #0084d4;
+        background-color: rgba(255, 255, 255, 0.05); }
+        .dark .deposit-container .modal-footer .btn-close:hover {
+          color: #009af8; }
+  .dark .withdrawal-container {
+    background-color: transparent; }
+    .dark .withdrawal-container .modal-header {
+      background-color: #0084d4;
+      border-bottom-color: #0084d4; }
+    .dark .withdrawal-container .modal-body {
+      background-color: #2b3441;
+      color: rgba(255, 255, 255, 0.8); }
+    .dark .withdrawal-container .modal-disclaimer {
+      background-color: rgba(81, 89, 103, 0.3);
+      padding: 1rem; }
+    .dark .withdrawal-container .withdrawal-control {
+      background-color: #262c36;
+      border: 1px solid #515967;
+      color: #fff; }
+    .dark .withdrawal-container .modal-footer {
+      background-color: #2b3441;
+      border-top-color: #2b3441; }
+      .dark .withdrawal-container .modal-footer .btn-close {
+        border: 1px solid #0084d4;
+        color: #0084d4;
+        background-color: rgba(255, 255, 255, 0.1); }
+        .dark .withdrawal-container .modal-footer .btn-close:hover {
+          color: #2b3441; }
+      .dark .withdrawal-container .modal-footer .btn-withdrawal {
+        border: 1px solid #0084d4;
+        color: #fff;
+        background-color: rgba(255, 255, 255, 0.1); }
+        .dark .withdrawal-container .modal-footer .btn-withdrawal:hover {
+          color: #2b3441;
+          background-color: #009af8; }
+  .dark .deposit_table th {
+    color: #9caac1;
+    border-bottom: 1px solid #515967; }
 
 [data-theme='dark'] {
   background: #009af8; }
@@ -1849,14 +2017,11 @@ table.dataTable.no-footer {
   white-space: nowrap;
   height: 32px;
   border-radius: 4px;
-  border: solid 1px rgba(32, 32, 32, 0.6);
   padding: 8px 12px;
   font-size: 13px;
   font-weight: normal;
-  color: rgba(255, 255, 255, 0.6);
   line-height: 16px;
-  vertical-align: middle;
-  background-color: rgba(255, 255, 255, 0.1); }
+  vertical-align: middle; }
 
 @media screen and (min-width: 576px) {
   .balance .btn-custom {
@@ -1868,8 +2033,7 @@ table.dataTable.no-footer {
   margin-top: -4px; }
 
 .btn-refresh {
-  padding: .274rem .65rem;
-  background-color: #9caac1; }
+  padding: .274rem .65rem; }
 
 .icon {
   background-size: 16px;
@@ -1886,96 +2050,56 @@ table.dataTable.no-footer {
 .btn-modal-withdrawal {
   width: 100%;
   height: 30px;
-  background-color: transparent;
   border: 0; }
-
-.collapse-control a h1 {
-  color: rgba(255, 255, 255, 0.8); }
 
 .expand-collapse-container {
   padding: 2px 8px;
   border-radius: 2px;
-  margin-bottom: 24px;
-  border-left: 6px solid #009af8;
-  background-color: rgba(255, 255, 255, 0.05); }
+  margin-bottom: 24px; }
 
-.error-container {
-  background-color: transparent; }
-  .error-container .modal-header {
-    background-color: #c73535;
-    border-bottom-color: #c73535; }
-    .error-container .modal-header .modal-title {
-      margin-left: auto;
-      margin-right: auto; }
-    .error-container .modal-header .close {
-      margin-left: 0; }
-  .error-container .modal-body {
-    background-color: #2b3441;
-    color: rgba(255, 255, 255, 0.8); }
-  .error-container .modal-footer {
-    background-color: #2b3441;
-    border-top-color: #2b3441; }
-    .error-container .modal-footer .btn-transaction {
-      background-color: #c73535;
-      color: rgba(255, 255, 255, 0.8); }
-      .error-container .modal-footer .btn-transaction:hover {
-        color: #2b3441; }
+.error-container .modal-header .modal-title {
+  margin-left: auto;
+  margin-right: auto; }
 
-.deposit-container {
-  background-color: transparent; }
-  .deposit-container .modal-header {
-    background-color: #0084d4;
-    border-bottom-color: #0084d4;
-    padding: 1.5rem 1rem; }
-    .deposit-container .modal-header .modal-title {
-      margin-left: auto;
-      margin-right: auto; }
-      .deposit-container .modal-header .modal-title .title-icon {
-        display: inline-block;
-        width: 30px;
-        height: 26px;
-        background: url("../assets/icon-deposit-white.svg");
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center bottom;
-        vertical-align: text-bottom;
-        margin-right: 8px; }
-    .deposit-container .modal-header .close {
-      margin-left: 0;
-      margin-top: -0.75rem; }
-  .deposit-container .modal-body {
-    background-color: #2b3441;
-    color: rgba(255, 255, 255, 0.8); }
-  .deposit-container .modal-disclaimer {
-    background-color: rgba(81, 89, 104, 0.3);
-    padding: 1rem; }
-  .deposit-container .deposit-control {
-    background-color: #262c36;
-    padding: .7rem 1.75rem .7rem .75rem;
-    font-size: 15px;
-    border: 0; }
-  .deposit-container .btn.btn-new-address {
-    background-color: #0084d4;
-    color: #fff; }
-  .deposit-container .modal-footer {
-    background-color: #2b3441;
-    border-top-color: #2b3441; }
-    .deposit-container .modal-footer .btn-close {
-      border: 1px solid #0084d4;
-      color: #0084d4;
-      background-color: rgba(255, 255, 255, 0.1);
-      font-size: 15px;
-      width: 200px;
-      margin-right: 1rem;
-      padding: .7rem .75rem; }
-      .deposit-container .modal-footer .btn-close:hover {
-        color: #009af8; }
+.error-container .modal-header .close {
+  margin-left: 0; }
+
+.deposit-container .modal-header {
+  padding: 1.5rem 1rem; }
+  .deposit-container .modal-header .modal-title {
+    margin-left: auto;
+    margin-right: auto; }
+    .deposit-container .modal-header .modal-title .title-icon {
+      display: inline-block;
+      width: 30px;
+      height: 26px;
+      background: url("../assets/icon-deposit-white.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center bottom;
+      vertical-align: text-bottom;
+      margin-right: 8px; }
+  .deposit-container .modal-header .close {
+    margin-left: 0;
+    margin-top: -0.75rem; }
+
+.deposit-container .modal-disclaimer {
+  padding: 1rem; }
+
+.deposit-container .deposit-control {
+  padding: .7rem 1.75rem .7rem .75rem;
+  font-size: 15px;
+  border: 0; }
+
+.deposit-container .modal-footer .btn-close {
+  font-size: 15px;
+  width: 200px;
+  margin-right: 1rem;
+  padding: .7rem .75rem; }
 
 .withdrawal-container {
   background-color: transparent; }
   .withdrawal-container .modal-header {
-    background-color: #0084d4;
-    border-bottom-color: #0084d4;
     padding: 1.5rem 1rem; }
     .withdrawal-container .modal-header .modal-title {
       margin-left: auto;
@@ -1993,45 +2117,24 @@ table.dataTable.no-footer {
     .withdrawal-container .modal-header .close {
       margin-left: 0;
       margin-top: -0.75rem; }
-  .withdrawal-container .modal-body {
-    background-color: #2b3441;
-    color: rgba(255, 255, 255, 0.8); }
   .withdrawal-container .modal-disclaimer {
-    background-color: rgba(81, 89, 104, 0.3);
     padding: 1rem; }
   .withdrawal-container .withdrawal-control {
-    background-color: #262c36;
     padding: .5rem .75rem .5rem .75rem;
-    font-size: 15px;
-    border: 1px solid #515967;
-    color: #fff; }
+    font-size: 15px; }
   .withdrawal-container .amount {
     flex: 1;
     font-size: 15px; }
-  .withdrawal-container .modal-footer {
-    background-color: #2b3441;
-    border-top-color: #2b3441; }
-    .withdrawal-container .modal-footer .btn-close {
-      border: 1px solid #0084d4;
-      color: #0084d4;
-      background-color: rgba(255, 255, 255, 0.1);
-      font-size: 15px;
-      width: 200px;
-      margin-right: 1rem;
-      padding: .7rem .75rem; }
-      .withdrawal-container .modal-footer .btn-close:hover {
-        color: #2b3441; }
-    .withdrawal-container .modal-footer .btn-withdrawal {
-      border: 1px solid #0084d4;
-      color: #fff;
-      background-color: rgba(255, 255, 255, 0.1);
-      font-size: 15px;
-      width: 200px;
-      margin-right: 1rem;
-      padding: .7rem .75rem; }
-      .withdrawal-container .modal-footer .btn-withdrawal:hover {
-        color: #2b3441;
-        background-color: #009af8; }
+  .withdrawal-container .modal-footer .btn-close {
+    font-size: 15px;
+    width: 200px;
+    margin-right: 1rem;
+    padding: .7rem .75rem; }
+  .withdrawal-container .modal-footer .btn-withdrawal {
+    font-size: 15px;
+    width: 200px;
+    margin-right: 1rem;
+    padding: .7rem .75rem; }
 
 @media screen and (min-width: 576px) {
   #modalDeposit .modal-dialog,
@@ -2042,8 +2145,6 @@ table.dataTable.no-footer {
   width: 100%; }
   .deposit_table th {
     text-transform: uppercase;
-    color: #9caac1;
-    border-bottom: 1px solid #515967;
     font-weight: 500;
     padding: 12px 10px 8px; }
   .deposit_table td {
