@@ -18,7 +18,16 @@ $themes:(
     $light-bg-market-content,
     $light-market-info-footer-link,
     $light-market-table-link-hover,
-    $light-market-form-control
+    $light-market-form-control,
+    $light-menu,
+    $light-menu-font,
+    $light-bg-side,
+    $light-main-content,
+    $light-market-info-header,
+    $light-market-info-heading,
+    $light-button-active,
+    $light-button-active-hover,
+    $light-bg-modal-content
   ),
   dark: (
     $dark-primary,
@@ -38,22 +47,40 @@ $themes:(
     $dark-bg-market-content,
     $dark-market-info-footer-link,
     $dark-market-table-link-hover,
-    $dark-market-form-control
+    $dark-market-form-control,
+    $dark-menu,
+    $dark-menu-font,
+    $dark-bg-side,
+    $dark-main-content,
+    $dark-market-info-header,
+    $dark-market-info-heading,
+    $dark-button-active,
+    $dark-button-active-hover,
+    $dark-bg-modal-content
   )
 );
 @mixin theme($name,$color){
     // Theme changing
     .#{$name} {
         color: rgba(nth($color,11),0.8);
+        a{
+            color: nth($color,12);
+            &:hover{
+                color: nth($color,1);
+            }
+        }
         .navbar-dark{
             .navbar-nav{
                 .nav-link{
-                    color: nth($color,4);
+                    color: nth($color,20);
                     &:hover,
                     &:focus{
                         color: nth($color,1);
                     }
                 }
+            }
+            .navbar-brand{
+                color: nth($color,20);
             }
             .btn-outline-primary{
                 border: 2px solid nth($color,2) !important;
@@ -80,6 +107,9 @@ $themes:(
             a{
                 color: nth($color,14) !important;
             }
+        }
+        .bg-dark {
+            background-color: nth($color,19) !important;
         }
         // END BACKGROUND
         
@@ -152,7 +182,7 @@ $themes:(
             background-color: nth($color,8);
         }
         .bg-shadow{
-            box-shadow: -7px 5px 4px rgba(0, 0, 0, .9), 7px 5px 4px rgba(0, 0, 0, .9) !important;
+            // box-shadow: -7px 5px 4px rgba(0, 0, 0, .9), 7px 5px 4px rgba(0, 0, 0, .9) !important;
             margin-bottom: 1px;
         }
         .border-market{
@@ -175,7 +205,7 @@ $themes:(
                 border-color: nth($color,2);
                 color: nth($color,2);
                 &.current{
-                    color: rgba(nth($color,11),0.8);
+                    color: nth($color,15);
                     border: 0;
                 }
             }
@@ -183,6 +213,7 @@ $themes:(
                 background-color: nth($color,14) !important;
                 padding: 0.6rem 0.85rem;
                 top: -0.1rem;
+                color: nth($color,15);
             }
             &.disabled{
                 &:hover{
@@ -249,7 +280,7 @@ $themes:(
         .footer {
             background-color: nth($color,13);
             a{
-                color: nth($color,16);
+                color: nth($color,24) !important;
             }
         }
         // END FOOTER
@@ -331,7 +362,7 @@ $themes:(
             color: rgba(nth($color,11),0.8);
         }
         .blurd{
-            background-color: #262f3b;
+            background-color: nth($color,3);
             color: rgba(nth($color,11),0.8);
             &_icon{
                 color: #00a800;
@@ -358,7 +389,7 @@ $themes:(
                 }
             }
             .form-control{
-                background-color: nth($color,15);
+                background-color: nth($color,23);
                 border-bottom: 1px solid nth($color,9);
                 color: rgba(nth($color,11),0.8);
             }
@@ -388,7 +419,7 @@ $themes:(
             }
         }
         .default-panel{
-            background-color: nth($color,15);
+            background-color: transparent;
             border: 1px solid #ddd;
         }
         .step-num{
@@ -433,7 +464,7 @@ $themes:(
         //MARKET DETAIL
         .main-market-detail-container{
             .main_nav{
-                background-color: #1c222d;
+                background-color: nth($color,21);
                 &_menu{
                     &_title{
                         .toggle_icon_navbar{
@@ -463,7 +494,7 @@ $themes:(
             
             // MAIN CONTENT MARKKET DETAIL
             .main_content{
-                background-color: #303643;
+                background-color: nth($color,22);
             }
             // END MARKET DETAIL
         }
@@ -473,7 +504,7 @@ $themes:(
                 .paginate_button{
                     background-color: rgba(nth($color,11),0.1);
                     color: rgba(nth($color,11),0.8) !important;
-                    border: solid 1px nth($color,13);
+                    border: solid 1px transparent;
                     &:hover{
                         background-color: rgba(nth($color,11),0.1);
                         border-color: nth($color,2);
@@ -492,7 +523,7 @@ $themes:(
             
         }
         table.dataTable tbody tr:hover td{
-            background-color: rgba(nth($color,2),0.08);
+            background-color: rgba(nth($color,2),0.28);
         }
         .page-item{
             &.disabled{
@@ -539,7 +570,7 @@ $themes:(
                 tr{
                     background-color: transparent !important;
                     &:hover{
-                        background-color: rgba(nth($color,2),0.08);
+                        background-color: rgba(nth($color,2),0.28);
                     }
                 }
 
@@ -574,10 +605,10 @@ $themes:(
                 }
             }
             .btn-buy.active{
-                background-color: #00a45b;
+                background-color: nth($color,25);
                 color: nth($color,15);
                 &:hover{
-                    background-color: #00b74a;
+                    background-color: nth($color,26);
                 }
             }
         }
@@ -596,9 +627,9 @@ $themes:(
             .btn-transaction{
                 color: nth($color,15);
                 &.btn-buy{
-                    background-color: #00a45b;
+                    background-color: nth($color,25);
                     &:hover{
-                        background-color: #00b74a;
+                        background-color: nth($color,26);
                     }
                 }
                 &.btn-sell{
@@ -629,7 +660,7 @@ $themes:(
             background-color: rgba(nth($color,11),0.1);
         }
         .market_info_header{
-            background-color: nth($color,13);
+            background-color: nth($color,23);
         }
         // DATA CUSTOM TABLE
 
@@ -665,17 +696,17 @@ $themes:(
                 border-bottom-color: #c73535;
             }
             .modal-body{
-                background-color: nth($color,15);
+                background-color: nth($color,27);
                 color: rgba(nth($color,11),0.8);
             }
             .modal-footer{
-                background-color: nth($color,15);
-                border-top-color: nth($color,15);
+                background-color: nth($color,27);
+                border-top-color: nth($color,27);
                 .btn-transaction{
                     background-color: #c73535;
                     color: rgba(nth($color,11),0.8);
                     &:hover{
-                        color: nth($color,15);
+                        color: nth($color,27);
                     }
                 }
             }
@@ -687,7 +718,7 @@ $themes:(
                 border-bottom-color: nth($color,2);
             }
             .modal-body{
-                background-color: nth($color,15);
+                background-color: nth($color,27);
                 color: rgba(nth($color,11),0.8);
             }
             .modal-disclaimer{
@@ -701,8 +732,8 @@ $themes:(
                 color: nth($color,11);
             }
             .modal-footer{
-                background-color: nth($color,15);
-                border-top-color: nth($color,15);
+                background-color: nth($color,27);
+                border-top-color: nth($color,27);
                 .btn-close{
                     border: 1px solid nth($color,2);
                     color: nth($color,2);
@@ -720,7 +751,7 @@ $themes:(
                 border-bottom-color: nth($color,2);
             }
             .modal-body{
-                background-color: nth($color,15);
+                background-color: nth($color,27);
                 color: rgba(nth($color,11),0.8);
             }
             .modal-disclaimer{
@@ -733,14 +764,14 @@ $themes:(
                 color: nth($color,11);
             }
             .modal-footer{
-                background-color: nth($color,15);
-                border-top-color: nth($color,15);
+                background-color: nth($color,27);
+                border-top-color: nth($color,27);
                 .btn-close{
                     border: 1px solid nth($color,2);
                     color: nth($color,2);
                     background-color: rgba(nth($color,11),0.1);
                     &:hover{
-                        color: nth($color,15);
+                        color: nth($color,27);
                     }
                 }
                 .btn-withdrawal{
@@ -748,7 +779,7 @@ $themes:(
                     color: nth($color,11);
                     background-color: rgba(nth($color,11),0.1);
                     &:hover{
-                        color: nth($color,15);
+                        color: nth($color,27);
                         background-color: nth($color,1);
                     }
                 }
@@ -761,6 +792,98 @@ $themes:(
             }
         }
         // END MODAL
+        //STATUS PAGE
+        .intro-item{
+            border-bottom: 1px solid nth($color,9);
+        }
+        .color-orange {
+            color: #f5a623;
+        }
+        .color-green {
+            color: #00a45b;
+        }
+        .color-red {
+            color: #f75535;
+        }
+        .color-black{
+            color: rgba(nth($color,11),0.8);
+        }
+        table.dataTable{
+            thead{
+                .sorting:before,
+                .sorting:after,
+                .sorting_asc:before,
+                .sorting_asc:after,
+                .sorting_desc:before,
+                .sorting_desc:after,
+                .sorting_asc_disabled:before,
+                .sorting_asc_disabled:after,
+                .sorting_desc_disabled:before,
+                .sorting_desc_disabled:after{
+                    color: rgba(nth($color,11),0.8);
+                }
+            }
+        }
+        
+        .dataTables_wrapper{
+            .form-control{
+                color: nth($color,15);
+                border-color: nth($color,15);
+                background-color: nth($color,14);
+            }
+        }
+        .additional-buttons{
+            border: solid 1px nth($color,13);
+            background-color: nth($color,15);
+            color: rgba(nth($color,11),0.8);
+            &:hover{
+                color: nth($color,2);
+                border-color: nth($color,2);
+            }
+        }
+        .dataTable{
+            tbody {
+                tr{
+                    .status-normal{
+                        background-color: #00a45b;
+                    }
+                    .status-delayed{
+                        background-color: #f5a623;
+                    }
+                    .status-block{
+                        background-color: #f75535;
+                    }
+                    .status-inactive{
+                        background-color: rgba(nth($color,10),0.8);
+                    }
+                    &:hover{
+                        .status-normal{
+                            background-color: lighten(#00a45b,15%) !important;
+                        }
+                        .status-delayed{
+                            background-color: lighten(#f5a623,15%) !important;
+                        }
+                        .status-block{
+                            background-color: lighten(#f75535,15%) !important;
+                        }
+                        .status-inactive{
+                            background-color: lighten(nth($color,10),15%) !important;
+                        }
+                    }
+                }        
+            }
+        }
+        // END STATUS PAGE
+
+        // PRIVACY PAGE
+        .breadcrumbs{
+            li{
+                a{
+                    color: nth($color,2);
+                }
+            }
+        }
+        // END PRIVACY PAGE
     }
 
 

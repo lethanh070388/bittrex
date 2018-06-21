@@ -1,0 +1,30 @@
+extends layout_support.pug  
+
+block content
+    .container-inner.main-wrapper
+        .row.pt-4
+            .col-sm-8
+                ol.breadcrumbs
+                    li
+                        a(href="#") Bittradex Support
+                    li
+                        a(href="#") Site Information
+                    li
+                        a(href="#") Legal
+            .col-sm-4
+                form.form-inline.my-0
+                        .input-group.ml-auto
+                            input.form-control.support_search_control(type="text" placeholder="Search" aria-label="Search" aria-describedby="basic-addon2")
+                            .input-group-append
+                                button.btn.support_search_button(type="button")
+                                    i.fas.fa-search
+        .row.pt-4
+            .col-lg-8
+                article.article
+                    header.article_header
+                        h1.article_header_title Bittrex, Inc. Privacy Policy - Version 2
+                    .article_body
+                        p
+                            strong Effective Date: 
+                            | February 16, 2018
+            .col-lg-4.hidden-sm.hidden-xs

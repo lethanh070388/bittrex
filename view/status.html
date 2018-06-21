@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BITTRADEX</title>
+    <link rel="stylesheet" href="../css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="../css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="../css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+  </head>
+  <body>
+    <div class="controls"> 
+      <div class="control-toggle"><i class="fas fa-cog fa-1x"></i></div>
+      <div class="control-button-group">
+        <button class="btn-theme" data-theme="light"></button>
+        <button class="btn-theme" data-theme="dark"></button>
+      </div>
+    </div>
+    <div class="wrapper dark">
+      <div class="layout">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark scrolling-navbar fixed-top"><a class="navbar-brand" href="./index.html"><img class="logo-icon" src="../assets/logo.png"><span class="logo-word">BITTRADEX</span></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active"><a class="nav-link" href="./market.html">Markets<span class="sr-only">(current)</span></a></li>
+              <li class="nav-item"><a class="nav-link" href="./order.html">Orders</a></li>
+              <li class="nav-item"><a class="nav-link" href="./balance.html">Wallets</a></li>
+              <li class="nav-item dropdown"><a class="nav-link" href="./setting_activity.html">Settings</a></li>
+              <li class="nav-item"><a class="nav-link" href="./login.html">Login</a></li>
+            </ul>
+          </div>
+        </nav>
+        <div class="main-wapper main-market-detail-container">
+          <div class="main_content scrollbar_custom">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col">
+                  <h1 class="text-uppercase pt-4 border-bottom">SITE STATUS</h1>
+                  <div class="intro-item"> 
+                    <p class="py-0">
+                       This page displays status information for Bittrex's wallets and markets, updated on a 5 minute interval. If you are experiencing a problem that is not indicated below, please <a href="./help_center.html">contact support.</a></p>
+                  </div>
+                  <div class="intro-item"><span class="color-green text-uppercase">Normal</span>
+                    <p class="py-0">The wallet is operating as normal and blocks have been seen in the last 30 mins.</p>
+                  </div>
+                  <div class="intro-item"><span class="color-orange text-uppercase">Delayed</span>
+                    <p class="py-0">The wallet has not seen a block in the last 30 mins. This is likely because of long block times on the coin network. Please check with an official block explorer and see what's happening.</p>
+                  </div>
+                  <div class="intro-item"><span class="color-red text-uppercase">Blocked</span>
+                    <p class="py-0">The wallet has not seen a block in over 60 mins. This is likely because of long block times on the coin network. Please check with an official block explorer and see what's happening.</p>
+                  </div>
+                  <div class="intro-item"><span class="color-black text-uppercase">Inactive</span>
+                    <p class="py-0">The wallet is disabled. This is usually due to the network having difficulties or the wallet has been taken offline.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <h2 class="text-uppercase pt-4">Wallet Status</h2>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col text-center">
+                  <button class="additional-buttons">Only show wallets with updates</button>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <table class="dataTablePlugin market_table_detail table-status">
+                    <thead>
+                      <tr>
+                        <th class="text-left text-uppercase">Status</th>
+                        <th class="text-right text-uppercase">Currency</th>
+                        <th class="text-right text-uppercase">Block Height</th>
+                        <th class="text-right text-uppercase">Connections</th>
+                        <th class="text-right text-uppercase">Last update</th>
+                        <th class="text-right text-uppercase hidden-xs">Last Check</th>
+                        <th class="text-right text-uppercase hidden-xs">Notice</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="text-center status-normal">Normal</td>
+                        <td class="text-right">LBC</td>
+                        <td class="text-right">38991</td>
+                        <td class="text-right">8</td>
+                        <td class="text-right">0 min.</td>
+                        <td class="text-right hidden-xs">Wed Jun 20 2018 15:38:07 GMT+0700	</td>
+                        <td class="text-right hidden-xs">&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td class="text-center status-normal">Normal</td>
+                        <td class="text-right">LBC</td>
+                        <td class="text-right">38991</td>
+                        <td class="text-right">8</td>
+                        <td class="text-right">0 min.</td>
+                        <td class="text-right hidden-xs">Wed Jun 20 2018 15:38:07 GMT+0700	</td>
+                        <td class="text-right hidden-xs">&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td class="text-center status-normal">Normal</td>
+                        <td class="text-right">LBC</td>
+                        <td class="text-right">38991</td>
+                        <td class="text-right">8</td>
+                        <td class="text-right">0 min.</td>
+                        <td class="text-right hidden-xs">Wed Jun 20 2018 15:38:07 GMT+0700	</td>
+                        <td class="text-right hidden-xs">&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td class="text-center status-delayed">Delayed</td>
+                        <td class="text-right">PPC</td>
+                        <td class="text-right">371578</td>
+                        <td class="text-right">8</td>
+                        <td class="text-right">15 min.</td>
+                        <td class="text-right hidden-xs">Wed Jun 20 2018 15:38:36 GMT+0700		</td>
+                        <td class="text-right hidden-xs">&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td class="text-center status-inactive">Inactive</td>
+                        <td class="text-right">CANN</td>
+                        <td class="text-right">2885221</td>
+                        <td class="text-right">8</td>
+                        <td class="text-right">0 min.</td>
+                        <td class="text-right hidden-xs">Tue May 08 2018 02:38:07 GMT+0700			</td>
+                        <td class="text-right hidden-xs">Automated Maintenance.</td>
+                      </tr>
+                      <tr>
+                        <td class="text-center status-normal">Normal</td>
+                        <td class="text-right">LBC</td>
+                        <td class="text-right">38991</td>
+                        <td class="text-right">8</td>
+                        <td class="text-right">0 min.</td>
+                        <td class="text-right hidden-xs">Wed Jun 20 2018 15:38:07 GMT+0700	</td>
+                        <td class="text-right hidden-xs">The SWIFT ticker will be renamed to BITS on Wednesday, June 20th at 3:00pm PT.</td>
+                      </tr>
+                      <tr>
+                        <td class="text-center status-block">Block</td>
+                        <td class="text-right">LBC</td>
+                        <td class="text-right">38991</td>
+                        <td class="text-right">8</td>
+                        <td class="text-right">0 min.</td>
+                        <td class="text-right hidden-xs">Wed Jun 20 2018 15:38:07 GMT+0700	</td>
+                        <td class="text-right hidden-xs">&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td class="text-center status-normal">Inactive</td>
+                        <td class="text-right">CANN</td>
+                        <td class="text-right">2885221</td>
+                        <td class="text-right">8</td>
+                        <td class="text-right">0 min.</td>
+                        <td class="text-right hidden-xs">Tue May 08 2018 02:38:07 GMT+0700			</td>
+                        <td class="text-right hidden-xs">Wallet Offline.</td>
+                      </tr>
+                      <tr>
+                        <td class="text-center status-normal">Normal</td>
+                        <td class="text-right">LBC</td>
+                        <td class="text-right">38991</td>
+                        <td class="text-right">8</td>
+                        <td class="text-right">0 min.</td>
+                        <td class="text-right hidden-xs">Wed Jun 20 2018 15:38:07 GMT+0700	</td>
+                        <td class="text-right hidden-xs">&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td class="text-center status-normal">Normal</td>
+                        <td class="text-right">LBC</td>
+                        <td class="text-right">38991</td>
+                        <td class="text-right">8</td>
+                        <td class="text-right">0 min.</td>
+                        <td class="text-right hidden-xs">Wed Jun 20 2018 15:38:07 GMT+0700	</td>
+                        <td class="text-right hidden-xs">&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td class="text-center status-normal">Normal</td>
+                        <td class="text-right">LBC</td>
+                        <td class="text-right">38991</td>
+                        <td class="text-right">8</td>
+                        <td class="text-right">0 min.</td>
+                        <td class="text-right hidden-xs">Wed Jun 20 2018 15:38:07 GMT+0700	</td>
+                        <td class="text-right hidden-xs">&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td class="text-center status-normal">Normal</td>
+                        <td class="text-right">LBC</td>
+                        <td class="text-right">38991</td>
+                        <td class="text-right">8</td>
+                        <td class="text-right">0 min.</td>
+                        <td class="text-right hidden-xs">Wed Jun 20 2018 15:38:07 GMT+0700	</td>
+                        <td class="text-right hidden-xs">&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td class="text-center status-normal">Normal</td>
+                        <td class="text-right">LBC</td>
+                        <td class="text-right">38991</td>
+                        <td class="text-right">8</td>
+                        <td class="text-right">0 min.</td>
+                        <td class="text-right hidden-xs">Wed Jun 20 2018 15:38:07 GMT+0700	</td>
+                        <td class="text-right hidden-xs">&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td class="text-center status-normal">Normal</td>
+                        <td class="text-right">LBC</td>
+                        <td class="text-right">38991</td>
+                        <td class="text-right">8</td>
+                        <td class="text-right">0 min.</td>
+                        <td class="text-right hidden-xs">Wed Jun 20 2018 15:38:07 GMT+0700	</td>
+                        <td class="text-right hidden-xs">&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td class="text-center status-normal">Normal</td>
+                        <td class="text-right">LBC</td>
+                        <td class="text-right">38991</td>
+                        <td class="text-right">8</td>
+                        <td class="text-right">0 min.</td>
+                        <td class="text-right hidden-xs">Wed Jun 20 2018 15:38:07 GMT+0700	</td>
+                        <td class="text-right hidden-xs">&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td class="text-center status-normal">Normal</td>
+                        <td class="text-right">LBC</td>
+                        <td class="text-right">38991</td>
+                        <td class="text-right">8</td>
+                        <td class="text-right">0 min.</td>
+                        <td class="text-right hidden-xs">Wed Jun 20 2018 15:38:07 GMT+0700	</td>
+                        <td class="text-right hidden-xs">&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td class="text-center status-normal">Normal</td>
+                        <td class="text-right">LBC</td>
+                        <td class="text-right">38991</td>
+                        <td class="text-right">8</td>
+                        <td class="text-right">0 min.</td>
+                        <td class="text-right hidden-xs">Wed Jun 20 2018 15:38:07 GMT+0700	</td>
+                        <td class="text-right hidden-xs">&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td class="text-center status-normal">Normal</td>
+                        <td class="text-right">LBC</td>
+                        <td class="text-right">38991</td>
+                        <td class="text-right">8</td>
+                        <td class="text-right">0 min.</td>
+                        <td class="text-right hidden-xs">Wed Jun 20 2018 15:38:07 GMT+0700	</td>
+                        <td class="text-right hidden-xs">&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td class="text-center status-normal">Normal</td>
+                        <td class="text-right">LBC</td>
+                        <td class="text-right">38991</td>
+                        <td class="text-right">8</td>
+                        <td class="text-right">0 min.</td>
+                        <td class="text-right hidden-xs">Wed Jun 20 2018 15:38:07 GMT+0700	</td>
+                        <td class="text-right hidden-xs">&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td class="text-center status-normal">Normal</td>
+                        <td class="text-right">LBC</td>
+                        <td class="text-right">38991</td>
+                        <td class="text-right">8</td>
+                        <td class="text-right">0 min.</td>
+                        <td class="text-right hidden-xs">Wed Jun 20 2018 15:38:07 GMT+0700	</td>
+                        <td class="text-right hidden-xs">&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td class="text-center status-normal">Normal</td>
+                        <td class="text-right">LBC</td>
+                        <td class="text-right">38991</td>
+                        <td class="text-right">8</td>
+                        <td class="text-right">0 min.</td>
+                        <td class="text-right hidden-xs">Wed Jun 20 2018 15:38:07 GMT+0700	</td>
+                        <td class="text-right hidden-xs">&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td class="text-center status-normal">Normal</td>
+                        <td class="text-right">LBC</td>
+                        <td class="text-right">38991</td>
+                        <td class="text-right">8</td>
+                        <td class="text-right">0 min.</td>
+                        <td class="text-right hidden-xs">Wed Jun 20 2018 15:38:07 GMT+0700	</td>
+                        <td class="text-right hidden-xs">&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td class="text-center status-normal">Normal</td>
+                        <td class="text-right">LBC</td>
+                        <td class="text-right">38991</td>
+                        <td class="text-right">8</td>
+                        <td class="text-right">0 min.</td>
+                        <td class="text-right hidden-xs">Wed Jun 20 2018 15:38:07 GMT+0700	</td>
+                        <td class="text-right hidden-xs">&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td class="text-center status-normal">Normal</td>
+                        <td class="text-right">LBC</td>
+                        <td class="text-right">38991</td>
+                        <td class="text-right">8</td>
+                        <td class="text-right">0 min.</td>
+                        <td class="text-right hidden-xs">Wed Jun 20 2018 15:38:07 GMT+0700	</td>
+                        <td class="text-right hidden-xs">&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td class="text-center status-normal">Normal</td>
+                        <td class="text-right">LBC</td>
+                        <td class="text-right">38991</td>
+                        <td class="text-right">8</td>
+                        <td class="text-right">0 min.</td>
+                        <td class="text-right hidden-xs">Wed Jun 20 2018 15:38:07 GMT+0700	</td>
+                        <td class="text-right hidden-xs">&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td class="text-center status-normal">Normal</td>
+                        <td class="text-right">LBC</td>
+                        <td class="text-right">38991</td>
+                        <td class="text-right">8</td>
+                        <td class="text-right">0 min.</td>
+                        <td class="text-right hidden-xs">Wed Jun 20 2018 15:38:07 GMT+0700	</td>
+                        <td class="text-right hidden-xs">&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td class="text-center status-normal">Normal</td>
+                        <td class="text-right">LBC</td>
+                        <td class="text-right">38991</td>
+                        <td class="text-right">8</td>
+                        <td class="text-right">0 min.</td>
+                        <td class="text-right hidden-xs">Wed Jun 20 2018 15:38:07 GMT+0700	</td>
+                        <td class="text-right hidden-xs">&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td class="text-center status-normal">Normal</td>
+                        <td class="text-right">LBC</td>
+                        <td class="text-right">38991</td>
+                        <td class="text-right">8</td>
+                        <td class="text-right">0 min.</td>
+                        <td class="text-right hidden-xs">Wed Jun 20 2018 15:38:07 GMT+0700	</td>
+                        <td class="text-right hidden-xs">&nbsp;</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="../js/jquery.dataTables.min.js"></script>
+    <script src="../js/dataTables.bootstrap4.min.js"></script>
+    <script src="../js/theme.js"></script>
+    <script src="../js/main.js"></script>
+    <script>
+      (function($){
+          $(window).on("load",function(){
+              $(".scrollbar_custom").mCustomScrollbar({
+                  autoHideScrollbar:true
+              });
+              $.extend(true, $.fn.dataTable.defaults, {
+                  "lengthChange": false,
+                  "searching": true,
+                  "ordering": true,
+                  "info": false,
+                  "paging": false
+              });
+              $('.dataTablePlugin').DataTable();
+          });
+      })(jQuery);
+    </script>
+  </body>
+</html>

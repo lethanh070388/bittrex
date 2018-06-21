@@ -1,0 +1,182 @@
+doctype html
+html
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible" content="ie=edge")
+        title BITTRADEX
+        link(rel="stylesheet" href="../css/fontawesome-all.min.css")
+        link(rel="stylesheet" href="../css/bootstrap.css")
+        link(rel="stylesheet" href="../css/jquery.mCustomScrollbar.min.css")
+        link(rel="stylesheet" href="../css/jquery.dataTables.min.css")
+        link(rel="stylesheet" href="../css/dataTables.bootstrap4.min.css")
+        link(rel="stylesheet" href="../css/style.css")
+    body
+        .controls 
+            .control-toggle
+                i.fas.fa-cog.fa-1x
+            .control-button-group
+                button.btn-theme(data-theme="light")
+                button.btn-theme(data-theme="dark")
+        .wrapper.dark
+            .layout
+                //- navigation bar
+                nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.scrolling-navbar.fixed-top
+                    a.navbar-brand(href="./index.html")
+                        img.logo-icon(src="../assets/logo.png") 
+                        span.logo-word BITTRADEX
+                    button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation")
+                        span.navbar-toggler-icon
+                    .collapse.navbar-collapse#navbarSupportedContent
+                        ul.navbar-nav.ml-auto
+                            li.nav-item.active
+                                a.nav-link(href="./market.html") Markets
+                                    span.sr-only (current)
+                            li.nav-item
+                                a.nav-link(href="./order.html") Orders
+                            li.nav-item
+                                a.nav-link(href="./balance.html") Wallets
+                            li.nav-item.dropdown
+                                a.nav-link(href="./setting_activity.html") Settings
+                            li.nav-item
+                                a.nav-link(href="./login.html") Login
+                //- end navigation bar
+                .main-wapper.main-market-detail-container
+                    .main_content.scrollbar_custom
+                        .container-fluid
+                            .row
+                                .col
+                                    h1.text-uppercase.pt-4.border-bottom SITE STATUS
+                                    .intro-item 
+                                        p.py-0 
+                                            |This page displays status information for Bittrex's wallets and markets, updated on a 5 minute interval. If you are experiencing a problem that is not indicated below, please 
+                                            a(href="./help_center.html") contact support.
+                                    .intro-item
+                                        span.color-green.text-uppercase Normal
+                                        p.py-0 The wallet is operating as normal and blocks have been seen in the last 30 mins.
+                                    .intro-item
+                                        span.color-orange.text-uppercase Delayed
+                                        p.py-0 The wallet has not seen a block in the last 30 mins. This is likely because of long block times on the coin network. Please check with an official block explorer and see what's happening.
+                                    .intro-item
+                                        span.color-red.text-uppercase Blocked
+                                        p.py-0 The wallet has not seen a block in over 60 mins. This is likely because of long block times on the coin network. Please check with an official block explorer and see what's happening.
+                                    .intro-item
+                                        span.color-black.text-uppercase Inactive
+                                        p.py-0 The wallet is disabled. This is usually due to the network having difficulties or the wallet has been taken offline.
+                            .row
+                                .col
+                                    h2.text-uppercase.pt-4 Wallet Status
+                            .row
+                                .col.text-center
+                                    button.additional-buttons Only show wallets with updates
+                            .row
+                                .col
+                                    table.dataTablePlugin.market_table_detail.table-status
+                                        thead
+                                            tr
+                                                th.text-left.text-uppercase Status
+                                                th.text-right.text-uppercase Currency
+                                                th.text-right.text-uppercase Block Height
+                                                th.text-right.text-uppercase Connections
+                                                th.text-right.text-uppercase Last update
+                                                th.text-right.text-uppercase.hidden-xs Last Check
+                                                th.text-right.text-uppercase.hidden-xs Notice
+                                        tbody
+                                            tr
+                                                td.text-center.status-normal Normal
+                                                td.text-right LBC
+                                                td.text-right 38991
+                                                td.text-right 8
+                                                td.text-right 0 min.
+                                                td.text-right.hidden-xs Wed Jun 20 2018 15:38:07 GMT+0700	
+                                                td.text-right.hidden-xs &nbsp;
+                                            tr
+                                                td.text-center.status-normal Normal
+                                                td.text-right LBC
+                                                td.text-right 38991
+                                                td.text-right 8
+                                                td.text-right 0 min.
+                                                td.text-right.hidden-xs Wed Jun 20 2018 15:38:07 GMT+0700	
+                                                td.text-right.hidden-xs &nbsp;
+                                            tr
+                                                td.text-center.status-normal Normal
+                                                td.text-right LBC
+                                                td.text-right 38991
+                                                td.text-right 8
+                                                td.text-right 0 min.
+                                                td.text-right.hidden-xs Wed Jun 20 2018 15:38:07 GMT+0700	
+                                                td.text-right.hidden-xs &nbsp;
+                                            tr
+                                                td.text-center.status-delayed Delayed
+                                                td.text-right PPC
+                                                td.text-right 371578
+                                                td.text-right 8
+                                                td.text-right 15 min.
+                                                td.text-right.hidden-xs Wed Jun 20 2018 15:38:36 GMT+0700		
+                                                td.text-right.hidden-xs &nbsp;
+                                            tr
+                                                td.text-center.status-inactive Inactive
+                                                td.text-right CANN
+                                                td.text-right 2885221
+                                                td.text-right 8
+                                                td.text-right 0 min.
+                                                td.text-right.hidden-xs Tue May 08 2018 02:38:07 GMT+0700			
+                                                td.text-right.hidden-xs Automated Maintenance.
+                                            tr
+                                                td.text-center.status-normal Normal
+                                                td.text-right LBC
+                                                td.text-right 38991
+                                                td.text-right 8
+                                                td.text-right 0 min.
+                                                td.text-right.hidden-xs Wed Jun 20 2018 15:38:07 GMT+0700	
+                                                td.text-right.hidden-xs The SWIFT ticker will be renamed to BITS on Wednesday, June 20th at 3:00pm PT.
+                                            tr
+                                                td.text-center.status-block Block
+                                                td.text-right LBC
+                                                td.text-right 38991
+                                                td.text-right 8
+                                                td.text-right 0 min.
+                                                td.text-right.hidden-xs Wed Jun 20 2018 15:38:07 GMT+0700	
+                                                td.text-right.hidden-xs &nbsp;
+                                            tr
+                                                td.text-center.status-normal Inactive
+                                                td.text-right CANN
+                                                td.text-right 2885221
+                                                td.text-right 8
+                                                td.text-right 0 min.
+                                                td.text-right.hidden-xs Tue May 08 2018 02:38:07 GMT+0700			
+                                                td.text-right.hidden-xs Wallet Offline.
+                                            -for(var i=1; i<=20; i++){
+                                                tr
+                                                    td.text-center.status-normal Normal
+                                                    td.text-right LBC
+                                                    td.text-right 38991
+                                                    td.text-right 8
+                                                    td.text-right 0 min.
+                                                    td.text-right.hidden-xs Wed Jun 20 2018 15:38:07 GMT+0700	
+                                                    td.text-right.hidden-xs &nbsp;
+                                            -}
+        script(src="../js/jquery.js")
+        script(src="../js/bootstrap.js")
+        script(src="../js/jquery.mCustomScrollbar.concat.min.js")
+        script(src="../js/jquery.dataTables.min.js")
+        script(src="../js/dataTables.bootstrap4.min.js")
+        script(src="../js/theme.js")
+        script(src="../js/main.js")
+        script.
+            (function($){
+                $(window).on("load",function(){
+                    $(".scrollbar_custom").mCustomScrollbar({
+                        autoHideScrollbar:true
+                    });
+                    $.extend(true, $.fn.dataTable.defaults, {
+                        "lengthChange": false,
+                        "searching": true,
+                        "ordering": true,
+                        "info": false,
+                        "paging": false
+                    });
+                    $('.dataTablePlugin').DataTable();
+                });
+            })(jQuery);
+        block script-append
