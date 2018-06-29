@@ -1,7 +1,7 @@
 extends layout_support.pug  
 
 block content
-    .container-inner.main-wrapper
+    .container.main-wrapper.support-content
         .row.pt-4
             .col-sm-8
                 ol.breadcrumbs
@@ -13,7 +13,7 @@ block content
                         a(href="#") Legal
             .col-sm-4
                 form.form-inline.my-0
-                        .input-group.ml-auto
+                        .input-group.ml-auto.w-100
                             input.form-control.support_search_control(type="text" placeholder="Search" aria-label="Search" aria-describedby="basic-addon2")
                             .input-group-append
                                 button.btn.support_search_button(type="button")
@@ -23,8 +23,64 @@ block content
                 article.article
                     header.article_header
                         h1.article_header_title Bittrex, Inc. Privacy Policy - Version 2
+                        .article_meta
+                            .article_meta_main
+                                b.author
+                                    a(href="#") Bittradex support team
+                                .time February 02, 2018 04:24
+                            .article_meta_button
+                                a.article-subscribe(href="#") Follow
                     .article_body
                         p
                             strong Effective Date: 
                             | February 16, 2018
+                        p Bittrex, Inc. and its subsidiaries and affiliates (collectively, “Bittrex” or “we” or “us”) provide services that permit you to trade cryptographic tokens and other digital rights or assets. This Privacy Policy describes how Bittrex collects, uses, stores, and protects information about users of the Services and applies to information we collect when you use our website www.bittrex.com (the “Site”) and to any other related services provided by Bittrex (collectively, the “Services”). We may periodically post changes to this Privacy Policy by revising the date at the top of this page. We encourage you to review the Privacy Policy whenever you access the Services or otherwise interact with us to stay informed about our information practices and the choices available to you.
+                        h2 Categories of Information Collected
+                        h3 Information You Provide to Us
+                        p We collect all the information you provide to us, such as when you register for an account on the Services (“Bittrex Account”), make deposits or withdrawals from your Bittrex Account, send fiat currency to us through the Services, apply for a job, sign up to receive our email updates, fill out a form, complete a survey, receive customer service, or when you otherwise communicate with us. This information includes, but is not limited to:
+                        ul
+                            li If you are an individual user: Your own personal data such as your first, middle, and last name, phone number, email address, photograph, physical address, date of birth, state and country of residency, username, password, social security number or other government ID number and photograph of government-issued identification information (including driver’s license and/or passport information).
+                            li Financial data such as full bank account information (including routing and account numbers) and certain digital currency information, including external wallet addresses.
+                            li Instructions you provide to us regarding your trades and other transactions you conduct through the Services;
+                            li Any feedback or suggestions you provide to us about our Services;
+                            li Information provided in any of Bittrex’s support channels or other communications channels; and
+                            li Any other information you provide to us or authorize us to access or collect from or using a third party.
+                        p In addition to the above, if you are using the Services on behalf of a corporation or other legal entity (“Enterprise User”), we collect and may retain all the information you provide to us, including all information provided in the Enterprise User’s application for a Bittrex Account. The information we collect from the Enterprise User’s application is described below:
+                        ul
+                            li Personal data of any individual who is identified as the person that controls the Bittrex Account and who is identified on the Enterprise User’s application for a Bittrex Account;
+                            li Basic entity information such as legal name, address, phone number, email address, tax ID number, state, and date of formation;
+                            li Information about the ownership and management of the Enterprise User such as a list of all beneficial owners, an organization chart, proof of identity for each individual beneficial owner that owns a 10% or greater interest in the Enterprise User, and proof of identity for each entity beneficial owner that owns a 10% or great interest in the Enterprise User;
+                            li Information about the Enterprise User’s legal existence such as entity charter (e.g. certificate of incorporation or articles of incorporation for a corporation, certificate of formation for a limited liability company, etc.) and certificate of good standing; and
+                    footer.article_footer
+                        .article_vote
+                            .article_vote_question.mr-2 Was this article helpful?
+                            .article_vote_control 
+                                a.article_vote_control_item(href="#")
+                                    i.fas.fa-thumbs-up
+                                a.article_vote_control_item(href="#")
+                                    i.fas.fa-thumbs-down
+                            small 478 out of 479 found this helpful
+                        ul.share.my-3
+                            li
+                                a(href="#")
+                                    i.fab.fa-facebook-f
+                            li
+                                a(href="#")
+                                    i.fab.fa-twitter
+                            li
+                                a(href="#")
+                                    i.fab.fa-linkedin-in
+                            li
+                                a(href="#")
+                                    i.fab.fa-google-plus-g
             .col-lg-4.hidden-sm.hidden-xs
+                h3 Articles in this section
+                ul.articles_list
+                    li
+                        a(href="#") Bittrex, Inc. Terms of Service - Version 2
+                    li
+                        a(href="#") Bittrex, Inc. Privacy Policy - Version 2
+                    li
+                        a(href="#") TERMS OF SERVICE
+                    li
+                        a(href="#") Bittrex, Inc. Privacy Policy - Version 1

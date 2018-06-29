@@ -41,7 +41,7 @@ a sup{
 .layout{
     display: flex;
     flex-direction: column;
-    height: 100%;
+    min-height: 100%;
 }
 .flex-full-height{
     flex: 1;
@@ -1567,11 +1567,14 @@ table.dataTable{
     padding-top: 56px;
     color: #4e5565;
     font-size: 16px;
+    display: flex;
+    flex-direction: column;
 }
 .container-inner{
     max-width: 1200px;
     padding-left: 15px;
     padding-right: 15px;
+    margin: 0 auto;
 }
 @include minq(medium){
     .container-inner{
@@ -1605,11 +1608,27 @@ table.dataTable{
         }
     }
 }
+.support-content{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    h1,h2,h3,h4,h5,h6{
+        font-weight: $font-light;
+    }
+}
+@include minq(medium){
+    .support-content{
+        font-size: 16px;
+    }
+}
+@include maxq(medium){
+    .support-content.container{
+        max-width: 100%;
+    }
+}
 .article{
     &_header{
         &_title{
             font-size: 24px;
-            font-weight: $font-light;
         }
         @include minq(medium){
             &_title{
@@ -1618,7 +1637,115 @@ table.dataTable{
         }
         @include minq(large){
             &_title{
-                font-size: 40px;
+                font-size: 32px;
+            }
+        }
+    }
+    &_meta{
+        display: flex;
+        &_main{
+            flex: 1;
+        }
+        &_button{
+            .article-subscribe{
+                color: #0084D4;
+                background-color: transparent;
+                display: inline-block;
+                margin-bottom: 0;
+                font-weight: 700;
+                text-transform: uppercase;
+                text-align: center;
+                vertical-align: middle;
+                -ms-touch-action: manipulation;
+                touch-action: manipulation;
+                cursor: pointer;
+                background-image: none;
+                border: 2px solid #0084D4;
+                white-space: nowrap;
+                letter-spacing: 0.1px;
+                padding: 6px 12px 6px 12px;
+                font-size: 11px;
+                line-height: 1.5;
+                border-radius: 4px;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+                transition: all 0.3s ease;
+            }
+        }
+    }
+    &_vote{
+        display: flex;
+        position: relative;
+        padding: 24px 12px 38px;
+        border: 2px solid #eceeef;
+        border-radius: 4px;
+        &_control{
+            white-space: nowrap;
+            &_item{
+                color: #4e5565;
+                background-color: #eceeef;
+                border: 2px solid #eceeef;
+                padding: 6px 12px 6px 12px;
+                transition: all 0.3s ease;
+                border-radius: 4px;
+                margin-right: 3px;
+            }
+        }
+        small{
+            position: absolute;
+            left: 12px;
+            bottom: 7px;
+        }
+    }
+    .share{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        li{
+            display: inline-block;
+            a{
+                display: block;
+                width: 30px;
+                height: 30px;
+                overflow: hidden;
+                line-height: 30px;
+                -ms-touch-action: manipulation;
+                touch-action: manipulation;
+                background-color: #eceeef;
+                border-color: #eceeef;
+                border-radius: 4px;
+                text-align: center;
+                .fa-facebook-f{
+                    color: #3d5b95;
+                }
+                .fa-twitter{
+                    color: #24aadd;
+                }
+                .fa-linkedin-in{
+                    color: #0976b4;
+                }
+                .fa-google-plus-g{
+                    color: #d23e30;
+                }
+            }
+        }
+    }
+}
+.articles_list{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    li{
+        margin-bottom: 12px;
+        a{
+            color: #4e5565;
+            border-bottom: 1px solid #eceeef;
+            padding-bottom: 1px;            
+            text-decoration: none;
+            &:hover{
+                color: #0065A2;
             }
         }
     }
