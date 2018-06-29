@@ -26,7 +26,7 @@ html
                         span.navbar-toggler-icon
                     .collapse.navbar-collapse#navbarSupportedContent
                         form.form-inline.ml-auto
-                            button#btnSubmitReq.btn.btn-outline-primary.disabled(type="submit") Submit a request
+                            a#btnSubmitReq.btn.btn-outline-primary(href="./request_select.html") Submit a request
                             button.btn.btn-outline-primary.ml-3 Sign in
                 //- end navigation bar
                 block content
@@ -43,3 +43,4 @@ html
         script(src="../js/bootstrap.js")
         script(src="../js/theme.js")
         script(src="../js/main.js")
+        block script-append
