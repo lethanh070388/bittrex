@@ -296,7 +296,8 @@ hr{
 }
 .home-market-content {
     background-color: #2b3441;
-    min-height: calc(100vh - 146px);
+    padding-top: 56px;
+    flex: 1;
 }
 .support-color{
     color: #4e5565;
