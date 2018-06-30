@@ -1755,3 +1755,17 @@ table.dataTable{
     }
 }
 
+//RELOAD ANIMATION
+.reload{
+    animation: reload .8s 1 ease;
+}
+@keyframes reload{
+    from{
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

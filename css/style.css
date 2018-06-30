@@ -2500,3 +2500,14 @@ table.dataTable thead .sorting_desc_disabled:after {
       text-decoration: none; }
       .articles_list li a:hover {
         color: #0065A2; }
+
+.reload {
+  animation: reload .8s 1 ease; }
+
+@keyframes reload {
+  from {
+    opacity: 0;
+    transform: translateX(-20px); }
+  to {
+    opacity: 1;
+    transform: translateX(0); } }

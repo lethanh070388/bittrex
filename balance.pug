@@ -202,8 +202,25 @@ block main_content
                                                     |We will not credit your account with tokens from that sale.
                             .modal-footer
                                 button.btn.btn-close(type="button" data-dismiss="modal") Cancel
-                                button.btn.btn-withdrawal(type="button") Withdraw LTC           
-
+                                button.btn.btn-withdrawal(type="button" data-toggle="modal" data-target="#modalWithdrawFailed") Withdraw LTC           
+        .row
+            .col
+                #modalWithdrawFailed.modal.fade(tabindex="-1" role="dialog" aria-labelledby="modalWithdrawFailedLabel" aria-hidden="true")
+                    .modal-dialog(role="document")
+                        .modal-content.error-container
+                            .modal-header.text-center
+                                h5.modal-title#modalWithdrawFailedLabel Withdraw Failed
+                                button.close(type="button" data-dismiss="modal" aria-label="Close")
+                                    span(aria-hidden="true") &times;
+                            .modal-body
+                                p 
+                                    |The following errors were encountered:
+                                    ul
+                                        li Verify quantity specified is less than 10,000,000 and that you have sufficient balance.
+                                        li An address must be specified.
+                                    |Please correct these issues and try again.
+                            .modal-footer
+                                button.btn.btn-transaction(type="button" data-dismiss="modal") Close
     //- PENDING WITHDRAWALS
     .container-fluid
         .row

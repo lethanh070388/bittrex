@@ -294,5 +294,25 @@ block script-append
                 $('.condition').removeClass('active');
                 $('.target-price').removeClass('active');
             });
+            
+            //RELOAD and random 10 items
+            
+            function randomLoad(){
+                $('.dataTablePlugin tbody tr').removeClass('reload');
+                var rows1 = $('.dataTablePlugin tbody').children();
+                var rad1 = Math.floor(Math.random()*10);
+                rows1.eq(rad1).addClass('reload');
+
+                $('.dataTablePlugin-right tbody tr').removeClass('reload');
+                var rows2 = $('.dataTablePlugin-right tbody').children();
+                var rad2 = Math.floor(Math.random()*10);
+                rows2.eq(rad2).addClass('reload');
+
+                $('.datalist_item').removeClass('reload');
+                var rows3 = $('.datalist_item');
+                var rad3 = Math.floor(Math.random()*10);
+                rows3.eq(rad3).addClass('reload');
+            }
+            setInterval(randomLoad,1000);
         });
     
