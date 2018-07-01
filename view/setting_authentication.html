@@ -59,7 +59,7 @@
             </h5>
           </div>
           <div class="main-content p-4">
-            <div class="container-fluid px-4 two-factor">
+            <div class="container-fluid px-4 two-factor" id="disable">
               <div class="row">
                 <div class="col">
                   <h5 class="heading-lv5 text-uppercase pt-4">TWO-FACTOR AUTHENTICATION</h5>
@@ -112,13 +112,57 @@
                       <div class="col-11 step-content">Enter the 6 digit authentication code provided by Google Authenticator</div>
                     </div>
                     <div class="row">
-                      <div class="col form-password">
+                      <div class="col-1"></div>
+                      <div class="col-11 form-input">
                         <div class="form-group pt-4">
                           <label for="authenticationCode">Authentication Code</label>
                           <input class="form-control" id="authenticationCode" type="text" placeholder="Input 6 digit authentication code">
                         </div>
                         <div class="text-center form-group mt-4"> 
-                          <button class="btn btn-form change-pass">Enable 2FA</button>
+                          <button class="btn btn-form change-pass" id="btn-enable">Enable 2FA</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="container-fluid px-4 two-factor" id="enable">
+              <div class="row">
+                <div class="col">
+                  <h5 class="heading-lv5 text-uppercase pt-4">TWO-FACTOR AUTHENTICATION</h5>
+                  <p class="border-bottom">Greatly increase security by requiring both your password and another form of authentication.</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <div class="panel status-panel">
+                    <h4>Status: <span class="verify"><i class="fas fa-address-card px-2"></i>Enable</span></h4>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <div class="disabled-content">
+                    <h5>Disable 2FA</h5>
+                    <div class="row">
+                      <div class="col form-input px-0">
+                        <div class="blurd sucess-blurd w-100 m-0 bg-notice">
+                          <div class="blurd_icon info"><i class="fas fa-exclamation-triangle fa-2x mt-2 text-black"></i></div>
+                          <div class="blurd_content">
+                            <div class="font-weight-bold">Disabling two-factor authentication will reset your secret key and delete all of your API keys.</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col form-input px-0">
+                        <div class="form-group pt-4">
+                          <label for="authenticationCode">Authentication Code</label>
+                          <input class="form-control" id="authenticationCode" type="text" placeholder="6 digit authentication code">
+                        </div>
+                        <div class="text-center form-group mt-4"> 
+                          <button class="btn btn-form change-pass disable-2fa" id="btn-disable">Disable 2FA</button>
                         </div>
                       </div>
                     </div>
@@ -155,5 +199,18 @@
     <script src="../js/dataTables.bootstrap4.min.js"></script>
     <script src="../js/theme.js"></script>
     <script src="../js/main.js"></script>
+    <script>
+      $(function(){
+          $('#enable').hide();
+          $('#btn-enable').click(function(){
+              $('#enable').show();
+              $('#disable').hide();
+          });
+          $('#btn-disable').click(function(){
+              $('#enable').hide();
+              $('#disable').show();
+          });
+      });
+    </script>
   </body>
 </html>

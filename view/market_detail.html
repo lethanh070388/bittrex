@@ -1155,7 +1155,7 @@
       
               $('.datalist_item').removeClass('reload');
               var rows3 = $('.datalist_item');
-              var rad3 = Math.floor(Math.random()*10);
+              var rad3 = Math.floor(Math.random()*rows3.length);
               rows3.eq(rad3).addClass('reload');
           }
           setInterval(randomLoad,1000);

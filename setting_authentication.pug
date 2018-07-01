@@ -1,7 +1,7 @@
 extends layout_setting.pug  
 
 block content
-    .container-fluid.px-4.two-factor
+    .container-fluid.px-4.two-factor#disable
         .row
             .col
                 h5.heading-lv5.text-uppercase.pt-4 TWO-FACTOR AUTHENTICATION
@@ -50,9 +50,54 @@ block content
                             span.step-num 4
                         .col-11.step-content Enter the 6 digit authentication code provided by Google Authenticator
                     .row
-                        .col.form-password
+                        .col-1
+                        .col-11.form-input
                             .form-group.pt-4
                                 label(for="authenticationCode") Authentication Code
                                 input.form-control#authenticationCode(type="text" placeholder="Input 6 digit authentication code")
                             .text-center.form-group.mt-4 
-                                button.btn.btn-form.change-pass Enable 2FA
+                                button.btn.btn-form.change-pass#btn-enable Enable 2FA
+    .container-fluid.px-4.two-factor#enable
+        .row
+            .col
+                h5.heading-lv5.text-uppercase.pt-4 TWO-FACTOR AUTHENTICATION
+                p.border-bottom Greatly increase security by requiring both your password and another form of authentication.
+        .row
+            .col
+                .panel.status-panel
+                    h4 Status: 
+                        span.verify
+                            i.fas.fa-address-card.px-2
+                            | Enable
+        .row
+            .col
+                .disabled-content
+                    h5 Disable 2FA
+                    .row
+                        .col.form-input.px-0
+                            .blurd.sucess-blurd.w-100.m-0.bg-notice
+                                .blurd_icon.info
+                                    i.fas.fa-exclamation-triangle.fa-2x.mt-2.text-black
+                                .blurd_content
+                                    .font-weight-bold Disabling two-factor authentication will reset your secret key and delete all of your API keys.
+                    .row
+                        .col.form-input.px-0
+                            .form-group.pt-4
+                                label(for="authenticationCode") Authentication Code
+                                input.form-control#authenticationCode(type="text" placeholder="6 digit authentication code")
+                            .text-center.form-group.mt-4 
+                                button.btn.btn-form.change-pass.disable-2fa#btn-disable Disable 2FA
+block script-append
+    script.
+        $(function(){
+            $('#enable').hide();
+            $('#btn-enable').click(function(){
+                $('#enable').show();
+                $('#disable').hide();
+            });
+            $('#btn-disable').click(function(){
+                $('#enable').hide();
+                $('#disable').show();
+            });
+        });
+    

@@ -407,7 +407,21 @@ $themes:(
                 &:hover{
                     background-color: nth($color,1);
                 }
+                &.disable-2fa{
+                    &:hover{
+                        background-color: #F7A623 !important;
+                    }
+                }
             }
+        }
+        .bg-green{
+            background-color: #00a45b;
+        }
+        .bg-notice{
+            background-color: #464C58;
+        }
+        .text-black{
+            color: #333;
         }
         .two-factor{
             color: nth($color,14);
@@ -416,6 +430,9 @@ $themes:(
             background-color: nth($color,13);
             .un-verify{
                 color: #f75535;
+            }
+            .verify{
+                color: #00a45b;
             }
         }
         .default-panel{

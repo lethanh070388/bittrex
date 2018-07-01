@@ -365,12 +365,22 @@ html, body {
       background-color: rgba(255, 255, 255, 0.1); }
       .light .btn-form.change-pass:hover {
         background-color: #f58220; }
+      .light .btn-form.change-pass.disable-2fa:hover {
+        background-color: #F7A623 !important; }
+  .light .bg-green {
+    background-color: #00a45b; }
+  .light .bg-notice {
+    background-color: #464C58; }
+  .light .text-black {
+    color: #333; }
   .light .two-factor {
     color: #eee; }
   .light .status-panel {
     background-color: #f7f4f9; }
     .light .status-panel .un-verify {
       color: #f75535; }
+    .light .status-panel .verify {
+      color: #00a45b; }
   .light .default-panel {
     background-color: transparent;
     border: 1px solid #ddd; }
@@ -841,12 +851,22 @@ html, body {
       background-color: rgba(255, 255, 255, 0.1); }
       .dark .btn-form.change-pass:hover {
         background-color: #009af8; }
+      .dark .btn-form.change-pass.disable-2fa:hover {
+        background-color: #F7A623 !important; }
+  .dark .bg-green {
+    background-color: #00a45b; }
+  .dark .bg-notice {
+    background-color: #464C58; }
+  .dark .text-black {
+    color: #333; }
   .dark .two-factor {
     color: #9caac1; }
   .dark .status-panel {
     background-color: #262c36; }
     .dark .status-panel .un-verify {
       color: #f75535; }
+    .dark .status-panel .verify {
+      color: #00a45b; }
   .dark .default-panel {
     background-color: transparent;
     border: 1px solid #ddd; }
