@@ -24,9 +24,12 @@ $light-bg-side: #230A39 !default;
 $light-main-content: #59287B !default;
 $light-market-info-header: #482368 !default;
 $light-market-info-heading: #66338a !default;
-$light-button-active: #465770 !default;
-$light-button-active-hover: #7889A4 !default;
+// $light-button-active: #465770 !default;
+// $light-button-active-hover: #7889A4 !default;
+$light-button-active: #00a45b !default;
+$light-button-active-hover: #00b74a !default;
 $light-bg-modal-content: #2b3441 !default;
+$light-color-sell-active: #2b3441 !default;
 
 // LIGHT
 $dark-primary: #009af8 !default;
@@ -56,6 +59,7 @@ $dark-market-info-heading: #eee !default;
 $dark-button-active: #00a45b !default;
 $dark-button-active-hover: #00b74a !default;
 $dark-bg-modal-content: #2b3441 !default;
+$dark-color-sell-active: #2b3441 !default;
 // FONT WEIGHT
 $font-light: 300;
 $font-normal: 400;

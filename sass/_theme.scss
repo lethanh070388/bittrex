@@ -27,7 +27,8 @@ $themes:(
     $light-market-info-heading,
     $light-button-active,
     $light-button-active-hover,
-    $light-bg-modal-content
+    $light-bg-modal-content,
+    $light-color-sell-active
   ),
   dark: (
     $dark-primary,
@@ -56,7 +57,8 @@ $themes:(
     $dark-market-info-heading,
     $dark-button-active,
     $dark-button-active-hover,
-    $dark-bg-modal-content
+    $dark-bg-modal-content,
+    $dark-color-sell-active
   )
 );
 @mixin theme($name,$color){
@@ -610,20 +612,23 @@ $themes:(
             .nav-link{
                 color: nth($color,15);
                 background-color: nth($color,14);
+                transition: all .3s ease;;
                 &:hover{
                     background-color: #7d899d;
                 }
             }
             .btn-sell.active{
                 background-color: #ff6724;
-                color: nth($color,15);
+                color: nth($color,28);
+                transition: all .3s ease;;
                 &:hover{
                     background-color: #f75535;
                 }
             }
             .btn-buy.active{
                 background-color: nth($color,25);
-                color: nth($color,15);
+                color: nth($color,28);
+                transition: all .3s ease;;
                 &:hover{
                     background-color: nth($color,26);
                 }
@@ -642,15 +647,17 @@ $themes:(
                 }
             }
             .btn-transaction{
-                color: nth($color,15);
+                color: nth($color,28);
                 &.btn-buy{
                     background-color: nth($color,25);
+                    transition: all .3s ease;;
                     &:hover{
                         background-color: nth($color,26);
                     }
                 }
                 &.btn-sell{
                     background-color: #ff6724;
+                    transition: all .3s ease;;
                     &:hover{
                         background-color: #f75535;
                     }
@@ -724,6 +731,42 @@ $themes:(
                     color: rgba(nth($color,11),0.8);
                     &:hover{
                         color: nth($color,27);
+                    }
+                }
+            }
+        }
+        .common-modal{
+            background-color: transparent;
+            .modal-header{
+                background-color: nth($color,2);
+                border-bottom-color: nth($color,2);
+            }
+            .modal-body{
+                background-color: nth($color,27);
+                color: rgba(nth($color,11),0.8);
+                .modal-disclaimer{
+                    background-color: rgba(nth($color,9),0.3);
+                    padding: 1rem;
+                }
+            }
+            .modal-footer{
+                background-color: nth($color,27);
+                border-top-color: nth($color,27);
+                .btn-close{
+                    border: 1px solid nth($color,2);
+                    color: nth($color,2);
+                    background-color: rgba(nth($color,11),0.1);
+                    &:hover{
+                        color: nth($color,27);
+                    }
+                }
+                .btn-confirm{
+                    border: 1px solid nth($color,2);
+                    color: nth($color,11);
+                    background-color: rgba(nth($color,11),0.1);
+                    &:hover{
+                        color: nth($color,27);
+                        background-color: nth($color,1);
                     }
                 }
             }

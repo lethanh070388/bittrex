@@ -118,13 +118,13 @@ block main_content
                                         .input-group-append
                                             span.input-group-text USDT
                                 .form-group
-                                    //- .dropdown.show
-                                    //-     a.btn.btn-link.text-uppercase.dropdown-toggle#bidPrice(href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Bid Price
-                                    //-     .dropdown-menu(aria-labelledby="bidPrice")
-                                    //-         a.dropdown-item(href="#") Last
-                                    //-         a.dropdown-item(href="#") Bid
-                                    //-         a.dropdown-item(href="#") Ask
-                                    label.text-uppercase(for="") Bid
+                                    .dropdown.show
+                                        a.btn.btn-link.text-uppercase.dropdown-toggle#bidPrice(href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Bid Price
+                                        .dropdown-menu(aria-labelledby="bidPrice")
+                                            a.dropdown-item(href="#") Last
+                                            a.dropdown-item(href="#") Bid
+                                            a.dropdown-item(href="#") Ask
+                                    //- label.text-uppercase(for="") Bid
                                     .input-group
                                         input.form-control(type="text" autocomplete="off" placeholder="0.000")
                                         .input-group-append
@@ -157,7 +157,7 @@ block main_content
                                             a.dropdown-item(href="#") Good 'Til Cancelled (Default)
                                             a.dropdown-item(href="#") Immediate or Cancel
                                 .text-center
-                                    button.btn.btn-transaction.btn-buy(type="button" data-toggle="modal" data-target="#modalFailed") Buy Tether
+                                    button.btn.btn-transaction.btn-buy(type="button" data-toggle="modal" data-target="#modalConfirmLimit") Buy Tether
                                 .max-buy.text-center
                                     h4.available-balance.mt-3 Available balance
                                     .balance-data.active-data 0.000 USD
@@ -180,7 +180,13 @@ block main_content
                                         .input-group-append
                                             span.input-group-text USDT
                                 .form-group
-                                    label.text-uppercase(for="") Ask
+                                    .dropdown.show
+                                        a.btn.btn-link.text-uppercase.dropdown-toggle#bidPrice(href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Ask Price
+                                        .dropdown-menu(aria-labelledby="bidPrice")
+                                            a.dropdown-item(href="#") Last
+                                            a.dropdown-item(href="#") Bid
+                                            a.dropdown-item(href="#") Ask
+                                    //- label.text-uppercase(for="") Ask
                                     .input-group
                                         input.form-control(type="text" autocomplete="off" placeholder="0.000")
                                         .input-group-append
@@ -256,6 +262,61 @@ block main_content
                                     |Please correct these issues and try again.
                             .modal-footer
                                 button.btn.btn-transaction(type="button" data-dismiss="modal") Close
+        //- Modal confirm limit buy order
+        .row
+            .col
+                #modalConfirmLimit.modal.fade(tabindex="-1" role="dialog" aria-labelledby="modalConfirmLimitLabel" aria-hidden="true")
+                    .modal-dialog(role="document")
+                        .modal-content.common-modal
+                            .modal-header
+                                h4.modal-title.mx-0.w-100#modalConfirmLimitLabel.row
+                                    span.col-3.px-0 BTC-XLM 
+                                    span.col-9.px-0 Confirm Your Limit Buy Order
+                                button.close(type="button" data-dismiss="modal" aria-label="Close")
+                                    span(aria-hidden="true") &times;
+                            .modal-body
+                                .modal_item
+                                    .modal_item_title.text-uppercase Quantity
+                                    .modal_item_info
+                                        span.modal_item_number.color-green 20.00000000
+                                        span.modal_item_symbol XLM
+                                .modal_item
+                                    .modal_item_title.text-uppercase Price
+                                    .modal_item_title
+                                        span.modal_item_number.color-green 0.00002987
+                                        span.modal_item_symbol BTC
+                                .modal_item
+                                    .modal_item_title.text-uppercase Subtotal
+                                    .modal_item_title
+                                        span.modal_item_number.color-green 0.00002987
+                                        span.modal_item_symbol BTC
+                                .modal_item
+                                    .modal_item_title.text-uppercase Commission
+                                    .modal_item_title
+                                        span.modal_item_number.color-green 0.00002987
+                                        span.modal_item_symbol BTC
+                                .modal_item
+                                    .modal_item_title.text-uppercase Total
+                                    .modal_item_info
+                                        span.modal_item_number.color-green 0.00002987
+                                        span.modal_item_symbol BTC
+                                .modal-transaction-type
+                                    .transaction-item
+                                        span.item-name Market
+                                        span.item-value BTC-XLM
+                                    .transaction-item
+                                        span.item-name Type
+                                        span.item-value Limit Buy
+                                    .transaction-item
+                                        span.item-name Time in force
+                                        span.item-value Good 'Til Cancelled (Default)
+                                .modal-disclaimer
+                                    h6.text-uppercase DISCLAIMER
+                                    small 
+                                        |Please verify this order before confirming. All orders are final once submitted and we will be unable to issue you a refund.
+                            .modal-footer
+                                button.btn.btn-close(type="button" data-dismiss="modal") Cancel
+                                button.btn.btn-confirm(type="button") Confirm          
     .container-fluid
         .row
             .col

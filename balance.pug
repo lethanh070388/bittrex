@@ -61,9 +61,9 @@ block main_content
                         -for(var i=1; i<20; i++){
                             tr.row-key
                                 td.icon.icon-deposit-green
-                                    button.btn-modal-deposit(type="button" data-toggle="modal" data-target="#modalDeposit")
+                                    button.btn-modal-deposit.btn-icon(type="button" data-toggle="modal" data-target="#modalDeposit")
                                 td.icon.icon-withdraw-red
-                                    button.btn-modal-withdrawal(type="button" data-toggle="modal" data-target="#modalWithdrawal")
+                                    button.btn-modal-withdrawal.btn-icon(type="button" data-toggle="modal" data-target="#modalWithdrawal")
                                 td.text-left.hidden-lg-cell Ada
                                 td.text-center ADA
                                 td.text-right.hidden-lg-cell 0.00000000
@@ -328,10 +328,10 @@ block script-append
             function format() {
                 return '<tr class="row-info pb-2 hidden-row">'+
                                 '<td colspan="10">'+
-                                    '<table>'+
+                                    '<table class="no-border">'+
                                         '<tr>'+
                                             '<td>Symbol</td>'+
-                                            '<td class="text-left">BTC</td>'+
+                                            '<td class="text-left"">BTC</td>'+
                                             '<td class="icon icon-deposit-green">'+
                                                 '<button class="btn-modal-deposit" type="button" data-toggle="modal" data-target="#modalDeposit"></button></td>'+
                                             '<td class="icon icon-withdraw-red">'+
@@ -339,27 +339,27 @@ block script-append
                                         '</tr>'+
                                         '<tr>'+
                                             '<td>%Change</td>'+
-                                            '<td class="text-left colspan="3">0.0%</td>'+
+                                            '<td class="text-left" colspan="3">0.0%</td>'+
                                         '</tr>'+
                                         '<tr>'+
                                             '<td>Available Balance</td>'+
-                                            '<td class="text-left colspan="3"> 0.00000000</td>'+
+                                            '<td class="text-left" colspan="3"> 0.00000000</td>'+
                                         '</tr>'+
                                         '<tr>'+
                                             '<td>Pending Deposit</td>'+
-                                            '<td class="text-left colspan="3"> 0.00000000</td>'+
+                                            '<td class="text-left" colspan="3"> 0.00000000</td>'+
                                         '</tr>'+
                                         '<tr>'+
                                             '<td>Total</td>'+
-                                            '<td class="text-left colspan="3"> 0.00000000</td>'+
+                                            '<td class="text-left" colspan="3"> 0.00000000</td>'+
                                         '</tr>'+
                                         '<tr>'+
                                             '<td>Est.BTC Value</td>'+
-                                            '<td class="text-left colspan="3"> 0.00000000</td>'+
+                                            '<td class="text-left" colspan="3"> 0.00000000</td>'+
                                         '</tr>'+
                                         '<tr>'+
                                             '<td> Rate</td>'+
-                                            '<td class="text-left colspan="3"> 0.00000000</td></tr>';
+                                            '<td class="text-left" colspan="3"> 0.00000000</td></tr>';
             }
             $('#balanceTable tbody tr').after(format());
         });                                

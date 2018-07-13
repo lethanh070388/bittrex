@@ -579,7 +579,9 @@
                           </div>
                         </div>
                         <div class="form-group">
-                          <label class="text-uppercase" for="">Bid</label>
+                          <div class="dropdown show"><a class="btn btn-link text-uppercase dropdown-toggle" id="bidPrice" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Bid Price</a>
+                            <div class="dropdown-menu" aria-labelledby="bidPrice"><a class="dropdown-item" href="#">Last</a><a class="dropdown-item" href="#">Bid</a><a class="dropdown-item" href="#">Ask</a></div>
+                          </div>
                           <div class="input-group">
                             <input class="form-control" type="text" autocomplete="off" placeholder="0.000">
                             <div class="input-group-append"><span class="input-group-text">USD</span></div>
@@ -612,7 +614,7 @@
                           </div>
                         </div>
                         <div class="text-center">
-                          <button class="btn btn-transaction btn-buy" type="button" data-toggle="modal" data-target="#modalFailed">Buy Tether</button>
+                          <button class="btn btn-transaction btn-buy" type="button" data-toggle="modal" data-target="#modalConfirmLimit">Buy Tether</button>
                         </div>
                         <div class="max-buy text-center">
                           <h4 class="available-balance mt-3">Available balance</h4>
@@ -636,7 +638,9 @@
                           </div>
                         </div>
                         <div class="form-group">
-                          <label class="text-uppercase" for="">Ask</label>
+                          <div class="dropdown show"><a class="btn btn-link text-uppercase dropdown-toggle" id="bidPrice" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ask Price</a>
+                            <div class="dropdown-menu" aria-labelledby="bidPrice"><a class="dropdown-item" href="#">Last</a><a class="dropdown-item" href="#">Bid</a><a class="dropdown-item" href="#">Ask</a></div>
+                          </div>
                           <div class="input-group">
                             <input class="form-control" type="text" autocomplete="off" placeholder="0.000">
                             <div class="input-group-append"><span class="input-group-text">USD</span></div>
@@ -896,6 +900,55 @@
                   </div>
                 </div>
               </div>
+              <div class="row">
+                <div class="col">
+                  <div class="modal fade" id="modalConfirmLimit" tabindex="-1" role="dialog" aria-labelledby="modalConfirmLimitLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content common-modal">
+                        <div class="modal-header">
+                          <h4 class="modal-title mx-0 w-100 row" id="modalConfirmLimitLabel"><span class="col-3 px-0">BTC-XLM </span><span class="col-9 px-0">Confirm Your Limit Buy Order</span></h4>
+                          <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        </div>
+                        <div class="modal-body">
+                          <div class="modal_item">
+                            <div class="modal_item_title text-uppercase">Quantity</div>
+                            <div class="modal_item_info"><span class="modal_item_number color-green">20.00000000</span><span class="modal_item_symbol">XLM</span></div>
+                          </div>
+                          <div class="modal_item">
+                            <div class="modal_item_title text-uppercase">Price</div>
+                            <div class="modal_item_title"><span class="modal_item_number color-green">0.00002987</span><span class="modal_item_symbol">BTC</span></div>
+                          </div>
+                          <div class="modal_item">
+                            <div class="modal_item_title text-uppercase">Subtotal</div>
+                            <div class="modal_item_title"><span class="modal_item_number color-green">0.00002987</span><span class="modal_item_symbol">BTC</span></div>
+                          </div>
+                          <div class="modal_item">
+                            <div class="modal_item_title text-uppercase">Commission</div>
+                            <div class="modal_item_title"><span class="modal_item_number color-green">0.00002987</span><span class="modal_item_symbol">BTC</span></div>
+                          </div>
+                          <div class="modal_item">
+                            <div class="modal_item_title text-uppercase">Total</div>
+                            <div class="modal_item_info"><span class="modal_item_number color-green">0.00002987</span><span class="modal_item_symbol">BTC</span></div>
+                          </div>
+                          <div class="modal-transaction-type">
+                            <div class="transaction-item"><span class="item-name">Market</span><span class="item-value">BTC-XLM</span></div>
+                            <div class="transaction-item"><span class="item-name">Type</span><span class="item-value">Limit Buy</span></div>
+                            <div class="transaction-item"><span class="item-name">Time in force</span><span class="item-value">Good 'Til Cancelled (Default)</span></div>
+                          </div>
+                          <div class="modal-disclaimer">
+                            <h6 class="text-uppercase">DISCLAIMER</h6><small>
+                               Please verify this order before confirming. All orders are final once submitted and we will be unable to issue you a refund.</small>
+                          </div>
+                        </div>
+                        <div class="modal-footer">
+                          <button class="btn btn-close" type="button" data-dismiss="modal">Cancel</button>
+                          <button class="btn btn-confirm" type="button">Confirm          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="container-fluid">
               <div class="row">
@@ -1077,6 +1130,7 @@
       </div>
     </div>
     <script src="../js/jquery.js"></script>
+    <script src="../js/popper.js"></script>
     <script src="../js/bootstrap.js"></script>
     <script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="../js/jquery.dataTables.min.js"></script>

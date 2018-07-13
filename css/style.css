@@ -472,19 +472,22 @@ html, body {
       color: #e55d1d; }
   .light .nav-pills .nav-link {
     color: #e55d1d;
-    background-color: #eee; }
+    background-color: #eee;
+    transition: all .3s ease; }
     .light .nav-pills .nav-link:hover {
       background-color: #7d899d; }
   .light .nav-pills .btn-sell.active {
     background-color: #ff6724;
-    color: #e55d1d; }
+    color: #2b3441;
+    transition: all .3s ease; }
     .light .nav-pills .btn-sell.active:hover {
       background-color: #f75535; }
   .light .nav-pills .btn-buy.active {
-    background-color: #465770;
-    color: #e55d1d; }
+    background-color: #00a45b;
+    color: #2b3441;
+    transition: all .3s ease; }
     .light .nav-pills .btn-buy.active:hover {
-      background-color: #7889A4; }
+      background-color: #00b74a; }
   .light .tab-pane .form-group {
     border-bottom: 1px solid #ccc; }
     .light .tab-pane .form-group .form-control {
@@ -494,13 +497,15 @@ html, body {
       color: #7d899d;
       background-color: transparent; }
   .light .tab-pane .btn-transaction {
-    color: #e55d1d; }
+    color: #2b3441; }
     .light .tab-pane .btn-transaction.btn-buy {
-      background-color: #465770; }
+      background-color: #00a45b;
+      transition: all .3s ease; }
       .light .tab-pane .btn-transaction.btn-buy:hover {
-        background-color: #7889A4; }
+        background-color: #00b74a; }
     .light .tab-pane .btn-transaction.btn-sell {
-      background-color: #ff6724; }
+      background-color: #ff6724;
+      transition: all .3s ease; }
       .light .tab-pane .btn-transaction.btn-sell:hover {
         background-color: #f75535; }
   .light .trade .dropdown-menu {
@@ -542,6 +547,33 @@ html, body {
         color: rgba(255, 255, 255, 0.8); }
         .light .error-container .modal-footer .btn-transaction:hover {
           color: #2b3441; }
+  .light .common-modal {
+    background-color: transparent; }
+    .light .common-modal .modal-header {
+      background-color: #482368;
+      border-bottom-color: #482368; }
+    .light .common-modal .modal-body {
+      background-color: #2b3441;
+      color: rgba(255, 255, 255, 0.8); }
+      .light .common-modal .modal-body .modal-disclaimer {
+        background-color: rgba(204, 204, 204, 0.3);
+        padding: 1rem; }
+    .light .common-modal .modal-footer {
+      background-color: #2b3441;
+      border-top-color: #2b3441; }
+      .light .common-modal .modal-footer .btn-close {
+        border: 1px solid #482368;
+        color: #482368;
+        background-color: rgba(255, 255, 255, 0.1); }
+        .light .common-modal .modal-footer .btn-close:hover {
+          color: #2b3441; }
+      .light .common-modal .modal-footer .btn-confirm {
+        border: 1px solid #482368;
+        color: #fff;
+        background-color: rgba(255, 255, 255, 0.1); }
+        .light .common-modal .modal-footer .btn-confirm:hover {
+          color: #2b3441;
+          background-color: #f58220; }
   .light .deposit-container {
     background-color: transparent; }
     .light .deposit-container .modal-header {
@@ -958,17 +990,20 @@ html, body {
       color: #2b3441; }
   .dark .nav-pills .nav-link {
     color: #2b3441;
-    background-color: #9caac1; }
+    background-color: #9caac1;
+    transition: all .3s ease; }
     .dark .nav-pills .nav-link:hover {
       background-color: #7d899d; }
   .dark .nav-pills .btn-sell.active {
     background-color: #ff6724;
-    color: #2b3441; }
+    color: #2b3441;
+    transition: all .3s ease; }
     .dark .nav-pills .btn-sell.active:hover {
       background-color: #f75535; }
   .dark .nav-pills .btn-buy.active {
     background-color: #00a45b;
-    color: #2b3441; }
+    color: #2b3441;
+    transition: all .3s ease; }
     .dark .nav-pills .btn-buy.active:hover {
       background-color: #00b74a; }
   .dark .tab-pane .form-group {
@@ -982,11 +1017,13 @@ html, body {
   .dark .tab-pane .btn-transaction {
     color: #2b3441; }
     .dark .tab-pane .btn-transaction.btn-buy {
-      background-color: #00a45b; }
+      background-color: #00a45b;
+      transition: all .3s ease; }
       .dark .tab-pane .btn-transaction.btn-buy:hover {
         background-color: #00b74a; }
     .dark .tab-pane .btn-transaction.btn-sell {
-      background-color: #ff6724; }
+      background-color: #ff6724;
+      transition: all .3s ease; }
       .dark .tab-pane .btn-transaction.btn-sell:hover {
         background-color: #f75535; }
   .dark .trade .dropdown-menu {
@@ -1028,6 +1065,33 @@ html, body {
         color: rgba(255, 255, 255, 0.8); }
         .dark .error-container .modal-footer .btn-transaction:hover {
           color: #2b3441; }
+  .dark .common-modal {
+    background-color: transparent; }
+    .dark .common-modal .modal-header {
+      background-color: #0084d4;
+      border-bottom-color: #0084d4; }
+    .dark .common-modal .modal-body {
+      background-color: #2b3441;
+      color: rgba(255, 255, 255, 0.8); }
+      .dark .common-modal .modal-body .modal-disclaimer {
+        background-color: rgba(81, 89, 103, 0.3);
+        padding: 1rem; }
+    .dark .common-modal .modal-footer {
+      background-color: #2b3441;
+      border-top-color: #2b3441; }
+      .dark .common-modal .modal-footer .btn-close {
+        border: 1px solid #0084d4;
+        color: #0084d4;
+        background-color: rgba(255, 255, 255, 0.1); }
+        .dark .common-modal .modal-footer .btn-close:hover {
+          color: #2b3441; }
+      .dark .common-modal .modal-footer .btn-confirm {
+        border: 1px solid #0084d4;
+        color: #fff;
+        background-color: rgba(255, 255, 255, 0.1); }
+        .dark .common-modal .modal-footer .btn-confirm:hover {
+          color: #2b3441;
+          background-color: #009af8; }
   .dark .deposit-container {
     background-color: transparent; }
     .dark .deposit-container .modal-header {
@@ -2183,17 +2247,29 @@ table.dataTable.no-footer {
   background-position: center; }
 
 .icon-withdraw-red {
-  background-image: url("../assets/icon-withdraw-red.svg"); }
+  background-image: url("../assets/icon-withdraw-red.svg");
+  position: relative; }
 
 .icon-deposit-green {
-  background-image: url("../assets/icon-deposit-green.svg"); }
+  background-image: url("../assets/icon-deposit-green.svg");
+  position: relative; }
 
 .btn-modal-deposit,
 .btn-modal-withdrawal {
   width: 100%;
-  height: 30px;
+  height: auto;
   border: 0;
   background-color: transparent; }
+
+.btn-icon {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0; }
+
+.no-border td {
+  border: 0 !important; }
 
 .expand-collapse-container {
   padding: 2px 8px;
@@ -2206,6 +2282,90 @@ table.dataTable.no-footer {
 
 .error-container .modal-header .close {
   margin-left: 0; }
+
+@media screen and (min-width: 576px) {
+  .modal-dialog {
+    max-width: 550px; } }
+
+.common-modal .modal-header .modal-title {
+  margin-left: auto;
+  margin-right: auto; }
+
+.common-modal .modal-header .close {
+  margin-left: 0; }
+
+.common-modal .modal-body {
+  font-size: 12px;
+  padding: 1rem 2rem; }
+  .common-modal .modal-body .modal_item {
+    padding: 0;
+    height: 48px;
+    border-bottom: 1px solid #eaeaea;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+    .common-modal .modal-body .modal_item_number {
+      font-size: 18px;
+      padding-right: 10px; }
+  .common-modal .modal-body .modal-transaction-type {
+    padding: 0;
+    height: 66px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+    .common-modal .modal-body .modal-transaction-type .item-name {
+      font-size: 12px;
+      line-height: 14px;
+      color: #7d899d;
+      text-transform: uppercase; }
+    .common-modal .modal-body .modal-transaction-type .item-value {
+      font-size: 13px;
+      line-height: 16px;
+      margin-left: 8px; }
+  .common-modal .modal-body .modal-disclaimer {
+    padding: 1rem; }
+
+.common-modal .modal-footer {
+  justify-content: space-between; }
+  .common-modal .modal-footer .btn-close {
+    font-size: 15px;
+    width: 200px;
+    margin-left: 1rem;
+    padding: .7rem .75rem; }
+  .common-modal .modal-footer .btn-confirm {
+    font-size: 15px;
+    width: 200px;
+    margin-right: 1rem;
+    padding: .7rem .75rem; }
+
+.light .btn-link {
+  color: #e55d1d; }
+  .light .btn-link:hover {
+    color: #f58220; }
+
+.light .tab-pane .form-group .form-control {
+  color: #f0f0f0; }
+
+.light .down {
+  color: #F9320B !important; }
+
+.light .up {
+  color: #0AD83E !important; }
+
+@media screen and (max-width: 575px) {
+  .common-modal .modal-header .modal-title {
+    font-size: 1.3rem; }
+  .common-modal .modal-body {
+    font-size: 11px; }
+    .common-modal .modal-body .modal_item_number {
+      font-size: 15px; }
+    .common-modal .modal-body .modal-transaction-type {
+      margin-top: 15px;
+      flex-direction: column; }
+      .common-modal .modal-body .modal-transaction-type .item-name {
+        font-size: 11px; }
+      .common-modal .modal-body .modal-transaction-type .item-value {
+        font-size: 12px; } }
 
 .deposit-container .modal-header {
   padding: 1.5rem 1rem; }
@@ -2304,6 +2464,12 @@ table.dataTable.no-footer {
 @media screen and (min-width: 768px) {
   .order-container {
     height: calc(100vh - 168px); } }
+
+.order_table .sum {
+  display: none !important; }
+
+.order_table_market {
+  color: #539ad7; }
 
 .intro-item {
   padding: 14px 0 12px;

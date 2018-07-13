@@ -1335,16 +1335,30 @@ table.dataTable.no-footer{
 }
 .icon-withdraw-red{
     background-image: url('../assets/icon-withdraw-red.svg');
+    position: relative;
 }
 .icon-deposit-green{
     background-image: url('../assets/icon-deposit-green.svg');
+    position: relative;
 }
 .btn-modal-deposit,
 .btn-modal-withdrawal{
     width: 100%;
-    height: 30px;
+    height: auto;
     border: 0;
     background-color: transparent;
+}
+.btn-icon{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.no-border{
+    td{
+        border: 0 !important;
+    }
 }
 .expand-collapse-container{
     padding: 2px 8px;
@@ -1361,6 +1375,122 @@ table.dataTable.no-footer{
         .close{
             margin-left: 0;
         }
+    }
+}
+@include minq(small){
+    .modal-dialog {
+        max-width: 550px;
+    }
+}
+.common-modal{
+    .modal-header {
+        .modal-title{
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .close{
+            margin-left: 0;
+        }
+    }
+    .modal-body{
+        font-size: 12px;
+        padding: 1rem 2rem;
+        .modal_item {
+            padding: 0;
+            height: 48px;
+            border-bottom: 1px solid #eaeaea;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            &_number{
+                font-size: 18px;
+                padding-right: 10px;
+            }
+        }
+        .modal-transaction-type {
+            padding: 0;
+            height: 66px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .item-name {
+                font-size: 12px;
+                line-height: 14px;
+                color: #7d899d;
+                text-transform: uppercase;
+            }
+            .item-value {
+                font-size: 13px;
+                line-height: 16px;
+                margin-left: 8px;
+            }
+        }
+        .modal-disclaimer{
+            padding: 1rem;
+        }
+    }    
+    .modal-footer{
+        justify-content: space-between;
+        .btn-close{
+            font-size: 15px;
+            width: 200px;
+            margin-left: 1rem;
+            padding: .7rem .75rem;
+        }
+        .btn-confirm{
+            font-size: 15px;
+            width: 200px;
+            margin-right: 1rem;
+            padding: .7rem .75rem;
+        }
+    }
+}
+.light{
+    .btn-link {
+        color: #e55d1d;
+        &:hover{
+            color: #f58220;
+        }
+    }
+    .tab-pane{
+        .form-group{
+            .form-control{
+                color: #f0f0f0;
+            }
+        }
+    }
+    .down{
+        color: #F9320B !important;
+    }
+    .up{
+        color: #0AD83E !important
+    }
+}
+@include maxq(small){
+    .common-modal{
+        .modal-header {
+            .modal-title{
+                font-size: 1.3rem;
+            }
+        }
+        .modal-body{
+            font-size: 11px;
+            .modal_item {
+                &_number{
+                    font-size: 15px;
+                }
+            }
+            .modal-transaction-type {
+                margin-top: 15px;
+                flex-direction: column;
+                .item-name {
+                    font-size: 11px;
+                }
+                .item-value {
+                    font-size: 12px;
+                }
+            }
+        } 
     }
 }
 .deposit-container{
@@ -1485,6 +1615,14 @@ table.dataTable.no-footer{
 @include minq(medium){
     .order-container {
         height: calc(100vh - 168px);
+    }
+}
+.order_table {
+    .sum{
+        display: none !important;
+    }
+    &_market{
+        color: #539ad7;
     }
 }
 // END ORDER PAGE
@@ -1769,3 +1907,4 @@ table.dataTable{
         transform: translateX(0);
     }
 }
+

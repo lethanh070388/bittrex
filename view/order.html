@@ -367,7 +367,7 @@
                 </div>
               </div>
               <div class="row">
-                <div class="col">
+                <div class="col order_table">
                   <div class="pt-2 text-right d-flex">
                     <input class="form-control ml-auto market_find d-inline-block mr-2" type="search" placeholder="Find..." aria-label="Search">
                     <button class="btn btn-refresh" type="button"><i class="fas fa-sync"></i></button>
@@ -383,11 +383,20 @@
                         <th class="text-right">Unit Total</th>
                         <th class="text-right hidden-lg-cell">Actual Rate</th>
                         <th class="text-right">EST.Total</th>
+                        <th class="text-right">&nbsp;</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <td class="text-center" colspan="8">You have no open orders.</td>
+                        <td class="text-left">2018/07/09 21:53:53</td>
+                        <td class="text-left hidden-lg-cell order_table_market">BTC-XML</td>
+                        <td class="text-right hidden-lg-cell color-red">SELL</td>
+                        <td class="text-right">0.00003172</td>
+                        <td class="text-right hidden-lg-cell">0.00000000</td>
+                        <td class="text-right">16.00000000</td>
+                        <td class="text-right hidden-lg-cell">0.00000000</td>
+                        <td class="text-right">0.00050625</td>
+                        <td class="text-right color-red">X</td>
                       </tr>
                     </tbody>
                   </table>
@@ -399,12 +408,12 @@
                 </div>
               </div>
               <div class="row">
-                <div class="col">
+                <div class="col order_table">
                   <div class="pt-2 text-right d-flex">
                     <input class="form-control ml-auto market_find d-inline-block mr-2" type="search" placeholder="Find..." aria-label="Search">
                     <button class="btn btn-refresh" type="button"><i class="fas fa-sync"></i></button>
                   </div>
-                  <table class="dataTablePlugin market_table_detail">
+                  <table class="dataTablePlugin market_table_detail" id="order_history_table">
                     <thead>
                       <tr>
                         <th class="text-left hidden-lg-cell hidden-xl-cell">Closed date</th>
@@ -419,8 +428,16 @@
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
-                        <td class="text-center" colspan="9">You have no closed orders.</td>
+                      <tr class="row-key">
+                        <td class="text-left hidden-lg-cell hidden-xl-cell">2018/07/09 22:01:08</td>
+                        <td class="text-left hidden-lg-cell hidden-xl-cell">2018/07/09 21:53:55</td>
+                        <td class="text-left order_table_market">BTC-XLM</td>
+                        <td class="text-right color-red">SELL</td>
+                        <td class="text-right hidden-lg-cell">0.00003172	</td>
+                        <td class="text-right">16.00000000</td>
+                        <td class="text-right">16.00000000</td>
+                        <td class="text-right hidden-lg-cell">0.00003172	</td>
+                        <td class="text-right hidden-lg-cell">0.00050626</td>
                       </tr>
                     </tbody>
                   </table>
@@ -450,6 +467,7 @@
       </div>
     </div>
     <script src="../js/jquery.js"></script>
+    <script src="../js/popper.js"></script>
     <script src="../js/bootstrap.js"></script>
     <script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="../js/jquery.dataTables.min.js"></script>
@@ -498,6 +516,50 @@
               });
           });
       })(jQuery);
+    </script>
+    <script>
+      $(function(){
+          function format() {
+              return '<tr class="row-info pb-2 hidden-row">'+
+                              '<td colspan="9">'+
+                                  '<table class="no-border">'+
+                                      '<tr>'+
+                                          '<td>Type</td>'+
+                                          '<td class="color-red">SELL</td>'+
+                                      '</tr>'+
+                                      '<tr>'+
+                                          '<td>Opened Date:</td>'+
+                                          '<td class="text-left">2018/07/09 21:53:55</td>'+
+                                      '</tr>'+
+                                      '<tr>'+
+                                          '<td>Closed Date:</td>'+
+                                          '<td class="text-left">2018/07/09 22:01:08</td>'+
+                                      '</tr>'+
+                                      '<tr>'+
+                                          '<td>Market:</td>'+
+                                          '<td class="text-left">BTC-XLM</td>'+
+                                      '</tr>'+
+                                      '<tr>'+
+                                          '<td>Bid/Ask:</td>'+
+                                          '<td class="text-left">0.00003172</td>'+
+                                      '</tr>'+
+                                      '<tr>'+
+                                          '<td>Units Filled:</td>'+
+                                          '<td class="text-left">16.00000000</td>'+
+                                      '</tr>'+
+                                      '<tr>'+
+                                          '<td>Unit Total:</td>'+
+                                          '<td class="text-left">16.00000000</td>'+
+                                      '<tr>'+
+                                          '<td>Actual Rate:</td>'+
+                                          '<td class="text-left">0.00003172</td>'+
+                                      '<tr>'+
+                                          '<td>Cost/Proceeds:</td>'+
+                                          '<td class="text-left color-red">0.00050626</td>'+
+                                      '</tr>';
+          }
+          $('#order_history_table tbody tr').after(format());
+      });           
     </script>
   </body>
 </html>
