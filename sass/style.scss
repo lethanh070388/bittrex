@@ -1601,6 +1601,23 @@ table.dataTable.no-footer{
         padding: 10px 10px 11px;
     }
 }
+.notify-content{
+    background-color: #C5E1A5;
+    color: #2c3441;
+    .modal-header{
+        padding: 0.5em;
+        border-bottom: 0;
+    }
+    .modal-body{
+        padding: 0.5em;
+    }
+}
+@include minq(small){
+    .modal-sm{
+        max-width: 300px;
+        margin-right: 0;
+    }
+}
 // END MODAL
 
 // ORDER PAGE

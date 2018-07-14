@@ -316,7 +316,18 @@ block main_content
                                         |Please verify this order before confirming. All orders are final once submitted and we will be unable to issue you a refund.
                             .modal-footer
                                 button.btn.btn-close(type="button" data-dismiss="modal") Cancel
-                                button.btn.btn-confirm(type="button") Confirm          
+                                button.btn.btn-confirm(type="button" data-dismiss="modal" data-toggle="modal" data-target=".notify-modal") Confirm
+        .row
+            .col
+                .modal.fade.notify-modal(tabindex="-1" role="dialog" aria-labelledby="notify-label" aria-hidden="true")
+                    .modal-dialog.modal-sm
+                        .modal-content.notify-content
+                            .modal-header
+                                h6.modal-title BTC-XLM Buy Complete
+                                button.close(type="button" data-dismiss="modal" aria-label="Close")
+                                    span(aria-hidden="true") &times;
+                            .modal-body
+                                span test
     .container-fluid
         .row
             .col
@@ -340,7 +351,6 @@ block main_content
                                 td.text-right 3035.33000000
                                 td.text-right.hidden-xs 3038.36533000
                         -}
-    
 block script-append
     script.
         $(function(){
@@ -375,5 +385,10 @@ block script-append
                 rows3.eq(rad3).addClass('reload');
             }
             setInterval(randomLoad,1000);
+            $('.btn-confirm').click(function(){
+                setTimeout(function() {
+                    $('.notify-modal').modal('hide');
+                }, 5000);
+            });
         });
     
