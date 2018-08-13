@@ -21,7 +21,7 @@
       </div>
     </div>
     <div class="wrapper dark">
-      <div class="layout">
+      <div class="layout justify-content-between">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark scrolling-navbar fixed-top"><a class="navbar-brand" href="./index.html"><img class="logo-icon" src="../assets/logo.png"><span class="logo-word">BITTRADEX</span></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -32,7 +32,7 @@
             </ul>
           </div>
         </nav>
-        <div class="container-fluid h-100 bg-secondary register-section">
+        <div class="container-fluid h-100 bg-secondary register-section flex-grow-1">
           <div class="container">
             <div class="row d-flex justify-content-center">
               <div class="col-lg-7 col-md-10">
@@ -41,23 +41,61 @@
             </div>
             <div class="row d-flex justify-content-center">
               <div class="col-lg-7 col-md-10">
-                <form class="form-register" action="#">
-                  <div class="form-group text-left">
-                    <label for="inputEmail">Email address</label>
-                    <input class="form-control" id="inputEmail" type="email" aria-describedby="emailHelp" placeholder="">
+                <form class="form-register needs-validation" action="#" novalidate>
+                  <div class="row">
+                    <div class="col-sm-6 px-1">
+                      <div class="form-group text-left">
+                        <label for="inputUser">Username</label>
+                        <input class="form-control" id="inputUser" type="text" placeholder="" required>
+                        <div class="invalid-feedback">Please input username</div>
+                      </div>
+                    </div>
+                    <div class="col-sm-6 px-1">
+                      <div class="form-group text-left">
+                        <label for="inputAlias">Alias</label>
+                        <input class="form-control" id="inputAlias" type="text" placeholder="" required>
+                        <div class="invalid-feedback">Please input alias</div>
+                      </div>
+                    </div>
                   </div>
-                  <div class="form-group text-left">
-                    <label for="inputPassword">Password</label>
-                    <input class="form-control" id="inputPassword" type="password" placeholder="">
+                  <div class="row">
+                    <div class="col px-1">
+                      <div class="form-group text-left">
+                        <label for="inputEmail">Email address</label>
+                        <input class="form-control" id="inputEmail" type="email" aria-describedby="emailHelp" placeholder="" required>
+                        <div class="invalid-feedback">Please input email</div>
+                      </div>
+                    </div>
                   </div>
-                  <div class="form-group text-left">
-                    <label for="inputPassword">Confirm Password</label>
-                    <input class="form-control" id="inputPassword" type="password" placeholder="">
+                  <div class="row">
+                    <div class="col-sm-6 px-1">
+                      <div class="form-group text-left">
+                        <label for="inputPassword">Password</label>
+                        <input class="form-control" id="inputPassword" type="password" placeholder="" required>
+                        <div class="invalid-feedback">Please input password</div>
+                      </div>
+                    </div>
+                    <div class="col-sm-6 px-1">
+                      <div class="form-group text-left">
+                        <label for="inputPassword">Confirm Password</label>
+                        <input class="form-control" id="inputPassword" type="password" placeholder="" required>
+                        <div class="invalid-feedback">Please confirm password</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col px-1">
+                      <div class="form-group text-left">
+                        <label for="inputAlias">Reference code</label>
+                        <input class="form-control" id="inputAlias" type="text" placeholder="" required>
+                        <div class="invalid-feedback">Please input reference code</div>
+                      </div>
+                    </div>
                   </div>
                   <div class="form-group form-check">
-                    <input class="form-check-input" id="checkPolicy" type="checkbox">
-                    <label class="form-check-label" for="checkPolicy">
-                       agree to the Bittrex.com |  <a href="#">Terms of Service</a></label>
+                    <input class="form-check-input" id="checkPolicy" type="checkbox" required>
+                    <label class="form-check-label text-white" for="checkPolicy">I agree to the Bittrex.com |  <a href="#">Terms of Service</a></label>
+                    <div class="invalid-feedback">You must agree before submitting.</div>
                   </div>
                   <div class="form-group">
                     <button class="btn register-btn" type="submit">Sign up</button>
@@ -112,6 +150,23 @@
               });
           });
       })(jQuery);
+    </script>
+    <script>
+      (function() {
+          'use strict';
+          window.addEventListener('load', function() {
+              var forms = document.getElementsByClassName('needs-validation');
+              var validation = Array.prototype.filter.call(forms, function(form) {
+              form.addEventListener('submit', function(event) {
+                  if (form.checkValidity() === false) {
+                      event.preventDefault();
+                      event.stopPropagation();
+                  }
+                  form.classList.add('was-validated');
+              }, false);
+              });
+          }, false);
+      })();
     </script>
   </body>
 </html>

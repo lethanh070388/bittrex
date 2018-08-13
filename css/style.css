@@ -1471,8 +1471,7 @@ hr {
 
 .register-section {
   text-align: center;
-  padding-top: 100px;
-  padding-bottom: 100px; }
+  padding-top: 100px; }
   .register-section .form-register {
     display: inline-block;
     padding-bottom: 16px;
@@ -2711,3 +2710,10 @@ table.dataTable thead .sorting_desc_disabled:after {
   to {
     opacity: 1;
     transform: translateX(0); } }
+
+.invalid-feedback {
+  font-size: 90%; }
+
+.was-validated .register-btn {
+  background-color: #ccc !important;
+  color: #2b3441 !important; }

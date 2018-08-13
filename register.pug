@@ -1,29 +1,55 @@
-extends layout.pug  
+extends layout_register.pug  
 
 block content
     //- register section
-    .container-fluid.h-100.bg-secondary.register-section
+    .container-fluid.h-100.bg-secondary.register-section.flex-grow-1
         .container
             .row.d-flex.justify-content-center
                 .col-lg-7.col-md-10
                     h3.trade_aside_header.text-center Start Trading Today!
             .row.d-flex.justify-content-center
                 .col-lg-7.col-md-10
-                    form(action="#").form-register
-                        .form-group.text-left
-                            label(for="inputEmail") Email address
-                            input.form-control#inputEmail(type="email" aria-describedby="emailHelp" placeholder="")
-                        .form-group.text-left
-                            label(for="inputPassword") Password
-                            input.form-control#inputPassword(type="password" placeholder="")
-                        .form-group.text-left
-                            label(for="inputPassword") Confirm Password
-                            input.form-control#inputPassword(type="password" placeholder="")
+                    form(action="#" novalidate).form-register.needs-validation
+                        .row
+                            .col-sm-6.px-1
+                                .form-group.text-left
+                                    label(for="inputUser") Username
+                                    input.form-control#inputUser(type="text" placeholder="" required)
+                                    .invalid-feedback Please input username
+                            .col-sm-6.px-1
+                                .form-group.text-left
+                                    label(for="inputAlias") Alias
+                                    input.form-control#inputAlias(type="text" placeholder="" required)
+                                    .invalid-feedback Please input alias
+                        .row
+                            .col.px-1
+                                .form-group.text-left
+                                    label(for="inputEmail") Email address
+                                    input.form-control#inputEmail(type="email" aria-describedby="emailHelp" placeholder="" required)
+                                    .invalid-feedback Please input email
+                        .row
+                            .col-sm-6.px-1
+                                .form-group.text-left
+                                    label(for="inputPassword") Password
+                                    input.form-control#inputPassword(type="password" placeholder="" required)
+                                    .invalid-feedback Please input password
+                            .col-sm-6.px-1
+                                .form-group.text-left
+                                    label(for="inputPassword") Confirm Password
+                                    input.form-control#inputPassword(type="password" placeholder="" required)
+                                    .invalid-feedback Please confirm password
+                        .row
+                            .col.px-1
+                                .form-group.text-left
+                                        label(for="inputAlias") Reference code
+                                        input.form-control#inputAlias(type="text" placeholder="" required)
+                                        .invalid-feedback Please input reference code
                         .form-group.form-check
-                            input.form-check-input#checkPolicy(type="checkbox")
-                            label.form-check-label(for="checkPolicy") 
-                                |agree to the Bittrex.com |  
+                            input.form-check-input#checkPolicy(type="checkbox" required)
+                            label.form-check-label(for="checkPolicy").text-white
+                                | I agree to the Bittrex.com |  
                                 a(href="#") Terms of Service
+                            .invalid-feedback You must agree before submitting.
                         .form-group
                             button.btn.register-btn(type="submit") Sign up
             .row
@@ -31,3 +57,21 @@ block content
                     p.register-footer
                         span Already have an account? 
                         a(href="./login.html") Login
+block js
+    script.
+        (function() {
+            'use strict';
+            window.addEventListener('load', function() {
+                var forms = document.getElementsByClassName('needs-validation');
+                var validation = Array.prototype.filter.call(forms, function(form) {
+                form.addEventListener('submit', function(event) {
+                    if (form.checkValidity() === false) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+                });
+            }, false);
+        })();
+    
