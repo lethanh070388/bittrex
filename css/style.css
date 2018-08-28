@@ -2717,3 +2717,12 @@ table.dataTable thead .sorting_desc_disabled:after {
 .was-validated .register-btn {
   background-color: #ccc !important;
   color: #2b3441 !important; }
+
+.connect-status img {
+  padding-right: 5px; }
+
+@media screen and (max-width: 991px) {
+  .connect-status {
+    padding: 1em 1em 2em;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 1em; } }

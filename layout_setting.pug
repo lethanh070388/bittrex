@@ -25,6 +25,11 @@ html
                     button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation")
                         span.navbar-toggler-icon
                     .collapse.navbar-collapse#navbarSupportedContent
+                        .connect-status 
+                            img(src="../assets/icon-socket-status-disconnected.svg")
+                            small Socket status = Disconnected
+                            //- img(src="../assets/icon-socket-status-connected.svg")
+                            //- small Socket status = Connected
                         ul.navbar-nav.ml-auto
                             li.nav-item.active
                                 a.nav-link(href="./index.html") Markets

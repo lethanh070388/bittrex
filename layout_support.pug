@@ -25,6 +25,11 @@ html
                     button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation")
                         span.navbar-toggler-icon
                     .collapse.navbar-collapse#navbarSupportedContent
+                        .connect-status 
+                            img(src="../assets/icon-socket-status-disconnected.svg")
+                            small Socket status = Disconnected
+                            //- img(src="../assets/icon-socket-status-connected.svg")
+                            //- small Socket status = Connected
                         form.form-inline.ml-auto.pb-2.pb-sm-0
                             a#btnSubmitReq.btn.btn-outline-primary(href="./request_select.html") Submit a request
                             button.btn.btn-outline-primary.ml-3 Sign in

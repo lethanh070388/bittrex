@@ -1934,3 +1934,17 @@ table.dataTable{
         color: #2b3441 !important;
     }
 }
+
+//CONNECT STATUS
+.connect-status{
+    img{
+        padding-right: 5px;
+    }
+}
+@include maxq(large){
+    .connect-status{
+        padding: 1em 1em 2em;
+        border-bottom: 1px solid rgba(255,255,255,.1);
+        margin-bottom: 1em;
+    }
+}
