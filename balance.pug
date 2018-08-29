@@ -61,7 +61,8 @@ block main_content
                         -for(var i=1; i<20; i++){
                             tr.row-key
                                 td.icon.icon-deposit-green
-                                    button.btn-modal-deposit.btn-icon(type="button" data-toggle="modal" data-target="#modalDeposit")
+                                    //- button.btn-modal-deposit.btn-icon(type="button" data-toggle="modal" data-target="#modalDeposit")
+                                    button.btn-modal-deposit.btn-icon(type="button" data-toggle="modal")
                                 td.icon.icon-withdraw-red
                                     button.btn-modal-withdrawal.btn-icon(type="button" data-toggle="modal" data-target="#modalWithdrawal")
                                 td.text-left.hidden-lg-cell Ada
@@ -114,7 +115,10 @@ block main_content
                                             .input-group.mb-3
                                                 input.form-control.deposit-control(type="text" placeholder="Generate a new address" aria-label="newaddress" aria-describedby="basic-addon2")
                                                 .input-group-append
-                                                    button.btn.btn-new-address(type="button" data-toggle="modal" data-target="#modalFailed") New Address
+                                                    //- button.btn.btn-new-address(type="button" data-toggle="modal" data-target="#modalFailed") New Address
+                                                    button.btn.btn-new-address(type="button" data-toggle="modal")
+                                                        i.fas.fa-circle-notch.fa-spin.loading-icon
+                                                        | New Address
                                             .modal-disclaimer
                                                 h5.text-uppercase DEPOSIT INSTRUCTIONS
                                                 small Depositing tokens to this address other than BTC will result in your funds being lost.
@@ -138,6 +142,12 @@ block main_content
                                     |Please correct these issues and try again.
                             .modal-footer
                                 button.btn.btn-transaction(type="button" data-dismiss="modal") Close
+        //- Loading new address
+        .row
+            .col
+                .loading-address
+                    h1
+                        i.fas.fa-spinner.fa-spin.fa-3x.color-icon
         .row
             .col
                 #modalWithdrawal.modal.fade(tabindex="-1" role="dialog" aria-labelledby="modalWithdrawalLabel" aria-hidden="true")
@@ -324,6 +334,21 @@ block script-append
         $(function(){
             $('.expand-button').on("click",function(){
                 $('.expand-icon').toggleClass('show');
+            });
+            $('.btn-modal-deposit').on('click', function() {
+                $('.loading-address').css('display','flex');
+                setTimeout(function(){
+                    $('.loading-address').css('display','none');
+                    $('#modalDeposit').modal({show: true});
+                },1500);
+            });
+            $('.btn-new-address').on('click', function() {
+                $('.loading-icon').css('display','inline-block');
+                setTimeout(function(){
+                    $('.loading-icon').css('display','none');
+                    $('.btn-new-address').text('Copy');
+                    $('#modalFailed').modal({show: true});
+                },1500);
             });
             function format() {
                 return '<tr class="row-info pb-2 hidden-row">'+

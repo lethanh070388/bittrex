@@ -2726,3 +2726,23 @@ table.dataTable thead .sorting_desc_disabled:after {
     padding: 1em 1em 2em;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     margin-bottom: 1em; } }
+
+.loading-address {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+  display: none; }
+
+.loading-icon {
+  padding: 5px;
+  display: none; }
+
+.color-icon {
+  color: rgba(255, 255, 255, 0.7); }

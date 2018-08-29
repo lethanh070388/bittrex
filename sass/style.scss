@@ -1948,3 +1948,33 @@ table.dataTable{
         margin-bottom: 1em;
     }
 }
+
+//ANIMATION LOADING MODAL
+
+//LOADING NEW ADDRESS
+.loading-address{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+    display: none;
+}
+.loading-icon{
+    padding: 5px;
+    display: none;
+}
+// .light .color-icon{
+//     color: #66338a;
+// }
+// .dark .color-icon{
+//     color: #fff;
+// }
+.color-icon{
+    color: rgba(255,255,255,.7);
+}
