@@ -97,6 +97,9 @@ $themes:(
                 }
             }
         }
+        .connect-status{
+            color: nth($color,20);
+        }
         // BACKGROUND
         .bg-primary{
             background-color: nth($color,1) !important;

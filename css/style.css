@@ -194,6 +194,8 @@ html, body {
       background-color: transparent;
       border-color: #e55d1d !important;
       color: #e55d1d !important; }
+  .light .connect-status {
+    color: #66338a; }
   .light .bg-primary {
     background-color: #f58220 !important; }
   .light .bg-secondary {
@@ -712,6 +714,8 @@ html, body {
       background-color: transparent;
       border-color: #0065a2 !important;
       color: #0065a2 !important; }
+  .dark .connect-status {
+    color: #fff; }
   .dark .bg-primary {
     background-color: #009af8 !important; }
   .dark .bg-secondary {
