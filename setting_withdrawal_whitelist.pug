@@ -2,8 +2,78 @@ extends layout_setting.pug
 
 block content
     .container-fluid.px-4.two-factor
+        //- .row
+        //-     .col.mt-2
+        //-         .panel.default-panel.p-2.mt-4
+        //-             .py-2 To manage the withdrawal whitelist, you must have Two-Factor Authentication enabled.
+        //-             a.d-block.pb-2(href="./setting_authenticaition.html") Two-Factor Authentication settings
         .row
-            .col.mt-2
-                .panel.default-panel.p-2.mt-4
-                    .py-2 To manage the withdrawal whitelist, you must have Two-Factor Authentication enabled.
-                    a.d-block.pb-2(href="./setting_authenticaition.html") Two-Factor Authentication settings
+            .col
+                h5.heading-lv5.text-uppercase.pt-4.border-bottom WITHDRAWAL WHITELIST
+        .row.mt-4
+            .col
+                .info-blurd.alert
+                    .summary-content
+                        h5.heading-lv5.text-center.pt-2 Withdrawal Address Whitelisting
+                        p By adding a digital currency address to this list, you will only be able to withdraw that specified currency to one of its matching addresses. To add or delete a currency and address pair, you must have two-factor authentication enabled and provide your authenticator code before submitting any changes.
+                        p 
+                            i.fas.fa-exclamation-triangle.pr-2
+                            |Warning: If you have this enabled on any currency, all currencies need to have a specified withdrawal address.
+        .row.mt-4
+            .col.ip-content.withdrawal-whitelist
+                form.address-group
+                    label.d-block Add New Address
+                    .row
+                        .col-sm-6
+                            label.d-block Currency
+                            input.form-control.w-100(type="text" placeholder="BTC,ETH,DASH" autocomplete="off")
+                        .col-sm-6
+                            label.d-block Address
+                            input.form-control.w-100(type="text" placeholder="0x0000ABCDABCDABCD" autocomplete="off")
+                    .text-right.form-group.pt-4
+                        button.btn.btn-form.change-pass(type="button" data-toggle="modal" data-target="#modalAuthenticatorCode") Save Address
+        .row
+            .col
+                table.table.custom-table
+                    thead
+                        tr
+                            th.heading-lv6 Cerrency
+                            th.heading-lv6 Address
+                    tbody
+                        tr
+                            td &nbsp;
+                            td &nbsp;
+        //- Modal
+        .row
+            .col
+                #modalAuthenticatorCode.modal.fade(tabindex="-1" role="dialog" aria-labelledby="modalAuthenticatorCodeLabel" aria-hidden="true")
+                    .modal-dialog(role="document")
+                        .modal-content.deposit-container
+                            .modal-header.text-center
+                                h5.modal-title#modalAuthenticatorCodeLabel.text-white Authenticator Code
+                                button.close(type="button" data-dismiss="modal" aria-label="Close")
+                                    span(aria-hidden="true") &times;
+                            .modal-body
+                                .container.address-group
+                                    h6.text-white.py-2 Please enter your authenticator code:
+                                    input.form-control.w-100(type="text" placeholder="Authenticator code" autocomplete="off")
+                            .modal-footer
+                                button.btn.btn-close(type="button"  data-toggle="modal" data-dismiss="modal" data-target="#modalFailed") Confirm
+        //- Modal error
+        .row
+            .col
+                #modalFailed.modal.fade(tabindex="-1" role="dialog" aria-labelledby="modalFailedLabel" aria-hidden="true")
+                    .modal-dialog(role="document")
+                        .modal-content.error-container
+                            .modal-header.text-center
+                                h5.modal-title#modalFailedLabel.text-white Create Withdraw Address Whitelist Entry Error
+                                button.close(type="button" data-dismiss="modal" aria-label="Close")
+                                    span(aria-hidden="true") &times;
+                            .modal-body
+                                p 
+                                    |The following errors were encountered:
+                                    ul
+                                        li INVALID_ADDRESS
+                                    |Please correct these issues and try again.
+                            .modal-footer
+                                button.btn.btn-transaction(type="button" data-dismiss="modal") Close

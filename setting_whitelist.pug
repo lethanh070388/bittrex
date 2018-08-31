@@ -2,8 +2,65 @@ extends layout_setting.pug
 
 block content
     .container-fluid.px-4.two-factor
+        //- .row
+        //-     .col.mt-2
+        //-         .panel.default-panel.p-2.mt-4
+        //-             .py-2 To manage the IP Address whitelist, you must have Two-Factor Authentication enabled.
+        //-             a.d-block.pb-2(href="./setting_authenticaition.html") Two-Factor Authentication settings
         .row
-            .col.mt-2
-                .panel.default-panel.p-2.mt-4
-                    .py-2 To manage the IP Address whitelist, you must have Two-Factor Authentication enabled.
-                    a.d-block.pb-2(href="./setting_authenticaition.html") Two-Factor Authentication settings
+            .col
+                h5.heading-lv5.text-uppercase.pt-4.border-bottom IP WHITELIST
+        .row.mt-4
+            .col
+                .info-blurd.alert
+                    .summary-content
+                        h5.heading-lv5.text-center.pt-2 IP Address Whitelisting
+                        p By adding one or more IP address to this list, you will only be able to place orders or withdraw funds from those addresses. To add or remove an IP address, you must have two factor authentication enabled and provide your authenticator code before submitting any changes.
+        .row.mt-4
+            .col.ip-content
+                form.address-group
+                    label.d-block Add New Address
+                    .input-group.d-flex
+                        input.form-control(type="text" placeholder="000" autocomplete="off")
+                        input.form-control(type="text" placeholder="000" autocomplete="off")
+                        input.form-control(type="text" placeholder="000" autocomplete="off")
+                        input.form-control(type="text" placeholder="000" autocomplete="off")
+                    .text-right.form-group.pt-4
+                        button.btn.btn-form.change-pass(type="button" data-toggle="modal" data-target="#modalAuthenticatorCode") Save Address
+                    label.mt-4.border-bottom.d-block Save Address
+                    p.py-2 You have no addresses configured
+        //- Modal
+        .row
+            .col
+                #modalAuthenticatorCode.modal.fade(tabindex="-1" role="dialog" aria-labelledby="modalAuthenticatorCodeLabel" aria-hidden="true")
+                    .modal-dialog(role="document")
+                        .modal-content.deposit-container
+                            .modal-header.text-center
+                                h5.modal-title#modalAuthenticatorCodeLabel.text-white Authenticator Code
+                                button.close(type="button" data-dismiss="modal" aria-label="Close")
+                                    span(aria-hidden="true") &times;
+                            .modal-body
+                                .container.address-group
+                                    h6.text-white.py-2 Please enter your authenticator code:
+                                    input.form-control.w-100(type="text" placeholder="Authenticator code" autocomplete="off")
+                            .modal-footer
+                                button.btn.btn-close(type="button"  data-toggle="modal" data-dismiss="modal" data-target="#modalFailed") Confirm
+        //- Modal error
+        .row
+            .col
+                #modalFailed.modal.fade(tabindex="-1" role="dialog" aria-labelledby="modalFailedLabel" aria-hidden="true")
+                    .modal-dialog(role="document")
+                        .modal-content.error-container
+                            .modal-header.text-center
+                                h5.modal-title#modalFailedLabel.text-white Create IP Address Whitelist Errors
+
+                                button.close(type="button" data-dismiss="modal" aria-label="Close")
+                                    span(aria-hidden="true") &times;
+                            .modal-body
+                                p 
+                                    |The following errors were encountered:
+                                    ul
+                                        li Invalid IP address
+                                    |Please correct these issues and try again.
+                            .modal-footer
+                                button.btn.btn-transaction(type="button" data-dismiss="modal") Close

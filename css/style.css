@@ -194,6 +194,8 @@ html, body {
       background-color: transparent;
       border-color: #e55d1d !important;
       color: #e55d1d !important; }
+  .light .navbar-dark .navbar-toggler {
+    background-color: #66338a; }
   .light .connect-status {
     color: #66338a; }
   .light .bg-primary {
@@ -279,6 +281,13 @@ html, body {
     color: #fff; }
     .light .nav-items .nav-item .nav-subitem a:hover {
       color: #482368; }
+  .light .address-group input {
+    border: solid 1px #ccc;
+    background-color: #fff; }
+    .light .address-group input:focus {
+      border-color: #482368; }
+  .light .address-group p:hover {
+    background-color: rgba(72, 35, 104, 0.08); }
   .light .main-market-detail-container {
     color: rgba(255, 255, 255, 0.8); }
   .light .home-market-content {
@@ -349,6 +358,9 @@ html, body {
   .light .info-blurd {
     color: #fff;
     background-color: rgba(255, 255, 255, 0.25); }
+    .light .info-blurd.alert {
+      background-color: rgba(204, 204, 204, 0.3);
+      color: rgba(255, 255, 255, 0.8); }
   .light .form-input {
     color: #eee; }
     .light .form-input .form-control-inline.border-right {
@@ -714,6 +726,8 @@ html, body {
       background-color: transparent;
       border-color: #0065a2 !important;
       color: #0065a2 !important; }
+  .dark .navbar-dark .navbar-toggler {
+    background-color: transparent; }
   .dark .connect-status {
     color: #fff; }
   .dark .bg-primary {
@@ -799,6 +813,13 @@ html, body {
     color: #fff; }
     .dark .nav-items .nav-item .nav-subitem a:hover {
       color: #0084d4; }
+  .dark .address-group input {
+    border: solid 1px #515967;
+    background-color: #2b3441; }
+    .dark .address-group input:focus {
+      border-color: #0084d4; }
+  .dark .address-group p:hover {
+    background-color: rgba(0, 132, 212, 0.08); }
   .dark .main-market-detail-container {
     color: rgba(255, 255, 255, 0.8); }
   .dark .home-market-content {
@@ -869,6 +890,9 @@ html, body {
   .dark .info-blurd {
     color: #ffffff;
     background-color: rgba(255, 255, 255, 0.25); }
+    .dark .info-blurd.alert {
+      background-color: rgba(81, 89, 103, 0.3);
+      color: rgba(255, 255, 255, 0.8); }
   .dark .form-input {
     color: #9caac1; }
     .dark .form-input .form-control-inline.border-right {
@@ -2750,3 +2774,30 @@ table.dataTable thead .sorting_desc_disabled:after {
 
 .color-icon {
   color: rgba(255, 255, 255, 0.7); }
+
+.summary-content {
+  text-align: justify;
+  line-height: 1.38;
+  max-width: 697px;
+  margin: 0 auto; }
+
+.ip-content {
+  max-width: 428px;
+  margin: 0 auto; }
+
+.withdrawal-whitelist {
+  width: 100%;
+  max-width: 568px; }
+
+.address-group input {
+  width: 89px;
+  height: 44px;
+  border: solid 1px #515967;
+  padding: 12px 12px 13px;
+  font-size: 15px;
+  color: #fff;
+  background-color: #2b3441;
+  border-radius: 3px; }
+
+.no-border {
+  border: 0 !important; }

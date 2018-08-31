@@ -1978,3 +1978,34 @@ table.dataTable{
 .color-icon{
     color: rgba(255,255,255,.7);
 }
+
+//IP WHITELIST
+.summary-content{
+    text-align: justify;
+    line-height: 1.38;
+    max-width: 697px;
+    margin: 0 auto;
+}
+.ip-content{
+    max-width: 428px;
+    margin: 0 auto;
+}
+.withdrawal-whitelist{
+    width: 100%;
+    max-width: 568px;
+}
+.address-group{
+    input{
+        width: 89px;
+        height: 44px;
+        border: solid 1px #515967;
+        padding: 12px 12px 13px;
+        font-size: 15px;
+        color: #fff;
+        background-color: #2b3441;
+        border-radius: 3px;
+    }
+}
+.no-border{
+    border: 0 !important;
+}

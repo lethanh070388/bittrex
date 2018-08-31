@@ -28,7 +28,9 @@ $themes:(
     $light-button-active,
     $light-button-active-hover,
     $light-bg-modal-content,
-    $light-color-sell-active
+    $light-color-sell-active,
+    $light-bg-input-ip,
+    $light-navbar-toggle
   ),
   dark: (
     $dark-primary,
@@ -58,7 +60,9 @@ $themes:(
     $dark-button-active,
     $dark-button-active-hover,
     $dark-bg-modal-content,
-    $dark-color-sell-active
+    $dark-color-sell-active,
+    $dark-bg-input-ip,
+    $dark-navbar-toggle
   )
 );
 @mixin theme($name,$color){
@@ -95,6 +99,9 @@ $themes:(
                     border-color: nth($color,12) !important;
                     color: nth($color,12) !important;
                 }
+            }
+            .navbar-toggler{
+                background-color: nth($color,30);
             }
         }
         .connect-status{
@@ -251,6 +258,22 @@ $themes:(
                 }
             }
         }
+
+        //IP WHITE-LIST
+        .address-group{
+            input{
+                border: solid 1px nth($color,9);
+                background-color: nth($color,29);
+                &:focus{
+                    border-color: nth($color,2);
+                }
+            }
+            p{
+                &:hover{
+                    background-color: rgba(nth($color,2),0.08);
+                }
+            }
+        }
         // END SETTING PAGE
 
         // MARKET DETAIL
@@ -385,7 +408,12 @@ $themes:(
         .info-blurd{
             color: nth($color,4);
             background-color: rgba(nth($color,11),0.25);
+            &.alert{
+                background-color: rgba(nth($color,9),0.3);
+                color: rgba(nth($color,11),0.8);
+            }
         }
+        
         .form-input{
             color: nth($color,14);
             .form-control-inline{

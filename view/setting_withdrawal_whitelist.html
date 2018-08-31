@@ -62,9 +62,104 @@
           <div class="main-content p-4">
             <div class="container-fluid px-4 two-factor">
               <div class="row">
-                <div class="col mt-2">
-                  <div class="panel default-panel p-2 mt-4">
-                    <div class="py-2">To manage the withdrawal whitelist, you must have Two-Factor Authentication enabled.</div><a class="d-block pb-2" href="./setting_authenticaition.html">Two-Factor Authentication settings</a>
+                <div class="col">
+                  <h5 class="heading-lv5 text-uppercase pt-4 border-bottom">WITHDRAWAL WHITELIST</h5>
+                </div>
+              </div>
+              <div class="row mt-4">
+                <div class="col">
+                  <div class="info-blurd alert">
+                    <div class="summary-content">
+                      <h5 class="heading-lv5 text-center pt-2">Withdrawal Address Whitelisting</h5>
+                      <p>By adding a digital currency address to this list, you will only be able to withdraw that specified currency to one of its matching addresses. To add or delete a currency and address pair, you must have two-factor authentication enabled and provide your authenticator code before submitting any changes.</p>
+                      <p> <i class="fas fa-exclamation-triangle pr-2"></i>Warning: If you have this enabled on any currency, all currencies need to have a specified withdrawal address.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row mt-4">
+                <div class="col ip-content withdrawal-whitelist">
+                  <form class="address-group">
+                    <label class="d-block">Add New Address</label>
+                    <div class="row">
+                      <div class="col-sm-6">
+                        <label class="d-block">Currency</label>
+                        <input class="form-control w-100" type="text" placeholder="BTC,ETH,DASH" autocomplete="off">
+                      </div>
+                      <div class="col-sm-6">
+                        <label class="d-block">Address</label>
+                        <input class="form-control w-100" type="text" placeholder="0x0000ABCDABCDABCD" autocomplete="off">
+                      </div>
+                    </div>
+                    <div class="text-right form-group pt-4">
+                      <button class="btn btn-form change-pass" type="button" data-toggle="modal" data-target="#modalAuthenticatorCode">Save Address</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <table class="table custom-table">
+                    <thead>
+                      <tr>
+                        <th class="heading-lv6">Cerrency</th>
+                        <th class="heading-lv6">Address</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <div class="modal fade" id="modalAuthenticatorCode" tabindex="-1" role="dialog" aria-labelledby="modalAuthenticatorCodeLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content deposit-container">
+                        <div class="modal-header text-center">
+                          <h5 class="modal-title text-white" id="modalAuthenticatorCodeLabel">Authenticator Code</h5>
+                          <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        </div>
+                        <div class="modal-body">
+                          <div class="container address-group">
+                            <h6 class="text-white py-2">Please enter your authenticator code:</h6>
+                            <input class="form-control w-100" type="text" placeholder="Authenticator code" autocomplete="off">
+                          </div>
+                        </div>
+                        <div class="modal-footer">
+                          <button class="btn btn-close" type="button" data-toggle="modal" data-dismiss="modal" data-target="#modalFailed">Confirm</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <div class="modal fade" id="modalFailed" tabindex="-1" role="dialog" aria-labelledby="modalFailedLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content error-container">
+                        <div class="modal-header text-center">
+                          <h5 class="modal-title text-white" id="modalFailedLabel">Create Withdraw Address Whitelist Entry Error</h5>
+                          <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        </div>
+                        <div class="modal-body">
+                          <p>
+                             The following errors were encountered:
+                            <ul>
+                              <li>INVALID_ADDRESS</li>
+                            </ul>Please correct these issues and try again.
+                          </p>
+                        </div>
+                        <div class="modal-footer">
+                          <button class="btn btn-transaction" type="button" data-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>

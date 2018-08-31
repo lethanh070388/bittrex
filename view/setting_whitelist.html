@@ -62,9 +62,83 @@
           <div class="main-content p-4">
             <div class="container-fluid px-4 two-factor">
               <div class="row">
-                <div class="col mt-2">
-                  <div class="panel default-panel p-2 mt-4">
-                    <div class="py-2">To manage the IP Address whitelist, you must have Two-Factor Authentication enabled.</div><a class="d-block pb-2" href="./setting_authenticaition.html">Two-Factor Authentication settings</a>
+                <div class="col">
+                  <h5 class="heading-lv5 text-uppercase pt-4 border-bottom">IP WHITELIST</h5>
+                </div>
+              </div>
+              <div class="row mt-4">
+                <div class="col">
+                  <div class="info-blurd alert">
+                    <div class="summary-content">
+                      <h5 class="heading-lv5 text-center pt-2">IP Address Whitelisting</h5>
+                      <p>By adding one or more IP address to this list, you will only be able to place orders or withdraw funds from those addresses. To add or remove an IP address, you must have two factor authentication enabled and provide your authenticator code before submitting any changes.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row mt-4">
+                <div class="col ip-content">
+                  <form class="address-group">
+                    <label class="d-block">Add New Address</label>
+                    <div class="input-group d-flex">
+                      <input class="form-control" type="text" placeholder="000" autocomplete="off">
+                      <input class="form-control" type="text" placeholder="000" autocomplete="off">
+                      <input class="form-control" type="text" placeholder="000" autocomplete="off">
+                      <input class="form-control" type="text" placeholder="000" autocomplete="off">
+                    </div>
+                    <div class="text-right form-group pt-4">
+                      <button class="btn btn-form change-pass" type="button" data-toggle="modal" data-target="#modalAuthenticatorCode">Save Address</button>
+                    </div>
+                    <label class="mt-4 border-bottom d-block">Save Address</label>
+                    <p class="py-2">You have no addresses configured</p>
+                  </form>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <div class="modal fade" id="modalAuthenticatorCode" tabindex="-1" role="dialog" aria-labelledby="modalAuthenticatorCodeLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content deposit-container">
+                        <div class="modal-header text-center">
+                          <h5 class="modal-title text-white" id="modalAuthenticatorCodeLabel">Authenticator Code</h5>
+                          <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        </div>
+                        <div class="modal-body">
+                          <div class="container address-group">
+                            <h6 class="text-white py-2">Please enter your authenticator code:</h6>
+                            <input class="form-control w-100" type="text" placeholder="Authenticator code" autocomplete="off">
+                          </div>
+                        </div>
+                        <div class="modal-footer">
+                          <button class="btn btn-close" type="button" data-toggle="modal" data-dismiss="modal" data-target="#modalFailed">Confirm</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <div class="modal fade" id="modalFailed" tabindex="-1" role="dialog" aria-labelledby="modalFailedLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content error-container">
+                        <div class="modal-header text-center">
+                          <h5 class="modal-title text-white" id="modalFailedLabel">Create IP Address Whitelist Errors</h5>
+                          <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        </div>
+                        <div class="modal-body">
+                          <p>
+                             The following errors were encountered:
+                            <ul>
+                              <li>Invalid IP address</li>
+                            </ul>Please correct these issues and try again.
+                          </p>
+                        </div>
+                        <div class="modal-footer">
+                          <button class="btn btn-transaction" type="button" data-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
