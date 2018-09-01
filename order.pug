@@ -38,16 +38,18 @@ block main_content
                             th.text-right EST.Total
                             th.text-right &nbsp;
                     tbody
-                        tr
-                            td.text-left 2018/07/09 21:53:53
-                            td.text-left.hidden-lg-cell.order_table_market BTC-XML
-                            td.text-right.hidden-lg-cell.color-red SELL
-                            td.text-right 0.00003172
-                            td.text-right.hidden-lg-cell 0.00000000
-                            td.text-right 16.00000000
-                            td.text-right.hidden-lg-cell 0.00000000
-                            td.text-right 0.00050625
-                            td.text-right.color-red X
+                        -for(var i=1; i<40; i++){
+                            tr
+                                td.text-left 2018/07/09 21:53:53
+                                td.text-left.hidden-lg-cell.order_table_market BTC-XML
+                                td.text-right.hidden-lg-cell.color-red SELL
+                                td.text-right 0.00003172
+                                td.text-right.hidden-lg-cell 0.00000000
+                                td.text-right 16.00000000
+                                td.text-right.hidden-lg-cell 0.00000000
+                                td.text-right 0.00050625
+                                td.text-right.color-red X
+                        -}
         .row
             .col
                 h1.text-uppercase.mt-4 My order history
@@ -70,16 +72,18 @@ block main_content
                             th.text-right.hidden-lg-cell Actual Rate
                             th.text-right.hidden-lg-cell Cost/Proceeds
                     tbody
-                        tr.row-key
-                            td.text-left.hidden-lg-cell.hidden-xl-cell 2018/07/09 22:01:08
-                            td.text-left.hidden-lg-cell.hidden-xl-cell 2018/07/09 21:53:55
-                            td.text-left.order_table_market BTC-XLM
-                            td.text-right.color-red SELL
-                            td.text-right.hidden-lg-cell 0.00003172	
-                            td.text-right 16.00000000
-                            td.text-right 16.00000000
-                            td.text-right.hidden-lg-cell 0.00003172	
-                            td.text-right.hidden-lg-cell 0.00050626
+                        //- -for(var i=1; i<40; i++){
+                        //-     tr.row-key
+                        //-         td.text-left.hidden-lg-cell.hidden-xl-cell 2018/07/09 22:01:08
+                        //-         td.text-left.hidden-lg-cell.hidden-xl-cell 2018/07/09 21:53:55
+                        //-         td.text-left.order_table_market BTC-XLM
+                        //-         td.text-right.color-red SELL
+                        //-         td.text-right.hidden-lg-cell 0.00003172	
+                        //-         td.text-right 16.00000000
+                        //-         td.text-right 16.00000000
+                        //-         td.text-right.hidden-lg-cell 0.00003172	
+                        //-         td.text-right.hidden-lg-cell 0.00050626
+                        //- -}
 block script-append
     script.
         $(function(){

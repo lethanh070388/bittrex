@@ -355,7 +355,7 @@ hr{
 
 //FOOTER
 .footer {
-    padding: 28px 0 20px;
+    padding: 10px 0;
     a{
         font-size: 12px;
         cursor: pointer;
@@ -363,6 +363,11 @@ hr{
         color: #666;
         text-transform: capitalize;
         text-decoration: none;
+    }
+}
+@include minq(small){
+    .footer{
+        padding: 28px 0 20px;
     }
 }
 // END FOOTER
@@ -1620,17 +1625,31 @@ table.dataTable.no-footer{
 // END MODAL
 
 // ORDER PAGE
-.order-container {
-    height: calc(100vh - 320px);
+// .order-container {
+//     height: calc(100vh - 320px);
+// }
+// @include minq(small){
+//     .order-container {
+//         height: calc(100vh - 210px);
+//     }
+// }
+// @include minq(medium){
+//     .order-container {
+//         height: calc(100vh - 168px);
+//     }
+// }
+
+.order-container{
+    min-height: calc(100vh - 290px);
 }
 @include minq(small){
     .order-container {
-        height: calc(100vh - 210px);
+        min-height: calc(100vh - 210px);
     }
 }
-@include minq(medium){
+@include minq(large){
     .order-container {
-        height: calc(100vh - 168px);
+        min-height: calc(100vh - 167px);
     }
 }
 .order_table {
@@ -1639,6 +1658,12 @@ table.dataTable.no-footer{
     }
     &_market{
         color: #539ad7;
+    }
+}
+.footer{
+    [class*='col']{
+        padding-left: 0 !important;
+        padding-right: 0 !important;
     }
 }
 // END ORDER PAGE
