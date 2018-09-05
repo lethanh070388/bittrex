@@ -364,7 +364,7 @@
             <div class="container-fluid">
               <div class="row">
                 <div class="col market_info_header">
-                  <div class="row">
+                  <div class="row py-1">
                     <div class="col-lg-2">
                       <div class="market_info_header_name d-flex align-content-center"><img class="market-logo" src="../assets/bitcoin_small.png" alt="">
                         <div>
@@ -376,27 +376,181 @@
                     <div class="col-lg-10 item-group">
                       <div class="item last">
                         <div class="text-right up">$7692.38500000</div>
+                        <div class="text-right"> <i class="fab fa-bitcoin pr-1"></i>0.03928441</div>
                         <div class="text-right text-uppercase">Last</div>
                       </div>
                       <div class="item bid">
                         <div class="text-right up">$7692.38500000</div>
+                        <div class="text-right"> <i class="fab fa-bitcoin pr-1"></i>0.03928441</div>
                         <div class="text-right text-uppercase">Bid</div>
                       </div>
                       <div class="item ask">
                         <div class="text-right down">$7692.38500000</div>
+                        <div class="text-right"> <i class="fab fa-bitcoin pr-1"></i>0.03928441</div>
                         <div class="text-right text-uppercase">Ask</div>
                       </div>
                       <div class="item volume">
                         <div class="text-right up">$7692.38500000</div>
+                        <div class="text-right"> <i class="fab fa-bitcoin pr-1"></i>0.03928441</div>
                         <div class="text-right text-uppercase">Volume</div>
                       </div>
                       <div class="item high">
                         <div class="text-right up">$7692.38500000</div>
+                        <div class="text-right"> <i class="fab fa-bitcoin pr-1"></i>0.03928441</div>
                         <div class="text-right text-uppercase">24h High</div>
                       </div>
                       <div class="item low">
                         <div class="text-right">$7692.38500000</div>
+                        <div class="text-right"> <i class="fab fa-bitcoin pr-1"></i>0.03928441</div>
                         <div class="text-right text-uppercase">24h Low</div>
+                      </div>
+                      <div class="item py-1 px-2">
+                        <button class="btn icon btn-block btn-modal-deposit d-flex flex-column align-items-center justify-content-center" type="button" data-toggle="modal" data-target="#modalDeposit"> <img src="../assets/icon-deposit-green.svg" alt="">Deposit</button>
+                      </div>
+                      <div class="item py-1 px-2">
+                        <button class="btn icon btn-block btn-modal-withdrawal d-flex flex-column align-items-center justify-content-center" type="button" data-toggle="modal" data-target="#modalWithdrawal"> <img src="../assets/icon-withdraw-red.svg" alt="">Withdraw</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <div class="modal fade" id="modalDeposit" tabindex="-1" role="dialog" aria-labelledby="modalDepositLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content deposit-container">
+                        <div class="modal-header text-center">
+                          <h5 class="modal-title" id="modalDepositLabel"> <span class="title-icon"></span>Deposit</h5>
+                          <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        </div>
+                        <div class="modal-body">
+                          <div class="container">
+                            <div class="row">
+                              <div class="col">
+                                <div class="info d-flex justify-content-between align-items-baseline">
+                                  <h5>Currency</h5>
+                                  <h6> <i class="fas fa-check-circle mr-2"></i>Block updated 8 minutes ago</h6>
+                                </div>
+                                <table class="deposit_table">
+                                  <thead>
+                                    <tr>
+                                      <th>Name</th>
+                                      <th class="text-right">Symbol</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td>Bitcoin</td>
+                                      <td class="text-right">BTC</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                                <div class="modal-disclaimer">
+                                  <h5 class="text-uppercase">Disclaimer</h5><small>I acknowledge the following information: </small><small>By depositing tokens to this address, you agree to our <a href="#">deposit recovery policy</a>. Depositing tokens to an address other than BTC may result in your funds being lost.</small>
+                                </div>
+                                <div class="info mt-4">
+                                  <h5>Address</h5>
+                                </div>
+                                <div class="input-group mb-3">
+                                  <input class="form-control deposit-control" type="text" placeholder="Generate a new address" aria-label="newaddress" aria-describedby="basic-addon2">
+                                  <div class="input-group-append">
+                                    <button class="btn btn-new-address" type="button" data-toggle="modal"><i class="fas fa-circle-notch fa-spin loading-icon"></i>New Address</button>
+                                  </div>
+                                </div>
+                                <div class="modal-disclaimer">
+                                  <h5 class="text-uppercase">DEPOSIT INSTRUCTIONS</h5><small>Depositing tokens to this address other than BTC will result in your funds being lost.</small>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="modal-footer">
+                          <button class="btn btn-close" type="button" data-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <div class="modal fade" id="modalWithdrawal" tabindex="-1" role="dialog" aria-labelledby="modalWithdrawalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content withdrawal-container">
+                        <div class="modal-header text-center">
+                          <h5 class="modal-title" id="modalWithdrawalLabel"> <span class="title-icon"></span>Withdrawal</h5>
+                          <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        </div>
+                        <div class="modal-body">
+                          <div class="container">
+                            <div class="row">
+                              <div class="col">
+                                <div class="info d-flex justify-content-between align-items-baseline">
+                                  <h5>Currency</h5>
+                                </div>
+                                <table class="deposit_table">
+                                  <thead>
+                                    <tr>
+                                      <th>Name</th>
+                                      <th>Symbol</th>
+                                      <th class="text-right">Available balance</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td>Bitcoin</td>
+                                      <td>BTC</td>
+                                      <td class="text-right">0</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                                <div class="info mt-4">
+                                  <h5>Withdrawal amount</h5>
+                                </div>
+                                <div class="container-fluid">
+                                  <div class="row mt-3">
+                                    <div class="col-6 px-0">
+                                      <div class="text-uppercase">Quantity</div>
+                                    </div>
+                                    <div class="col-6 d-flex align-items-baseline px-0">
+                                      <input class="form-control withdrawal-control text-right" type="text" placeholder="0" autocomplete="off"><span class="currency text-center px-2">LTC</span>
+                                    </div>
+                                  </div>
+                                  <div class="row mt-3">
+                                    <div class="col-6 px-0">
+                                      <div class="text-uppercase">Transaction fee</div>
+                                    </div>
+                                    <div class="col-6 px-0 d-flex align-items-baseline">
+                                      <div class="amount text-right">0.01000000</div><span class="currency text-center px-2">LTC</span>
+                                    </div>
+                                  </div>
+                                  <div class="row mt-3">
+                                    <div class="col-6 px-0">
+                                      <div class="text-uppercase">Total withdrawal</div>
+                                    </div>
+                                    <div class="col-6 px-0 d-flex align-items-baseline">
+                                      <div class="amount text-right">-0.01000000</div><span class="currency text-center px-2">LTC</span>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="info mt-4">
+                                  <h5>Address</h5>
+                                </div>
+                                <div class="input-group mb-3">
+                                  <input class="form-control withdrawal-control" type="text" autocomplete="off">
+                                </div>
+                                <div class="modal-disclaimer">
+                                  <h5 class="text-uppercase">DISCLAIMER</h5><small>
+                                     Please verify your withdrawal address. We cannot refund an incorrect withdrawal.<br><br>DO NOT WITHDRAW DIRECTLY TO A CROWDFUND OR ICO.<br>We will not credit your account with tokens from that sale.</small>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="modal-footer">
+                          <button class="btn btn-close" type="button" data-dismiss="modal">Cancel</button>
+                          <button class="btn btn-withdrawal" type="button" data-toggle="modal" data-target="#modalWithdrawFailed">Withdraw LTC           </button>
+                        </div>
                       </div>
                     </div>
                   </div>

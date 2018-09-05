@@ -18,7 +18,7 @@ block main_content
     .container-fluid
         .row
             .col.market_info_header
-                .row
+                .row.py-1
                     .col-lg-2
                         .market_info_header_name.d-flex.align-content-center
                             img.market-logo(src="../assets/bitcoin_small.png", alt="")
@@ -28,22 +28,163 @@ block main_content
                     .col-lg-10.item-group
                         .item.last
                             .text-right.up $7692.38500000
+                            .text-right 
+                                i.fab.fa-bitcoin.pr-1
+                                |0.03928441
                             .text-right.text-uppercase Last
                         .item.bid
                             .text-right.up $7692.38500000
+                            .text-right 
+                                i.fab.fa-bitcoin.pr-1
+                                |0.03928441
                             .text-right.text-uppercase Bid
                         .item.ask
                             .text-right.down $7692.38500000
+                            .text-right 
+                                i.fab.fa-bitcoin.pr-1
+                                |0.03928441
                             .text-right.text-uppercase Ask
                         .item.volume
                             .text-right.up $7692.38500000
+                            .text-right 
+                                i.fab.fa-bitcoin.pr-1
+                                |0.03928441
                             .text-right.text-uppercase Volume
                         .item.high
                             .text-right.up $7692.38500000
+                            .text-right 
+                                i.fab.fa-bitcoin.pr-1
+                                |0.03928441
                             .text-right.text-uppercase 24h High
                         .item.low
                             .text-right $7692.38500000
+                            .text-right 
+                                i.fab.fa-bitcoin.pr-1
+                                |0.03928441
                             .text-right.text-uppercase 24h Low
+                        .item.py-1.px-2
+                            button.btn.icon.btn-block.btn-modal-deposit.d-flex.flex-column.align-items-center.justify-content-center(type="button" data-toggle="modal" data-target="#modalDeposit") 
+                                img(src="../assets/icon-deposit-green.svg", alt="")
+                                |Deposit
+                        .item.py-1.px-2
+                            button.btn.icon.btn-block.btn-modal-withdrawal.d-flex.flex-column.align-items-center.justify-content-center(type="button" data-toggle="modal" data-target="#modalWithdrawal") 
+                                img(src="../assets/icon-withdraw-red.svg", alt="")
+                                |Withdraw
+        //- Modal
+        .row
+            .col
+                #modalDeposit.modal.fade(tabindex="-1" role="dialog" aria-labelledby="modalDepositLabel" aria-hidden="true")
+                    .modal-dialog(role="document")
+                        .modal-content.deposit-container
+                            .modal-header.text-center
+                                h5.modal-title#modalDepositLabel 
+                                    span.title-icon
+                                    |Deposit
+                                button.close(type="button" data-dismiss="modal" aria-label="Close")
+                                    span(aria-hidden="true") &times;
+                            .modal-body
+                                .container
+                                    .row
+                                        .col
+                                            .info.d-flex.justify-content-between.align-items-baseline
+                                                h5 Currency
+                                                h6 
+                                                    i.fas.fa-check-circle.mr-2
+                                                    |Block updated 8 minutes ago
+                                            table.deposit_table
+                                                thead
+                                                    tr
+                                                        th Name
+                                                        th.text-right Symbol
+                                                tbody
+                                                    tr
+                                                        td Bitcoin
+                                                        td.text-right BTC
+                                            .modal-disclaimer
+                                                h5.text-uppercase Disclaimer
+                                                small I acknowledge the following information: 
+                                                small By depositing tokens to this address, you agree to our 
+                                                    a(href="#") deposit recovery policy
+                                                    |. Depositing tokens to an address other than BTC may result in your funds being lost.
+                                            .info.mt-4
+                                                h5 Address
+                                            .input-group.mb-3
+                                                input.form-control.deposit-control(type="text" placeholder="Generate a new address" aria-label="newaddress" aria-describedby="basic-addon2")
+                                                .input-group-append
+                                                    //- button.btn.btn-new-address(type="button" data-toggle="modal" data-target="#modalFailed") New Address
+                                                    button.btn.btn-new-address(type="button" data-toggle="modal")
+                                                        i.fas.fa-circle-notch.fa-spin.loading-icon
+                                                        | New Address
+                                            .modal-disclaimer
+                                                h5.text-uppercase DEPOSIT INSTRUCTIONS
+                                                small Depositing tokens to this address other than BTC will result in your funds being lost.
+                            .modal-footer
+                                button.btn.btn-close(type="button" data-dismiss="modal") Close
+        .row
+            .col
+                #modalWithdrawal.modal.fade(tabindex="-1" role="dialog" aria-labelledby="modalWithdrawalLabel" aria-hidden="true")
+                    .modal-dialog(role="document")
+                        .modal-content.withdrawal-container
+                            .modal-header.text-center
+                                h5.modal-title#modalWithdrawalLabel 
+                                    span.title-icon
+                                    |Withdrawal
+                                button.close(type="button" data-dismiss="modal" aria-label="Close")
+                                    span(aria-hidden="true") &times;
+                            .modal-body
+                                .container
+                                    .row
+                                        .col
+                                            .info.d-flex.justify-content-between.align-items-baseline
+                                                h5 Currency
+                                            table.deposit_table
+                                                thead
+                                                    tr
+                                                        th Name
+                                                        th Symbol
+                                                        th.text-right Available balance
+                                                tbody
+                                                    tr
+                                                        td Bitcoin
+                                                        td BTC
+                                                        td.text-right 0
+                                            .info.mt-4
+                                                h5 Withdrawal amount
+                                            .container-fluid
+                                                .row.mt-3
+                                                    .col-6.px-0
+                                                        .text-uppercase Quantity
+                                                    .col-6.d-flex.align-items-baseline.px-0
+                                                        input.form-control.withdrawal-control.text-right(type="text" placeholder="0" autocomplete="off")
+                                                        span.currency.text-center.px-2 LTC
+                                                .row.mt-3
+                                                    .col-6.px-0
+                                                        .text-uppercase Transaction fee
+                                                    .col-6.px-0.d-flex.align-items-baseline
+                                                        .amount.text-right 0.01000000
+                                                        span.currency.text-center.px-2 LTC
+                                                .row.mt-3
+                                                    .col-6.px-0
+                                                        .text-uppercase Total withdrawal
+                                                    .col-6.px-0.d-flex.align-items-baseline
+                                                        .amount.text-right -0.01000000
+                                                        span.currency.text-center.px-2 LTC
+                                            .info.mt-4
+                                                h5 Address
+                                            .input-group.mb-3
+                                                input.form-control.withdrawal-control(type="text" autocomplete="off")
+                                            .modal-disclaimer
+                                                h5.text-uppercase DISCLAIMER
+                                                small 
+                                                    |Please verify your withdrawal address. We cannot refund an incorrect withdrawal.
+                                                    br
+                                                    br
+                                                    |DO NOT WITHDRAW DIRECTLY TO A CROWDFUND OR ICO.
+                                                    br
+                                                    |We will not credit your account with tokens from that sale.
+                            .modal-footer
+                                button.btn.btn-close(type="button" data-dismiss="modal") Cancel
+                                button.btn.btn-withdrawal(type="button" data-toggle="modal" data-target="#modalWithdrawFailed") Withdraw LTC           
         .row
             .col
                 .chart_area

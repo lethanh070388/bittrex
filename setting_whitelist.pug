@@ -28,7 +28,17 @@ block content
                     .text-right.form-group.pt-4
                         button.btn.btn-form.change-pass(type="button" data-toggle="modal" data-target="#modalAuthenticatorCode") Save Address
                     label.mt-4.border-bottom.d-block Save Address
-                    p.py-2 You have no addresses configured
+                    //- p.py-2 You have no addresses configured
+                    p.py-2.d-flex.justify-content-between
+                        |127.1.1.27
+                        button.btn-address-remove x
+                    p.py-2.d-flex.justify-content-between
+                        |127.1.1.28
+                        button.btn-address-remove x
+                    p.py-2.d-flex.justify-content-between
+                        |127.1.1.28
+                        button.btn-address-remove x
+
         //- Modal
         .row
             .col
@@ -64,3 +74,11 @@ block content
                                     |Please correct these issues and try again.
                             .modal-footer
                                 button.btn.btn-transaction(type="button" data-dismiss="modal") Close
+block script-append
+    script.
+        $(function(){
+            $('.btn-address-remove').click(function(){
+                $(this).closest('p').remove();
+            });
+        });
+    

@@ -2211,7 +2211,8 @@ table.dataTable.no-footer {
   height: 650px; }
 
 .market_info_header {
-  min-height: 60px; }
+  min-height: 60px;
+  font-size: 12px; }
   .market_info_header_name {
     display: flex;
     padding-top: 7px;
@@ -2809,3 +2810,15 @@ table.dataTable thead .sorting_desc_disabled:after {
 
 .no-border {
   border: 0 !important; }
+
+.btn-address-remove {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  color: #fff; }
+
+.btn-block {
+  height: 100%;
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 4px; }

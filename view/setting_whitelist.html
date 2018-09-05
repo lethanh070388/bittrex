@@ -90,7 +90,15 @@
                       <button class="btn btn-form change-pass" type="button" data-toggle="modal" data-target="#modalAuthenticatorCode">Save Address</button>
                     </div>
                     <label class="mt-4 border-bottom d-block">Save Address</label>
-                    <p class="py-2">You have no addresses configured</p>
+                    <p class="py-2 d-flex justify-content-between">127.1.1.27
+                      <button class="btn-address-remove">x</button>
+                    </p>
+                    <p class="py-2 d-flex justify-content-between">127.1.1.28
+                      <button class="btn-address-remove">x</button>
+                    </p>
+                    <p class="py-2 d-flex justify-content-between">127.1.1.28
+                      <button class="btn-address-remove">x</button>
+                    </p>
                   </form>
                 </div>
               </div>
@@ -173,5 +181,12 @@
     <script src="../js/dataTables.bootstrap4.min.js"></script>
     <script src="../js/theme.js"></script>
     <script src="../js/main.js"></script>
+    <script>
+      $(function(){
+          $('.btn-address-remove').click(function(){
+              $(this).closest('p').remove();
+          });
+      });
+    </script>
   </body>
 </html>
