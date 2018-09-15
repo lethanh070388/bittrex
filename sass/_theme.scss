@@ -706,7 +706,7 @@ $themes:(
             }
         }
         .btn-link{
-            color: nth($color,2);
+            color: nth($color,2) !important;
             &:hover{
                 color: nth($color,2);
             }
@@ -728,6 +728,9 @@ $themes:(
             }
         }
         .btn-refresh{
+            background-color: nth($color,14);
+        }
+        .btn-download{
             background-color: nth($color,14);
         }
         .collapse-control{

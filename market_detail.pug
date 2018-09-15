@@ -216,6 +216,7 @@ block main_content
                             th Total
                             th Size(BTC)
                             th Bid(USD)
+                            th &nbsp;
                     tbody
                         -for(var i=1; i<20; i++){
                             tr
@@ -223,6 +224,8 @@ block main_content
                                 td 483.7489
                                 td 0.064
                                 td.up 7575.30700000
+                                td
+                                    a.btn.btn-link.text-uppercase.p-0(data-toggle="modal" data-target="#modalConfirmLimit") Sell
                         -}
             
             -const login = true
@@ -372,6 +375,7 @@ block main_content
                 table.dataTablePlugin-right.market_table_detail.text-left
                     thead
                         tr
+                            th &nbsp;
                             th Ask (USD)
                             th Size (USDT)
                             th Total
@@ -379,6 +383,8 @@ block main_content
                     tbody
                         -for(var i=1; i<30; i++){
                             tr
+                                td
+                                    a.btn.btn-link.text-uppercase.p-0(data-toggle="modal" data-target="#modalConfirmLimit") Buy
                                 td.down 1.00300000
                                 td 100300.0000
                                 td 100000.000	
@@ -492,6 +498,56 @@ block main_content
                                 td.text-right 3035.33000000
                                 td.text-right.hidden-xs 3038.36533000
                         -}
+    .container-fluid
+        .row
+            .col.balance
+                div.collapse-control
+                    a.expand-button(data-toggle="collapse" href="#collapseOpenOrder" role="button" aria-expanded="false" aria-controls="collapseOpenOrder")
+                        h1.text-uppercase.mt-4
+                            i.far.fa-plus-square.expand-icon.show.mr-2
+                            i.far.fa-minus-square.expand-icon.mr-2
+                            |My open orders
+                .collapse#collapseOpenOrder
+                    .expand-collapse-container
+                        .pt-2.text-right.d-flex
+                            input.form-control.ml-auto.market_find.d-inline-block.mr-2(type="search" placeholder="Find..." aria-label="Search")
+                        table.dataTablePlugin_openOrders.market_table_detail
+                            thead
+                                tr
+                                    th.text-left.hidden-lg-cell Order date
+                                    th.text-right.hidden-lg-cell Type
+                                    th.text-right Bid/Ask
+                                    th.text-right.hidden-lg-cell Filled
+                                    th.text-right Units total
+                                    th.text-right.hidden-lg-cell Actual rate
+                                    th.text-right Est. Total(USD)
+                            tbody
+                                tr
+                                    td.text-center(colspan="7") You have no open orders.
+        .row
+            .col.balance
+                div.collapse-control
+                    a.expand-button(data-toggle="collapse" href="#collapseOrderHistory" role="button" aria-expanded="false" aria-controls="collapseOrderHistory")
+                        h1.text-uppercase.mt-4
+                            i.far.fa-plus-square.expand-icon.show.mr-2
+                            i.far.fa-minus-square.expand-icon.mr-2
+                            |My open orders
+                .collapse#collapseOrderHistory
+                    .expand-collapse-container
+                        .pt-2.text-right.d-flex
+                            input.form-control.ml-auto.market_find.d-inline-block.mr-2(type="search" placeholder="Find..." aria-label="Search")
+                        table.dataTablePlugin_orderHistory.market_table_detail
+                            thead
+                                tr
+                                    th.text-left Type
+                                    th.text-right.hidden-lg-cell Bid/Ask
+                                    th.text-right Units Filled(USDT)
+                                    th.text-right Total units
+                                    th.text-right.hidden-lg-cell Actual rate
+                                    th.text-right.hidden-lg-cell Cost/Process
+                            tbody
+                                tr
+                                    td.text-center(colspan="6") You have no closed orders.
 block script-append
     script.
         $(function(){

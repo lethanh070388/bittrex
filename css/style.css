@@ -527,7 +527,7 @@ html, body {
     .light .trade .dropdown-menu .dropdown-item:hover {
       color: #482368; }
   .light .btn-link {
-    color: #482368; }
+    color: #482368 !important; }
     .light .btn-link:hover {
       color: #482368; }
   .light .chart_area {
@@ -539,6 +539,8 @@ html, body {
     color: rgba(255, 255, 255, 0.6);
     background-color: rgba(255, 255, 255, 0.1); }
   .light .btn-refresh {
+    background-color: #eee; }
+  .light .btn-download {
     background-color: #eee; }
   .light .collapse-control a h1 {
     color: rgba(255, 255, 255, 0.8); }
@@ -1059,7 +1061,7 @@ html, body {
     .dark .trade .dropdown-menu .dropdown-item:hover {
       color: #0084d4; }
   .dark .btn-link {
-    color: #0084d4; }
+    color: #0084d4 !important; }
     .dark .btn-link:hover {
       color: #0084d4; }
   .dark .chart_area {
@@ -1071,6 +1073,8 @@ html, body {
     color: rgba(255, 255, 255, 0.6);
     background-color: rgba(255, 255, 255, 0.1); }
   .dark .btn-refresh {
+    background-color: #9caac1; }
+  .dark .btn-download {
     background-color: #9caac1; }
   .dark .collapse-control a h1 {
     color: rgba(255, 255, 255, 0.8); }
@@ -2104,7 +2108,6 @@ table.dataTable.no-footer {
     text-transform: uppercase;
     padding: 5px !important; }
   .market_table_detail td {
-    cursor: pointer;
     padding: 5px !important; }
     .market_table_detail td a {
       color: white; }

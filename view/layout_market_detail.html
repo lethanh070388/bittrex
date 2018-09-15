@@ -129,6 +129,9 @@
                       $('.total_sum').html(api.column(3,{page:'current'}).data().sum().toFixed(3)+" USDT");
                   }
               });
+              
+              $('.dataTablePlugin_openOrders').DataTable();
+              $('.dataTablePlugin_orderHistory').DataTable();
           });
       })(jQuery);
     </script>

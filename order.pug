@@ -56,7 +56,10 @@ block main_content
         .row
             .col.order_table
                 .pt-2.text-right.d-flex
-                    input.form-control.ml-auto.market_find.d-inline-block.mr-2(type="search" placeholder="Find..." aria-label="Search")
+                    button.btn.btn-download.ml-auto.market_find.d-inline-block.mr-2(type="button") 
+                        i.fa.fa-download.pr-1
+                        |Download history
+                    input.form-control.market_find.d-inline-block.mr-2(type="search" placeholder="Find..." aria-label="Search")
                     button.btn.btn-refresh(type="button")
                         i.fas.fa-sync
                 table.dataTablePlugin.market_table_detail#order_history_table
