@@ -710,6 +710,12 @@ $themes:(
             &:hover{
                 color: nth($color,2);
             }
+            &.custom{
+                color: nth($color,1) !important;
+                &:hover{
+                    color: nth($color,1);
+                }
+            }
         }
         .chart_area{
             background-color: rgba(nth($color,11),0.1);
