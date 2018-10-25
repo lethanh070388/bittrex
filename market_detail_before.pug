@@ -1,0 +1,229 @@
+extends layout_market_detail.pug  
+
+block datalist_aside
+    .datalist.scrollbar_custom.mCustomScrollbar
+        -for(var i=0; i<30; i++){
+            ul.datalist_item
+                li.datalist_item_up
+                    .market_currency ANI
+                    .market_change 
+                        span.up -3.1%
+                        img(src="../assets/arrow-up.svg", alt="")
+                li.datalist_item_down
+                    .market_volumn 9.34
+                    .market_last 0.074890
+        -}
+
+block main_content
+    .container-fluid
+        .row
+            .col.market_info_header
+                .row.py-1
+                    .col-lg-2
+                        .market_info_header_name.d-flex.align-content-center
+                            img.market-logo(src="../assets/bitcoin_small.png", alt="")
+                            div
+                                h4.text-uppercase.mb-0.pr-0 USD-BTC
+                                p Bitcoin
+                    .col-lg-10.item-group
+                        .item.last
+                            .text-right.up $7692.38500000
+                            .text-right.text-uppercase Last
+                        .item.bid
+                            .text-right.up $7692.38500000
+                            .text-right.text-uppercase Bid
+                        .item.ask
+                            .text-right.down $7692.38500000
+                            .text-right.text-uppercase Ask
+                        .item.volume
+                            .text-right.up $7692.38500000
+                            .text-right.text-uppercase Volume
+                        .item.high
+                            .text-right.up $7692.38500000
+                            .text-right.text-uppercase 24h High
+                        .item.low
+                            .text-right $7692.38500000
+                            .text-right.text-uppercase 24h Low      
+        .row
+            .col
+                .chart_area
+    .container-fluid
+        .row
+            .col
+                h1.text-uppercase.mt-4 Other books
+        .row
+            .col
+                .row-count-selector.mb-3
+                    nav.mx-auto(aria-label="Pagination")
+                        ul.pagination.mb-0.justify-content-center
+                            li.page-item 
+                                span.page-link.disabled Display row
+                            li.page-item
+                                a.page-link.current(href="#") 10
+                            li.page-item
+                                a.page-link(href="#") 25   
+                            li.page-item
+                                a.page-link(href="#") 50
+                            li.page-item
+                                a.page-link(href="#") 100
+        .row
+            .col-lg-5.col-xl-4
+                table.dataTablePlugin.market_table_detail.text-right
+                    thead
+                        tr
+                            th Sum
+                            th Total
+                            th Size(BTC)
+                            th Bid(USD)
+                            th &nbsp;
+                    tbody
+                        -for(var i=1; i<20; i++){
+                            tr
+                                td 483.7489
+                                td 483.7489
+                                td 0.064
+                                td.up 7575.30700000
+                                td
+                                    a.btn.btn-link.custom.text-uppercase.p-0(data-toggle="modal" data-target="#modalConfirmLimit") Sell
+                        -}
+            .col-lg-2.col-xl-4
+                .trade.trade-unauthenticated
+                    .trade_content
+                        p To begin trading please log in or create an account.
+                        .text-center
+                            a.btn(href="./register.html") Create account
+                        .text-center
+                            a.btn(href="./login.html") Login     
+            .col-lg-5.col-xl-4
+                table.dataTablePlugin-right.market_table_detail.text-left
+                    thead
+                        tr
+                            th &nbsp;
+                            th Ask (USD)
+                            th Size (USDT)
+                            th Total
+                            th Sum
+                    tbody
+                        -for(var i=1; i<30; i++){
+                            tr
+                                td
+                                    a.btn.btn-link.custom.text-uppercase.p-0(data-toggle="modal" data-target="#modalConfirmLimit") Buy
+                                td.down 1.00300000
+                                td 100300.0000
+                                td 100000.000	
+                                td 100300.0000
+                        -}
+    .container-fluid
+        .row
+            .col
+                h1.text-uppercase.mt-4 Market history
+        .row
+            .col
+                table.dataTablePlugin.market_table_detail
+                    thead
+                        tr
+                            th.text-left Date
+                            th.text-left Buy/Sell
+                            th.text-right Bid/Ask
+                            th.text-right Total Units (USDT)
+                            th.text-right.hidden-xs Totol Cost (USD)
+                    tbody
+                        -for(var i=1; i<20; i++){
+                            tr
+                                td.text-left 23:23:45
+                                td.text-left.down SELL
+                                td.text-right 1.00100000
+                                td.text-right 3035.33000000
+                                td.text-right.hidden-xs 3038.36533000
+                        -}
+    .container-fluid
+        .row
+            .col.balance
+                div.collapse-control
+                    a.expand-button(data-toggle="collapse" href="#collapseOpenOrder" role="button" aria-expanded="false" aria-controls="collapseOpenOrder")
+                        h1.text-uppercase.mt-4
+                            i.far.fa-plus-square.expand-icon.show.mr-2
+                            i.far.fa-minus-square.expand-icon.mr-2
+                            |My open orders
+                .collapse#collapseOpenOrder
+                    .expand-collapse-container
+                        .pt-2.text-right.d-flex
+                            input.form-control.ml-auto.market_find.d-inline-block.mr-2(type="search" placeholder="Find..." aria-label="Search")
+                        table.dataTablePlugin_openOrders.market_table_detail
+                            thead
+                                tr
+                                    th.text-left.hidden-lg-cell Order date
+                                    th.text-right.hidden-lg-cell Type
+                                    th.text-right Bid/Ask
+                                    th.text-right.hidden-lg-cell Filled
+                                    th.text-right Units total
+                                    th.text-right.hidden-lg-cell Actual rate
+                                    th.text-right Est. Total(USD)
+                            tbody
+                                tr
+                                    td.text-center(colspan="7") You have no open orders.
+        .row
+            .col.balance
+                div.collapse-control
+                    a.expand-button(data-toggle="collapse" href="#collapseOrderHistory" role="button" aria-expanded="false" aria-controls="collapseOrderHistory")
+                        h1.text-uppercase.mt-4
+                            i.far.fa-plus-square.expand-icon.show.mr-2
+                            i.far.fa-minus-square.expand-icon.mr-2
+                            |My open orders
+                .collapse#collapseOrderHistory
+                    .expand-collapse-container
+                        .pt-2.text-right.d-flex
+                            input.form-control.ml-auto.market_find.d-inline-block.mr-2(type="search" placeholder="Find..." aria-label="Search")
+                        table.dataTablePlugin_orderHistory.market_table_detail
+                            thead
+                                tr
+                                    th.text-left Type
+                                    th.text-right.hidden-lg-cell Bid/Ask
+                                    th.text-right Units Filled(USDT)
+                                    th.text-right Total units
+                                    th.text-right.hidden-lg-cell Actual rate
+                                    th.text-right.hidden-lg-cell Cost/Process
+                            tbody
+                                tr
+                                    td.text-center(colspan="6") You have no closed orders.
+block script-append
+    script.
+        $(function(){
+            $('.dropdown-menu a').on("click",function(){
+                $(this).parent().prev().text($(this).text());
+            });
+            $('.conditionTarget').on("click",function(){
+                $('.condition').addClass('active');
+                $('.target-price').addClass('active');
+            });
+            $('.limitDefault').on("click",function(){
+                $('.condition').removeClass('active');
+                $('.target-price').removeClass('active');
+            });
+            
+            //RELOAD and random 10 items
+            
+            function randomLoad(){
+                $('.dataTablePlugin tbody tr').removeClass('reload');
+                var rows1 = $('.dataTablePlugin tbody').children();
+                var rad1 = Math.floor(Math.random()*10);
+                rows1.eq(rad1).addClass('reload');
+
+                $('.dataTablePlugin-right tbody tr').removeClass('reload');
+                var rows2 = $('.dataTablePlugin-right tbody').children();
+                var rad2 = Math.floor(Math.random()*10);
+                rows2.eq(rad2).addClass('reload');
+
+                $('.datalist_item').removeClass('reload');
+                var rows3 = $('.datalist_item');
+                var rad3 = Math.floor(Math.random()*rows3.length);
+                rows3.eq(rad3).addClass('reload');
+            }
+            setInterval(randomLoad,1000);
+            $('.btn-confirm').click(function(){
+                setTimeout(function() {
+                    $('.notify-modal').modal('hide');
+                }, 5000);
+            });
+        });
+    
