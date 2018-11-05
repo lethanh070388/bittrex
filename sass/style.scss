@@ -1825,6 +1825,9 @@ table.dataTable{
             }
         }
     }
+    &_body{
+        text-align: justify;
+    }
     &_meta{
         display: flex;
         &_main{

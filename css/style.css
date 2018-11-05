@@ -6,28 +6,24 @@
   src: url("../webfonts/RobotoLight.eot?#iefix") format("embedded-opentype"), url("../webfonts/RobotoLight.woff") format("woff"), url("../webfonts/RobotoLight.ttf") format("truetype"), url("../webfonts/RobotoLight.svg#RobotoLight") format("svg");
   font-weight: 300;
   font-style: normal; }
-
 @font-face {
   font-family: 'Roboto';
   src: url("../webfonts/RobotoRegular.eot");
   src: url("../webfonts/RobotoRegular.eot?#iefix") format("embedded-opentype"), url("../webfonts/RobotoRegular.woff") format("woff"), url("../webfonts/RobotoRegular.ttf") format("truetype"), url("../webfonts/RobotoRegular.svg#RobotoRegular") format("svg");
   font-weight: 400;
   font-style: normal; }
-
 @font-face {
   font-family: 'Roboto';
   src: url("../webfonts/RobotoMedium.eot");
   src: url("../webfonts/RobotoMedium.eot?#iefix") format("embedded-opentype"), url("../webfonts/RobotoMedium.woff") format("woff"), url("../webfonts/RobotoMedium.ttf") format("truetype"), url("../webfonts/RobotoMedium.svg#RobotoMedium") format("svg");
   font-weight: 500;
   font-style: normal; }
-
 @font-face {
   font-family: 'Roboto';
   src: url("../webfonts/RobotoBold.eot");
   src: url("../webfonts/RobotoBold.eot?#iefix") format("embedded-opentype"), url("../webfonts/RobotoBold.woff") format("woff"), url("../webfonts/RobotoBold.ttf") format("truetype"), url("../webfonts/RobotoBold.svg#RobotoBold") format("svg");
   font-weight: 700;
   font-style: normal; }
-
 html {
   font-size: 14px; }
 
@@ -38,7 +34,6 @@ body {
 @media (min-width: 576px) {
   body {
     font-size: 1rem; } }
-
 .visible-sm-block,
 .visible-xs-block,
 .visible-md-block {
@@ -51,29 +46,27 @@ body {
 @media screen and (max-width: 991px) {
   .hidden-lg-cell {
     display: none; } }
-
 @media screen and (max-width: 1199px) {
   .hidden-xl-cell {
     display: none; } }
-
 @media screen and (max-width: 767px) {
   .visible-xs-block {
     display: block !important; }
+
   .hidden-xs {
     display: none !important; } }
-
 @media screen and (min-width: 768px) and (max-width: 991px) {
   .visible-sm-block {
     display: block !important; }
+
   .hidden-sm {
     display: none !important; } }
-
 @media screen and (min-width: 992px) and (max-width: 1199px) {
   .visible-md-block {
     display: block !important; }
+
   .hidden-md {
     display: none !important; } }
-
 .custom-table {
   color: rgba(255, 255, 255, 0.8); }
   .custom-table th {
@@ -1351,25 +1344,30 @@ hr {
 @media screen and (min-width: 768px) {
   .heading-lv1 {
     font-size: 42px; }
+
   .heading-lv4 {
     font-size: 24px; }
+
   .heading-lv5 {
     font-size: 21px; }
+
   .heading-lv6 {
     font-size: 18px; }
+
   h5 {
     font-size: 1.25rem; }
+
   h6 {
     font-size: 1rem; } }
-
 @media screen and (min-width: 992px) {
   .heading-lv1 {
     font-size: 42px; }
+
   .heading-lv5 {
     font-size: 24px; }
+
   .heading-lv4 {
     font-size: 30px; } }
-
 .logo-word {
   font-weight: 500;
   font-size: 1.5rem;
@@ -1431,27 +1429,22 @@ hr {
       margin-bottom: 20px; }
     .banner .banner_footer .btn {
       display: block; } }
-
 @media screen and (min-width: 992px) {
   .banner {
     background: url("../assets/cover-image.svg") center no-repeat; } }
-
 .trade_aside_header {
   font-size: 42px;
   font-weight: 300;
   line-height: 49px;
   margin: 0; }
-
 .trade_aside_content {
   font-size: 15px;
   line-height: 22px;
   text-align: left;
   margin-bottom: 48px; }
-
 @media screen and (max-width: 1199px) {
   .trade_aside_content {
     margin-bottom: 40px; } }
-
 @media screen and (max-width: 991px) {
   .trade_aside_content {
     padding: 0;
@@ -1462,7 +1455,6 @@ hr {
   .trade_aside h3 {
     font-size: 36px;
     line-height: 42px; } }
-
 @media screen and (max-width: 767px) {
   .trade_aside_content {
     width: 100%; } }
@@ -1476,15 +1468,12 @@ hr {
 @media screen and (max-width: 1199px) {
   .trade-section {
     padding: 100px 0; } }
-
 @media screen and (max-width: 991px) {
   .trade-section {
     padding-top: 108px; } }
-
 @media screen and (max-width: 767px) {
   .trade-section {
     padding: 56px 40px 60px; } }
-
 .security-section {
   text-align: center;
   padding-top: 100px;
@@ -1563,17 +1552,14 @@ hr {
 @media screen and (min-width: 576px) {
   .footer {
     padding: 28px 0 20px; } }
-
 .wrapper-market .container {
   padding-left: 5px;
   padding-right: 5px;
   max-width: 100%; }
-
 @media screen and (min-width: 768px) {
   .wrapper-market .container {
     padding-left: 15px;
     padding-right: 15px; } }
-
 @media screen and (min-width: 1200px) {
   .wrapper-market .container {
     padding-left: 45px;
@@ -1582,7 +1568,7 @@ hr {
 .carousel {
   margin-top: 56px; }
   .carousel .market_title {
-    font-size: 51.33334px; }
+    font-size: 51.333338px; }
     .carousel .market_title.small-heading {
       font-size: 28px; }
   .carousel .market_price, .carousel .market_volume {
@@ -1598,41 +1584,31 @@ hr {
 .market_detail_icon img {
   max-width: 71px;
   width: 100%; }
-
 .market_detail_label {
   font-size: 10px;
   margin-top: 16px; }
-
 .market_detail_name {
   font-size: 20px; }
-
 .market_detail_price_value {
   font-size: 20px; }
-
 .market_detail_change {
   font-size: 14px;
   margin-bottom: 16px; }
-
 .market_detail_change.up {
   color: #00a45b !important; }
-
 .market_detail_change.down {
   color: #f75535 !important; }
-
 .market_detail_change img {
   margin-top: -3px; }
-
 .market_title_name {
   font-size: 28px;
   text-transform: uppercase;
   display: inline-block; }
-
 .market_title_info {
   display: inline;
   padding-left: 20px;
   text-transform: capitalize;
   font-size: 12px; }
-
 .market_find {
   max-width: 100%;
   font-size: 14px;
@@ -1643,11 +1619,9 @@ hr {
   -moz-border-radius: 4px;
   -ms-border-radius: 4px;
   border-radius: 4px; }
-
 @media screen and (min-width: 576px) {
   .market_find {
     max-width: 200px; } }
-
 .market_table {
   width: 100%; }
   .market_table_heading, .market_table th {
@@ -1664,7 +1638,6 @@ hr {
     .market_table tr th:nth-child(n+3),
     .market_table tr td:nth-child(n+3) {
       text-align: right; }
-
 .market .border-left {
   border: 1px solid transparent; }
 
@@ -1678,12 +1651,12 @@ hr {
   .market_detail_change {
     font-size: 14px;
     margin-bottom: 10px; }
+
   .market_title_info {
     display: block;
     padding-left: 0; }
     .market_title_info span {
       padding-right: 15px; } }
-
 .main-container {
   margin-top: 56px;
   display: flex; }
@@ -1751,7 +1724,6 @@ hr {
   .navbar .dropdown-menu,
   .navbar .dropdown-menu.show {
     display: none; } }
-
 .basic-form {
   max-width: 400px;
   font-size: 16px;
@@ -1781,7 +1753,6 @@ hr {
 @media screen and (min-width: 576px) {
   .blurd {
     width: 70%; } }
-
 .info-blurd {
   max-width: 100%;
   font-size: 13px;
@@ -2060,7 +2031,6 @@ hr {
   font-size: 13px; }
   .dataTables_wrapper .dataTables_paginate .paginate_button:hover {
     background: none; }
-
 .dataTables_wrapper .col-sm-12 {
   padding-left: 0;
   padding-right: 0; }
@@ -2069,17 +2039,14 @@ hr {
   table.dataTable thead th,
   table.dataTable thead td {
     padding: 5px; } }
-
 @media screen and (min-width: 576px) {
   table.dataTable thead th,
   table.dataTable thead td {
     padding: 8px; } }
-
 @media screen and (min-width: 992px) {
   table.dataTable thead th,
   table.dataTable thead td {
     padding: 8px 10px; } }
-
 @media (max-width: 360px) {
   .container-fluid {
     padding-left: 8px;
@@ -2090,12 +2057,13 @@ hr {
       .container-fluid .row [class*='col'] {
         padding-left: 8px;
         padding-right: 8px; }
+
   .dataTables_wrapper [class*='col'] {
     padding-left: 5px;
     padding-right: 5px; }
+
   .carousel .market_title {
     font-size: 28px; } }
-
 table.dataTable.no-footer {
   border-bottom: 0; }
 
@@ -2159,22 +2127,18 @@ table.dataTable.no-footer {
   border: 0;
   font-size: 11px;
   padding: .375rem 0; }
-
 .tab-pane .form-group .input-group-text {
   border: 0;
   padding: .375rem 0;
   font-size: 11px; }
-
 .tab-pane .condition {
   display: none; }
   .tab-pane .condition.active {
     display: block; }
-
 .tab-pane .target-price {
   display: none; }
   .tab-pane .target-price.active {
     display: block; }
-
 .tab-pane .btn-transaction {
   padding: 11px 12px;
   outline: none;
@@ -2190,7 +2154,6 @@ table.dataTable.no-footer {
   .trade .dropdown-menu .dropdown-item {
     padding: 3px 10px;
     font-size: 11px; }
-
 .trade label {
   font-size: 10px; }
 
@@ -2208,16 +2171,18 @@ table.dataTable.no-footer {
 @media screen and (min-width: 768px) {
   .market_table_detail {
     font-size: 13px; }
+
   .btn-link {
     font-size: 13px; }
+
   .trade .dropdown-menu .dropdown-item {
     font-size: 13px; }
   .trade label {
     font-size: 12px; }
+
   .tab-pane .form-group .form-control,
   .tab-pane .form-group .input-group-text {
     font-size: 13px; } }
-
 .chart_area {
   height: 650px; }
 
@@ -2246,20 +2211,15 @@ table.dataTable.no-footer {
 @media screen and (max-width: 991px) {
   .market_info_header {
     height: auto; } }
-
 @media screen and (max-width: 767px) {
   .market_info_header .volume, .market_info_header .high, .market_info_header .low {
     display: none; } }
-
 .balance .sum {
   display: none; }
-
 .balance .expand-icon {
   display: none; }
-
 .balance .expand-icon.show {
   display: inline-block; }
-
 .balance .btn-custom {
   cursor: pointer;
   text-align: center;
@@ -2271,11 +2231,9 @@ table.dataTable.no-footer {
   font-weight: normal;
   line-height: 16px;
   vertical-align: middle; }
-
 @media screen and (min-width: 576px) {
   .balance .btn-custom {
     max-width: 200px; } }
-
 .balance .far {
   font-size: 14px;
   vertical-align: middle;
@@ -2322,21 +2280,17 @@ table.dataTable.no-footer {
 .error-container .modal-header .modal-title {
   margin-left: auto;
   margin-right: auto; }
-
 .error-container .modal-header .close {
   margin-left: 0; }
 
 @media screen and (min-width: 576px) {
   .modal-dialog {
     max-width: 550px; } }
-
 .common-modal .modal-header .modal-title {
   margin-left: auto;
   margin-right: auto; }
-
 .common-modal .modal-header .close {
   margin-left: 0; }
-
 .common-modal .modal-body {
   font-size: 12px;
   padding: 1rem 2rem; }
@@ -2367,7 +2321,6 @@ table.dataTable.no-footer {
       margin-left: 8px; }
   .common-modal .modal-body .modal-disclaimer {
     padding: 1rem; }
-
 .common-modal .modal-footer {
   justify-content: space-between; }
   .common-modal .modal-footer .btn-close {
@@ -2385,13 +2338,10 @@ table.dataTable.no-footer {
   color: #e55d1d; }
   .light .btn-link:hover {
     color: #f58220; }
-
 .light .tab-pane .form-group .form-control {
   color: #f0f0f0; }
-
 .light .down {
   color: #F9320B !important; }
-
 .light .up {
   color: #0AD83E !important; }
 
@@ -2409,7 +2359,6 @@ table.dataTable.no-footer {
         font-size: 11px; }
       .common-modal .modal-body .modal-transaction-type .item-value {
         font-size: 12px; } }
-
 .deposit-container .modal-header {
   padding: 1.5rem 1rem; }
   .deposit-container .modal-header .modal-title {
@@ -2428,15 +2377,12 @@ table.dataTable.no-footer {
   .deposit-container .modal-header .close {
     margin-left: 0;
     margin-top: -0.75rem; }
-
 .deposit-container .modal-disclaimer {
   padding: 1rem; }
-
 .deposit-container .deposit-control {
   padding: .7rem 1.75rem .7rem .75rem;
   font-size: 15px;
   border: 0; }
-
 .deposit-container .modal-footer .btn-close {
   font-size: 15px;
   width: 200px;
@@ -2486,7 +2432,6 @@ table.dataTable.no-footer {
   #modalDeposit .modal-dialog,
   #modalWithdrawal .modal-dialog {
     max-width: 600px; } }
-
 .deposit_table {
   width: 100%; }
   .deposit_table th {
@@ -2510,21 +2455,17 @@ table.dataTable.no-footer {
   .modal-sm {
     max-width: 300px;
     margin-right: 0; } }
-
 .order-container {
   min-height: calc(100vh - 290px); }
 
 @media screen and (min-width: 576px) {
   .order-container {
     min-height: calc(100vh - 210px); } }
-
 @media screen and (min-width: 992px) {
   .order-container {
     min-height: calc(100vh - 167px); } }
-
 .order_table .sum {
   display: none !important; }
-
 .order_table_market {
   color: #539ad7; }
 
@@ -2591,7 +2532,6 @@ table.dataTable thead .sorting_desc_disabled:after {
 @media screen and (max-width: 767px) {
   .dataTables_filter {
     text-align: right !important; } }
-
 .main-wrapper {
   min-height: calc(100vh - 100px);
   padding-top: 56px;
@@ -2610,7 +2550,6 @@ table.dataTable thead .sorting_desc_disabled:after {
   .container-inner {
     padding-left: 30px;
     padding-right: 30px; } }
-
 .breadcrumbs {
   padding: 0; }
   .breadcrumbs li {
@@ -2623,7 +2562,6 @@ table.dataTable thead .sorting_desc_disabled:after {
 
 .support_search_control {
   border-right: 0; }
-
 .support_search_button {
   color: #495057;
   background-color: transparent;
@@ -2640,22 +2578,19 @@ table.dataTable thead .sorting_desc_disabled:after {
 @media screen and (min-width: 768px) {
   .support-content {
     font-size: 16px; } }
-
 @media screen and (max-width: 767px) {
   .support-content.container {
     max-width: 100%; } }
-
 .article_header_title {
   font-size: 24px; }
-
 @media screen and (min-width: 768px) {
   .article_header_title {
     font-size: 28px; } }
-
 @media screen and (min-width: 992px) {
   .article_header_title {
     font-size: 32px; } }
-
+.article_body {
+  text-align: justify; }
 .article_meta {
   display: flex; }
   .article_meta_main {
@@ -2685,7 +2620,6 @@ table.dataTable thead .sorting_desc_disabled:after {
     -ms-user-select: none;
     user-select: none;
     transition: all 0.3s ease; }
-
 .article_vote {
   display: flex;
   position: relative;
@@ -2706,7 +2640,6 @@ table.dataTable thead .sorting_desc_disabled:after {
     position: absolute;
     left: 12px;
     bottom: 7px; }
-
 .article .share {
   list-style-type: none;
   margin: 0;
@@ -2758,7 +2691,6 @@ table.dataTable thead .sorting_desc_disabled:after {
   to {
     opacity: 1;
     transform: translateX(0); } }
-
 .invalid-feedback {
   font-size: 90%; }
 
@@ -2774,7 +2706,6 @@ table.dataTable thead .sorting_desc_disabled:after {
     padding: 1em 1em 2em;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     margin-bottom: 1em; } }
-
 .loading-address {
   position: fixed;
   width: 100vw;
@@ -2833,7 +2764,6 @@ table.dataTable thead .sorting_desc_disabled:after {
   color: #ffffff;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 4px; }
-<<<<<<< HEAD
 
 .light .withdrawal-container .withdrawal-control {
   background-color: #f7f4f9;
@@ -2841,5 +2771,3 @@ table.dataTable thead .sorting_desc_disabled:after {
   color: #2c3441; }
 
 /*# sourceMappingURL=style.css.map */
-=======
->>>>>>> 538970a99c50b7a5b4cc421faf9595a4442fe021
