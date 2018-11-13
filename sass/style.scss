@@ -2086,8 +2086,11 @@ table.dataTable{
     background-color: #f0b90b !important;
 }
 .social-icons{
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     padding-top: 70px;
     li{
         padding-left: 1em;
@@ -2122,6 +2125,34 @@ table.dataTable{
             .#{nth($p,1)}{
                 &:after{
                   content: '#{nth($p,2)}';
+                }
+            }
+        }
+    }
+}
+
+@include maxq(medium){
+    .social-icons{
+        padding-top: 40px;
+        li{
+            padding-left: 0;
+            padding-right: 0;
+            a{
+                &:after{
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+}
+@include maxq(small){
+    .social-icons{
+        li{
+            min-width: 40px;
+            a{
+                font-size: 0.8em;
+                &:after{
+                    font-size: 30px;
                 }
             }
         }

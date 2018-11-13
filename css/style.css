@@ -2787,8 +2787,11 @@ table.dataTable thead .sorting_desc_disabled:after {
   background-color: #f0b90b !important; }
 
 .social-icons {
+  margin: 0;
+  padding: 0;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   padding-top: 70px; }
   .social-icons li {
     padding-left: 1em;
@@ -2826,5 +2829,21 @@ table.dataTable thead .sorting_desc_disabled:after {
       content: ""; }
     .social-icons li .instagram:after {
       content: ""; }
+
+@media screen and (max-width: 767px) {
+  .social-icons {
+    padding-top: 40px; }
+    .social-icons li {
+      padding-left: 0;
+      padding-right: 0; }
+      .social-icons li a:after {
+        font-size: 30px; } }
+@media screen and (max-width: 575px) {
+  .social-icons li {
+    min-width: 40px; }
+    .social-icons li a {
+      font-size: 0.8em; }
+      .social-icons li a:after {
+        font-size: 30px; } }
 
 /*# sourceMappingURL=style.css.map */
