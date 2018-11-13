@@ -1,0 +1,84 @@
+doctype html
+html
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible" content="ie=edge")
+        title BITRADEX
+        link(rel="stylesheet" href="../css/fontawesome-all.min.css")
+        link(rel="stylesheet" href="../css/bootstrap.css")
+        link(rel="stylesheet" href="../css/jquery.mCustomScrollbar.min.css")
+        link(rel="stylesheet" href="../css/jquery.dataTables.min.css")
+        link(rel="stylesheet" href="../css/dataTables.bootstrap4.min.css")
+        link(rel="stylesheet" href="../css/style.css")
+    body
+        .controls 
+            .control-toggle
+                i.fas.fa-cog.fa-1x
+            .control-button-group
+                button.btn-theme(data-theme="light")
+                button.btn-theme(data-theme="dark")
+        .wrapper.dark
+            .layout
+                //- navigation bar
+                nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.scrolling-navbar.fixed-top
+                    a.navbar-brand(href="./index.html")
+                        img.logo-icon(src="../assets/logo.png") 
+                        span.logo-word BITRADEX
+                    button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation")
+                        span.navbar-toggler-icon
+                    .collapse.navbar-collapse#navbarSupportedContent
+                        .connect-status 
+                            img(src="../assets/icon-socket-status-disconnected.svg")
+                            small Socket status = Disconnected
+                            //- img(src="../assets/icon-socket-status-connected.svg")
+                            //- small Socket status = Connected
+                        ul.navbar-nav.ml-auto
+                            li.nav-item.active
+                                a.nav-link(href="./market.html") Markets
+                                    span.sr-only (current)
+                            li.nav-item
+                                a.nav-link(href="./order.html") Orders
+                            li.nav-item
+                                a.nav-link(href="./balance.html") Wallets
+                            li.nav-item.dropdown
+                                a.nav-link(href="./setting_activity.html") Settings
+                            li.nav-item
+                                a.nav-link(href="./login.html") Login
+                .contact.pt-5.text-center
+                    h4.market_title_name.mt5 Contact Us
+                    .container
+                        .row.justify-content-center
+                            .col-md-8.col-sm-10
+                                .info-blurd.text-center.bg-orange.mt-4.tab-pane.text-black
+                                    h5 Got a question?
+                                    p 
+                                        |Please first check the 
+                                        a(href="#") official Binance FAQ 
+                                        | to see if your question has already been answered:
+                                    div
+                                        .btn.btn-transaction.btn-buy.mb-3.text-white View support documentation
+                                    p 
+                                        |Still can’t find what you’re looking for? Please 
+                                        a(href="#") submit a request.
+                .social.pt-5
+                    ul.social-icons
+                        li
+                            a.telegram(href="#") Telegram
+                        li
+                            a.facebook(href="#") Facebook
+                        li
+                            a.twitter(href="#") Twitter
+                        li
+                            a.reddit(href="#") Reddit
+                        li
+                            a.weibo(href="#") Weibo
+                        li
+                            a.smedium(href="#") Medium
+                        li
+                            a.instagram(href="#") Instagram
+        script(src="../js/jquery.js")
+        script(src="../js/popper.js")
+        script(src="../js/bootstrap.js")
+        script(src="../js/theme.js")
+        script(src="../js/main.js")

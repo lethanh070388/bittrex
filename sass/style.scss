@@ -2055,3 +2055,75 @@ table.dataTable{
     border: 1px solid #ccc;
     color: #2c3441;
 }
+//MODIFY ALL
+.light{
+    .nav-items{
+        .nav-item{
+            .nav-subitem{
+                a{
+                    &:hover {
+                        color: $light-button-hover !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//CONTACT
+.contact{
+    background-image: url('../assets/contact_banner_bg.jpg');
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    min-height: 400px;
+    margin-top: 55px;
+}
+
+.bg-orange{
+    background-color: #f0b90b !important;
+}
+.social-icons{
+    display: flex;
+    justify-content: center;
+    padding-top: 70px;
+    li{
+        padding-left: 1em;
+        padding-right: 1em;
+        min-width: 80px;
+        text-align: center;
+        a{
+            position: relative;
+            color: #333;
+            &:hover{
+                color: #333;
+            }
+            &:after{
+                content: '';
+                font-family: "Font Awesome 5 Brands";
+                position: absolute;
+                bottom: 100%;
+                font-size: 50px;
+                left: 50%;
+                @include  transform-translateX(-50%);
+            }
+        }
+        @each $p in (
+            telegram "\f3fe",
+            facebook "\f39e",
+            twitter "\f099",
+            reddit "\f281",
+            weibo "\f18a",
+            smedium "\f3c7",
+            instagram "\f16d"
+        ){
+            .#{nth($p,1)}{
+                &:after{
+                  content: '#{nth($p,2)}';
+                }
+            }
+        }
+    }
+}

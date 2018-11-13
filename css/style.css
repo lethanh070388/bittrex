@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,700");
 @font-face {
@@ -2769,5 +2770,61 @@ table.dataTable thead .sorting_desc_disabled:after {
   background-color: #f7f4f9;
   border: 1px solid #ccc;
   color: #2c3441; }
+
+.light .nav-items .nav-item .nav-subitem a:hover {
+  color: #e55d1d !important; }
+
+.contact {
+  background-image: url("../assets/contact_banner_bg.jpg");
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 400px;
+  margin-top: 55px; }
+
+.bg-orange {
+  background-color: #f0b90b !important; }
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  padding-top: 70px; }
+  .social-icons li {
+    padding-left: 1em;
+    padding-right: 1em;
+    min-width: 80px;
+    text-align: center; }
+    .social-icons li a {
+      position: relative;
+      color: #333; }
+      .social-icons li a:hover {
+        color: #333; }
+      .social-icons li a:after {
+        content: '';
+        font-family: "Font Awesome 5 Brands";
+        position: absolute;
+        bottom: 100%;
+        font-size: 50px;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+        transform: translateX(-50%); }
+    .social-icons li .telegram:after {
+      content: ""; }
+    .social-icons li .facebook:after {
+      content: ""; }
+    .social-icons li .twitter:after {
+      content: ""; }
+    .social-icons li .reddit:after {
+      content: ""; }
+    .social-icons li .weibo:after {
+      content: ""; }
+    .social-icons li .smedium:after {
+      content: ""; }
+    .social-icons li .instagram:after {
+      content: ""; }
 
 /*# sourceMappingURL=style.css.map */
