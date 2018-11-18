@@ -1,0 +1,54 @@
+extends layout_support.pug  
+
+block content
+    .container.main-wrapper.support-content.px-0
+        .row.pt-4
+            .col-sm-8
+                ol.breadcrumbs
+                    li
+                        a(href="./help_center.html") BITRADEX Support
+                    li
+                        a(href="#") News and Announcements
+            .col-sm-4
+                form.form-inline.my-0
+                        .input-group.ml-auto.w-100
+                            input.form-control.support_search_control(type="text" placeholder="Search" aria-label="Search" aria-describedby="basic-addon2")
+                            .input-group-append
+                                button.btn.support_search_button(type="button")
+                                    i.fas.fa-search
+        .row.pt-4
+            .col
+                article.article
+                    header.article_header
+                        h1.article_header_title News and Announcements
+                        hr
+                    .article_body.container-fluid.px-0
+                        .row
+                            .col-md-4.text-left
+                                h4 Press Releases &amp; Statements
+                                p
+                                    a(href="#") Bitradex Announces Formation of Bitradex International
+                                p
+                                    a(href="#") Cryptofacil to Launch Digital Asset Platform; Platform will be Powered by Bitradex
+                                p
+                                    a(href="#") Rialto Trading and Bitradex Team Up on Digital Securities Trading Platform
+                                .article_meta_button
+                                    a.article-subscribe(href="#") See All 24 Articles
+                            .col-md-4.text-left
+                                h4 Blog
+                                p
+                                    a(href="#") This Month at Bitradex – October 2018
+                                p
+                                    a(href="#") Featured Job of the Month: Business Development Advisory Analyst
+                                p
+                                    a(href="#") Bitradex Trading 101: Trade with U.S. Dollars (Fiat)
+                                .article_meta_button
+                                    a.article-subscribe(href="#") See All 11 Articles
+                            .col-md-4.text-left
+                                h4 Announcements
+                                p
+                                    a(href="#") Joint statement from Bitradex and Dunamu
+                                p
+                                    a(href="#") Update: New Terms of Service – Restricted Locations Section
+                                .article_meta_button
+                                    a.article-subscribe(href="#") See All 9 Articles

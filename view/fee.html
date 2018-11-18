@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BITRADEX</title>
+    <link rel="stylesheet" href="../css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/style.css">
+  </head>
+  <body>
+    <div class="controls"> 
+      <div class="control-toggle"><i class="fas fa-cog fa-1x"></i></div>
+      <div class="control-button-group">
+        <button class="btn-theme" data-theme="light"></button>
+        <button class="btn-theme" data-theme="dark"></button>
+      </div>
+    </div>
+    <div class="wrapper dark">
+      <div class="layout">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark scrolling-navbar fixed-top"><a class="navbar-brand" href="./index.html"><img class="logo-icon" src="../assets/logo.png"><span class="logo-word">BITRADEX</span></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="connect-status"> <img src="../assets/icon-socket-status-disconnected.svg"><small>Socket status = Disconnected</small></div>
+            <form class="form-inline ml-auto pb-2 pb-sm-0"><a class="btn btn-outline-primary" id="btnSubmitReq" href="./request_select.html">Submit a request</a>
+              <button class="btn btn-outline-primary ml-3">Sign in</button>
+            </form>
+          </div>
+        </nav>
+        <div class="container-fluid mt-5 mb-4 px-0">
+          <div class="container mt-5 main-wrapper">
+            <ul class="nav nav-tabs" role="tablist">
+              <li class="nav-item"><a class="nav-link active text-uppercase" data-toggle="tab" href="#tradingFees">Trading fees</a></li>
+              <li class="nav-item"><a class="nav-link text-uppercase" data-toggle="tab" href="#depositWithdrawalFees">Deposit &amp; Withdrawal Fees</a></li>
+            </ul>
+            <div class="tab-content mb-5">
+              <div class="container tab-pane active px-3 pt-4" id="tradingFees">
+                <div class="row">
+                  <div class="col px-0">
+                    <div class="info-section text-justify">
+                      <ul>
+                        <h4>Trading fees</h4>
+                        <li>General: 0.1% trading fee.</li>
+                        <li>
+                           By default, if you hold BXB in your account, your trading fees will be automatically subtracted from your BXB balance. Using BXB for transaction fees applies a 0% discount to your trading fee will be applied (subject to change). <a href="#">Read more</a></li>
+                        <li>
+                           Trading fees are determined based on <b>trading volume over a 30-day period </b>(in BTC) and <b>BXB balance.</b></li>
+                        <li>At 00:00 AM (UTC) every day, your trading volume over the past 30-day period and your current BXB balance are evaluated. Your Tier level and corresponding maker/taker fees are updated one hour later.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="row mt-5">
+                  <div class="col px-0">
+                    <table class="table-custom table-fees">
+                      <thead>
+                        <tr>
+                          <th class="text-center">Level</th>
+                          <th class="text-right">30d Trade Volume(BTC)</th>
+                          <th class="text-center">&amp;</th>
+                          <th class="text-left">BNB holdings</th>
+                          <th class="text-right">Maker</th>
+                          <th class="text-left">Taker</th>
+                          <th class="text-right">Maker</th>
+                          <th class="text-left">Taker</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="text-center">General</td>
+                          <td class="text-right">&lt; 100 BTC</td>
+                          <td class="text-center">or</td>
+                          <td class="text-left">≥ 0 BNB</td>
+                          <td class="text-right">0.1000%</td>
+                          <td class="text-left">0.1000%</td>
+                          <td class="text-right">0.0750%</td>
+                          <td class="text-left">0.0750%</td>
+                        </tr>
+                        <tr>
+                          <td class="text-center">VIP 1</td>
+                          <td class="text-right">≥ 100 BTC</td>
+                          <td class="text-center">&amp;</td>
+                          <td class="text-left">≥ 50 BNB</td>
+                          <td class="text-right">0.0900%</td>
+                          <td class="text-left">0.1000%</td>
+                          <td class="text-right">0.0675%</td>
+                          <td class="text-left">0.0750%</td>
+                        </tr>
+                        <tr>
+                          <td class="text-center">VIP 2</td>
+                          <td class="text-right">≥ 500 BTC</td>
+                          <td class="text-center">&amp;</td>
+                          <td class="text-left">≥ 200 BNB</td>
+                          <td class="text-right">0.0800%</td>
+                          <td class="text-left">0.1000%</td>
+                          <td class="text-right">0.0600%</td>
+                          <td class="text-left">0.0750%</td>
+                        </tr>
+                        <tr>
+                          <td class="text-center">VIP 3</td>
+                          <td class="text-right">≥ 4500 BTC</td>
+                          <td class="text-center">&amp;</td>
+                          <td class="text-left">≥ 1000 BNB</td>
+                          <td class="text-right">0.0700%</td>
+                          <td class="text-left">0.0900%</td>
+                          <td class="text-right">0.0525%</td>
+                          <td class="text-left">0.0675%</td>
+                        </tr>
+                        <tr>
+                          <td class="text-center">VIP 4</td>
+                          <td class="text-right">≥ 10000 BTC</td>
+                          <td class="text-center">&amp;</td>
+                          <td class="text-left">≥ 2000 BNB</td>
+                          <td class="text-right">0.0600%</td>
+                          <td class="text-left">0.0800%</td>
+                          <td class="text-right">0.0450%</td>
+                          <td class="text-left">0.0600%</td>
+                        </tr>
+                        <tr>
+                          <td class="text-center">VIP 5</td>
+                          <td class="text-right">≥ 20000 BTC</td>
+                          <td class="text-center">&amp;</td>
+                          <td class="text-left">≥ 3500 BNB</td>
+                          <td class="text-right">0.0500%</td>
+                          <td class="text-left">0.0700%</td>
+                          <td class="text-right">0.0375%</td>
+                          <td class="text-left">0.0525%</td>
+                        </tr>
+                        <tr>
+                          <td class="text-center">VIP 6</td>
+                          <td class="text-right">≥ 40000 BTC</td>
+                          <td class="text-center">&amp;</td>
+                          <td class="text-left">≥ 6000 BNB</td>
+                          <td class="text-right">0.0400%</td>
+                          <td class="text-left">0.0600%</td>
+                          <td class="text-right">0.0300%</td>
+                          <td class="text-left">0.0450%</td>
+                        </tr>
+                        <tr>
+                          <td class="text-center">VIP 7</td>
+                          <td class="text-right">≥ 80000 BTC</td>
+                          <td class="text-center">&amp;</td>
+                          <td class="text-left">≥ 9000 BNB</td>
+                          <td class="text-right">0.0300%</td>
+                          <td class="text-left">0.0500%</td>
+                          <td class="text-right">0.0225%</td>
+                          <td class="text-left">0.0375%</td>
+                        </tr>
+                        <tr>
+                          <td class="text-center">VIP 8</td>
+                          <td class="text-right">≥ 150000 BTC</td>
+                          <td class="text-center">&amp;</td>
+                          <td class="text-left">≥ 11000 BNB</td>
+                          <td class="text-right">0.0200%</td>
+                          <td class="text-left">0.0400%</td>
+                          <td class="text-right">0.0150%</td>
+                          <td class="text-left">0.0300%</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="container tab-pane fade px-3 pt-4" id="depositWithdrawalFees">
+                <div class="row">
+                  <div class="col px-0">
+                    <div class="info-section text-justify">
+                      <ul>
+                        <h4>Deposit &amp; Withdrawal Fees</h4>
+                        <li>Deposit: Free</li>
+                        <li>Withdrawal: <span class="text-danger">Withdrawal fees are regularly adjusted according to blockchain conditions. Please read more below.                                       </span></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="row mt-5">
+                  <div class="col px-0">
+                    <table class="table-custom table-deposit-withdrawal-fees">
+                      <thead>
+                        <tr>
+                          <th>Coin/Token</th>
+                          <th>&nbsp;</th>
+                          <th>Minimum Withdrawal</th>
+                          <th>Withdrawal Fee</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><img class="icon20" src="../assets/bnb_icon.png" alt="">BNB</td>
+                          <td>Binance Coin</td>
+                          <td>0.28</td>
+                          <td>0.14 BNB</td>
+                        </tr>
+                        <tr>
+                          <td><img class="icon20" src="../assets/eth-icon.png" alt="">ETH</td>
+                          <td>Ethereum</td>
+                          <td>0.02</td>
+                          <td>0.01 ETH</td>
+                        </tr>
+                        <tr>
+                          <td><img class="icon20" src="../assets/bnb_icon.png" alt="">BNB</td>
+                          <td>Binance Coin</td>
+                          <td>0.28</td>
+                          <td>0.14 BNB</td>
+                        </tr>
+                        <tr>
+                          <td><img class="icon20" src="../assets/eth-icon.png" alt="">ETH</td>
+                          <td>Ethereum</td>
+                          <td>0.02</td>
+                          <td>0.01 ETH</td>
+                        </tr>
+                        <tr>
+                          <td><img class="icon20" src="../assets/bnb_icon.png" alt="">BNB</td>
+                          <td>Binance Coin</td>
+                          <td>0.28</td>
+                          <td>0.14 BNB</td>
+                        </tr>
+                        <tr>
+                          <td><img class="icon20" src="../assets/eth-icon.png" alt="">ETH</td>
+                          <td>Ethereum</td>
+                          <td>0.02</td>
+                          <td>0.01 ETH</td>
+                        </tr>
+                        <tr>
+                          <td><img class="icon20" src="../assets/bnb_icon.png" alt="">BNB</td>
+                          <td>Binance Coin</td>
+                          <td>0.28</td>
+                          <td>0.14 BNB</td>
+                        </tr>
+                        <tr>
+                          <td><img class="icon20" src="../assets/eth-icon.png" alt="">ETH</td>
+                          <td>Ethereum</td>
+                          <td>0.02</td>
+                          <td>0.01 ETH</td>
+                        </tr>
+                        <tr>
+                          <td><img class="icon20" src="../assets/bnb_icon.png" alt="">BNB</td>
+                          <td>Binance Coin</td>
+                          <td>0.28</td>
+                          <td>0.14 BNB</td>
+                        </tr>
+                        <tr>
+                          <td><img class="icon20" src="../assets/eth-icon.png" alt="">ETH</td>
+                          <td>Ethereum</td>
+                          <td>0.02</td>
+                          <td>0.01 ETH</td>
+                        </tr>
+                        <tr>
+                          <td><img class="icon20" src="../assets/bnb_icon.png" alt="">BNB</td>
+                          <td>Binance Coin</td>
+                          <td>0.28</td>
+                          <td>0.14 BNB</td>
+                        </tr>
+                        <tr>
+                          <td><img class="icon20" src="../assets/eth-icon.png" alt="">ETH</td>
+                          <td>Ethereum</td>
+                          <td>0.02</td>
+                          <td>0.01 ETH</td>
+                        </tr>
+                        <tr>
+                          <td><img class="icon20" src="../assets/bnb_icon.png" alt="">BNB</td>
+                          <td>Binance Coin</td>
+                          <td>0.28</td>
+                          <td>0.14 BNB</td>
+                        </tr>
+                        <tr>
+                          <td><img class="icon20" src="../assets/eth-icon.png" alt="">ETH</td>
+                          <td>Ethereum</td>
+                          <td>0.02</td>
+                          <td>0.01 ETH</td>
+                        </tr>
+                        <tr>
+                          <td><img class="icon20" src="../assets/bnb_icon.png" alt="">BNB</td>
+                          <td>Binance Coin</td>
+                          <td>0.28</td>
+                          <td>0.14 BNB</td>
+                        </tr>
+                        <tr>
+                          <td><img class="icon20" src="../assets/eth-icon.png" alt="">ETH</td>
+                          <td>Ethereum</td>
+                          <td>0.02</td>
+                          <td>0.01 ETH</td>
+                        </tr>
+                        <tr>
+                          <td><img class="icon20" src="../assets/bnb_icon.png" alt="">BNB</td>
+                          <td>Binance Coin</td>
+                          <td>0.28</td>
+                          <td>0.14 BNB</td>
+                        </tr>
+                        <tr>
+                          <td><img class="icon20" src="../assets/eth-icon.png" alt="">ETH</td>
+                          <td>Ethereum</td>
+                          <td>0.02</td>
+                          <td>0.01 ETH</td>
+                        </tr>
+                        <tr>
+                          <td><img class="icon20" src="../assets/bnb_icon.png" alt="">BNB</td>
+                          <td>Binance Coin</td>
+                          <td>0.28</td>
+                          <td>0.14 BNB</td>
+                        </tr>
+                        <tr>
+                          <td><img class="icon20" src="../assets/eth-icon.png" alt="">ETH</td>
+                          <td>Ethereum</td>
+                          <td>0.02</td>
+                          <td>0.01 ETH</td>
+                        </tr>
+                        <tr>
+                          <td><img class="icon20" src="../assets/bnb_icon.png" alt="">BNB</td>
+                          <td>Binance Coin</td>
+                          <td>0.28</td>
+                          <td>0.14 BNB</td>
+                        </tr>
+                        <tr>
+                          <td><img class="icon20" src="../assets/eth-icon.png" alt="">ETH</td>
+                          <td>Ethereum</td>
+                          <td>0.02</td>
+                          <td>0.01 ETH</td>
+                        </tr>
+                        <tr>
+                          <td><img class="icon20" src="../assets/bnb_icon.png" alt="">BNB</td>
+                          <td>Binance Coin</td>
+                          <td>0.28</td>
+                          <td>0.14 BNB</td>
+                        </tr>
+                        <tr>
+                          <td><img class="icon20" src="../assets/eth-icon.png" alt="">ETH</td>
+                          <td>Ethereum</td>
+                          <td>0.02</td>
+                          <td>0.01 ETH</td>
+                        </tr>
+                        <tr>
+                          <td><img class="icon20" src="../assets/bnb_icon.png" alt="">BNB</td>
+                          <td>Binance Coin</td>
+                          <td>0.28</td>
+                          <td>0.14 BNB</td>
+                        </tr>
+                        <tr>
+                          <td><img class="icon20" src="../assets/eth-icon.png" alt="">ETH</td>
+                          <td>Ethereum</td>
+                          <td>0.02</td>
+                          <td>0.01 ETH</td>
+                        </tr>
+                        <tr>
+                          <td><img class="icon20" src="../assets/bnb_icon.png" alt="">BNB</td>
+                          <td>Binance Coin</td>
+                          <td>0.28</td>
+                          <td>0.14 BNB</td>
+                        </tr>
+                        <tr>
+                          <td><img class="icon20" src="../assets/eth-icon.png" alt="">ETH</td>
+                          <td>Ethereum</td>
+                          <td>0.02</td>
+                          <td>0.01 ETH</td>
+                        </tr>
+                        <tr>
+                          <td><img class="icon20" src="../assets/bnb_icon.png" alt="">BNB</td>
+                          <td>Binance Coin</td>
+                          <td>0.28</td>
+                          <td>0.14 BNB</td>
+                        </tr>
+                        <tr>
+                          <td><img class="icon20" src="../assets/eth-icon.png" alt="">ETH</td>
+                          <td>Ethereum</td>
+                          <td>0.02</td>
+                          <td>0.01 ETH</td>
+                        </tr>
+                        <tr>
+                          <td><img class="icon20" src="../assets/bnb_icon.png" alt="">BNB</td>
+                          <td>Binance Coin</td>
+                          <td>0.28</td>
+                          <td>0.14 BNB</td>
+                        </tr>
+                        <tr>
+                          <td><img class="icon20" src="../assets/eth-icon.png" alt="">ETH</td>
+                          <td>Ethereum</td>
+                          <td>0.02</td>
+                          <td>0.01 ETH</td>
+                        </tr>
+                        <tr>
+                          <td><img class="icon20" src="../assets/bnb_icon.png" alt="">BNB</td>
+                          <td>Binance Coin</td>
+                          <td>0.28</td>
+                          <td>0.14 BNB</td>
+                        </tr>
+                        <tr>
+                          <td><img class="icon20" src="../assets/eth-icon.png" alt="">ETH</td>
+                          <td>Ethereum</td>
+                          <td>0.02</td>
+                          <td>0.01 ETH</td>
+                        </tr>
+                        <tr>
+                          <td><img class="icon20" src="../assets/bnb_icon.png" alt="">BNB</td>
+                          <td>Binance Coin</td>
+                          <td>0.28</td>
+                          <td>0.14 BNB</td>
+                        </tr>
+                        <tr>
+                          <td><img class="icon20" src="../assets/eth-icon.png" alt="">ETH</td>
+                          <td>Ethereum</td>
+                          <td>0.02</td>
+                          <td>0.01 ETH</td>
+                        </tr>
+                        <tr>
+                          <td><img class="icon20" src="../assets/bnb_icon.png" alt="">BNB</td>
+                          <td>Binance Coin</td>
+                          <td>0.28</td>
+                          <td>0.14 BNB</td>
+                        </tr>
+                        <tr>
+                          <td><img class="icon20" src="../assets/eth-icon.png" alt="">ETH</td>
+                          <td>Ethereum</td>
+                          <td>0.02</td>
+                          <td>0.01 ETH</td>
+                        </tr>
+                        <tr>
+                          <td><img class="icon20" src="../assets/bnb_icon.png" alt="">BNB</td>
+                          <td>Binance Coin</td>
+                          <td>0.28</td>
+                          <td>0.14 BNB</td>
+                        </tr>
+                        <tr>
+                          <td><img class="icon20" src="../assets/eth-icon.png" alt="">ETH</td>
+                          <td>Ethereum</td>
+                          <td>0.02</td>
+                          <td>0.01 ETH</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid footer-bottom bg-dark">
+          <div class="container h-100">
+            <div class="row text-white h-100 d-flex align-items-center">
+              <div class="col-6">©BITTRADEX Support</div>
+              <div class="col-6 text-right"> <i class="fab fa-twitter pr-4"></i><i class="fab fa-facebook-square"></i></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../js/jquery.js"></script>
+    <script src="../js/popper.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <script src="../js/theme.js"></script>
+    <script src="../js/main.js"></script>
+  </body>
+</html>

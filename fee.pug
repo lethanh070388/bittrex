@@ -1,0 +1,159 @@
+extends layout_support.pug
+
+block content
+    .container-fluid.mt-5.mb-4.px-0
+        .container.mt-5.main-wrapper
+            ul.nav.nav-tabs(role="tablist")
+                li.nav-item
+                    a.nav-link.active.text-uppercase(data-toggle="tab" href="#tradingFees") Trading fees
+                li.nav-item
+                    a.nav-link.text-uppercase(data-toggle="tab" href="#depositWithdrawalFees") Deposit &amp; Withdrawal Fees
+            .tab-content.mb-5
+                #tradingFees.container.tab-pane.active.px-3.pt-4
+                    .row
+                        .col.px-0
+                            .info-section.text-justify
+                                ul
+                                    h4 Trading fees
+                                    li General: 0.1% trading fee.
+                                    li 
+                                        |By default, if you hold BXB in your account, your trading fees will be automatically subtracted from your BXB balance. Using BXB for transaction fees applies a 0% discount to your trading fee will be applied (subject to change). 
+                                        a(href="#") Read more
+                                    li 
+                                        |Trading fees are determined based on 
+                                        b trading volume over a 30-day period 
+                                        | (in BTC) and 
+                                        b BXB balance.
+                                    li At 00:00 AM (UTC) every day, your trading volume over the past 30-day period and your current BXB balance are evaluated. Your Tier level and corresponding maker/taker fees are updated one hour later.
+                    .row.mt-5
+                        .col.px-0
+                            table.table-custom.table-fees
+                                thead
+                                    tr
+                                        th.text-center Level
+                                        th.text-right 30d Trade Volume(BTC)
+                                        th.text-center &amp;
+                                        th.text-left BNB holdings
+                                        th.text-right Maker
+                                        th.text-left Taker
+                                        th.text-right Maker
+                                        th.text-left Taker
+                                tbody
+                                    tr
+                                        td.text-center General
+                                        td.text-right &lt; 100 BTC
+                                        td.text-center or
+                                        td.text-left ≥ 0 BNB
+                                        td.text-right 0.1000%
+                                        td.text-left 0.1000%
+                                        td.text-right 0.0750%
+                                        td.text-left 0.0750%
+                                    tr
+                                        td.text-center VIP 1
+                                        td.text-right ≥ 100 BTC
+                                        td.text-center &amp;
+                                        td.text-left ≥ 50 BNB
+                                        td.text-right 0.0900%
+                                        td.text-left 0.1000%
+                                        td.text-right 0.0675%
+                                        td.text-left 0.0750%
+                                    tr
+                                        td.text-center VIP 2
+                                        td.text-right ≥ 500 BTC
+                                        td.text-center &amp;
+                                        td.text-left ≥ 200 BNB
+                                        td.text-right 0.0800%
+                                        td.text-left 0.1000%
+                                        td.text-right 0.0600%
+                                        td.text-left 0.0750%
+                                    tr
+                                        td.text-center VIP 3
+                                        td.text-right ≥ 4500 BTC
+                                        td.text-center &amp;
+                                        td.text-left ≥ 1000 BNB
+                                        td.text-right 0.0700%
+                                        td.text-left 0.0900%
+                                        td.text-right 0.0525%
+                                        td.text-left 0.0675%
+                                    tr
+                                        td.text-center VIP 4
+                                        td.text-right ≥ 10000 BTC
+                                        td.text-center &amp;
+                                        td.text-left ≥ 2000 BNB
+                                        td.text-right 0.0600%
+                                        td.text-left 0.0800%
+                                        td.text-right 0.0450%
+                                        td.text-left 0.0600%
+                                    tr
+                                        td.text-center VIP 5
+                                        td.text-right ≥ 20000 BTC
+                                        td.text-center &amp;
+                                        td.text-left ≥ 3500 BNB
+                                        td.text-right 0.0500%
+                                        td.text-left 0.0700%
+                                        td.text-right 0.0375%
+                                        td.text-left 0.0525%
+                                    tr
+                                        td.text-center VIP 6
+                                        td.text-right ≥ 40000 BTC
+                                        td.text-center &amp;
+                                        td.text-left ≥ 6000 BNB
+                                        td.text-right 0.0400%
+                                        td.text-left 0.0600%
+                                        td.text-right 0.0300%
+                                        td.text-left 0.0450%
+                                    tr
+                                        td.text-center VIP 7
+                                        td.text-right ≥ 80000 BTC
+                                        td.text-center &amp;
+                                        td.text-left ≥ 9000 BNB
+                                        td.text-right 0.0300%
+                                        td.text-left 0.0500%
+                                        td.text-right 0.0225%
+                                        td.text-left 0.0375%
+                                    tr
+                                        td.text-center VIP 8
+                                        td.text-right ≥ 150000 BTC
+                                        td.text-center &amp;
+                                        td.text-left ≥ 11000 BNB
+                                        td.text-right 0.0200%
+                                        td.text-left 0.0400%
+                                        td.text-right 0.0150%
+                                        td.text-left 0.0300%
+
+                #depositWithdrawalFees.container.tab-pane.fade.px-3.pt-4
+                    .row
+                        .col.px-0
+                            .info-section.text-justify
+                                ul
+                                    h4 Deposit &amp; Withdrawal Fees
+                                    li Deposit: Free
+                                    li
+                                        |Withdrawal: 
+                                        span.text-danger Withdrawal fees are regularly adjusted according to blockchain conditions. Please read more below.                                       
+                    .row.mt-5
+                        .col.px-0
+                            table.table-custom.table-deposit-withdrawal-fees
+                                thead
+                                    tr
+                                        th Coin/Token
+                                        th &nbsp;
+                                        th Minimum Withdrawal
+                                        th Withdrawal Fee
+                                tbody
+                                    -for(var i=1; i<=20; i++){
+                                        tr
+                                            td
+                                                img.icon20(src="../assets/bnb_icon.png", alt="")
+                                                |BNB
+                                            td Binance Coin
+                                            td 0.28
+                                            td 0.14 BNB
+                                        tr
+                                            td
+                                                img.icon20(src="../assets/eth-icon.png", alt="")
+                                                |ETH
+                                            td Ethereum
+                                            td 0.02
+                                            td 0.01 ETH
+                                    -}

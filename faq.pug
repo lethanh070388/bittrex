@@ -1,0 +1,54 @@
+extends layout_support.pug  
+
+block content
+    .container.main-wrapper.support-content.px-0
+        .row.pt-4
+            .col-sm-8
+                ol.breadcrumbs
+                    li
+                        a(href="./help_center.html") BITRADEX Support
+                    li
+                        a(href="#") FAQ - Frequently Asked Questions
+            .col-sm-4
+                form.form-inline.my-0
+                        .input-group.ml-auto.w-100
+                            input.form-control.support_search_control(type="text" placeholder="Search" aria-label="Search" aria-describedby="basic-addon2")
+                            .input-group-append
+                                button.btn.support_search_button(type="button")
+                                    i.fas.fa-search
+        .row.pt-4
+            .col
+                article.article
+                    header.article_header
+                        h1.article_header_title FAQ - Frequently Asked Questions
+                        hr
+                    .article_body.container-fluid.px-0
+                        .row
+                            .col-md-4.text-left
+                                h4 Common Errors and Troubleshooting Tips
+                                p
+                                    a(href="#") How do I get invited to the Bitradex Slack channel?
+                                p
+                                    a(href="#") Not receiving email from Bitradex
+                                p
+                                    a(href="#") Error Codes - Troubleshooting common error codes
+                                .article_meta_button
+                                    a.article-subscribe(href="#") See All 24 Articles
+                            .col-md-4.text-left
+                                h4 Trading
+                                p
+                                    a(href="#") What are my trade limits?
+                                p
+                                    a(href="#") Margin Trading Availability
+                                p
+                                    a(href="#") What fees does Bitradex charge?
+                                .article_meta_button
+                                    a.article-subscribe(href="#") See All 11 Articles
+                            .col-md-4.text-left
+                                h4 Wallets
+                                p
+                                    a(href="#") Where is my withdrawal?
+                                p
+                                    a(href="#") Where is my deposit?
+                                .article_meta_button
+                                    a.article-subscribe(href="#") See All 9 Articles
