@@ -2927,4 +2927,7 @@ table.dataTable thead .sorting_desc_disabled:after {
 .article_header hr {
   border-color: #eceeef; }
 
+.max1140 {
+  max-width: 1140px; }
+
 /*# sourceMappingURL=style.css.map */
