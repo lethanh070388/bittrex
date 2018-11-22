@@ -60,7 +60,7 @@
             </h5>
           </div>
           <div class="main-content p-4">
-            <div class="container-fluid px-4">
+            <div class="container-fluid px-4" id="verification">
               <div class="row">
                 <div class="col">
                   <h5 class="heading-lv5 text-uppercase pt-4 border-bottom">IDENTITY VERIFICATION</h5>
@@ -68,7 +68,7 @@
               </div>
               <div class="row">
                 <div class="col">
-                  <form class="enhanced-verification mt-3">
+                  <div class="enhanced-verification mt-3">
                     <p>Verifying your identity improves the security of your account. The next step in the process is to submit the materials needed to verify your identity. While driver’s licenses and ID cards are permitted, we recommend you use passports to help expedite the process.</p>
                     <div class="blurd sucess-blurd">
                       <div class="blurd_icon info"><i class="fas fa-info fa-3x"></i></div>
@@ -86,10 +86,81 @@
                         <li>Do not crop the image of your ID such that any portion of the ID is removed, including edges</li>
                       </ul>
                       <div class="text-center">
-                        <button class="btn btn-form bg-green mt-4">Start verification</button>
+                        <button class="btn btn-form bg-green mt-4" id="btnVerify">Start verification</button>
                       </div>
                     </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="container-fluid px-4" id="identity">
+              <div class="row">
+                <div class="col-md-6 mx-auto">
+                  <form class="form-input" id="frmIdentityCard" action="#">
+                    <div class="form-group">
+                      <label>Session KYC</label>
+                      <input class="form-control" type="text" placeholder="5748BBEF4E" disabled>
+                    </div>
+                    <div class="form-group">
+                      <label>Full Name</label>
+                      <input class="form-control" type="text">
+                    </div>
+                    <div class="form-group">
+                      <label>Identity card/Passport</label>
+                      <input class="form-control" type="text">
+                    </div>
+                    <div class="form-group">
+                      <label>Status Pending</label>
+                      <input class="form-control-file" id="inputFile" type="file">
+                    </div>
+                    <div class="row">
+                      <div class="col">
+                        <div class="img-holder border"><img class="w-100 d-block" src="../assets/Identity-demo.png" alt=""></div>
+                      </div>
+                    </div>
+                    <div class="text-right my-4">
+                      <button class="btn btn-form change-pass" id="saveChangesVerify" type="button">Save changes</button>
+                    </div>
                   </form>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <div class="modal fade" id="modalFailed" tabindex="-1" role="dialog" aria-labelledby="modalFailedLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content error-container">
+                        <div class="modal-header text-center">
+                          <h5 class="modal-title" id="modalFailedLabel">Error</h5>
+                          <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        </div>
+                        <div class="modal-body">
+                          <div>This file do not support. Please select another file type on jpg|jpeg|pdf|png.</div>
+                        </div>
+                        <div class="modal-footer">
+                          <button class="btn btn-transaction" type="button" data-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="container-fluid px-4" id="complete-step">
+              <div class="row">
+                <div class="col">
+                  <h5 class="heading-lv5 text-uppercase pt-4 border-bottom">VERIFYING...</h5>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <div class="enhanced-verification mt-3">
+                    <div class="blurd sucess-blurd">
+                      <div class="blurd_icon info"><i class="fas fa-info fa-3x"></i></div>
+                      <div class="blurd_content">
+                        <div class="font-weight-bold">Thanks for your verifications</div><small> <a href="#">The process is being processed</a></small>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -123,5 +194,23 @@
     <script src="../js/dataTables.bootstrap4.min.js"></script>
     <script src="../js/theme.js"></script>
     <script src="../js/main.js"></script>
+    <script>
+      $(function(){
+          $('#inputFile').click(function(){
+              $('#modalFailed').modal('show');
+          });
+      
+          $('#identity').hide();
+          $('#complete-step').hide();
+          $('#btnVerify').click(function(){
+              $('#identity').show();
+              $('#verification').hide();
+          });
+          $('#saveChangesVerify').click(function(){
+              $('#complete-step').show();
+              $('#identity').hide();
+          });
+      });
+    </script>
   </body>
 </html>

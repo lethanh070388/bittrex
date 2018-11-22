@@ -2286,3 +2286,23 @@ table.dataTable{
 .max1140{
     max-width: 1140px;
 }
+.light{
+    .common-modal{
+        .modal-footer{
+            .btn-confirm {
+                border: 1px solid #f58200;
+                color: #f58200 !important;
+                &:hover{
+                    color: #fff !important;
+                }
+            }
+            .btn-close{
+                border: 1px solid #f58200;
+                color: #fff;
+                &:hover{
+                    color: #f58200 !important;
+                }
+            }
+        }
+    }
+}

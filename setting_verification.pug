@@ -1,13 +1,13 @@
 extends layout_setting.pug  
 
 block content
-    .container-fluid.px-4
+    .container-fluid.px-4#verification
         .row
             .col
                 h5.heading-lv5.text-uppercase.pt-4.border-bottom IDENTITY VERIFICATION
         .row
             .col
-                form.enhanced-verification.mt-3
+                .enhanced-verification.mt-3
                     p Verifying your identity improves the security of your account. The next step in the process is to submit the materials needed to verify your identity. While driver’s licenses and ID cards are permitted, we recommend you use passports to help expedite the process.
                     .blurd.sucess-blurd
                         .blurd_icon.info
@@ -25,4 +25,72 @@ block content
                             li Do not manipulate the image of your identification in anyway, including the addition of watermarks or blacking out certain information
                             li Do not crop the image of your ID such that any portion of the ID is removed, including edges
                         .text-center
-                            button.btn.btn-form.bg-green.mt-4 Start verification
+                            button#btnVerify.btn.btn-form.bg-green.mt-4 Start verification
+    .container-fluid.px-4#identity
+        .row
+            .col-md-6.mx-auto
+                form#frmIdentityCard.form-input(action="#")
+                    .form-group
+                        label Session KYC
+                        input.form-control(type="text" placeholder="5748BBEF4E" disabled)
+                    .form-group
+                        label Full Name
+                        input.form-control(type="text")
+                    .form-group
+                        label Identity card/Passport
+                        input.form-control(type="text")
+                    .form-group
+                        label Status Pending
+                        input#inputFile.form-control-file(type="file")
+                    .row
+                        .col
+                            .img-holder.border
+                                img.w-100.d-block(src="../assets/Identity-demo.png", alt="")
+                    .text-right.my-4
+                        button.btn.btn-form.change-pass#saveChangesVerify(type="button") Save changes
+        .row
+            .col
+                #modalFailed.modal.fade(tabindex="-1" role="dialog" aria-labelledby="modalFailedLabel" aria-hidden="true")
+                    .modal-dialog(role="document")
+                        .modal-content.error-container
+                            .modal-header.text-center
+                                h5.modal-title#modalFailedLabel Error
+                                button.close(type="button" data-dismiss="modal" aria-label="Close")
+                                    span(aria-hidden="true") &times;
+                            .modal-body
+                                div This file do not support. Please select another file type on jpg|jpeg|pdf|png.
+                            .modal-footer
+                                button.btn.btn-transaction(type="button" data-dismiss="modal") Close
+    .container-fluid.px-4#complete-step
+        .row
+            .col
+                h5.heading-lv5.text-uppercase.pt-4.border-bottom VERIFYING...
+        .row
+            .col
+                .enhanced-verification.mt-3
+                    .blurd.sucess-blurd
+                        .blurd_icon.info
+                            i.fas.fa-info.fa-3x
+                        .blurd_content
+                            .font-weight-bold Thanks for your verifications
+                            small 
+                                a(href="#") The process is being processed
+block script-append
+    script.
+        $(function(){
+            $('#inputFile').click(function(){
+                $('#modalFailed').modal('show');
+            });
+
+            $('#identity').hide();
+            $('#complete-step').hide();
+            $('#btnVerify').click(function(){
+                $('#identity').show();
+                $('#verification').hide();
+            });
+            $('#saveChangesVerify').click(function(){
+                $('#complete-step').show();
+                $('#identity').hide();
+            });
+        });
+    

@@ -2930,4 +2930,15 @@ table.dataTable thead .sorting_desc_disabled:after {
 .max1140 {
   max-width: 1140px; }
 
+.light .common-modal .modal-footer .btn-confirm {
+  border: 1px solid #f58200;
+  color: #f58200 !important; }
+  .light .common-modal .modal-footer .btn-confirm:hover {
+    color: #fff !important; }
+.light .common-modal .modal-footer .btn-close {
+  border: 1px solid #f58200;
+  color: #fff; }
+  .light .common-modal .modal-footer .btn-close:hover {
+    color: #f58200 !important; }
+
 /*# sourceMappingURL=style.css.map */
