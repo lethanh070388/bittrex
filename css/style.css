@@ -2534,7 +2534,7 @@ table.dataTable thead .sorting_desc_disabled:after {
   .dataTables_filter {
     text-align: right !important; } }
 .main-wrapper {
-  min-height: calc(100vh - 100px);
+  min-height: calc(100vh - 88px);
   padding-top: 56px;
   color: #4e5565;
   display: flex;
@@ -2782,8 +2782,23 @@ table.dataTable thead .sorting_desc_disabled:after {
   min-height: 400px;
   margin-top: 55px; }
 
-.bg-orange {
-  background-color: #f0b90b !important; }
+.light .bg-orange {
+  background-color: #482368 !important;
+  color: #ffffff; }
+.light .btn-confirm {
+  min-width: 150px;
+  background-color: #e55d1d !important; }
+  .light .btn-confirm:hover {
+    background-color: #d15318 !important; }
+
+.dark .bg-orange {
+  background-color: #0084d4 !important;
+  color: #ffffff; }
+.dark .btn-confirm {
+  min-width: 150px;
+  background-color: #003662 !important; }
+  .dark .btn-confirm:hover {
+    background-color: #1e2838 !important; }
 
 .social-icons {
   margin: 0;
@@ -2940,5 +2955,8 @@ table.dataTable thead .sorting_desc_disabled:after {
   color: #fff; }
   .light .common-modal .modal-footer .btn-close:hover {
     color: #f58200 !important; }
+
+.footer a {
+  line-height: 20px; }
 
 /*# sourceMappingURL=style.css.map */

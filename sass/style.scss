@@ -1747,7 +1747,7 @@ table.dataTable{
 
 // PRIVACY PAGE
 .main-wrapper {
-    min-height: calc(100vh - 100px);
+    min-height: calc(100vh - 88px);
     padding-top: 56px;
     color: #4e5565;
     display: flex;
@@ -2081,8 +2081,31 @@ table.dataTable{
     margin-top: 55px;
 }
 
-.bg-orange{
-    background-color: #f0b90b !important;
+.light{
+    .bg-orange{
+        background-color: #482368 !important;
+        color: #ffffff;
+    }
+    .btn-confirm{
+        min-width: 150px;
+        background-color: #e55d1d !important;
+        &:hover{
+            background-color: darken(#e55d1d,5%) !important;
+        }
+    }
+}
+.dark{
+    .bg-orange{
+        background-color: #0084d4 !important;
+        color: #ffffff;
+    }
+    .btn-confirm{
+        min-width: 150px;
+        background-color: #003662 !important;
+        &:hover{
+            background-color: #1e2838 !important;
+        }
+    }
 }
 .social-icons{
     margin: 0;
@@ -2305,4 +2328,8 @@ table.dataTable{
             }
         }
     }
+}
+
+.footer a{
+    line-height: 20px;
 }
