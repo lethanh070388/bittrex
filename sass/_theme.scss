@@ -985,6 +985,12 @@ $themes:(
             }
         }
         // END PRIVACY PAGE
+
+        
+        // INVITE
+        .info-box{
+            background-color: rgba(nth($color,11),0.25);
+        }
     }
 
 
@@ -1045,4 +1051,6 @@ $themes:(
         }
     }
 }
+
+
 // END CONTROL THEME

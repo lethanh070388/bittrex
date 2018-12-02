@@ -1,0 +1,209 @@
+doctype html
+html
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible" content="ie=edge")
+        title BITRADEX
+        link(rel="stylesheet" href="../css/fontawesome-all.min.css")
+        link(rel="stylesheet" href="../css/bootstrap.css")
+        link(rel="stylesheet" href="../css/style.css")
+    body
+        .controls 
+            .control-toggle
+                i.fas.fa-cog.fa-1x
+            .control-button-group
+                button.btn-theme(data-theme="light")
+                button.btn-theme(data-theme="dark")
+        .wrapper.dark
+            .layout
+                //- navigation bar
+                nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.scrolling-navbar.fixed-top
+                    a.navbar-brand(href="./index.html")
+                        img.logo-icon(src="../assets/logo.png") 
+                        span.logo-word BITRADEX
+                    button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation")
+                        span.navbar-toggler-icon
+                    .collapse.navbar-collapse#navbarSupportedContent
+                        .connect-status 
+                            img(src="../assets/icon-socket-status-disconnected.svg")
+                            small Socket status = Disconnected
+                            //- img(src="../assets/icon-socket-status-connected.svg")
+                            //- small Socket status = Connected
+                        ul.navbar-nav.ml-auto
+                            li.nav-item.active
+                                a.nav-link(href="./index.html") Markets
+                                    span.sr-only (current)
+                            li.nav-item
+                                a.nav-link(href="./order.html") Orders
+                            li.nav-item
+                                a.nav-link(href="./balance.html") Wallets
+                            li.nav-item.dropdown
+                                a.nav-link.dropdown-toggle#navbarDropdownSetting(href="./view/setting_activity" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Settings
+                                .dropdown-menu(aria-labelledby="navbarDropdownSetting")
+                                    a.dropdown-item(href="./setting_activity.html") Action 
+                                    a.dropdown-item(href="./setting_profile.html") My Profile 
+                                    a.dropdown-item(href="./setting_verification.html") Identity Verification 
+                                    a.dropdown-item(href="./setting_enable.html") Enable Account 
+                                    a.dropdown-item(href="./setting_password.html") Password 
+                                    a.dropdown-item(href="./setting_authentication.html") Two-Factor Authentication 
+                                    a.dropdown-item(href="./setting_api_key.html") API Keys 
+                                    a.dropdown-item(href="./setting_auto_sell.html") Auto-Sell 
+                                    a.dropdown-item(href="./setting_whitelist.html") IP Whitelist
+                                    a.dropdown-item(href="./setting_withdrawal_whitelist.html") Withdrawal Whitelist 
+                                    a.dropdown-item(href="./setting_ui.html") UI Settings 
+                                    a.dropdown-item(href="./setting_notifications.html") Notifications 
+                            li.nav-item
+                                a.nav-link(href="./login.html") Login
+                //- end navigation bar
+
+                .main-container.flex-full-height.setting.flex-column
+                    .banner-fixed
+                        img(src="../assets/contact_banner_bg.jpg", alt="")
+                    .container.mt-5.px-0
+                        .row.no-gutters
+                            .col-sm-4.px-2.mb-2
+                                .friend.info-box
+                                    .row.no-gutters
+                                        .col.d-flex.pr-2
+                                            //- img(src="../assets/firstpm.jpg", alt="")
+                                            .info
+                                                div NO. 1
+                                                div.font-bold abc***@***.com
+                                        .col
+                                            div Commission
+                                            div.font-bold 186.14212345 BTC
+                            .col-sm-4.px-2.mb-2
+                                .friend.info-box
+                                    .row.no-gutters
+                                        .col.d-flex.pr-2
+                                            //- img(src="../assets/secendpm.jpg", alt="")
+                                            .info
+                                                div NO. 2
+                                                div.font-bold abc***@***.com
+                                        .col
+                                            div Commission
+                                            div.font-bold 186.14212345 BTC
+                            .col-sm-4.px-2.mb-2
+                                .friend.info-box
+                                    .row.no-gutters
+                                        .col.d-flex.pr-2
+                                            //- img(src="../assets/thirdpm.jpg", alt="")
+                                            .info
+                                                div NO. 3
+                                                div.font-bold abc***@***.com
+                                        .col
+                                            div Commission
+                                            div.font-bold 186.14212345 BTC
+                    .container.mt-3.px-2
+                        .row.no-gutters.info-box.flex-wrap
+                            .invite-link.d-flex.pr-4
+                                .barcode.pr-3
+                                    img(src="../assets/barcode.png", alt="")
+                                .myinfo
+                                    .d-flex.justify-content-between
+                                        span My Referral ID: 35966595
+                                        span Your commission rate:  
+                                            b 20%
+                                    .d-flex.mt-2.flex-wrap
+                                        .no-wrap.pr-2.d-flex.align-items-center Referral Link:
+                                        .input-group
+                                            input.form-control.copy-control(type="text" value="https://www.binance.com/?ref=35966595" aria-describedby="basic-addon2")
+                                            .input-group-append
+                                                button.btn.btn-copy(type="button") Copy
+                                    .d-flex.mt-2
+                                        .no-wrap.pr-2.d-flex.align-items-center Share:
+                                        .social
+                                            i.fab.fa-facebook-f
+                                            i.fab.fa-twitter
+                                            i.fab.fa-linkedin-in
+                                            i.fab.fa-weibo
+                            .invite-data.d-flex.px-3.justify-content-between
+                                .text-center.px-2
+                                    div Referral Friends
+                                    h3 0
+                                .text-center.px-2
+                                    div(title="Due to the large amount of data, the estimated commission fee will be updated at 8 AM (UTC+8) on a daily basis.")
+                                        |Estimated Commission Value
+                                    h3 0 BTC
+                    .container.mt-5.px-0.mb-5
+                        .row.no-gutters
+                            .col-md-6.px-2.mb-3
+                                .row.no-gutters.mb-2
+                                    .col Referral Friends
+                                    .col.text-right
+                                        a.text-white(href="#") Export
+                                            i.far.fa-file-excel.pl-2
+                                .info-box
+                                    table.table
+                                        thead
+                                            tr
+                                                td.text-center Email
+                                                td.text-center Date
+                                        tbody
+                                            tr
+                                                td.text-center(colspan="2") You have no referral friends.
+                            .col-md-6.px-2.mb-3
+                                .row.no-gutters.mb-2
+                                    .col Latest Commission History
+                                    .col.text-right
+                                        a.text-white(href="#") Export
+                                            i.far.fa-file-excel.pl-2
+                                .info-box
+                                    table.table
+                                        thead
+                                            tr
+                                                td.text-center Commission
+                                                td.text-center Email
+                                                td.text-center Date
+                                        tbody
+                                            tr
+                                                td.text-center(colspan="3") You have no commission.
+                    .container.mt-3.px-2.mb-5
+                        .row.no-gutters
+                            .col
+                                h2.text-center Program Details
+                                ul.pl-4
+                                    li Effective as of 2018/05/19 0:00 AM (UTC)
+                                    li The commission you receive from the referral program will initially be set at a rate of 20%. For accounts holding 500BNB or more, this rate will increase to 40%.
+                                    li The fee commission will be sent instantly in real-time to your Binance account as your referee completes each trade and will be paid to you in whatever token/cryptocurrency the original fee was paid in.
+                                    li There is no limit to the number of friends you can refer, although we do reserve the right to adjust or change the referral program rules at any time.
+                                    li Each referee must be signed up through your Referral Link, QR Code or Referral ID.
+                                    li Binance will check for duplicate or fake accounts and will not pay out referral bonuses on these accounts. Duplicate or shared finances will result in disqualification.
+                                h6 * Important Notice:
+                                p Binance reserves the right to change the terms of the referral program at any time due to changing market conditions, risk of fraud, or any other factors we deem relevant.
+
+                .container-fluid.footer.market-info-footer
+                    .container
+                        .row.text-center
+                            .col-lg-2.col-sm-4 
+                                a.d-block(href="./about.html") About
+                            .col-lg-2.col-sm-4 
+                                a.d-block(href="./privacy.html") Privacy
+                                a.d-block(href="./terms.html") Terms
+                            .col-lg-2.col-sm-4 
+                                a.d-block(href="./faq.html") FAQs
+                                a.d-block(href="./announcements.html") News &amp; Announcements
+                            .col-lg-2.col-sm-4 
+                                a.d-block(href="./fee.html") Fees
+                                a.d-block(href="./invite.html") Refer Friends
+                            .col-lg-2.col-sm-4 
+                                a.d-block(href="./help_center.html") Support
+                                a.d-block(href="./contact.html") Contact
+                            .col-lg-2.col-sm-4 
+                                a.d-block(href="#") 
+                                    i.fab.fa-facebook-square.pr-1
+                                    |Like Us On Facebook
+                                a.d-block(href="#") 
+                                    i.fab.fa-telegram-plane.pr-1
+                                    |Telegram
+                                
+        script(src="../js/jquery.js")
+        script(src="../js/popper.js")
+        script(src="../js/bootstrap.js")
+        script(src="../js/jquery.mCustomScrollbar.concat.min.js")
+        script(src="../js/jquery.dataTables.min.js")
+        script(src="../js/dataTables.bootstrap4.min.js")
+        script(src="../js/theme.js")
+        script(src="../js/main.js")
+        block script-append
