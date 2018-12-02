@@ -2104,6 +2104,7 @@ table.dataTable{
         background-color: #003662 !important;
         &:hover{
             background-color: #1e2838 !important;
+            color: #fff !important;
         }
     }
 }
@@ -2314,7 +2315,7 @@ table.dataTable{
         .modal-footer{
             .btn-confirm {
                 border: 1px solid #f58200;
-                color: #f58200 !important;
+                color: #fff !important;
                 &:hover{
                     color: #fff !important;
                 }
@@ -2329,7 +2330,17 @@ table.dataTable{
         }
     }
 }
-
+.dark{
+    .common-modal{
+        .modal-footer{
+            .btn-close {
+                &:hover{
+                    color: #fff !important;
+                }
+            }
+        }
+    }
+}
 .footer a{
     line-height: 20px;
 }

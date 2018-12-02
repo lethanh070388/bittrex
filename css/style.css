@@ -2802,7 +2802,8 @@ table.dataTable thead .sorting_desc_disabled:after {
   min-width: 150px;
   background-color: #003662 !important; }
   .dark .btn-confirm:hover {
-    background-color: #1e2838 !important; }
+    background-color: #1e2838 !important;
+    color: #fff !important; }
 
 .social-icons {
   margin: 0;
@@ -2951,7 +2952,7 @@ table.dataTable thead .sorting_desc_disabled:after {
 
 .light .common-modal .modal-footer .btn-confirm {
   border: 1px solid #f58200;
-  color: #f58200 !important; }
+  color: #fff !important; }
   .light .common-modal .modal-footer .btn-confirm:hover {
     color: #fff !important; }
 .light .common-modal .modal-footer .btn-close {
@@ -2959,6 +2960,9 @@ table.dataTable thead .sorting_desc_disabled:after {
   color: #fff; }
   .light .common-modal .modal-footer .btn-close:hover {
     color: #f58200 !important; }
+
+.dark .common-modal .modal-footer .btn-close:hover {
+  color: #fff !important; }
 
 .footer a {
   line-height: 20px; }
