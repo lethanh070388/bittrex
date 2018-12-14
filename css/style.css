@@ -2778,14 +2778,22 @@ table.dataTable thead .sorting_desc_disabled:after {
   color: #e55d1d !important; }
 
 .contact {
-  background-image: url("../assets/contact_banner_bg.jpg");
-  background-position: center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
-  min-height: 400px;
-  margin-top: 55px; }
+  height: 400px;
+  margin-top: 55px;
+  position: relative; }
+  .contact-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    -webkit-transform: translate(0, -35%);
+    -moz-transform: translate(0, -35%);
+    -ms-transform: translate(0, -35%);
+    -o-transform: translate(0, -35%);
+    transform: translate(0, -35%); }
 
+.light .contact {
+  background-color: #66338a; }
 .light .bg-orange {
   background-color: #482368 !important;
   color: #ffffff; }
@@ -2795,8 +2803,10 @@ table.dataTable thead .sorting_desc_disabled:after {
   .light .btn-confirm:hover {
     background-color: #d15318 !important; }
 
+.dark .contact {
+  background-color: #0084d4; }
 .dark .bg-orange {
-  background-color: #0084d4 !important;
+  background-color: #009af8 !important;
   color: #ffffff; }
 .dark .btn-confirm {
   min-width: 150px;
@@ -2804,6 +2814,8 @@ table.dataTable thead .sorting_desc_disabled:after {
   .dark .btn-confirm:hover {
     background-color: #1e2838 !important;
     color: #fff !important; }
+.dark a {
+  color: #2b3441; }
 
 .social-icons {
   margin: 0;

@@ -2071,17 +2071,27 @@ table.dataTable{
 
 //CONTACT
 .contact{
-    background-image: url('../assets/contact_banner_bg.jpg');
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    min-height: 400px;
+    // background-image: url('../assets/contact_banner_bg.jpg');
+    // background-position: center;
+    // background-attachment: fixed;
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    height: 400px;
     margin-top: 55px;
+    position: relative;
+    &-wrapper{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 50%;
+        @include transform-translate(0,-35%);
+    }
 }
 
 .light{
+    .contact{
+        background-color: #66338a;
+    }
     .bg-orange{
         background-color: #482368 !important;
         color: #ffffff;
@@ -2095,8 +2105,11 @@ table.dataTable{
     }
 }
 .dark{
+    .contact{
+        background-color: #0084d4;
+    }
     .bg-orange{
-        background-color: #0084d4 !important;
+        background-color: #009af8 !important;
         color: #ffffff;
     }
     .btn-confirm{
@@ -2106,6 +2119,9 @@ table.dataTable{
             background-color: #1e2838 !important;
             color: #fff !important;
         }
+    }
+    a{
+        color: #2b3441;
     }
 }
 .social-icons{
