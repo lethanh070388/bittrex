@@ -649,6 +649,7 @@ hr{
         padding: 0 10px;
     }
     &_icon{
+
         &.info{
             .fa-info{
                 padding: 15px 30px;
@@ -660,6 +661,12 @@ hr{
 @include minq(small){
     .blurd{
         width: 70%;
+    }
+}
+
+@media (max-width: 380px){
+    .blurd_icon{
+        display: none;
     }
 }
 .info-blurd{
