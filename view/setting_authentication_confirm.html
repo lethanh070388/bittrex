@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BITRADEX</title>
+    <link rel="stylesheet" href="../css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/style.css">
+  </head>
+  <body>
+    <div class="controls"> 
+      <div class="control-toggle"><i class="fas fa-cog fa-1x"></i></div>
+      <div class="control-button-group">
+        <button class="btn-theme" data-theme="light"></button>
+        <button class="btn-theme" data-theme="dark"></button>
+      </div>
+    </div>
+    <div class="wrapper dark">
+      <div class="layout">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark scrolling-navbar fixed-top"><a class="navbar-brand" href="./index.html"><img class="logo-icon" src="../assets/logo.png"><span class="logo-word">BITRADEX</span></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="connect-status"> <img src="../assets/icon-socket-status-disconnected.svg"><small>Socket status = Disconnected</small></div>
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active"><a class="nav-link" href="./index.html">Markets<span class="sr-only">(current)</span></a></li>
+              <li class="nav-item"><a class="nav-link" href="./order.html">Orders</a></li>
+              <li class="nav-item"><a class="nav-link" href="./balance.html">Wallets</a></li>
+              <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="navbarDropdownSetting" href="./view/setting_activity" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Settings</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownSetting"><a class="dropdown-item" href="./setting_activity.html">Action </a><a class="dropdown-item" href="./setting_profile.html">My Profile </a><a class="dropdown-item" href="./setting_verification.html">Identity Verification </a><a class="dropdown-item" href="./setting_enable.html">Enable Account </a><a class="dropdown-item" href="./setting_password.html">Password </a><a class="dropdown-item" href="./setting_authentication.html">Two-Factor Authentication </a><a class="dropdown-item" href="./setting_api_key.html">API Keys </a><a class="dropdown-item" href="./setting_auto_sell.html">Auto-Sell </a><a class="dropdown-item" href="./setting_whitelist.html">IP Whitelist</a><a class="dropdown-item" href="./setting_withdrawal_whitelist.html">Withdrawal Whitelist </a><a class="dropdown-item" href="./setting_ui.html">UI Settings </a><a class="dropdown-item" href="./setting_notifications.html">Notifications </a></div>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="./login.html">Login</a></li>
+            </ul>
+          </div>
+        </nav>
+        <div class="main-container flex-full-height setting">
+          <div class="nav-setting py-4 hidden-xs hidden-sm">
+            <h5 class="heading-lv5 text-uppercase pt-4 pl-4"> <i class="fas fa-cog fa-1x pr-3"></i>Setting
+              <div class="nav-items">
+                <ul class="heading-lv6 nav-item text-uppercase">Summary
+                  <li class="heading-lv6 nav-subitem current active"> <a href="./setting_activity.html">My Activity</a></li>
+                </ul>
+                <ul class="heading-lv6 nav-item text-uppercase">Account
+                  <li class="heading-lv6 nav-subitem"> <a href="./setting_profile.html">My Profile</a></li>
+                  <li class="heading-lv6 nav-subitem"> <a href="./setting_verification.html">Identity Verification</a></li>
+                  <li class="heading-lv6 nav-subitem"><a href="./setting_enable.html">Enable Account</a></li>
+                </ul>
+                <ul class="heading-lv6 nav-item text-uppercase">Site Settings
+                  <li class="heading-lv6 nav-subitem"><a href="./setting_password.html">Password</a></li>
+                  <li class="heading-lv6 nav-subitem"><a href="./setting_authentication.html">Two-Factor Authentication</a></li>
+                  <li class="heading-lv6 nav-subitem"><a href="./setting_api_key.html">API Keys</a></li>
+                  <li class="heading-lv6 nav-subitem"><a href="./setting_auto_sell.html">Auto-Sell</a></li>
+                  <li class="heading-lv6 nav-subitem"><a href="./setting_whitelist.html">IP Whitelist</a></li>
+                  <li class="heading-lv6 nav-subitem"><a href="./setting_withdrawal_whitelist.html">Withdrawal Whitelist</a></li>
+                  <li class="heading-lv6 nav-subitem"><a href="./setting_ui.html">UI Settings</a></li>
+                  <li class="heading-lv6 nav-subitem"><a href="./setting_notifications.html">Notifications</a></li>
+                </ul>
+              </div>
+            </h5>
+          </div>
+          <div class="main-content p-4">
+            <div class="container-fluid px-4 two-factor" id="disable">
+              <div class="row">
+                <div class="col">
+                  <div class="enhanced-verification mt-3">
+                    <div class="blurd sucess-blurd">
+                      <div class="blurd_icon info"><i class="fas fa-info fa-3x"></i></div>
+                      <div class="blurd_content">
+                        <div class="font-weight-bold">Confirm enabling Two-Factor Authentication</div>
+                        <div class="row">
+                          <div class="col">
+                            <form class="form-input">
+                              <div class="form-group pt-2 address-group">
+                                <label for="authenticationCode">Authentication Code</label>
+                                <input class="form-control w-100" type="text" placeholder="Input 6 digit authentication code">
+                              </div>
+                              <div class="form-group">
+                                <p>
+                                   If you did not request Two-Factor Authentication on your account or this request suspicious please <a class="btn-link" href="#">disable your account  </a>and email support@bitradex.com. If your account is disabled in this way, it will remain disabled for at least 24 hours after you contact support</p>
+                              </div>
+                              <div class="text-center form-group mt-4"> 
+                                <button class="btn btn-form change-pass" id="btn-enable">Two-Factor Authentication</button>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid footer market-info-footer">
+          <div class="container">
+            <div class="row text-center">
+              <div class="col-lg-2 col-sm-4"> <a class="d-block" href="./about.html">About</a></div>
+              <div class="col-lg-2 col-sm-4"> <a class="d-block" href="./privacy.html">Privacy</a><a class="d-block" href="./terms.html">Terms</a></div>
+              <div class="col-lg-2 col-sm-4"> <a class="d-block" href="./faq.html">FAQs</a><a class="d-block" href="./announcements.html">News &amp; Announcements</a></div>
+              <div class="col-lg-2 col-sm-4"> <a class="d-block" href="./fee.html">Fees</a><a class="d-block" href="./invite.html">Refer Friends</a></div>
+              <div class="col-lg-2 col-sm-4"> <a class="d-block" href="./help_center.html">Support</a><a class="d-block" href="./contact.html">Contact</a></div>
+              <div class="col-lg-2 col-sm-4"> <a class="d-block" href="#"> <i class="fab fa-facebook-square pr-1"></i>Like Us On Facebook</a><a class="d-block" href="#"> <i class="fab fa-telegram-plane pr-1"></i>Telegram</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../js/jquery.js"></script>
+    <script src="../js/popper.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="../js/jquery.dataTables.min.js"></script>
+    <script src="../js/dataTables.bootstrap4.min.js"></script>
+    <script src="../js/theme.js"></script>
+    <script src="../js/main.js"></script>
+    <script>
+      $(function(){
+          $('#enable').hide();
+          $('#btn-enable').click(function(){
+              $('#enable').show();
+              $('#disable').hide();
+          });
+          $('#btn-disable').click(function(){
+              $('#enable').hide();
+              $('#disable').show();
+          });
+      });
+    </script>
+  </body>
+</html>

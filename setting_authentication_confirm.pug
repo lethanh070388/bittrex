@@ -1,0 +1,39 @@
+extends layout_setting.pug  
+
+block content
+    .container-fluid.px-4.two-factor#disable
+        .row
+            .col
+                .enhanced-verification.mt-3
+                    .blurd.sucess-blurd
+                        .blurd_icon.info
+                            i.fas.fa-info.fa-3x
+                        .blurd_content
+                            .font-weight-bold Confirm enabling Two-Factor Authentication
+                            .row
+                                .col
+                                    form.form-input
+                                        .form-group.pt-2.address-group
+                                            label(for="authenticationCode") Authentication Code
+                                            input.form-control.w-100(type="text" placeholder="Input 6 digit authentication code")
+                                        .form-group
+                                            p 
+                                                |If you did not request Two-Factor Authentication on your account or this request suspicious please 
+                                                a.btn-link(href="#") disable your account  
+                                                | and email support@bitradex.com. If your account is disabled in this way, it will remain disabled for at least 24 hours after you contact support
+                                        .text-center.form-group.mt-4 
+                                            button.btn.btn-form.change-pass#btn-enable Two-Factor Authentication
+block script-append
+    script.
+        $(function(){
+            $('#enable').hide();
+            $('#btn-enable').click(function(){
+                $('#enable').show();
+                $('#disable').hide();
+            });
+            $('#btn-disable').click(function(){
+                $('#enable').hide();
+                $('#disable').show();
+            });
+        });
+    
