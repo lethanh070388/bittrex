@@ -2461,3 +2461,26 @@ table.dataTable{
         height: 396px;
     }
 }
+
+
+.light{
+    .address-group{
+        input{
+            color: #333 !important;
+        }
+    }
+}
+.light{
+    .deposit-container{
+        .modal-footer{
+            .btn-close{
+                border: 1px solid #e55d1d !important;
+                color: #e55d1d !important;
+                &:hover{
+                    background-color: #e55d1d !important;
+                    color: #fff !important;
+                }
+            }
+        }
+    }
+}
